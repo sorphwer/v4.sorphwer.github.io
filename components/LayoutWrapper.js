@@ -1,6 +1,7 @@
 import siteMetadata from '@/data/siteMetadata'
 import headerNavLinks from '@/data/headerNavLinks'
 import Logo from '@/data/logo.svg'
+import Image from './Image'
 import Link from './Link'
 import SectionContainer from './SectionContainer'
 import Footer from './Footer'

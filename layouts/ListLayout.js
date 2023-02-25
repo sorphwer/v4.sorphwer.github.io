@@ -7,8 +7,10 @@ import formatDate from '@/lib/utils/formatDate'
 
 export default function ListLayout({ posts, title, initialDisplayPosts = [], pagination }) {
   const [searchValue, setSearchValue] = useState('')
+  // posts is the all frontmatter
+  console.log(posts)
   const filteredBlogPosts = posts.filter((frontMatter) => {
-    const searchContent = frontMatter.title + frontMatter.summary + frontMatter.tags.join(' ')
+    const searchContent = frontMatter.title + frontMatter.tags.join(' ')
     return searchContent.toLowerCase().includes(searchValue.toLowerCase())
   })
 
@@ -50,6 +52,7 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], pag
         <ul>
           {!filteredBlogPosts.length && 'No posts found.'}
           {displayPosts.map((frontMatter) => {
+            // todo modify this
             const { slug, date, title, summary, tags } = frontMatter
             return (
               <li key={slug} className="py-4">
@@ -63,9 +66,12 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], pag
                   <div className="space-y-3 xl:col-span-3">
                     <div>
                       <h3 className="text-2xl font-bold leading-8 tracking-tight">
-                        <Link href={`/blog/${slug}`} className="text-gray-900 dark:text-gray-100">
-                          {title}
-                        </Link>
+                        {title && (
+                          <Link href={`/blog/${slug}`} className="text-gray-900 dark:text-gray-100">
+                            {title}
+                          </Link>
+                        )}
+                        {frontMatter.subtitle && <div>{frontMatter.subtitle}</div>}
                       </h3>
                       <div className="flex flex-wrap">
                         {tags.map((tag) => (

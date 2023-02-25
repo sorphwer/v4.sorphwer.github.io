@@ -47,7 +47,9 @@ export default function Blog({ post, authorDetails, prev, next }) {
     <>
       {frontMatter.draft !== true ? (
         <MDXLayoutRenderer
-          layout={frontMatter.layout || DEFAULT_LAYOUT}
+          layout={
+            (frontMatter.layout === 'post' ? 'PostLayout' : frontMatter.layout) || DEFAULT_LAYOUT
+          }
           toc={toc}
           mdxSource={mdxSource}
           frontMatter={frontMatter}

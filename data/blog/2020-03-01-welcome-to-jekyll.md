@@ -1,5 +1,5 @@
 ---
-# layout: post
+layout: post
 title: 'Theme Showcase'
 subtitle: 'Features and yaml configuration demo' #optional
 author: 'RiinoSite' #optional
@@ -47,7 +47,7 @@ To add new posts, simply add a file in the `_posts` directory that follows the c
 - Mermaid support
 - Multilanguage Support
 - Emoji Support
-- Highly custom config in header and footeraa
+- Highly custom config in header and footer
 
 # Site Configuration
 
