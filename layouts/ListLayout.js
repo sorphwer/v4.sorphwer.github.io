@@ -8,7 +8,7 @@ import formatDate from '@/lib/utils/formatDate'
 export default function ListLayout({ posts, title, initialDisplayPosts = [], pagination }) {
   const [searchValue, setSearchValue] = useState('')
   // posts is the all frontmatter
-  console.log(posts)
+  // console.log(posts)
   const filteredBlogPosts = posts.filter((frontMatter) => {
     const searchContent = frontMatter.title + frontMatter.tags.join(' ')
     return searchContent.toLowerCase().includes(searchValue.toLowerCase())
