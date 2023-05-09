@@ -1,6 +1,8 @@
 import '@/css/tailwind.css'
 import '@/css/prism.css'
+// import '@/css/mermaid.css'
 import 'katex/dist/katex.css'
+import '@fortawesome/fontawesome-svg-core/styles.css'
 
 import '@fontsource/inter/variable-full.css'
 
@@ -11,6 +13,12 @@ import siteMetadata from '@/data/siteMetadata'
 import Analytics from '@/components/analytics'
 import LayoutWrapper from '@/components/LayoutWrapper'
 import { ClientReload } from '@/components/ClientReload'
+
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faTags, faEdit } from '@fortawesome/free-solid-svg-icons'
+import { config } from '@fortawesome/fontawesome-svg-core'
+config.autoAddCss = false
+library.add(faTags, faEdit)
 
 const isDevelopment = process.env.NODE_ENV === 'development'
 const isSocket = process.env.SOCKET

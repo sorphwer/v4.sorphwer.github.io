@@ -1,0 +1,33 @@
+polygon.label-container {
+  color: #0070c9;
+}
+
+g.label {
+  color: #e83e8c !important;
+}
+.node rect {
+  fill: #fff !important;
+  stroke: #333 !important;
+  stroke-width: 1px !important;
+  rx: 5px !important;
+  ry: 5px !important;
+}
+
+/* Style the text inside the nodes */
+.node text {
+  font-family: Arial, sans-serif !important;
+  font-size: 12px !important;
+  fill: #333 !important;
+}
+
+/* Style the edges */
+g.edgePaths {
+  stroke: #64d2ff !important; /* change this to the color you want */
+  stroke-width: 2px !important; /* change this to the width you want */
+  fill: none !important;
+}
+
+/* Style the arrowheads */
+.marker {
+  fill: #808080 !important;
+}

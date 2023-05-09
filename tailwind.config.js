@@ -1,5 +1,6 @@
 const defaultTheme = require('tailwindcss/defaultTheme')
 const colors = require('tailwindcss/colors')
+const { DEFAULT } = require('@tailwindcss/typography/src/styles')
 
 module.exports = {
   experimental: {
@@ -26,10 +27,20 @@ module.exports = {
       },
       fontFamily: {
         sans: ['InterVariable', ...defaultTheme.fontFamily.sans],
+        rs: '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"',
       },
       colors: {
-        primary: colors.teal,
         gray: colors.neutral,
+        primary: {
+          400: '#64d2ff',
+          500: '#0070c9',
+          600: '#0070c9',
+          light: '#64d2ff',
+          DEFAULT: '#0070c9',
+          dark: '#0070c9',
+        },
+        RSpink: '#e83e8c',
+        RSgrey: '#808080',
       },
       typography: (theme) => ({
         DEFAULT: {
@@ -63,7 +74,7 @@ module.exports = {
               backgroundColor: theme('colors.gray.800'),
             },
             code: {
-              color: theme('colors.pink.500'),
+              color: theme('colors.RSpink'),
               backgroundColor: theme('colors.gray.100'),
               paddingLeft: '4px',
               paddingRight: '4px',
@@ -163,6 +174,20 @@ module.exports = {
         },
       }),
     },
+    // mermaid: (theme) => ({
+    //   light: {
+    //     // Modify the styles for light mode here
+    //     '& path': {
+    //       fill: theme('colors.gray.500'),
+    //     },
+    //   },
+    //   dark: {
+    //     // Modify the styles for dark mode here
+    //     '& path': {
+    //       fill: theme('colors.gray.200'),
+    //     },
+    //   },
+    // }),
   },
   plugins: [require('@tailwindcss/forms'), require('@tailwindcss/typography')],
 }

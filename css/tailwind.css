@@ -11,7 +11,7 @@
 }
 
 .footnotes {
-  @apply pt-8 mt-12 border-t border-gray-200 dark:border-gray-700;
+  @apply mt-12 border-t border-gray-200 pt-8 dark:border-gray-700;
 }
 
 .csl-entry {
@@ -22,4 +22,73 @@
 input:-webkit-autofill,
 input:-webkit-autofill:focus {
   transition: background-color 600000s 0s, color 600000s 0s;
+}
+
+article blockquote {
+  border-left: 10px solid !important;
+  border-bottom: 2px solid !important;
+  @apply border-gray-300;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+  quotes: '“' '”' '‘' '’';
+  margin-left: 20px !important;
+  margin-right: 20px !important;
+}
+article blockquote:before {
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+
+article blockquote p {
+  display: inline;
+}
+
+ul.nav li {
+  float: left;
+  margin-right: 41px;
+  letter-spacing: 0.1em;
+}
+
+ul.nav li:last-child {
+  margin-right: 0;
+}
+ul.nav li a {
+  @apply relative;
+  @apply font-normal;
+  @apply text-sm;
+  @apply hover:text-primary-light;
+  @apply dark:hover:text-primary-light;
+  @apply uppercase;
+}
+ul.nav li a:before {
+  opacity: 0;
+  content: '';
+  position: absolute;
+  top: -54px;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  @apply bg-black;
+  @apply dark:bg-white;
+  -webkit-transform: scale(1.25);
+  transform: scale(1.25);
+  transition: top 0.3s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+    opacity 0.3s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+    visibility 0.3s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+    transform 0.3s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+    -webkit-transform 0.3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+
+ul.nav li a.active:before {
+  opacity: 1;
+}
+
+ul.nav li a:hover:before {
+  opacity: 1;
 }

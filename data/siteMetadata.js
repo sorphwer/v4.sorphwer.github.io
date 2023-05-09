@@ -2,7 +2,7 @@ const siteMetadata = {
   title: 'RiinoSite4',
   author: 'Riino',
   headerTitle: 'RiinoSite Blog',
-  description: 'RiinoSite with Next.js + Tailwind.css ',
+  description: 'RiinoSite v4 Early Preview | Nest of Etamine Study',
   language: 'en-us',
   theme: 'system', // system, dark or light
   siteUrl: 'https://v4.riino.site',
