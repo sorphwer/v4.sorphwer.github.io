@@ -47,6 +47,7 @@ const LayoutWrapper = ({ children }) => {
                   </Link>
                 </li>
               ))}
+              <span>|</span>
             </ul>
           </div>
           <ThemeSwitch />

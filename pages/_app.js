@@ -1,10 +1,11 @@
 import '@/css/tailwind.css'
 import '@/css/prism.css'
-// import '@/css/mermaid.css'
+import '@/css/mermaid.css'
 import 'katex/dist/katex.css'
 import '@fortawesome/fontawesome-svg-core/styles.css'
 
 import '@fontsource/inter/variable-full.css'
+import 'react-notion-x/src/styles.css'
 
 import { ThemeProvider } from 'next-themes'
 import Head from 'next/head'
