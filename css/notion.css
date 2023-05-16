@@ -57,3 +57,7 @@ img.notion-page-icon {
 .notion-text {
   /* @apply dark:text-white; */
 }
+
+.notion-table-view {
+  min-width: none !important;
+}
