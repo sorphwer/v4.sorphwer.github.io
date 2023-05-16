@@ -61,3 +61,25 @@ img.notion-page-icon {
 .notion-table-view {
   min-width: none !important;
 }
+.notion-table-row {
+  @apply !border-b-black;
+  @apply dark:!border-b-white;
+}
+.notion-table-view-header-cell-inner {
+  @apply !border-r-black;
+  @apply dark:!border-r-white;
+}
+.notion-collection-column-title {
+  @apply text-black;
+  @apply dark:text-white;
+}
+.notion-table-cell {
+  @apply !border-r-black;
+  @apply dark:!border-r-white;
+}
+.notion-table-header-inner {
+  @apply !border-b-black;
+  @apply dark:!border-b-white;
+  @apply !border-t-black;
+  @apply dark:!border-t-white;
+}
