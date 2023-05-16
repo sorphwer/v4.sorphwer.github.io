@@ -17,7 +17,15 @@ const discussUrl = (slug) =>
 
 const postDateTemplate = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }
 
-export default function PostLayout({ frontMatter, authorDetails, next, prev, children }) {
+export default function PostLayout({
+  frontMatter,
+  authorDetails,
+  next,
+  prev,
+  NotionJsx,
+  NotionTitle,
+  children,
+}) {
   const { slug, fileName, date, title, images, tags } = frontMatter
   // console.log(children)
   return (
@@ -34,15 +42,17 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
             <div className="space-y-1 ">
               <div>
                 <PageTitle>
-                  {title}
+                  {NotionTitle ? NotionTitle : title}
                   <span className="text-base">
                     <span> </span>
-                    <Link
-                      href={editUrl(fileName)}
-                      className="hover:text-primary-600 dark:hover:text-primary-400"
-                    >
-                      <FontAwesomeIcon icon="edit" className="ml-2" />
-                    </Link>
+                    {!frontMatter.notion && (
+                      <Link
+                        href={editUrl(fileName)}
+                        className="hover:text-primary-600 dark:hover:text-primary-400"
+                      >
+                        <FontAwesomeIcon icon="edit" className="ml-2" />
+                      </Link>
+                    )}
                   </span>
                 </PageTitle>
               </div>
@@ -102,7 +112,10 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
               </dd>
             </dl> */}
             <div className="divide-y divide-gray-200 dark:divide-gray-700 xl:col-span-3 xl:row-span-2 xl:pb-0">
-              <div className="prose max-w-none pt-10 pb-8 dark:prose-dark">{children}</div>
+              <div className="prose max-w-none  pb-8 dark:prose-dark">
+                {children}
+                {NotionJsx}
+              </div>
               {/* <div className="pt-6 pb-6 text-sm text-gray-700 dark:text-gray-300">
                 <Link href={editUrl(fileName)}>{'View on GitHub'}</Link>
               </div> */}

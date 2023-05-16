@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.notion-title {
+  display: none;
+}
+
+.notion-page-cover-wrapper {
+  height: 10vh !important;
+}
+.notion-page-cover-wrapper img {
+  height: 10vh !important;
+}
+.notion-header {
+  visibility: hidden;
+}
+.notion.notion-app {
+  background: inherit !important;
+}
+.notion {
+  color: inherit !important;
+}
+.notion-external-title {
+  color: inherit !important;
+}
+a.notion-page-link {
+  text-decoration: none !important;
+}
+a.notion-page-link:hover {
+  @apply hover:!text-primary-400;
+}
+
+.notion-bookmark-description {
+  @apply !text-gray-600;
+  @apply dark:!text-gray-400;
+}
+.notion-bookmark-title {
+  @apply !text-black;
+  @apply dark:!text-white;
+  @apply hover:!text-primary-light;
+}
+.notion-bookmark-link-text {
+  @apply !text-black;
+  @apply dark:!text-gray-50;
+}
+.notion-page-cover-wrapper {
+  filter: brightness(0);
+  @apply dark:brightness-200;
+}
+.notion-bookmark {
+  @apply !no-underline;
+}
+img.notion-page-icon {
+  filter: brightness(0);
+  @apply dark:brightness-200;
+}
+.notion-text {
+  /* @apply dark:text-white; */
+}

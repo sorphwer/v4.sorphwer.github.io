@@ -6,7 +6,8 @@ import CustomLink from './Link'
 import TOCInline from './TOCInline'
 import Pre from './Pre'
 import { BlogNewsletterForm } from './NewsletterForm'
-
+import { NotionRenderer } from 'react-notion-x'
+import { getPageTitle } from 'notion-utils'
 export const MDXComponents = {
   Image,
   TOCInline,
@@ -19,8 +20,28 @@ export const MDXComponents = {
   },
 }
 
-export const MDXLayoutRenderer = ({ layout, mdxSource, ...rest }) => {
+export const MDXLayoutRenderer = ({ layout, mdxSource, recordMap, ...rest }) => {
   const MDXLayout = useMemo(() => getMDXComponent(mdxSource), [mdxSource])
+  // const { recordMap,...reset } = rest
+  const NotionJsx = recordMap ? (
+    <NotionRenderer recordMap={recordMap} fullPage={true} darkMode={true} />
+  ) : (
+    <span className="noNotion"></span>
+  )
+  const NotionTitle = recordMap ? getPageTitle(recordMap) : null
 
-  return <MDXLayout layout={layout} components={MDXComponents} {...rest} />
+  return (
+    <>
+      <MDXLayout
+        layout={layout}
+        components={MDXComponents}
+        NotionJsx={NotionJsx}
+        NotionTitle={NotionTitle}
+        {...rest}
+      />
+      {/* {recordMap && (
+      <NotionRenderer recordMap={recordMap} fullPage={true} darkMode={true}/>
+    )} */}
+    </>
+  )
 }

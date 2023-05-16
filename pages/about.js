@@ -7,9 +7,15 @@ const DEFAULT_LAYOUT = 'AuthorLayout'
 
 //Next.js SSR
 export async function getStaticProps() {
-  const notion = new NotionAPI()
-  const recordMap = await notion.getPage('009dcf743a8e40cca778c55251123a9b')
   const authorDetails = await getFileBySlug('authors', ['default'])
+  //notion
+  let recordMap = null
+  if (authorDetails.frontMatter.notion) {
+    const notion = new NotionAPI()
+    recordMap = await notion.getPage(authorDetails.frontMatter.notion)
+  } else {
+    recordMap = null
+  }
   return { props: { authorDetails, recordMap } }
 }
 
@@ -17,11 +23,11 @@ export default function About({ authorDetails, recordMap }) {
   const { mdxSource, frontMatter } = authorDetails
 
   return (
-    <NotionRenderer recordMap={recordMap} fullPage={true} darkMode={true} />
-    // <MDXLayoutRenderer
-    //   layout={frontMatter.layout || DEFAULT_LAYOUT}
-    //   mdxSource={mdxSource}
-    //   frontMatter={frontMatter}
-    // />
+    <MDXLayoutRenderer
+      layout={frontMatter.layout || DEFAULT_LAYOUT}
+      mdxSource={mdxSource}
+      recordMap={recordMap}
+      frontMatter={frontMatter}
+    />
   )
 }

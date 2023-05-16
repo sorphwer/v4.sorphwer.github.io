@@ -51,6 +51,16 @@ export default function Home({ posts }) {
                               className="text-gray-900 hover:text-primary-600 dark:text-gray-100 dark:hover:text-primary-400"
                             >
                               {title}
+                              {frontMatter.status && (
+                                <span className="align-top text-sm font-normal text-RSpink">
+                                  {' [' + frontMatter.status + ']'}
+                                </span>
+                              )}
+                              {frontMatter.subtitle && (
+                                <div className="text-xl font-normal text-gray-500">
+                                  {frontMatter.subtitle}
+                                </div>
+                              )}
                             </Link>
                           </h2>
                           <div className="flex flex-wrap">

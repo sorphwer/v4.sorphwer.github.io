@@ -1,6 +1,7 @@
 import '@/css/tailwind.css'
 import '@/css/prism.css'
 import '@/css/mermaid.css'
+import '@/css/notion.css'
 import 'katex/dist/katex.css'
 import '@fortawesome/fontawesome-svg-core/styles.css'
 

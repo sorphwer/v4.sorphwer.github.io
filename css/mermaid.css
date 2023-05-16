@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 html {
   --link-color: rgb(0, 112, 201);
   --main-background-color: #fff;

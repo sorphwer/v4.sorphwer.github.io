@@ -1,3 +1,4 @@
+// Archive page
 import Link from '@/components/Link'
 import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
@@ -72,12 +73,20 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], pag
                             className="text-gray-900 hover:text-primary-600 dark:text-gray-100 dark:hover:text-primary-400"
                           >
                             {title}
-                            {frontMatter.subtitle && (
-                              <div className="text-xl text-gray-500">{frontMatter.subtitle}</div>
-                            )}
                           </Link>
                         )}
+                        {frontMatter.status && (
+                          <span className="align-top text-sm font-normal text-RSpink">
+                            {' [' + frontMatter.status + ']'}
+                          </span>
+                        )}
                       </h3>
+
+                      {frontMatter.subtitle && (
+                        <div className="text-xl font-normal text-gray-500">
+                          {frontMatter.subtitle}
+                        </div>
+                      )}
                       <div className="flex flex-wrap">
                         {tags.map((tag) => (
                           <Tag key={tag} text={tag} />

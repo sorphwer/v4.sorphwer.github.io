@@ -3,7 +3,8 @@ import PageTitle from '@/components/PageTitle'
 import generateRss from '@/lib/generate-rss'
 import { MDXLayoutRenderer } from '@/components/MDXComponents'
 import { formatSlug, getAllFilesFrontMatter, getFileBySlug, getFiles } from '@/lib/mdx'
-
+import { NotionAPI } from 'notion-client'
+import { NotionRenderer } from 'react-notion-x'
 export async function getStaticPaths() {
   const posts = getFiles('blog')
   return {
@@ -28,20 +29,29 @@ export async function getStaticProps({ params }) {
     return authorResults.frontMatter
   })
   const authorDetails = await Promise.all(authorPromise)
-
+  let recordMap = null
   // rss
   if (allPosts.length > 0) {
     const rss = generateRss(allPosts)
     fs.writeFileSync('./public/feed.xml', rss)
   }
 
-  return { props: { post, authorDetails, prev, next } }
+  //notion
+  if (post.frontMatter.notion) {
+    const notion = new NotionAPI()
+    recordMap = await notion.getPage(post.frontMatter.notion)
+  } else {
+    recordMap = null
+  }
+
+  return { props: { post, recordMap, authorDetails, prev, next } }
 }
 
-export default function Blog({ post, authorDetails, prev, next }) {
+export default function Blog({ post, recordMap, authorDetails, prev, next }) {
   const DEFAULT_LAYOUT = 'PostLayout'
   const { mdxSource, toc, frontMatter } = post
   // console.log(typeof(mdxSource))
+  // console.log(typeof(recordMap))
   return (
     <>
       {frontMatter.draft !== true ? (
@@ -52,6 +62,7 @@ export default function Blog({ post, authorDetails, prev, next }) {
           toc={toc}
           mdxSource={mdxSource}
           frontMatter={frontMatter}
+          recordMap={recordMap}
           authorDetails={authorDetails}
           prev={prev}
           next={next}
