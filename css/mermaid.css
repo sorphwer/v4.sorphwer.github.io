@@ -52,6 +52,10 @@ article path {
   @apply dark:!stroke-white;
 }
 
+svg line {
+  @apply !stroke-black;
+  @apply dark:!stroke-white;
+}
 marker#flowchart-circleEnd {
   @apply !fill-black;
   @apply dark:!fill-white;
@@ -333,4 +337,96 @@ div.mermaidTooltip {
   border-radius: 2px;
   pointer-events: none;
   z-index: 100;
+}
+
+.cluster rect {
+  @apply !fill-gray-100;
+  @apply dark:!fill-gray-900;
+}
+
+rect.actor {
+  @apply !fill-gray-50;
+  @apply dark:!fill-gray-900;
+}
+
+svg tspan {
+  @apply !fill-black;
+  @apply dark:!fill-white;
+}
+
+text.messageText {
+  @apply !fill-black;
+  @apply dark:!fill-white;
+}
+
+.er.entityBox {
+  @apply !fill-gray-400;
+  @apply dark:!fill-gray-700;
+}
+.er.entityLabel {
+  @apply !fill-black;
+  @apply dark:!fill-white;
+}
+
+.journey-section div.lable {
+  @apply !fill-black;
+  @apply dark:!fill-white;
+}
+
+circle.face {
+  @apply !fill-gray-400;
+}
+
+.task .label {
+  @apply !text-white;
+}
+
+.journey-section .label {
+  @apply !text-white;
+}
+
+.pieTitleText {
+  @apply !fill-black;
+  @apply dark:!fill-white;
+}
+
+.legend text {
+  @apply !fill-black;
+  @apply dark:!fill-white;
+}
+
+path.pieCircle {
+  @apply !stroke-black;
+  @apply dark:!stroke-black;
+}
+
+tspan.row {
+  @apply !fill-white;
+  @apply dark:!fill-white;
+}
+
+rect.branchLabelBkg {
+  @apply !fill-gray-700;
+}
+rect.commit-label-bkg {
+  @apply !fill-transparent;
+  @apply dark:!fill-transparent;
+}
+text.commit-label {
+  @apply !fill-black;
+  @apply dark:!fill-white;
+}
+
+.commit-arrows path {
+  @apply !stroke-black;
+  @apply dark:!stroke-white;
+  @apply !fill-transparent;
+}
+circle.commit {
+  @apply !fill-primary-500;
+}
+
+svg text {
+  @apply !fill-black;
+  @apply dark:!fill-white;
 }

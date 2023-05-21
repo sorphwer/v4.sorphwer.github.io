@@ -83,3 +83,22 @@ img.notion-page-icon {
   @apply !border-t-black;
   @apply dark:!border-t-white;
 }
+
+a.notion-page-link {
+  @apply !no-underline;
+  @apply !text-black;
+  @apply dark:!text-white;
+}
+
+main.notion-page {
+  @apply !p-0;
+}
+.notion-table-view {
+  @apply !p-0;
+}
+.notion-collection {
+  @apply !self-start;
+}
+.notion-page-title-text {
+  @apply !no-underline;
+}
