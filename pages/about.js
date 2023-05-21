@@ -7,20 +7,20 @@ const DEFAULT_LAYOUT = 'AuthorLayout'
 
 //Next.js SSR
 export async function getStaticProps() {
-  const authorDetails = await getFileBySlug('authors', ['default'])
+  const aboutDetails = await getFileBySlug('about', ['default'])
   //notion
   let recordMap = null
-  if (authorDetails.frontMatter.notion) {
+  if (aboutDetails.frontMatter.notion) {
     const notion = new NotionAPI()
-    recordMap = await notion.getPage(authorDetails.frontMatter.notion)
+    recordMap = await notion.getPage(aboutDetails.frontMatter.notion)
   } else {
     recordMap = null
   }
-  return { props: { authorDetails, recordMap } }
+  return { props: { aboutDetails, recordMap } }
 }
 
-export default function About({ authorDetails, recordMap }) {
-  const { mdxSource, frontMatter } = authorDetails
+export default function About({ aboutDetails, recordMap }) {
+  const { mdxSource, frontMatter } = aboutDetails
 
   return (
     <MDXLayoutRenderer

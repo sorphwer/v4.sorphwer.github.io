@@ -102,3 +102,47 @@ main.notion-page {
 .notion-page-title-text {
   @apply !no-underline;
 }
+.notion-item-orange {
+  @apply !bg-orange-400;
+}
+.notion-item-gray {
+  @apply !bg-gray-400;
+}
+.notion-item-brown {
+  @apply !bg-amber-600;
+}
+.notion-item-yellow {
+  @apply !bg-yellow-500;
+}
+.notion-item-blue {
+  @apply !bg-primary-600;
+}
+.notion-item-purple {
+  @apply !bg-purple-500;
+}
+.notion-item-pink {
+  @apply !bg-pink-400;
+}
+.notion-item-red {
+  @apply !bg-red-600;
+}
+
+.notion-gallery a {
+  @apply !no-underline;
+  @apply !text-gray-50;
+  @apply !pointer-events-none;
+}
+
+/* .notion-gallery input{
+  @apply !pointer-events-auto;
+ } */
+
+input.notion-link {
+  @apply focus:!pointer-events-auto;
+  @apply !select-all;
+  @apply hover:text-primary-400;
+}
+.notion-property form {
+  @apply !cursor-text;
+  @apply focus:!pointer-events-auto;
+}

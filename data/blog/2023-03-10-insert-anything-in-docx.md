@@ -30,7 +30,7 @@ print([[run.text for run in p.runs] for p in doc.paragraphs])
 
 You may find that `run` is a compress unite that may contain a part of a single word, a single word or several words. And some `run` elements seems to have no content here.
 
-## TL;DR： Control everything although docx does not support this
+## TL;DR: Control everything although docx does not support this
 
 - docx library will only select tags it know (w:p, w:b, w:r, etc.) and will ignore tags it doesn't know (w:ins, w:del, etc.)
 

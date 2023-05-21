@@ -5,7 +5,7 @@ import { PageSEO } from '@/components/SEO'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCoffee } from '@fortawesome/free-solid-svg-icons'
-export const POSTS_PER_PAGE = 10
+export const POSTS_PER_PAGE = 20
 
 export async function getStaticProps() {
   const posts = await getAllFilesFrontMatter('blog')
