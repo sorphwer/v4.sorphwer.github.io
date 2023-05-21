@@ -81,7 +81,7 @@ ISP is the latest version of LIP, whose main thought was re-designed in HEVC. IS
 
 ISP is based on LIP, whose purpose is in meeting K, [11]. The main thought is to use intra motion predictor to decrease the size of encoded file.
 
-<img src="https://riino.site/img/assets/image-20200125212734459.png" alt="image-20200125212734459" style="zoom:80%;" />
+<img src="https://riino.site/img/assets/image-20200125212734459.png" alt="image-20200125212734459"  />
 
 <center>Fig. 2 Predictor based on lines in HEVC,[12]</center>
 LIP looks like Intra Prediction in HEVC,([12]): *“At the same time, the residue compensation is introduced to calibrate the prediction of boundary regions in a block when we utilize further reference lines. ”* And in [12],  we can see that the predictor contains a block with a vector, and the approach is to find reference line, and further reference lines are also utilized.
@@ -132,7 +132,7 @@ Some proposal ([18]) also said that the cost is still high, with the proposal of
 
 Notice that from [4], which set a limitation: the ISP coding has 64x64 CUs at most. Specific CU size is:
 
-<img src="https://riino.site/img/assets/image-20200126135314357.png" alt="image-20200126135314357" style="zoom:67%;" />
+<img src="https://riino.site/img/assets/image-20200126135314357.png" alt="image-20200126135314357" />
 
 <center>Fig. 5 Table of CU size</center>
 ##### .2.2.2.3. ISP in meeting O
@@ -234,7 +234,7 @@ All the data can be found in **evaluation excel file**. Here are some screenshot
 ![image-20200127220427206](https://riino.site/img/assets/image-20200127220427206.png)
 
 <center>Fig.8 AI result, table by JVET-N1010</center>
-<img src="https://riino.site/img/assets/image-20200127220702331.png" alt="image-20200127220702331" style="zoom:50%;" />
+<img src="https://riino.site/img/assets/image-20200127220702331.png" alt="image-20200127220702331"  />
 
 <center>Fig.9 AI mode,BD-rate,from top to bottom:Tango,FoodMarket,Campfire. table by JVET-N1010</center>
 

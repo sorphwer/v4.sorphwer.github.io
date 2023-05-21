@@ -16,11 +16,6 @@ tags:
   - 3.1. [Start Parsing.](#StartParsing.)
   - 3.2. [Parsing an Array.](#ParsinganArray.)
 
-<!-- vscode-markdown-toc-config
-	numbering=true
-	autoSave=true
-	/vscode-markdown-toc-config -->
-
 Environment : Json-cpp , C++
 
 ## 1. <a name='Foreword'></a>Foreword
