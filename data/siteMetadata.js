@@ -7,9 +7,9 @@ const siteMetadata = {
   theme: 'system', // system, dark or light
   siteUrl: 'https://v4.riino.site',
   siteRepo: 'https://github.com/sorphwer/v4.sorphwer.github.io',
-  siteLogo: '/static/images/logo.png',
-  image: '/static/images/avatar.png',
-  socialBanner: '/static/images/twitter-card.png',
+  siteLogo: '/static/images/logo_Nest.png',
+  image: '/static/images/bg.gif',
+  socialBanner: '/static/images/bg.gif',
   email: 'sorphwer@gmail.com',
   github: 'https://github.com/sorphwer',
   twitter: 'https://twitter.com/Twitter',
