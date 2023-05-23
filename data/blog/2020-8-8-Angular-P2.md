@@ -46,23 +46,20 @@ switch:
 Interpolation is the most common syntax in our html. As we mentioned, for each component, we have a **css file**, a **html file** and a **ts** script file as **the script behind**, if we declare a variable in script behind, we can use interpolation to render it directly in html:
 
 ```html
-{% raw %}
 <h3>Current customer: {{ currentCustomer }}</h3>
-{% endraw%}
 ```
 
 Notice that html tag is not allowed to appear in script behind, unlike jsx in react.
 
-However, only the “name” of variable will be rendered, so if we have {% raw %} `{{1+2}}` {% endraw%}, this will be calculated and rendered as `2` , same as other functions/API when using interpolation.
+However, only the “name” of variable will be rendered, so if we have `{{1+2}}` , this will be calculated and rendered as `2` , same as other functions/API when using interpolation.
 
 Besides, you can use **operators ** to tell more information :
-{% raw %}
+
 `{{var!}}` tell angular that var must exist.
 
 `{{var?}}` tell angular that var can be undefined.
 
 `{{var | func}}` tell angular that render the output from pipe `func`, with the input of var.
-{% endraw%}
 
 ## Pipes
 

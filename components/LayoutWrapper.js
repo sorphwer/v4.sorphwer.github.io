@@ -54,7 +54,7 @@ const LayoutWrapper = ({ children }) => {
           <MobileNav />
         </div>
       </header>
-      <div className="mx-auto flex h-screen flex-col justify-between justify-self-center xl:max-w-4xl">
+      <div className="mx-auto flex h-screen flex-col justify-between justify-self-center lg:max-w-5xl xl:max-w-6xl">
         <main className="mb-auto">{children}</main>
         <Footer />
       </div>
