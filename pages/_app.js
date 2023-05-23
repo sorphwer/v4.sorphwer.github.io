@@ -19,10 +19,18 @@ import LayoutWrapper from '@/components/LayoutWrapper'
 import { ClientReload } from '@/components/ClientReload'
 
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faTags, faEdit } from '@fortawesome/free-solid-svg-icons'
+import {
+  faTags,
+  faEdit,
+  faSun,
+  faSnowflake,
+  faFan,
+  faLeaf,
+} from '@fortawesome/free-solid-svg-icons'
+
 import { config } from '@fortawesome/fontawesome-svg-core'
 config.autoAddCss = false
-library.add(faTags, faEdit)
+library.add(faTags, faEdit, faSun, faSnowflake, faFan, faLeaf)
 
 const isDevelopment = process.env.NODE_ENV === 'development'
 const isSocket = process.env.SOCKET

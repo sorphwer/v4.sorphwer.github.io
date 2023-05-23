@@ -1,11 +1,13 @@
 // Archive page
 import Link from '@/components/Link'
 import Tag from '@/components/Tag'
+import Image from 'next/image'
 import siteMetadata from '@/data/siteMetadata'
 import { useState } from 'react'
 import Pagination from '@/components/Pagination'
 import formatDate from '@/lib/utils/formatDate'
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import SocialIcon from '@/components/social-icons'
 export default function ListLayout({ posts, title, initialDisplayPosts = [], pagination }) {
   const [searchValue, setSearchValue] = useState('')
   // posts is the all frontmatter
@@ -56,42 +58,51 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], pag
           {displayPosts.map((frontMatter) => {
             // todo modify this
             const { slug, date, title, summary, tags } = frontMatter
+            const season = Math.floor((new Date(date).getMonth() / 12) * 4) % 4
             return (
               <li key={slug} className="py-4 font-rs">
                 <article className="space-y-2 xl:grid xl:grid-cols-4 xl:items-baseline xl:space-y-0">
                   <dl>
                     <dt className="sr-only">Published on</dt>
-                    <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
-                      <time dateTime={date}>{formatDate(date)}</time>
+                    <dd className="text  -base font-medium leading-6 text-gray-500 dark:text-gray-400">
+                      {season == 0 && <FontAwesomeIcon icon="fan" className="text-pink-300" />}
+                      {season == 1 && <FontAwesomeIcon icon="sun" className="text-amber-300" />}
+                      {season == 2 && <FontAwesomeIcon icon="leaf" className="text-green-300" />}
+                      {season == 3 && (
+                        <FontAwesomeIcon icon="snowflake" className="text-stone-300" />
+                      )}
+                      <time dateTime={date}>{' ' + formatDate(date)}</time>
                     </dd>
                   </dl>
                   <div className="space-y-3 font-rs xl:col-span-3">
                     <div>
-                      <h3 className="text-2xl font-bold leading-8 tracking-tight ">
-                        {title && (
-                          <Link
-                            href={`/blog/${slug}`}
-                            className="text-gray-900 hover:text-primary-600 dark:text-gray-100 dark:hover:text-primary-400"
-                          >
-                            {title}
-                          </Link>
-                        )}
-                        {frontMatter.status && (
-                          <span className="align-top text-sm font-normal text-RSpink">
-                            {' [' + frontMatter.status + ']'}
-                          </span>
-                        )}
-                      </h3>
+                      <div>
+                        <h3 className="text-2xl font-bold leading-8 tracking-tight ">
+                          {title && (
+                            <Link
+                              href={`/blog/${slug}`}
+                              className="text-gray-900 hover:text-primary-600 dark:text-gray-100 dark:hover:text-primary-400"
+                            >
+                              {title}
+                            </Link>
+                          )}
+                          {frontMatter.status && (
+                            <span className="align-top text-sm font-normal text-RSpink">
+                              {' [' + frontMatter.status + ']'}
+                            </span>
+                          )}
+                        </h3>
 
-                      {frontMatter.subtitle && (
-                        <div className="text-xl font-normal text-gray-500">
-                          {frontMatter.subtitle}
+                        {frontMatter.subtitle && (
+                          <div className="text-xl font-normal text-gray-500">
+                            {frontMatter.subtitle}
+                          </div>
+                        )}
+                        <div className="flex flex-wrap ">
+                          {tags.map((tag) => (
+                            <Tag key={tag} text={tag} />
+                          ))}
                         </div>
-                      )}
-                      <div className="flex flex-wrap">
-                        {tags.map((tag) => (
-                          <Tag key={tag} text={tag} />
-                        ))}
                       </div>
                     </div>
                     <div className="prose max-w-none text-gray-500 dark:text-gray-400">

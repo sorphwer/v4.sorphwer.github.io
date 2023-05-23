@@ -125,10 +125,10 @@ export default function PostLayout({
               <div className="divide-gray-200 text-sm font-medium leading-5 dark:divide-gray-700 xl:col-start-1 xl:row-start-2 xl:divide-y">
                 {tags && (
                   <div className="py-4 xl:py-8">
-                    <h2 className="text-xs uppercase tracking-wide text-gray-700 dark:text-gray-200">
+                    {/* <h2 className="text-xs uppercase tracking-wide text-gray-700 dark:text-gray-200">
                       <FontAwesomeIcon icon="tags" />
                       Tags
-                    </h2>
+                    </h2> */}
                     <div className="flex flex-wrap">
                       {tags.map((tag) => (
                         <Tag key={tag} text={tag} />

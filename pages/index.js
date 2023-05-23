@@ -6,7 +6,7 @@ import { getAllFilesFrontMatter } from '@/lib/mdx'
 import formatDate from '@/lib/utils/formatDate'
 
 import NewsletterForm from '@/components/NewsletterForm'
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 const MAX_DISPLAY = 5
 
 export async function getStaticProps() {
@@ -32,6 +32,7 @@ export default function Home({ posts }) {
           {!posts.length && 'No posts found.'}
           {posts.slice(0, MAX_DISPLAY).map((frontMatter) => {
             const { slug, date, title, summary, tags } = frontMatter
+            const season = Math.floor((new Date(date).getMonth() / 12) * 4) % 4
             return (
               <li key={slug} className="py-12">
                 <article>
@@ -39,7 +40,13 @@ export default function Home({ posts }) {
                     <dl>
                       <dt className="sr-only">Published on</dt>
                       <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
-                        <time dateTime={date}>{formatDate(date)}</time>
+                        {season == 0 && <FontAwesomeIcon icon="fan" className="text-pink-300" />}
+                        {season == 1 && <FontAwesomeIcon icon="sun" className="text-amber-300" />}
+                        {season == 2 && <FontAwesomeIcon icon="leaf" className="text-green-300" />}
+                        {season == 3 && (
+                          <FontAwesomeIcon icon="snowflake" className="text-stone-300" />
+                        )}
+                        <time dateTime={date}>{' ' + formatDate(date)}</time>
                       </dd>
                     </dl>
                     <div className="space-y-5 xl:col-span-3">
