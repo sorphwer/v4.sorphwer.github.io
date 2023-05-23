@@ -842,7 +842,7 @@ $$
 \hat d(typical x,typicaly)\le D+ke,0<k<1
 $$
 
-但是問題是，typical 有 2^{NH(X)}個，但是我們上面說了這個 d 下只能有 M 個 codewords.
+但是問題是，typical 有 $2^{NH(X)}$個，但是我們上面說了這個 d 下只能有 M 個 codewords.
 
 **方法一** : Typical First
 
@@ -1014,7 +1014,7 @@ and error max_m $P_E^{\underline c_m} \le \epsilon $
 
 ### \*Transmit Steps
 
-1. assume q(x) that achieves $\C$, construct p(x,y)
+1. assume q(x) that achieves $\mathhbf{C}$, construct p(x,y)
 
 2. construct $\C$ by sampling from $p(\bar x)$ for M times
 
