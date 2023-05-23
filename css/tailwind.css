@@ -92,3 +92,8 @@ ul.nav li a.active:before {
 ul.nav li a:hover:before {
   opacity: 1;
 }
+
+a.notion-link {
+  @apply !no-underline;
+  @apply !border-0;
+}
