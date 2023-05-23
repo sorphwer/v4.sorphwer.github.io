@@ -62,7 +62,7 @@ Jinja is the solutions for all the issues above, like **Liquid**, jinja use embe
 <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/home.css') }}" />
 ```
 
-Here we use a **{{SYNTAX}}** format to mark that this is a jinja language, and the template engine will run `usl_for` method to get the correct path.
+Here we use a `{{SYNTAX}}` format to mark that this is a jinja language, and the template engine will run `usl_for` method to get the correct path.
 
 ```html
 <script

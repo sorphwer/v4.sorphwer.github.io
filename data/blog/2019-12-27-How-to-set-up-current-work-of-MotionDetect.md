@@ -14,14 +14,10 @@ tags:
 
 # 1. How to set up current work: Dev.27th
 
-<!-- TOC -->
-
 - [1. How to set up current work: Dev.27th](#1-how-to-set-up-current-work-dev27th)
   - [1.1. Python side](#11-python-side)
   - [1.2. STM32 side](#12-stm32-side)
   - [How to run](#how-to-run)
-
-<!-- /TOC -->
 
 ## 1.1. Python side
 
