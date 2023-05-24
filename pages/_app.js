@@ -17,6 +17,7 @@ import siteMetadata from '@/data/siteMetadata'
 import Analytics from '@/components/analytics'
 import LayoutWrapper from '@/components/LayoutWrapper'
 import { ClientReload } from '@/components/ClientReload'
+import { UserProvider } from '@auth0/nextjs-auth0/client'
 
 import { library } from '@fortawesome/fontawesome-svg-core'
 import {
@@ -43,9 +44,11 @@ export default function App({ Component, pageProps }) {
       </Head>
       {isDevelopment && isSocket && <ClientReload />}
       <Analytics />
-      <LayoutWrapper>
-        <Component {...pageProps} />
-      </LayoutWrapper>
+      <UserProvider>
+        <LayoutWrapper>
+          <Component {...pageProps} />
+        </LayoutWrapper>
+      </UserProvider>
     </ThemeProvider>
   )
 }

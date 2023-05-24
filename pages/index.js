@@ -26,6 +26,7 @@ export default function Home({ posts }) {
           </h1> */}
           <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">
             {siteMetadata.description}
+            {/* <a href="/api/auth/login">Login</a> <a href="/api/auth/logout">Logout</a> */}
           </p>
         </div>
         <ul className="divide-y divide-gray-200 dark:divide-gray-700">
