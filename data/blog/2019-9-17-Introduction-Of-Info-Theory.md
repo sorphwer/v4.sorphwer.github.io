@@ -477,8 +477,6 @@ $$
 p1>=p2>=p3...>=pn
 $$
 
-​
-
 $$
 n1<=n2<=...<=nk
 $$
@@ -1014,9 +1012,9 @@ and error max_m $P_E^{\underline c_m} \le \epsilon $
 
 ### \*Transmit Steps
 
-1. assume q(x) that achieves $\mathhbf{C}$, construct p(x,y)
+1. assume q(x) that achieves $\mathbf{C}$, construct p(x,y)
 
-2. construct $\C$ by sampling from $p(\bar x)$ for M times
+2. construct $\mathbf{C}$ by sampling from $p(\bar x)$ for M times
 
 3. $\mu(y)=\underline c$ iff $(\underline c, \underline y)$ singly jointly typical
 
@@ -1314,7 +1312,7 @@ $$
 
 主流的解決方案：
 
-​ **Consider programs that are prefix-free**(什麽是 prefix-free？ huffman code 就是 prefix-free)
+**Consider programs that are prefix-free**(什麽是 prefix-free？ huffman code 就是 prefix-free)
 
 define ensemble : ${\underline p}$
 
