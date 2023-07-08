@@ -1,0 +1,26 @@
+diff --git a/node_modules/mdx-mermaid/lib/mdxast-mermaid.cjs b/node_modules/mdx-mermaid/lib/mdxast-mermaid.cjs
+index 6c4b064..5fd208c 100644
+--- a/node_modules/mdx-mermaid/lib/mdxast-mermaid.cjs
++++ b/node_modules/mdx-mermaid/lib/mdxast-mermaid.cjs
+@@ -9,7 +9,7 @@ var unistUtilVisit = require('unist-util-visit');
+  * license file in the root directory of this source tree.
+  */
+ /* istanbul ignore next */
+-const renderToSvg = async (id, src, config, url = 'https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js') => {
++const renderToSvg = async (id, src, config, url = 'https://cdn.jsdelivr.net/npm/mermaid@9.3.0/dist/mermaid.min.js') => {
+     const puppeteer = await import('puppeteer');
+     let browser = await puppeteer.launch({ args: ["--no-sandbox"] });
+     try {
+diff --git a/node_modules/mdx-mermaid/lib/mdxast-mermaid.mjs b/node_modules/mdx-mermaid/lib/mdxast-mermaid.mjs
+index 4661012..99cc2e3 100644
+--- a/node_modules/mdx-mermaid/lib/mdxast-mermaid.mjs
++++ b/node_modules/mdx-mermaid/lib/mdxast-mermaid.mjs
+@@ -7,7 +7,7 @@ import { visit } from 'unist-util-visit';
+  * license file in the root directory of this source tree.
+  */
+ /* istanbul ignore next */
+-const renderToSvg = async (id, src, config, url = 'https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js') => {
++const renderToSvg = async (id, src, config, url = 'https://cdn.jsdelivr.net/npm/mermaid@9.3.0/dist/mermaid.min.js') => {
+     const puppeteer = await import('puppeteer');
+     let browser = await puppeteer.launch({ args: ["--no-sandbox"] });
+     try {
