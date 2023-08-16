@@ -2,9 +2,9 @@
 layout: post # must be 'post'
 title: 'AI Memo'
 subtitle: 'Papers, PLMs and tools of LLM'
-tags: #optional
-  - Python
-  - xml
+tags:
+  - LLM
+  - AI
 toc: true #default: true
 auto-convert-img: true
 
