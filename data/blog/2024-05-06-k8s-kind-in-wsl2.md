@@ -14,6 +14,8 @@ tags:
 
     Ref: https://kind.sigs.k8s.io/docs/user/using-wsl2/#helpful-tips-for-wsl2
 
+    > Notes: Enter `\\wsl$` in windows to view wsl2 files.
+
  # Install Kind and kubectl
 
  0. If you have internect connection issue, you can forward the request via windows by adding a `.proxy` where I use 1200 in windows for proxy.
@@ -104,3 +106,57 @@ kubectl create deployment nginx --image=nginx --port=80
 kubectl create service nodeport nginx --tcp=80:80 --node-port=30000
  ```
 and nginx will be in `localhost:30000`
+
+# Scan k8s and docker image using Trivy
+
+1. Install Trivy
+```
+wget https://github.com/aquasecurity/trivy/releases/download/v0.18.3/trivy_0.18.3_Linux-64bit.deb
+sudo dpkg -i trivy_0.18.3_Linux-64bit.deb
+
+```
+2. Add Github token
+
+Trivy require github token to access API , generate one following https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens, and:
+```
+vim ~/.bash.profile
+```
+
+add 
+```
+export GITHUB_TOKEN=github_pat_11AICDMQY0pZxxxxxxxxxxxxxxxxxxxxxxxxx
+```
+3. Install trivy-plugin-kubectl
+
+```
+trivy plugin install github.com/aquasecurity/trivy-plugin-kubectl
+```
+
+4. Get pods
+```
+kubectl get pods
+```
+5. Scan pods
+
+```
+trivy kubectl pod {POD_NAME}
+```
+
+For example, we deployed a nginx service in early steps, so we can find the nginx pod and scan it:
+```
+sor@WINDOWSXXX:~$ kubectl get pods
+NAME                    READY   STATUS    RESTARTS   AGE
+nginx-55f598f8d-phq4z   1/1     Running   0          39m
+sorphwer@WINDOWS-C2J5ID6:~$ trivy kubectl pod nginx-55f598f8d-phq4z
+2024-05-06T15:56:58.263+0800    INFO    Detected OS: debian
+2024-05-06T15:56:58.263+0800    INFO    Detecting Debian vulnerabilities...
+2024-05-06T15:56:58.286+0800    INFO    Number of PL dependency files: 1
+2024-05-06T15:56:58.287+0800    INFO    Detecting jar vulnerabilities...
+
+nginx (debian 12.5)
+===================
+Total: 88 (UNKNOWN: 10, LOW: 9, MEDIUM: 43, HIGH: 23, CRITICAL: 3)
+```
+   
+
+
