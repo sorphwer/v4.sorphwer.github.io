@@ -97,3 +97,10 @@ index.html                        [ <=>                                         
     
     To further debug and diagnose cluster problems, use 'kubectl cluster-info dump'.
    ```
+
+ Deploy and access:
+ ```
+kubectl create deployment nginx --image=nginx --port=80
+kubectl create service nodeport nginx --tcp=80:80 --node-port=30000
+ ```
+and nginx will be in `localhost:30000`
