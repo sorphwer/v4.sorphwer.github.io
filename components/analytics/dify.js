@@ -10,7 +10,10 @@ const DifyScript = () => {
           __html: `
                         window.difyChatbotConfig = {
                             token: '1vyqhA009GOZeG1k',
-                            baseUrl: 'https://ai.riino.site'
+                            baseUrl: 'https://ai.riino.site',
+                                containerProps: {
+                                className: 'dify-chatbot-bubble-button-custom',
+                                },
                         };
                     `,
         }}

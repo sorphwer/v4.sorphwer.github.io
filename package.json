@@ -54,7 +54,8 @@
     "remark-mermaid": "^0.2.0",
     "sharp": "^0.28.3",
     "tailwindcss": "^3.0.23",
-    "unist-util-visit": "^4.0.0"
+    "unist-util-visit": "^4.0.0",
+    "v4-riinosite": "file:"
   },
   "devDependencies": {
     "@svgr/webpack": "^6.1.2",
