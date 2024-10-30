@@ -1,13 +1,13 @@
 ---
 layout: post
-
+subtitle: 'Guide to Setting Up Motion Detection on Raspberry Pi and STM32'
 author: 'Riino'
 header-img: 'img/lunur.jpg'
 header-mask: 0.3
 mathjax: true
 sticky: false
 tags:
-  - Embedded System
+  - Embedded-System
   - Raspberry-Pi
   - STM32
 ---

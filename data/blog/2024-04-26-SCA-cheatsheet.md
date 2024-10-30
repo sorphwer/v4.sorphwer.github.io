@@ -1,10 +1,10 @@
 ---
 layout: post # must be 'post'
-title: 'Software Compostition Analysis Tool Cheat Sheet'
-
+title: 'Software Composition Analysis Tool Cheat Sheet'
+subtitle: 'Guide to Efficiently Identifying Vulnerabilities in Software Components'
 tags:
-  - SCA
-  - Cyber
+  - software-composition-analysis
+  - cybersecurity
 ---
 
 # Background

@@ -1,12 +1,13 @@
 ---
 layout: post
 title: 'Threat Modeling using Neo4j Graph Database'
+subtitle: 'Enhance Cybersecurity with Graph-Based Threat Analysis'
 render_with_liquid: false
 toc: inline
 tags: #optional
   - neo4j
   - threat-modeling
-  - cyber-security
+  - cybersecurity
 ---
 
 # Threat Modeling using Neo4j Graph Database[Draft]

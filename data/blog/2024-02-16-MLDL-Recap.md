@@ -1,9 +1,11 @@
 ---
 layout: post # must be 'post'
 title: 'Recap of Machine Learning Foundation'
-
+subtitle: 'Essential Concepts and Techniques in Machine Learning and Deep Learning'
 tags:
-  - ML
+  - machine-learning
+  - deep-learning
+  - linear-regression
 ---
 
 ## Before Reading

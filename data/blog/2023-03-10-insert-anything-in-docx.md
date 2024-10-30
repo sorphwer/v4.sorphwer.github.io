@@ -1,10 +1,13 @@
 ---
 layout: post # must be 'post'
 title: 'Edit Anything in MS Word using Python docx'
-subtitle: 'You can edit revision element w:ins w:del and much more.'
-tags: #optional
+subtitle: 'Edit MS Word documents with Python: w:ins, w:del, and more.'
+tags:
   - Python
   - xml
+  - ms-word
+  - python-docx
+  - document-editing
 toc: true #default: true
 hide: false #default: false (hide from home page only)(old)
 mathjax: true #default: true

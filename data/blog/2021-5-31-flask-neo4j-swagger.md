@@ -1,12 +1,15 @@
 ---
 layout: post
-title: 'Combine Swagger, Flask and python db driver'
-subtitle: 'With an example of neo4j graph database' #optional
-author: 'Riino' #optional
-tags: #optional
+title: 'Combine Swagger, Flask and Python DB Driver'
+subtitle: 'Integrating Swagger with Flask and Neo4j for Enhanced API Documentation'
+author: 'Riino'
+tags:
   - neo4j
   - swagger
-  - Python
+  - python
+  - flask
+  - graph-database
+  - api-documentation
 ---
 
 ## Main target

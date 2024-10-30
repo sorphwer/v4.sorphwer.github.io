@@ -1,16 +1,18 @@
 ---
 layout: post
 title: 'Learning Angular Part 2'
-subtitle: 'Template Syntax'
+subtitle: 'Understanding Angular Template Syntax'
 author: 'Riino'
 mathjax: false
 sticky: false
 tags:
-  - Web
+  - web
   - html
-  - Frontend
-  - Angular
+  - frontend
+  - angular
 ---
+
+# Angular Template Syntax
 
 # Microsyntax
 

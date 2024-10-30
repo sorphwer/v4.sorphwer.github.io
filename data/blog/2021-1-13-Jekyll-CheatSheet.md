@@ -1,12 +1,13 @@
 ---
 layout: post
 title: 'Jekyll Cheat Sheet'
+subtitle: 'Comprehensive Guide to Jekyll Setup and Usage'
 author: 'Riino'
 status: doc
 tags:
   - jekyll
-  - doc
-  - CheatSheet
+  - documentation
+  - cheatsheet
 mathjax: false
 mermaid: false
 ---

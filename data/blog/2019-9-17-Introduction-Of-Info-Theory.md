@@ -1,8 +1,9 @@
 ---
 layout: post
-title: 'Learning I.T.T '
+title: 'Learning Information Theory'
+subtitle: 'An Introduction to Information Theory Concepts'
 tags:
-  - Information Theory
+  - Information-Theory
 ---
 
 [TOC]

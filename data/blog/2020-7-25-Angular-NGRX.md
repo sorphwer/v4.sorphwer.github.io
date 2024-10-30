@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 'Learning Angular NGRX'
-subtitle: 'Component State switch and effects'
+subtitle: 'Mastering Component State Management and Effects'
 author: 'Riino'
 mathjax: false
 sticky: false
@@ -11,6 +11,9 @@ tags:
   - html
   - Frontend
   - Angular
+  - Angular-NGRX
+  - State-Management
+  - Reactive-Programming
 ---
 
 # Why NGRX Store?
