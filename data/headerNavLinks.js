@@ -6,7 +6,7 @@ const headerNavLinks = [
   { href: '/profile', title: 'Profile' },
   { href: '/about', title: 'About' },
   { href: 'https://jupyter.riino.site/lab/index.html', title: 'Jupyter↗' },
-  { href: 'https://tool.riino.site', title: 'AI.Tool↗' },
+  // { href: 'https://tool.riino.site', title: 'AI.Tool↗' },
 ]
 
 export default headerNavLinks
