@@ -1,0 +1,1106 @@
+{
+  "pageProps": {
+    "aboutDetails": {
+      "mdxSource": "var Component=(()=>{var m=Object.create;var o=Object.defineProperty;var u=Object.getOwnPropertyDescriptor;var x=Object.getOwnPropertyNames;var d=Object.getPrototypeOf,g=Object.prototype.hasOwnProperty;var s=t=>o(t,\"__esModule\",{value:!0});var p=(t,e)=>()=>(e||t((e={exports:{}}).exports,e),e.exports),_=(t,e)=>{s(t);for(var n in e)o(t,n,{get:e[n],enumerable:!0})},f=(t,e,n)=>{if(e&&typeof e==\"object\"||typeof e==\"function\")for(let r of x(e))!g.call(t,r)&&r!==\"default\"&&o(t,r,{get:()=>e[r],enumerable:!(n=u(e,r))||n.enumerable});return t},j=t=>f(s(o(t!=null?m(d(t)):{},\"default\",t&&t.__esModule&&\"default\"in t?{get:()=>t.default,enumerable:!0}:{value:t,enumerable:!0})),t);var i=p((F,c)=>{c.exports=_jsx_runtime});var C={};_(C,{default:()=>b,frontmatter:()=>l});var a=j(i()),l={name:\"Riino\",avatar:\"/static/images/logo_Nest.png\",notion:\"d6221d127cda44aa8b4d1422eca4979c\"};function M(t={}){let{wrapper:e}=t.components||{};return e?(0,a.jsx)(e,Object.assign({},t,{children:(0,a.jsx)(n,{})})):n();function n(){return(0,a.jsx)(a.Fragment,{})}}var b=M;return C;})();\n;return Component;",
+      "toc": [],
+      "frontMatter": {
+        "readingTime": { "text": "1 min read", "minutes": 0.145, "time": 8700, "words": 29 },
+        "slug": ["default"],
+        "fileName": "default.md",
+        "name": "Riino",
+        "avatar": "/static/images/logo_Nest.png",
+        "notion": "d6221d127cda44aa8b4d1422eca4979c",
+        "date": null
+      }
+    },
+    "recordMap": {
+      "block": {
+        "d6221d12-7cda-44aa-8b4d-1422eca4979c": {
+          "value": {
+            "id": "d6221d12-7cda-44aa-8b4d-1422eca4979c",
+            "version": 224,
+            "type": "page",
+            "properties": { "title": [["RiinoSite v4 Project"]] },
+            "content": [
+              "398e6f14-9f46-4151-8568-6b52364c78a7",
+              "0602ae1a-37d2-4bc9-a745-0a60032ea193",
+              "f4c85c1f-e5a9-4e29-ad3f-88d765b95c8b",
+              "a59d820c-3f83-419a-beb8-44a3905b20bd",
+              "d4e635be-007e-4fcc-a9bd-72d58082e1d8",
+              "489ca195-b51b-4ebe-ad4f-5519fdcd0108",
+              "536985d0-1207-48b3-b6d6-5d4924e4aabc",
+              "69d20507-7faf-4fdb-8dce-9f7e15360a7b",
+              "2facc4f4-b649-46b0-a259-585dcb42a107",
+              "c7292b14-10f6-4878-a53b-1572cb30a9dd",
+              "af2eee14-df86-4121-972b-2280154a5607",
+              "b6766347-423b-4cde-ab6f-ade7176db5cd",
+              "b833bfad-b6a8-4709-9d0a-8032aaf2e151",
+              "d19c4392-67c2-49dd-bf0b-c2a329b05069",
+              "9613a512-11dd-44be-8a1b-e086162a0074",
+              "e8c2b808-d879-4a1a-8d07-988722e5c3da",
+              "18d02303-77e2-4d92-8731-e94b0a0b7a86",
+              "862e4f65-d661-41eb-a217-e896fa2d73a8",
+              "fb259910-1450-49dd-8f8e-fb96a348140c",
+              "aff746d1-1164-4890-8486-0de75c4f534e",
+              "9d669b77-169d-4069-8c84-7c8c38f5224c",
+              "70a64cfb-f5ae-4ac0-b6d8-723b474ed96d",
+              "f3d0975b-42fb-4d71-b3f8-6ba1a564b1e3",
+              "c9e72bc5-f9e2-415c-bab9-a03ebabb6fa5",
+              "a82ba486-8b66-4bcb-8ce2-0fd3ae01f3a5",
+              "56345f10-0bb0-4972-a527-996e9fb00ed4",
+              "5f4faed1-8412-49ba-81a5-f3ee13c88e12",
+              "54d840fb-cd41-4988-9063-043f0a898711",
+              "779bc3c0-6cfa-4688-8c09-b21a6621e228",
+              "16fd7527-343a-4d3c-8501-c1f016dac995",
+              "652bcfbc-b961-4f58-b1ca-170e9fdaeaff",
+              "9614090b-6621-42b4-bda5-b265e2c33c2d",
+              "12992590-2033-46a3-ba4f-3286073aa181",
+              "fbd8fffe-3df5-4483-a219-3e3c1d93b6dc",
+              "0619a751-221a-4b94-8aed-6e33cbd3f1d9",
+              "266018e0-26af-4b54-a96a-3f037d4a4664",
+              "29f2e8eb-0506-4c91-b45b-c57132cb0c7e",
+              "d838e73b-a1cc-4f98-b1da-abe2d49f45ef",
+              "d434ee80-6090-4217-b728-e209eb4cdb25",
+              "cb3b7aea-ca57-466f-ad54-7d862ce33cf6",
+              "13fa5338-d1a2-46aa-ae91-8f78d093ff13",
+              "c3d45c35-4abe-4a70-b5f3-e8d326a2ba19",
+              "c6d1a867-360d-4cf1-a553-2b12bdcac1c0",
+              "24a222d5-e990-482f-b84b-5bfd2592ec26",
+              "e66820c0-5517-46e6-8c88-db3f6ad80c3a",
+              "7d6e1342-e0d9-4072-94a4-3c8a7695c719",
+              "b8eed3df-9d34-4578-a01e-f16c92cfe044",
+              "e575776c-ca21-484b-bb3e-0cc5d1b48d29"
+            ],
+            "format": {
+              "site_id": "1b537cc0-aa00-8185-acc9-007900c91706",
+              "page_cover": "https://prod-files-secure.s3.us-west-2.amazonaws.com/cb537cc0-aa00-4959-8db9-80abdf2033d3/833fd5bd-6377-49eb-bc75-a577ea80068a/noelogo2024.jpg",
+              "page_cover_position": 0.4937,
+              "social_media_image_preview_url": "https://prod-files-secure.s3.us-west-2.amazonaws.com/cb537cc0-aa00-4959-8db9-80abdf2033d3/0348b23a-1734-4b4b-a0d6-feceb8b3d5f2/SocialMediaPreviewImage.png"
+            },
+            "permissions": [
+              {
+                "role": "reader",
+                "type": "public_permission",
+                "is_site": true,
+                "added_timestamp": 1684652247980
+              }
+            ],
+            "created_time": 1684645497967,
+            "last_edited_time": 1730185266528,
+            "parent_id": "0b47e047-c965-4a4e-bfae-d4fe3ebaf12d",
+            "parent_table": "block",
+            "alive": true,
+            "file_ids": [
+              "833fd5bd-6377-49eb-bc75-a577ea80068a",
+              "0348b23a-1734-4b4b-a0d6-feceb8b3d5f2"
+            ],
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "0b47e047-c965-4a4e-bfae-d4fe3ebaf12d": { "role": "none" },
+        "398e6f14-9f46-4151-8568-6b52364c78a7": {
+          "value": {
+            "id": "398e6f14-9f46-4151-8568-6b52364c78a7",
+            "version": 23,
+            "type": "divider",
+            "created_time": 1684648761479,
+            "last_edited_time": 1684648766014,
+            "parent_id": "d6221d12-7cda-44aa-8b4d-1422eca4979c",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "0602ae1a-37d2-4bc9-a745-0a60032ea193": {
+          "value": {
+            "id": "0602ae1a-37d2-4bc9-a745-0a60032ea193",
+            "version": 5,
+            "type": "image",
+            "properties": {
+              "size": [["6.1KB"]],
+              "title": [["NoEVoix.svg"]],
+              "source": [
+                [
+                  "https://s3-us-west-2.amazonaws.com/secure.notion-static.com/0dbb5076-5880-4711-98a7-b535696bea8d/NoEVoix.svg"
+                ]
+              ]
+            },
+            "format": {
+              "block_width": 209.00001525878906,
+              "block_height": 20,
+              "display_source": "https://s3-us-west-2.amazonaws.com/secure.notion-static.com/0dbb5076-5880-4711-98a7-b535696bea8d/NoEVoix.svg",
+              "block_alignment": "left",
+              "block_full_width": false,
+              "block_page_width": false,
+              "block_aspect_ratio": 0.09569377990430622,
+              "copied_from_pointer": {
+                "id": "e6f92077-b37d-4b7d-bf0e-a0938503a396",
+                "table": "block",
+                "spaceId": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+              },
+              "block_preserve_scale": true
+            },
+            "created_time": 1684648751476,
+            "last_edited_time": 1730185019083,
+            "parent_id": "d6221d12-7cda-44aa-8b4d-1422eca4979c",
+            "parent_table": "block",
+            "alive": true,
+            "copied_from": "e6f92077-b37d-4b7d-bf0e-a0938503a396",
+            "file_ids": ["0dbb5076-5880-4711-98a7-b535696bea8d"],
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "f4c85c1f-e5a9-4e29-ad3f-88d765b95c8b": {
+          "value": {
+            "id": "f4c85c1f-e5a9-4e29-ad3f-88d765b95c8b",
+            "version": 22,
+            "type": "divider",
+            "created_time": 1684648755781,
+            "last_edited_time": 1684648757210,
+            "parent_id": "d6221d12-7cda-44aa-8b4d-1422eca4979c",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "a59d820c-3f83-419a-beb8-44a3905b20bd": {
+          "value": {
+            "id": "a59d820c-3f83-419a-beb8-44a3905b20bd",
+            "version": 8,
+            "type": "text",
+            "properties": {
+              "title": [
+                ["In early "],
+                ["2015", [["b"]]],
+                [", we published "],
+                ["riinosite1.0", [["h", "blue"]]],
+                [", which was in wixcom, with a fixed template."]
+              ]
+            },
+            "created_time": 1684647708102,
+            "last_edited_time": 1684648353667,
+            "parent_id": "d6221d12-7cda-44aa-8b4d-1422eca4979c",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "d4e635be-007e-4fcc-a9bd-72d58082e1d8": {
+          "value": {
+            "id": "d4e635be-007e-4fcc-a9bd-72d58082e1d8",
+            "version": 108,
+            "type": "text",
+            "properties": {
+              "title": [
+                ["In "],
+                ["2017", [["b"]]],
+                [",the website was merged into GithubPage, which is the "],
+                ["riinosite hux", [["h", "blue"]]],
+                [". Since then, GithubPage is the first option to deploy riinosite."]
+              ]
+            },
+            "created_time": 1684647708103,
+            "last_edited_time": 1684648392151,
+            "parent_id": "d6221d12-7cda-44aa-8b4d-1422eca4979c",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "489ca195-b51b-4ebe-ad4f-5519fdcd0108": {
+          "value": {
+            "id": "489ca195-b51b-4ebe-ad4f-5519fdcd0108",
+            "version": 4,
+            "type": "text",
+            "properties": {
+              "title": [
+                ["In "],
+                ["2019", [["b"]]],
+                [
+                  ", we redesigned entire website from scratch using jekyll, and we dropped the origin jekyll template hux."
+                ]
+              ]
+            },
+            "created_time": 1684647708103,
+            "last_edited_time": 1684647722877,
+            "parent_id": "d6221d12-7cda-44aa-8b4d-1422eca4979c",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "536985d0-1207-48b3-b6d6-5d4924e4aabc": {
+          "value": {
+            "id": "536985d0-1207-48b3-b6d6-5d4924e4aabc",
+            "version": 88,
+            "type": "text",
+            "properties": {
+              "title": [
+                ["In "],
+                ["2020,", [["b"]]],
+                [
+                  " we merged riinosite with website of low illuminance (li.riino.site), and isolated style template, named it as ‘"
+                ],
+                ["jekyll-theme-panda", [["h", "blue"]]],
+                ["’."]
+              ]
+            },
+            "created_time": 1684647708103,
+            "last_edited_time": 1684648389980,
+            "parent_id": "d6221d12-7cda-44aa-8b4d-1422eca4979c",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "69d20507-7faf-4fdb-8dce-9f7e15360a7b": {
+          "value": {
+            "id": "69d20507-7faf-4fdb-8dce-9f7e15360a7b",
+            "version": 35,
+            "type": "text",
+            "properties": {
+              "title": [
+                ["In "],
+                ["2022", [["b"]]],
+                [
+                  ", we get approximately 4 GB data flow each month, and ‘jekyll-theme-panda’ got over "
+                ],
+                ["5000 ", [["h", "pink"]]],
+                ["downloads"]
+              ]
+            },
+            "created_time": 1684647708103,
+            "last_edited_time": 1684647850208,
+            "parent_id": "d6221d12-7cda-44aa-8b4d-1422eca4979c",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "2facc4f4-b649-46b0-a259-585dcb42a107": {
+          "value": {
+            "id": "2facc4f4-b649-46b0-a259-585dcb42a107",
+            "version": 969,
+            "type": "text",
+            "properties": {
+              "title": [
+                ["In "],
+                ["2023", [["b"]]],
+                [", "],
+                ["RiinoSite v4", [["h", "blue"]]],
+                [
+                  " Project is launched, where not only the entire blog website is re-developed using "
+                ],
+                ["next.js", [["c"]]],
+                [", but also include the power of "],
+                ["full stack framework", [["c"]]],
+                [" , "],
+                ["Notion", [["c"]]],
+                [" and "],
+                ["LLM", [["c"]]],
+                [". It will support authentication via "],
+                ["Auth0", [["c"]]],
+                [" and has modern features like HSTS preload."]
+              ]
+            },
+            "created_time": 1684647851313,
+            "last_edited_time": 1700982996582,
+            "parent_id": "d6221d12-7cda-44aa-8b4d-1422eca4979c",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "c7292b14-10f6-4878-a53b-1572cb30a9dd": {
+          "value": {
+            "id": "c7292b14-10f6-4878-a53b-1572cb30a9dd",
+            "version": 7,
+            "type": "text",
+            "created_time": 1684647955318,
+            "last_edited_time": 1684647955912,
+            "parent_id": "d6221d12-7cda-44aa-8b4d-1422eca4979c",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "af2eee14-df86-4121-972b-2280154a5607": {
+          "value": {
+            "id": "af2eee14-df86-4121-972b-2280154a5607",
+            "version": 358,
+            "type": "text",
+            "properties": {
+              "title": [["Some dominant featrues that you are experiencing or will experience:"]]
+            },
+            "created_time": 1684647955318,
+            "last_edited_time": 1684648017029,
+            "parent_id": "d6221d12-7cda-44aa-8b4d-1422eca4979c",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "b6766347-423b-4cde-ab6f-ade7176db5cd": {
+          "value": {
+            "id": "b6766347-423b-4cde-ab6f-ade7176db5cd",
+            "version": 456,
+            "type": "bulleted_list",
+            "properties": {
+              "title": [
+                ["Super fast page loading, due to Server-side static resource rendering from "],
+                ["Next.js", [["c"]]],
+                [" and resource optimaztion, including lazy loading and dynamic dependcency."]
+              ]
+            },
+            "created_time": 1684648017229,
+            "last_edited_time": 1684648070397,
+            "parent_id": "d6221d12-7cda-44aa-8b4d-1422eca4979c",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "b833bfad-b6a8-4709-9d0a-8032aaf2e151": {
+          "value": {
+            "id": "b833bfad-b6a8-4709-9d0a-8032aaf2e151",
+            "version": 805,
+            "type": "bulleted_list",
+            "properties": {
+              "title": [
+                ["Some post are from "],
+                ["mdx", [["c"]]],
+                [" format, while some post can be from "],
+                ["Notion", [["c"]]],
+                [", in a same post list."]
+              ]
+            },
+            "created_time": 1684648070674,
+            "last_edited_time": 1684648202939,
+            "parent_id": "d6221d12-7cda-44aa-8b4d-1422eca4979c",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "d19c4392-67c2-49dd-bf0b-c2a329b05069": {
+          "value": {
+            "id": "d19c4392-67c2-49dd-bf0b-c2a329b05069",
+            "version": 426,
+            "type": "bulleted_list",
+            "properties": {
+              "title": [
+                [
+                  "[WIP] Intergated API services that can be hooked via Auth0, allowing privilege controled pages."
+                ]
+              ]
+            },
+            "created_time": 1684648203291,
+            "last_edited_time": 1684648296672,
+            "parent_id": "d6221d12-7cda-44aa-8b4d-1422eca4979c",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "9613a512-11dd-44be-8a1b-e086162a0074": {
+          "value": {
+            "id": "9613a512-11dd-44be-8a1b-e086162a0074",
+            "version": 229,
+            "type": "bulleted_list",
+            "properties": {
+              "title": [
+                ["[WIP] Database view to support "],
+                ["Notion Database", [["c"]]],
+                [" and "],
+                ["Neo4j Aura", [["c"]]],
+                ["."]
+              ]
+            },
+            "created_time": 1684648256043,
+            "last_edited_time": 1684648317711,
+            "parent_id": "d6221d12-7cda-44aa-8b4d-1422eca4979c",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "e8c2b808-d879-4a1a-8d07-988722e5c3da": {
+          "value": {
+            "id": "e8c2b808-d879-4a1a-8d07-988722e5c3da",
+            "version": 9,
+            "type": "text",
+            "created_time": 1684648321244,
+            "last_edited_time": 1684648321580,
+            "parent_id": "d6221d12-7cda-44aa-8b4d-1422eca4979c",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "18d02303-77e2-4d92-8731-e94b0a0b7a86": {
+          "value": {
+            "id": "18d02303-77e2-4d92-8731-e94b0a0b7a86",
+            "version": 239,
+            "type": "text",
+            "properties": { "title": [["The v3 version is retired."]] },
+            "created_time": 1684648321244,
+            "last_edited_time": 1700982967868,
+            "parent_id": "d6221d12-7cda-44aa-8b4d-1422eca4979c",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "862e4f65-d661-41eb-a217-e896fa2d73a8": {
+          "value": {
+            "id": "862e4f65-d661-41eb-a217-e896fa2d73a8",
+            "version": 5,
+            "type": "text",
+            "created_time": 1684647946964,
+            "last_edited_time": 1684647946967,
+            "parent_id": "d6221d12-7cda-44aa-8b4d-1422eca4979c",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "fb259910-1450-49dd-8f8e-fb96a348140c": {
+          "value": {
+            "id": "fb259910-1450-49dd-8f8e-fb96a348140c",
+            "version": 2,
+            "type": "text",
+            "properties": {
+              "title": [
+                ["We can’t get this far without everyone’s help, and we want to say thanks to:"]
+              ]
+            },
+            "created_time": 1684648460809,
+            "last_edited_time": 1684648460822,
+            "parent_id": "d6221d12-7cda-44aa-8b4d-1422eca4979c",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "aff746d1-1164-4890-8486-0de75c4f534e": {
+          "value": {
+            "id": "aff746d1-1164-4890-8486-0de75c4f534e",
+            "version": 2,
+            "type": "bulleted_list",
+            "properties": {
+              "title": [
+                [
+                  "Yi-Shin Tung - Professor, Graduate Institute of Networking and Multimedia, National Taiwan University."
+                ]
+              ]
+            },
+            "created_time": 1684648460810,
+            "last_edited_time": 1684648460822,
+            "parent_id": "d6221d12-7cda-44aa-8b4d-1422eca4979c",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "9d669b77-169d-4069-8c84-7c8c38f5224c": {
+          "value": {
+            "id": "9d669b77-169d-4069-8c84-7c8c38f5224c",
+            "version": 2,
+            "type": "bulleted_list",
+            "properties": {
+              "title": [
+                [
+                  "Hsuan-Tien Lin - Professor, Department of Computer Science & Information Engineering , National Taiwan University."
+                ]
+              ]
+            },
+            "created_time": 1684648460810,
+            "last_edited_time": 1684648460822,
+            "parent_id": "d6221d12-7cda-44aa-8b4d-1422eca4979c",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "70a64cfb-f5ae-4ac0-b6d8-723b474ed96d": {
+          "value": {
+            "id": "70a64cfb-f5ae-4ac0-b6d8-723b474ed96d",
+            "version": 2,
+            "type": "bulleted_list",
+            "properties": {
+              "title": [["Damon Zhang - Frontend Tech Lead, PricewaterhouseCoopers Shanghai AC."]]
+            },
+            "created_time": 1684648460810,
+            "last_edited_time": 1684648460822,
+            "parent_id": "d6221d12-7cda-44aa-8b4d-1422eca4979c",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "f3d0975b-42fb-4d71-b3f8-6ba1a564b1e3": {
+          "value": {
+            "id": "f3d0975b-42fb-4d71-b3f8-6ba1a564b1e3",
+            "version": 2,
+            "type": "bulleted_list",
+            "properties": {
+              "title": [["Lily Gao - BA Lead, PricewaterhouseCoopers Shanghai AC."]]
+            },
+            "created_time": 1684648460810,
+            "last_edited_time": 1684648460822,
+            "parent_id": "d6221d12-7cda-44aa-8b4d-1422eca4979c",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "c9e72bc5-f9e2-415c-bab9-a03ebabb6fa5": {
+          "value": {
+            "id": "c9e72bc5-f9e2-415c-bab9-a03ebabb6fa5",
+            "version": 2,
+            "type": "bulleted_list",
+            "properties": {
+              "title": [
+                [
+                  "Jun Zeng - Professor, School of Big Data and Software Engineering, Chongqing University."
+                ]
+              ]
+            },
+            "created_time": 1684648460810,
+            "last_edited_time": 1684648460822,
+            "parent_id": "d6221d12-7cda-44aa-8b4d-1422eca4979c",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "a82ba486-8b66-4bcb-8ce2-0fd3ae01f3a5": {
+          "value": {
+            "id": "a82ba486-8b66-4bcb-8ce2-0fd3ae01f3a5",
+            "version": 2,
+            "type": "bulleted_list",
+            "properties": {
+              "title": [["Naoaki Okazaki - Professor, Okazaki Lab, Tokyo Institute of Technology."]]
+            },
+            "created_time": 1684648460811,
+            "last_edited_time": 1684648460822,
+            "parent_id": "d6221d12-7cda-44aa-8b4d-1422eca4979c",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "56345f10-0bb0-4972-a527-996e9fb00ed4": {
+          "value": {
+            "id": "56345f10-0bb0-4972-a527-996e9fb00ed4",
+            "version": 8,
+            "type": "bulleted_list",
+            "properties": { "title": [["Tianyue Jia"]] },
+            "created_time": 1684648460811,
+            "last_edited_time": 1700983010654,
+            "parent_id": "d6221d12-7cda-44aa-8b4d-1422eca4979c",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "5f4faed1-8412-49ba-81a5-f3ee13c88e12": {
+          "value": {
+            "id": "5f4faed1-8412-49ba-81a5-f3ee13c88e12",
+            "version": 7,
+            "type": "bulleted_list",
+            "properties": { "title": [["Huichi Bao - Ex-leader of Youzipu"]] },
+            "created_time": 1684648460811,
+            "last_edited_time": 1684648522659,
+            "parent_id": "d6221d12-7cda-44aa-8b4d-1422eca4979c",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "54d840fb-cd41-4988-9063-043f0a898711": {
+          "value": {
+            "id": "54d840fb-cd41-4988-9063-043f0a898711",
+            "version": 16,
+            "type": "bulleted_list",
+            "properties": { "title": [["Xuan Huang - Developer - Creator of Hux Blog."]] },
+            "created_time": 1684648460811,
+            "last_edited_time": 1684648523120,
+            "parent_id": "d6221d12-7cda-44aa-8b4d-1422eca4979c",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "779bc3c0-6cfa-4688-8c09-b21a6621e228": {
+          "value": {
+            "id": "779bc3c0-6cfa-4688-8c09-b21a6621e228",
+            "version": 2,
+            "type": "bulleted_list",
+            "properties": { "title": [["Murakami Takashi - Artist"]] },
+            "created_time": 1684648460811,
+            "last_edited_time": 1684648460822,
+            "parent_id": "d6221d12-7cda-44aa-8b4d-1422eca4979c",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "16fd7527-343a-4d3c-8501-c1f016dac995": {
+          "value": {
+            "id": "16fd7527-343a-4d3c-8501-c1f016dac995",
+            "version": 2,
+            "type": "bulleted_list",
+            "properties": {
+              "title": [
+                [
+                  "Yinglun Xia - Photographer , State Grid , Ex-lead of CQUNEWS Static Image branch, Chongqing University"
+                ]
+              ]
+            },
+            "created_time": 1684648460811,
+            "last_edited_time": 1684648460822,
+            "parent_id": "d6221d12-7cda-44aa-8b4d-1422eca4979c",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "652bcfbc-b961-4f58-b1ca-170e9fdaeaff": {
+          "value": {
+            "id": "652bcfbc-b961-4f58-b1ca-170e9fdaeaff",
+            "version": 2,
+            "type": "bulleted_list",
+            "properties": {
+              "title": [
+                [
+                  "Qingqing Shi - Photographer, Ex-lead of CQUNEWS video branch, Chongqing University"
+                ]
+              ]
+            },
+            "created_time": 1684648460812,
+            "last_edited_time": 1684648460822,
+            "parent_id": "d6221d12-7cda-44aa-8b4d-1422eca4979c",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "9614090b-6621-42b4-bda5-b265e2c33c2d": {
+          "value": {
+            "id": "9614090b-6621-42b4-bda5-b265e2c33c2d",
+            "version": 2,
+            "type": "bulleted_list",
+            "properties": { "title": [["Leon - Artist - Founder of The Ancient Stone Art Team."]] },
+            "created_time": 1684648460812,
+            "last_edited_time": 1684648460822,
+            "parent_id": "d6221d12-7cda-44aa-8b4d-1422eca4979c",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "12992590-2033-46a3-ba4f-3286073aa181": {
+          "value": {
+            "id": "12992590-2033-46a3-ba4f-3286073aa181",
+            "version": 2,
+            "type": "bulleted_list",
+            "properties": {
+              "title": [["Chen-Hao Yang - Photographer, Ntuphoto , National Taiwan University."]]
+            },
+            "created_time": 1684648460812,
+            "last_edited_time": 1684648460822,
+            "parent_id": "d6221d12-7cda-44aa-8b4d-1422eca4979c",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "fbd8fffe-3df5-4483-a219-3e3c1d93b6dc": {
+          "value": {
+            "id": "fbd8fffe-3df5-4483-a219-3e3c1d93b6dc",
+            "version": 2,
+            "type": "bulleted_list",
+            "properties": {
+              "title": [
+                ["Che-wei Hsu - Photographer, Ex-Chairman of Ntuphoto, National Taiwan University"]
+              ]
+            },
+            "created_time": 1684648460812,
+            "last_edited_time": 1684648460822,
+            "parent_id": "d6221d12-7cda-44aa-8b4d-1422eca4979c",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "0619a751-221a-4b94-8aed-6e33cbd3f1d9": {
+          "value": {
+            "id": "0619a751-221a-4b94-8aed-6e33cbd3f1d9",
+            "version": 2,
+            "type": "bulleted_list",
+            "properties": {
+              "title": [["Thomas Wu - Photographer, Ntuphoto , Nationaly Taiwan University."]]
+            },
+            "created_time": 1684648460812,
+            "last_edited_time": 1684648460822,
+            "parent_id": "d6221d12-7cda-44aa-8b4d-1422eca4979c",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "266018e0-26af-4b54-a96a-3f037d4a4664": {
+          "value": {
+            "id": "266018e0-26af-4b54-a96a-3f037d4a4664",
+            "version": 2,
+            "type": "bulleted_list",
+            "properties": {
+              "title": [
+                [
+                  "Linhan Chang(Hanklin Zhroc) - Photographer, Ntuphoto , National Taiwan University."
+                ]
+              ]
+            },
+            "created_time": 1684648460812,
+            "last_edited_time": 1684648460822,
+            "parent_id": "d6221d12-7cda-44aa-8b4d-1422eca4979c",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "29f2e8eb-0506-4c91-b45b-c57132cb0c7e": {
+          "value": {
+            "id": "29f2e8eb-0506-4c91-b45b-c57132cb0c7e",
+            "version": 2,
+            "type": "bulleted_list",
+            "properties": { "title": [["Nakayama - Co-founder of TaipeiCameraClub (TCC)"]] },
+            "created_time": 1684648460812,
+            "last_edited_time": 1684648460822,
+            "parent_id": "d6221d12-7cda-44aa-8b4d-1422eca4979c",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "d838e73b-a1cc-4f98-b1da-abe2d49f45ef": {
+          "value": {
+            "id": "d838e73b-a1cc-4f98-b1da-abe2d49f45ef",
+            "version": 2,
+            "type": "bulleted_list",
+            "properties": {
+              "title": [["Shannooty - Youtuber - Ex-hoster of Google+ Minecraft Community"]]
+            },
+            "created_time": 1684648460812,
+            "last_edited_time": 1684648460822,
+            "parent_id": "d6221d12-7cda-44aa-8b4d-1422eca4979c",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "d434ee80-6090-4217-b728-e209eb4cdb25": {
+          "value": {
+            "id": "d434ee80-6090-4217-b728-e209eb4cdb25",
+            "version": 6,
+            "type": "bulleted_list",
+            "properties": { "title": [["Jaeylo - Artist/Youtuber"]] },
+            "created_time": 1684648460812,
+            "last_edited_time": 1684652319175,
+            "parent_id": "d6221d12-7cda-44aa-8b4d-1422eca4979c",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "cb3b7aea-ca57-466f-ad54-7d862ce33cf6": {
+          "value": {
+            "id": "cb3b7aea-ca57-466f-ad54-7d862ce33cf6",
+            "version": 20,
+            "type": "divider",
+            "created_time": 1684652317101,
+            "last_edited_time": 1684652318426,
+            "parent_id": "d6221d12-7cda-44aa-8b4d-1422eca4979c",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "13fa5338-d1a2-46aa-ae91-8f78d093ff13": {
+          "value": {
+            "id": "13fa5338-d1a2-46aa-ae91-8f78d093ff13",
+            "version": 11,
+            "type": "text",
+            "properties": {
+              "title": [
+                ["Classification:", [["b"]]],
+                [" [Public]  ", [["b"], ["h", "teal"]]]
+              ]
+            },
+            "created_time": 1684648465293,
+            "last_edited_time": 1684652314284,
+            "parent_id": "d6221d12-7cda-44aa-8b4d-1422eca4979c",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "c3d45c35-4abe-4a70-b5f3-e8d326a2ba19": {
+          "value": {
+            "id": "c3d45c35-4abe-4a70-b5f3-e8d326a2ba19",
+            "version": 79,
+            "type": "text",
+            "properties": { "title": [["Last Modify: "], ["⁍", [["e", "2023/11/26"]]]] },
+            "created_time": 1684652323085,
+            "last_edited_time": 1700983035062,
+            "parent_id": "d6221d12-7cda-44aa-8b4d-1422eca4979c",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "c6d1a867-360d-4cf1-a553-2b12bdcac1c0": {
+          "value": {
+            "id": "c6d1a867-360d-4cf1-a553-2b12bdcac1c0",
+            "version": 21,
+            "type": "divider",
+            "created_time": 1684648603437,
+            "last_edited_time": 1684651337289,
+            "parent_id": "d6221d12-7cda-44aa-8b4d-1422eca4979c",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "24a222d5-e990-482f-b84b-5bfd2592ec26": {
+          "value": {
+            "id": "24a222d5-e990-482f-b84b-5bfd2592ec26",
+            "version": 353,
+            "type": "callout",
+            "properties": {
+              "title": [["RiinoSite - Blogs of Nest of Etamine Study Copyright 2012 - 2023"]]
+            },
+            "format": {
+              "page_icon": "https://s3-us-west-2.amazonaws.com/secure.notion-static.com/55668bb8-b6aa-4766-b5c1-f8ced04c7b3c/logo_Nest.png",
+              "block_color": "gray_background"
+            },
+            "created_time": 1684648465293,
+            "last_edited_time": 1684652402531,
+            "parent_id": "d6221d12-7cda-44aa-8b4d-1422eca4979c",
+            "parent_table": "block",
+            "alive": true,
+            "file_ids": ["55668bb8-b6aa-4766-b5c1-f8ced04c7b3c"],
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "e66820c0-5517-46e6-8c88-db3f6ad80c3a": {
+          "value": {
+            "id": "e66820c0-5517-46e6-8c88-db3f6ad80c3a",
+            "version": 364,
+            "type": "callout",
+            "properties": {
+              "title": [
+                [
+                  "Source Code | RiinoSite4",
+                  [["a", "https://github.com/sorphwer/v4.sorphwer.github.io"]]
+                ]
+              ]
+            },
+            "format": {
+              "page_icon": "https://s3-us-west-2.amazonaws.com/secure.notion-static.com/eef326ca-2e86-4a23-adcd-1e530be990ed/logo_search.png",
+              "block_color": "gray_background"
+            },
+            "created_time": 1684651884855,
+            "last_edited_time": 1684652063417,
+            "parent_id": "d6221d12-7cda-44aa-8b4d-1422eca4979c",
+            "parent_table": "block",
+            "alive": true,
+            "file_ids": ["eef326ca-2e86-4a23-adcd-1e530be990ed"],
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "7d6e1342-e0d9-4072-94a4-3c8a7695c719": {
+          "value": {
+            "id": "7d6e1342-e0d9-4072-94a4-3c8a7695c719",
+            "version": 103,
+            "type": "callout",
+            "properties": {
+              "title": [
+                ["Terms of Use ", [["a", "https://riino.site/terms_of_use/"]]],
+                [" &  "],
+                ["Privacy Statement", [["a", "https://riino.site/privacy_statement/"]]]
+              ]
+            },
+            "format": {
+              "page_icon": "https://s3-us-west-2.amazonaws.com/secure.notion-static.com/d5bf6880-273b-4f56-ad81-eb6b790d52b0/NoeP.png",
+              "block_color": "gray_background"
+            },
+            "created_time": 1684652070039,
+            "last_edited_time": 1684652186814,
+            "parent_id": "d6221d12-7cda-44aa-8b4d-1422eca4979c",
+            "parent_table": "block",
+            "alive": true,
+            "file_ids": ["d5bf6880-273b-4f56-ad81-eb6b790d52b0"],
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "b8eed3df-9d34-4578-a01e-f16c92cfe044": {
+          "value": {
+            "id": "b8eed3df-9d34-4578-a01e-f16c92cfe044",
+            "version": 60,
+            "type": "callout",
+            "properties": {
+              "title": [["Notion - Disclaimer", [["a", "/9c2494171a484236aeca99a9059596a4"]]]]
+            },
+            "format": {
+              "page_icon": "https://s3-us-west-2.amazonaws.com/secure.notion-static.com/d136c1f6-388e-4d18-84e3-b5761d61ab55/notion.png",
+              "block_color": "gray_background"
+            },
+            "created_time": 1684652198799,
+            "last_edited_time": 1684652234294,
+            "parent_id": "d6221d12-7cda-44aa-8b4d-1422eca4979c",
+            "parent_table": "block",
+            "alive": true,
+            "file_ids": ["d136c1f6-388e-4d18-84e3-b5761d61ab55"],
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "e575776c-ca21-484b-bb3e-0cc5d1b48d29": {
+          "value": {
+            "id": "e575776c-ca21-484b-bb3e-0cc5d1b48d29",
+            "version": 4,
+            "type": "text",
+            "created_time": 1684652234799,
+            "last_edited_time": 1684652234800,
+            "parent_id": "d6221d12-7cda-44aa-8b4d-1422eca4979c",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "9c249417-1a48-4236-aeca-99a9059596a4": {
+          "value": {
+            "id": "9c249417-1a48-4236-aeca-99a9059596a4",
+            "version": 343,
+            "type": "page",
+            "properties": { "title": [["Notion - Disclaimer & Terms of Use"]] },
+            "content": [
+              "958bd60d-03e7-4e88-a655-47a5fe158624",
+              "52e81e3e-471f-4a2b-8c19-47241f195a22",
+              "1d9f1432-fae6-45dc-af23-ad9f41884450",
+              "1e47d755-bc4b-4237-94e4-16912e230e45",
+              "f71b7a03-5745-447d-b0b6-e80753e52d4b",
+              "658655cf-1552-4877-b27b-127c0239b648",
+              "f15a4141-171a-4aad-8a41-bf1b78c21ac3",
+              "21b68738-b675-809e-a25e-fba8c99265b1",
+              "21b68738-b675-8042-974e-fc56ea5ebf94",
+              "21b68738-b675-804c-8b9e-e1f49734e764",
+              "21b68738-b675-8082-b5bf-cbde3f17fc3e",
+              "21b68738-b675-8076-af1a-ef48d2ebf16f",
+              "21b68738-b675-8012-bfcc-f9fd712fa1f5",
+              "e29649c4-5245-4026-b8ad-7682921dd475",
+              "c9c6d4ac-0667-4286-9af3-44b64c622338",
+              "3a72b282-c848-4509-b17c-1192a663c025",
+              "21b68738-b675-808b-8d2b-c9ae05a3061d",
+              "21b68738-b675-8092-bdf2-c8bdef21bc60",
+              "21b68738-b675-80fa-900b-d6c67ef8361e",
+              "21b68738-b675-802c-9510-fbeea054bd7b",
+              "21b68738-b675-8093-b9da-e5436b56d301",
+              "21b68738-b675-80f2-908f-ea29deb706bb",
+              "004a8d67-865d-484b-83a5-3a3fdc65f3d7"
+            ],
+            "format": {
+              "site_id": "1b537cc0-aa00-81ed-a271-0079f1b47946",
+              "page_icon": "https://s3-us-west-2.amazonaws.com/secure.notion-static.com/48ea2f4b-ee9b-4c4f-b93f-3c7e11b29fd3/notion.png",
+              "page_cover": "https://s3-us-west-2.amazonaws.com/secure.notion-static.com/e98d71cc-6517-4320-98a5-e816b4276ccd/bg.gif",
+              "page_cover_position": 0.5
+            },
+            "permissions": [
+              {
+                "role": "editor",
+                "type": "user_permission",
+                "user_id": "83417450-12ca-42e8-a980-4100da082185"
+              },
+              {
+                "role": "reader",
+                "type": "public_permission",
+                "is_site": true,
+                "added_timestamp": 1682602988774
+              }
+            ],
+            "created_time": 1676178179037,
+            "last_edited_time": 1750659433485,
+            "parent_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3",
+            "parent_table": "space",
+            "alive": true,
+            "file_ids": [
+              "e98d71cc-6517-4320-98a5-e816b4276ccd",
+              "4eff9be4-72b0-482c-b0bb-995af220b88f",
+              "48ea2f4b-ee9b-4c4f-b93f-3c7e11b29fd3"
+            ],
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        }
+      },
+      "collection": {},
+      "collection_view": {},
+      "notion_user": {},
+      "collection_query": {},
+      "signed_urls": {
+        "0602ae1a-37d2-4bc9-a745-0a60032ea193": "https://file.notion.so/f/f/cb537cc0-aa00-4959-8db9-80abdf2033d3/0dbb5076-5880-4711-98a7-b535696bea8d/NoEVoix.svg?table=block&id=0602ae1a-37d2-4bc9-a745-0a60032ea193&spaceId=cb537cc0-aa00-4959-8db9-80abdf2033d3&expirationTimestamp=1756735200000&signature=4mPt3Ngw1V9C5stfCOUozEobQFLRVL42JmUQ0PiJfrM"
+      }
+    }
+  },
+  "__N_SSG": true
+}

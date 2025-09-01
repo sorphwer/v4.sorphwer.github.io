@@ -1,0 +1,53 @@
+{
+  "pageProps": {
+    "post": {
+      "mdxSource": "var Component=(()=>{var x=Object.create;var s=Object.defineProperty;var m=Object.getOwnPropertyDescriptor;var d=Object.getOwnPropertyNames;var h=Object.getPrototypeOf,l=Object.prototype.hasOwnProperty;var o=t=>s(t,\"__esModule\",{value:!0});var u=(t,e)=>()=>(e||t((e={exports:{}}).exports,e),e.exports),j=(t,e)=>{o(t);for(var a in e)s(t,a,{get:e[a],enumerable:!0})},p=(t,e,a)=>{if(e&&typeof e==\"object\"||typeof e==\"function\")for(let n of d(e))!l.call(t,n)&&n!==\"default\"&&s(t,n,{get:()=>e[n],enumerable:!(a=m(e,n))||a.enumerable});return t},f=t=>p(o(s(t!=null?x(h(t)):{},\"default\",t&&t.__esModule&&\"default\"in t?{get:()=>t.default,enumerable:!0}:{value:t,enumerable:!0})),t);var c=u((D,i)=>{i.exports=_jsx_runtime});var b={};j(b,{default:()=>k,frontmatter:()=>_});var r=f(c()),_={layout:\"post\",title:\"Learning Data Retrieval\",subtitle:\"TextRank\",hide:!0,tags:[\"algorithm\"],mathjax:!0,mermaid:!1};function g(t={}){let{wrapper:e}=t.components||{};return e?(0,r.jsx)(e,Object.assign({},t,{children:(0,r.jsx)(a,{})})):a();function a(){let n=Object.assign({h1:\"h1\",a:\"a\",span:\"span\"},t.components);return(0,r.jsxs)(n.h1,{id:\"text-rank-methods\",children:[(0,r.jsx)(n.a,{\"aria-hidden\":\"true\",href:\"#text-rank-methods\",tabIndex:\"-1\",children:(0,r.jsx)(n.span,{className:\"icon icon-link\"})}),\"Text Rank Methods\"]})}}var k=g;return b;})();\n;return Component;",
+      "toc": [{ "value": "Text Rank Methods", "url": "#text-rank-methods", "depth": 1 }],
+      "frontMatter": {
+        "readingTime": { "text": "1 min read", "minutes": 0.175, "time": 10500, "words": 35 },
+        "slug": "2021-3-16-IR-TextRank",
+        "fileName": "2021-3-16-IR-TextRank.md",
+        "layout": "post",
+        "title": "Learning Data Retrieval",
+        "subtitle": "TextRank",
+        "hide": true,
+        "tags": ["algorithm"],
+        "mathjax": true,
+        "mermaid": false,
+        "date": "2021-03-15T16:00:00.000Z"
+      }
+    },
+    "recordMap": null,
+    "authorDetails": [
+      {
+        "readingTime": { "text": "1 min read", "minutes": 0.145, "time": 8700, "words": 29 },
+        "slug": ["default"],
+        "fileName": "default.md",
+        "name": "Riino",
+        "avatar": "/static/images/logo_Nest.png",
+        "notion": "97ab7c51daf5470ea07e43c577169d24",
+        "date": null
+      }
+    ],
+    "prev": {
+      "layout": "post",
+      "title": "Learning Q-gram Distance",
+      "subtitle": "Understanding Q-gram and N-gram Algorithms for String Comparison",
+      "tags": ["mdx", "algorithm", "q-gram", "n-gram", "string-comparison"],
+      "mathjax": true,
+      "mermaid": false,
+      "slug": "2021-02-26-Q-Gram",
+      "date": "2021-02-26T00:00:00.000Z"
+    },
+    "next": {
+      "layout": "post",
+      "title": "Certification Test Minutes: Neo4j Certified Professional",
+      "subtitle": "Guide to Passing the Neo4j Certification Exam",
+      "status": "Minutes",
+      "tags": ["mdx", "neo4j", "certification-test", "graph-database", "cypher-language"],
+      "slug": "2021-5-31-neo4j-certification",
+      "date": "2021-05-30T16:00:00.000Z"
+    }
+  },
+  "__N_SSG": true
+}

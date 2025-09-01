@@ -1,0 +1,64 @@
+{
+  "pageProps": {
+    "post": {
+      "mdxSource": "var Component=(()=>{var m=Object.create;var o=Object.defineProperty;var c=Object.getOwnPropertyDescriptor;var x=Object.getOwnPropertyNames;var g=Object.getPrototypeOf,l=Object.prototype.hasOwnProperty;var s=t=>o(t,\"__esModule\",{value:!0});var h=(t,e)=>()=>(e||t((e={exports:{}}).exports,e),e.exports),j=(t,e)=>{s(t);for(var n in e)o(t,n,{get:e[n],enumerable:!0})},p=(t,e,n)=>{if(e&&typeof e==\"object\"||typeof e==\"function\")for(let a of x(e))!l.call(t,a)&&a!==\"default\"&&o(t,a,{get:()=>e[a],enumerable:!(n=c(e,a))||n.enumerable});return t},f=t=>p(s(o(t!=null?m(g(t)):{},\"default\",t&&t.__esModule&&\"default\"in t?{get:()=>t.default,enumerable:!0}:{value:t,enumerable:!0})),t);var u=h((C,i)=>{i.exports=_jsx_runtime});var _={};j(_,{default:()=>M,frontmatter:()=>d});var r=f(u()),d={layout:\"post\",title:\"Learning Python3 C4 \",subtitle:\"Max/Min Stack\",author:\"Riino\",\"header-img\":\"img/lunur.jpg\",\"header-mask\":.3,mathjax:!0,sticky:!1,status:\"WIP\",tags:[\"Python\",\"Algorithm\"]};function y(t={}){let{wrapper:e}=t.components||{};return e?(0,r.jsx)(e,Object.assign({},t,{children:(0,r.jsx)(n,{})})):n();function n(){return(0,r.jsx)(r.Fragment,{})}}var M=y;return _;})();\n;return Component;",
+      "toc": [],
+      "frontMatter": {
+        "readingTime": { "text": "1 min read", "minutes": 0.165, "time": 9900, "words": 33 },
+        "slug": "2020-6-21-Python[4]",
+        "fileName": "2020-6-21-Python[4].md",
+        "layout": "post",
+        "title": "Learning Python3 C4 ",
+        "subtitle": "Max/Min Stack",
+        "author": "Riino",
+        "header-img": "img/lunur.jpg",
+        "header-mask": 0.3,
+        "mathjax": true,
+        "sticky": false,
+        "status": "WIP",
+        "tags": ["Python", "Algorithm"],
+        "date": "2020-06-20T16:00:00.000Z"
+      }
+    },
+    "recordMap": null,
+    "authorDetails": [
+      {
+        "readingTime": { "text": "1 min read", "minutes": 0.145, "time": 8700, "words": 29 },
+        "slug": ["default"],
+        "fileName": "default.md",
+        "name": "Riino",
+        "avatar": "/static/images/logo_Nest.png",
+        "notion": "97ab7c51daf5470ea07e43c577169d24",
+        "date": null
+      }
+    ],
+    "prev": {
+      "layout": "post",
+      "title": "Learning Python3 C5 ",
+      "subtitle": "Greedy Algorithm",
+      "author": "Riino",
+      "header-img": "img/lunur.jpg",
+      "header-mask": 0.3,
+      "mathjax": true,
+      "sticky": false,
+      "status": "WIP",
+      "tags": ["mdx", "Python", "Algorithm"],
+      "slug": "2020-6-21-Python[5]",
+      "date": "2020-06-20T16:00:00.000Z"
+    },
+    "next": {
+      "layout": "post",
+      "title": "Learning Python3 C3",
+      "subtitle": "Dynamic Programming Techniques",
+      "author": "Riino",
+      "header-img": "img/lunur.jpg",
+      "header-mask": 0.3,
+      "mathjax": true,
+      "sticky": false,
+      "tags": ["mdx", "Python", "Algorithm", "Dynamic-Programming", "Coding-Tutorial"],
+      "slug": "2020-6-21-Python[3]",
+      "date": "2020-06-20T16:00:00.000Z"
+    }
+  },
+  "__N_SSG": true
+}

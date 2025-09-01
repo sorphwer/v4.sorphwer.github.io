@@ -203,7 +203,6 @@ graph LR
     A[Ubuntu with Gophish] -->|Request to 257| B[Load Balancer]
     B -->|Request to 25| C[Internal SMTP Server]
     C -->|Send Email| D[Other Internal Servers]
-
 ```
 
 Now in your SMTP server, install `docker-mailserver`.

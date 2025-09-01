@@ -1,0 +1,1100 @@
+{
+  "pageProps": {
+    "post": {
+      "mdxSource": "var Component=(()=>{var i=Object.create;var a=Object.defineProperty;var m=Object.getOwnPropertyDescriptor;var x=Object.getOwnPropertyNames;var d=Object.getPrototypeOf,f=Object.prototype.hasOwnProperty;var u=t=>a(t,\"__esModule\",{value:!0});var p=(t,e)=>()=>(e||t((e={exports:{}}).exports,e),e.exports),g=(t,e)=>{u(t);for(var n in e)a(t,n,{get:e[n],enumerable:!0})},j=(t,e,n)=>{if(e&&typeof e==\"object\"||typeof e==\"function\")for(let o of x(e))!f.call(t,o)&&o!==\"default\"&&a(t,o,{get:()=>e[o],enumerable:!(n=m(e,o))||n.enumerable});return t},l=t=>j(u(a(t!=null?i(d(t)):{},\"default\",t&&t.__esModule&&\"default\"in t?{get:()=>t.default,enumerable:!0}:{value:t,enumerable:!0})),t);var s=p((A,c)=>{c.exports=_jsx_runtime});var L={};g(L,{default:()=>b,frontmatter:()=>M});var r=l(s()),M={layout:\"post\",title:\"Secured AI Memo\",tags:[\"LLM\",\"AI\"],toc:!0,\"auto-convert-img\":!0,notion:\"a49559dc51554bf59e640dba69d8fa3b\"};function _(t={}){let{wrapper:e}=t.components||{};return e?(0,r.jsx)(e,Object.assign({},t,{children:(0,r.jsx)(n,{})})):n();function n(){return(0,r.jsx)(r.Fragment,{})}}var b=_;return L;})();\n;return Component;",
+      "toc": [],
+      "frontMatter": {
+        "readingTime": { "text": "1 min read", "minutes": 0.155, "time": 9300, "words": 31 },
+        "slug": "2023-08-24-notion-secured-ai-memo",
+        "fileName": "2023-08-24-notion-secured-ai-memo.md",
+        "layout": "post",
+        "title": "Secured AI Memo",
+        "tags": ["LLM", "AI"],
+        "toc": true,
+        "auto-convert-img": true,
+        "notion": "a49559dc51554bf59e640dba69d8fa3b",
+        "date": "2023-08-24T00:00:00.000Z"
+      }
+    },
+    "recordMap": {
+      "block": {
+        "a49559dc-5155-4bf5-9e64-0dba69d8fa3b": {
+          "value": {
+            "id": "a49559dc-5155-4bf5-9e64-0dba69d8fa3b",
+            "version": 165,
+            "type": "page",
+            "properties": { "title": [["Nest AI Research - Security & Language Models"]] },
+            "content": [
+              "b846e152-3b42-44cc-afe1-dea539f49652",
+              "ce1085b0-4875-4d75-92b7-da5f172054dc",
+              "6ebfe208-3f16-44f6-9b3c-be5ca90a973a",
+              "8aee4fbc-71ba-4250-9488-5d38bb9b6615",
+              "fa6a0730-3970-45a1-a580-7490b3b1827d",
+              "4739c24e-0bd7-4040-a672-df6e26dc6dfb",
+              "5069529e-7e5f-45a7-93be-f0dbb0922b30",
+              "23d0409f-5f04-4eb2-ac22-9f3fcb819839",
+              "27c74c2a-bec3-451d-9568-0cc55fda46cd",
+              "19a1b31e-a599-4db5-ba9b-16b5d9575b6a",
+              "19bee1ed-fe8a-4bcb-97c9-33cdb9e0cab9",
+              "c2c0ac8f-aaca-4b65-a807-4dae18d2c884",
+              "daab8cd6-ccb1-4d51-8a6d-e6eae59c042b",
+              "2e768d0b-1d8a-4ac8-8832-b3231185dea3",
+              "bca21449-104e-4414-8bc5-a3c115e92a7a",
+              "3dc264a0-4409-4eaa-84d7-9be6cecab5dd",
+              "86e1d1c6-921f-4585-9126-369d235a67ba",
+              "e1e6c0f2-9b2d-4078-8942-235af9d73797",
+              "a2e6198f-5696-4233-aeee-b8e212e5b798",
+              "b6abf9cc-676e-48b3-8806-2ea1a4b98c7c",
+              "ff7359db-ff08-4dc8-bc3a-ec1ac8657c1e",
+              "746de15f-0fc8-4891-9d1e-228a2ab4416f",
+              "421c4585-632b-4681-919f-e884f6ff8bb5",
+              "7a18893b-f00b-4395-be06-aa53f241cae8",
+              "141781d7-f10c-4c51-bd25-9b04e6425df9",
+              "bd6be43c-579e-4c97-a03c-4611f97c3781",
+              "33fff2b3-8c8e-4fe0-9952-be8c450ff668",
+              "bd7bdd6c-a1f3-43ce-8d74-9b4d20907e99",
+              "a65e99bb-c3b1-462a-bd7b-1af43854e2ec",
+              "9e25b9d6-5ec1-4ec5-9371-c1005778abc7",
+              "77d95b0e-35d3-47c3-a2ef-f258d018e0b9",
+              "5fcd6148-5971-473a-9687-1e7af17c58b2",
+              "f7918951-70ce-4017-a8de-ccfef105e29a",
+              "33a4cc1d-f192-42d5-8160-0e76741c8396",
+              "29364569-f007-4c2c-b723-ff4570484fc2",
+              "08283f43-4395-4d6d-bc8d-c735bbd8c94e",
+              "e331e5ad-f082-43d9-9f60-39dafcaa0c18",
+              "c08b325c-c9f6-471f-ba84-3b973523d7b6",
+              "5d88eae1-4d3b-41cb-a0aa-c321b721170f",
+              "980be308-490e-4781-8a60-764a21e4edf6"
+            ],
+            "format": {
+              "site_id": "1b537cc0-aa00-81ec-84d0-0079f43a5db7",
+              "page_icon": "https://s3-us-west-2.amazonaws.com/secure.notion-static.com/c8e4c04e-bbcf-44b0-91e8-c3df063da38a/logo_search.png",
+              "page_cover": "https://s3-us-west-2.amazonaws.com/secure.notion-static.com/7122a372-dd57-4ddd-8603-cf0861b7d3eb/bg2.gif",
+              "page_full_width": false,
+              "copied_from_pointer": {
+                "id": "f82ea177-8333-4963-b905-3813312b6277",
+                "table": "block",
+                "spaceId": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+              },
+              "page_cover_position": 0.5
+            },
+            "permissions": [
+              {
+                "role": "editor",
+                "type": "user_permission",
+                "user_id": "83417450-12ca-42e8-a980-4100da082185"
+              },
+              {
+                "role": "reader",
+                "type": "public_permission",
+                "is_site": true,
+                "added_timestamp": 1693467299697,
+                "allow_duplicate": false
+              }
+            ],
+            "created_time": 1693037598901,
+            "last_edited_time": 1734422578284,
+            "parent_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3",
+            "parent_table": "space",
+            "alive": true,
+            "copied_from": "f82ea177-8333-4963-b905-3813312b6277",
+            "file_ids": [
+              "c8e4c04e-bbcf-44b0-91e8-c3df063da38a",
+              "7122a372-dd57-4ddd-8603-cf0861b7d3eb"
+            ],
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "b846e152-3b42-44cc-afe1-dea539f49652": {
+          "value": {
+            "id": "b846e152-3b42-44cc-afe1-dea539f49652",
+            "version": 45,
+            "type": "sub_sub_header",
+            "properties": { "title": [["Overview"]] },
+            "created_time": 1696491454104,
+            "last_edited_time": 1696491474621,
+            "parent_id": "a49559dc-5155-4bf5-9e64-0dba69d8fa3b",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "ce1085b0-4875-4d75-92b7-da5f172054dc": {
+          "value": {
+            "id": "ce1085b0-4875-4d75-92b7-da5f172054dc",
+            "version": 1740,
+            "type": "text",
+            "properties": {
+              "title": [
+                [
+                  "LM (languages models) are considered to firstly obtain the capabilities of interfecing, compared with other deep learning methods. LMs are trying to select most suitable words based on the previous given informations, which is called ‘completing’, regarding to the technique using ‘prompt’ to align all the downstream tasks into completing sentences."
+                ]
+              ]
+            },
+            "created_time": 1696491454104,
+            "last_edited_time": 1696493928833,
+            "parent_id": "a49559dc-5155-4bf5-9e64-0dba69d8fa3b",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "6ebfe208-3f16-44f6-9b3c-be5ca90a973a": {
+          "value": {
+            "id": "6ebfe208-3f16-44f6-9b3c-be5ca90a973a",
+            "version": 154,
+            "type": "text",
+            "properties": { "title": [["Therefore, two major types of training data are used:"]] },
+            "created_time": 1696493930296,
+            "last_edited_time": 1696493948340,
+            "parent_id": "a49559dc-5155-4bf5-9e64-0dba69d8fa3b",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "8aee4fbc-71ba-4250-9488-5d38bb9b6615": {
+          "value": {
+            "id": "8aee4fbc-71ba-4250-9488-5d38bb9b6615",
+            "version": 366,
+            "type": "numbered_list",
+            "properties": {
+              "title": [
+                [
+                  "Examples of conversations. Where some words/sentences are masked so that supervised learning can be conducted."
+                ]
+              ]
+            },
+            "created_time": 1696493948691,
+            "last_edited_time": 1696493985819,
+            "parent_id": "a49559dc-5155-4bf5-9e64-0dba69d8fa3b",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "fa6a0730-3970-45a1-a580-7490b3b1827d": {
+          "value": {
+            "id": "fa6a0730-3970-45a1-a580-7490b3b1827d",
+            "version": 724,
+            "type": "numbered_list",
+            "properties": {
+              "title": [
+                [
+                  "Ranked answers or conversations. This will help LMs to improve the performance. And this is related with RLHF procedure."
+                ]
+              ]
+            },
+            "created_time": 1696493986156,
+            "last_edited_time": 1696494098986,
+            "parent_id": "a49559dc-5155-4bf5-9e64-0dba69d8fa3b",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "4739c24e-0bd7-4040-a672-df6e26dc6dfb": {
+          "value": {
+            "id": "4739c24e-0bd7-4040-a672-df6e26dc6dfb",
+            "version": 420,
+            "type": "text",
+            "properties": {
+              "title": [
+                [
+                  "Overall, LMs are the most complex systems designed, and there are lots of modified methods based on this structure."
+                ]
+              ]
+            },
+            "created_time": 1696494099448,
+            "last_edited_time": 1696494152723,
+            "parent_id": "a49559dc-5155-4bf5-9e64-0dba69d8fa3b",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "5069529e-7e5f-45a7-93be-f0dbb0922b30": {
+          "value": {
+            "id": "5069529e-7e5f-45a7-93be-f0dbb0922b30",
+            "version": 37,
+            "type": "sub_sub_header",
+            "properties": { "title": [["Key Risks"]] },
+            "created_time": 1696494153461,
+            "last_edited_time": 1696494260556,
+            "parent_id": "a49559dc-5155-4bf5-9e64-0dba69d8fa3b",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "23d0409f-5f04-4eb2-ac22-9f3fcb819839": {
+          "value": {
+            "id": "23d0409f-5f04-4eb2-ac22-9f3fcb819839",
+            "version": 136,
+            "type": "text",
+            "properties": {
+              "title": [["My personal selection of risk for LLM base models will be:"]]
+            },
+            "created_time": 1696494329747,
+            "last_edited_time": 1696494498088,
+            "parent_id": "a49559dc-5155-4bf5-9e64-0dba69d8fa3b",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "27c74c2a-bec3-451d-9568-0cc55fda46cd": {
+          "value": {
+            "id": "27c74c2a-bec3-451d-9568-0cc55fda46cd",
+            "version": 37,
+            "type": "bulleted_list",
+            "properties": { "title": [["Hallucination"]] },
+            "created_time": 1696494265882,
+            "last_edited_time": 1696494268987,
+            "parent_id": "a49559dc-5155-4bf5-9e64-0dba69d8fa3b",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "19a1b31e-a599-4db5-ba9b-16b5d9575b6a": {
+          "value": {
+            "id": "19a1b31e-a599-4db5-ba9b-16b5d9575b6a",
+            "version": 32,
+            "type": "bulleted_list",
+            "properties": { "title": [["Jailbreaking"]] },
+            "created_time": 1696494269178,
+            "last_edited_time": 1696494276847,
+            "parent_id": "a49559dc-5155-4bf5-9e64-0dba69d8fa3b",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "19bee1ed-fe8a-4bcb-97c9-33cdb9e0cab9": {
+          "value": {
+            "id": "19bee1ed-fe8a-4bcb-97c9-33cdb9e0cab9",
+            "version": 150,
+            "type": "bulleted_list",
+            "properties": { "title": [["Membership Inference Attack"]] },
+            "created_time": 1696494277954,
+            "last_edited_time": 1696494309845,
+            "parent_id": "a49559dc-5155-4bf5-9e64-0dba69d8fa3b",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "c2c0ac8f-aaca-4b65-a807-4dae18d2c884": {
+          "value": {
+            "id": "c2c0ac8f-aaca-4b65-a807-4dae18d2c884",
+            "version": 342,
+            "type": "text",
+            "properties": {
+              "title": [
+                [
+                  "While you may know the ‘OWASP LLM Top10’, which consider the LLM mode, LLM-based tools (agents) and ML/AI platforms as an intergrated system."
+                ]
+              ]
+            },
+            "created_time": 1696491454104,
+            "last_edited_time": 1696494488860,
+            "parent_id": "a49559dc-5155-4bf5-9e64-0dba69d8fa3b",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "daab8cd6-ccb1-4d51-8a6d-e6eae59c042b": {
+          "value": {
+            "id": "daab8cd6-ccb1-4d51-8a6d-e6eae59c042b",
+            "version": 59,
+            "type": "sub_sub_header",
+            "properties": { "title": [["Current Researches"]] },
+            "created_time": 1696491454104,
+            "last_edited_time": 1696491506343,
+            "parent_id": "a49559dc-5155-4bf5-9e64-0dba69d8fa3b",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "2e768d0b-1d8a-4ac8-8832-b3231185dea3": {
+          "value": {
+            "id": "2e768d0b-1d8a-4ac8-8832-b3231185dea3",
+            "version": 115,
+            "type": "sub_sub_header",
+            "properties": { "title": [["Selected Works"]] },
+            "created_time": 1696491454104,
+            "last_edited_time": 1696491466821,
+            "parent_id": "a49559dc-5155-4bf5-9e64-0dba69d8fa3b",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "bca21449-104e-4414-8bc5-a3c115e92a7a": {
+          "value": {
+            "id": "bca21449-104e-4414-8bc5-a3c115e92a7a",
+            "version": 4,
+            "type": "text",
+            "created_time": 1697350235866,
+            "last_edited_time": 1697350236022,
+            "parent_id": "a49559dc-5155-4bf5-9e64-0dba69d8fa3b",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "3dc264a0-4409-4eaa-84d7-9be6cecab5dd": {
+          "value": {
+            "id": "3dc264a0-4409-4eaa-84d7-9be6cecab5dd",
+            "version": 2,
+            "type": "text",
+            "properties": { "title": [["Model Assessment", [["b"]]]] },
+            "format": {
+              "copied_from_pointer": {
+                "id": "d40b351b-dc3f-43ab-b31d-c7957468cffc",
+                "table": "block",
+                "spaceId": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+              }
+            },
+            "created_time": 1693037598902,
+            "last_edited_time": 1693037598919,
+            "parent_id": "a49559dc-5155-4bf5-9e64-0dba69d8fa3b",
+            "parent_table": "block",
+            "alive": true,
+            "copied_from": "d40b351b-dc3f-43ab-b31d-c7957468cffc",
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "86e1d1c6-921f-4585-9126-369d235a67ba": {
+          "value": {
+            "id": "86e1d1c6-921f-4585-9126-369d235a67ba",
+            "version": 2,
+            "type": "bookmark",
+            "properties": {
+              "link": [["https://arxiv.org/abs/2212.09251"]],
+              "title": [["Discovering Language Model Behaviors with Model-Written Evaluations"]],
+              "description": [
+                [
+                  "As language models (LMs) scale, they develop many novel behaviors, good and bad, exacerbating the need to evaluate how they behave. Prior work creates evaluations with crowdwork (which is..."
+                ]
+              ]
+            },
+            "format": {
+              "block_color": "red_background",
+              "bookmark_icon": "https://static.arxiv.org/static/browse/0.3.4/images/icons/apple-touch-icon.png",
+              "bookmark_cover": "https://static.arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png",
+              "copied_from_pointer": {
+                "id": "ff4c1d70-8cb9-40ff-bf79-e98b2b806ff6",
+                "table": "block",
+                "spaceId": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+              }
+            },
+            "created_time": 1693037598902,
+            "last_edited_time": 1693037598919,
+            "parent_id": "a49559dc-5155-4bf5-9e64-0dba69d8fa3b",
+            "parent_table": "block",
+            "alive": true,
+            "copied_from": "ff4c1d70-8cb9-40ff-bf79-e98b2b806ff6",
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "e1e6c0f2-9b2d-4078-8942-235af9d73797": {
+          "value": {
+            "id": "e1e6c0f2-9b2d-4078-8942-235af9d73797",
+            "version": 2,
+            "type": "bookmark",
+            "properties": {
+              "link": [["https://arxiv.org/abs/2212.09667"]],
+              "title": [["Foveate, Attribute, and Rationalize: Towards Physically Safe and..."]],
+              "description": [
+                [
+                  "Users' physical safety is an increasing concern as the market for intelligent systems continues to grow, where unconstrained systems may recommend users dangerous actions that can lead to serious..."
+                ]
+              ]
+            },
+            "format": {
+              "block_color": "default",
+              "bookmark_icon": "https://static.arxiv.org/static/browse/0.3.4/images/icons/apple-touch-icon.png",
+              "bookmark_cover": "https://static.arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png",
+              "copied_from_pointer": {
+                "id": "f256450c-3dc4-4af3-8318-c3238cf8a4af",
+                "table": "block",
+                "spaceId": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+              }
+            },
+            "created_time": 1693037598902,
+            "last_edited_time": 1693037598919,
+            "parent_id": "a49559dc-5155-4bf5-9e64-0dba69d8fa3b",
+            "parent_table": "block",
+            "alive": true,
+            "copied_from": "f256450c-3dc4-4af3-8318-c3238cf8a4af",
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "a2e6198f-5696-4233-aeee-b8e212e5b798": {
+          "value": {
+            "id": "a2e6198f-5696-4233-aeee-b8e212e5b798",
+            "version": 2,
+            "type": "bookmark",
+            "properties": {
+              "link": [["https://arxiv.org/abs/2212.09251"]],
+              "title": [["Discovering Language Model Behaviors with Model-Written Evaluations"]],
+              "description": [
+                [
+                  "As language models (LMs) scale, they develop many novel behaviors, good and bad, exacerbating the need to evaluate how they behave. Prior work creates evaluations with crowdwork (which is..."
+                ]
+              ]
+            },
+            "format": {
+              "bookmark_icon": "https://static.arxiv.org/static/browse/0.3.4/images/icons/apple-touch-icon.png",
+              "bookmark_cover": "https://static.arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png",
+              "copied_from_pointer": {
+                "id": "88420804-8ba4-42d0-823f-7828b1e54a4a",
+                "table": "block",
+                "spaceId": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+              }
+            },
+            "created_time": 1693037598902,
+            "last_edited_time": 1693037598919,
+            "parent_id": "a49559dc-5155-4bf5-9e64-0dba69d8fa3b",
+            "parent_table": "block",
+            "alive": true,
+            "copied_from": "88420804-8ba4-42d0-823f-7828b1e54a4a",
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "b6abf9cc-676e-48b3-8806-2ea1a4b98c7c": {
+          "value": {
+            "id": "b6abf9cc-676e-48b3-8806-2ea1a4b98c7c",
+            "version": 2,
+            "type": "bookmark",
+            "properties": {
+              "link": [["https://arxiv.org/abs/2308.05374"]],
+              "title": [["Trustworthy LLMs: a Survey and Guideline for Evaluating Large..."]],
+              "description": [
+                [
+                  "Ensuring alignment, which refers to making models behave in accordance with human intentions [1,2], has become a critical task before deploying large language models (LLMs) in real-world..."
+                ]
+              ]
+            },
+            "format": {
+              "bookmark_icon": "https://static.arxiv.org/static/browse/0.3.4/images/icons/apple-touch-icon.png",
+              "bookmark_cover": "https://static.arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png",
+              "copied_from_pointer": {
+                "id": "546318ce-1d04-45c3-9433-d4561aac5511",
+                "table": "block",
+                "spaceId": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+              }
+            },
+            "created_time": 1693037598903,
+            "last_edited_time": 1693037598919,
+            "parent_id": "a49559dc-5155-4bf5-9e64-0dba69d8fa3b",
+            "parent_table": "block",
+            "alive": true,
+            "copied_from": "546318ce-1d04-45c3-9433-d4561aac5511",
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "ff7359db-ff08-4dc8-bc3a-ec1ac8657c1e": {
+          "value": {
+            "id": "ff7359db-ff08-4dc8-bc3a-ec1ac8657c1e",
+            "version": 2,
+            "type": "text",
+            "properties": { "title": [["Digital Signatrue", [["b"]]]] },
+            "format": {
+              "copied_from_pointer": {
+                "id": "9e46cef4-8baa-4b5f-8c89-e44648e74871",
+                "table": "block",
+                "spaceId": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+              }
+            },
+            "created_time": 1693037598903,
+            "last_edited_time": 1693037598919,
+            "parent_id": "a49559dc-5155-4bf5-9e64-0dba69d8fa3b",
+            "parent_table": "block",
+            "alive": true,
+            "copied_from": "9e46cef4-8baa-4b5f-8c89-e44648e74871",
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "746de15f-0fc8-4891-9d1e-228a2ab4416f": {
+          "value": {
+            "id": "746de15f-0fc8-4891-9d1e-228a2ab4416f",
+            "version": 2,
+            "type": "bookmark",
+            "properties": {
+              "link": [["https://arxiv.org/abs/2303.07205"]],
+              "title": [["The Science of Detecting LLM-Generated Texts"]],
+              "description": [
+                [
+                  "The emergence of large language models (LLMs) has resulted in the production of LLM-generated texts that is highly sophisticated and almost indistinguishable from texts written by humans. However,..."
+                ]
+              ]
+            },
+            "format": {
+              "bookmark_icon": "https://static.arxiv.org/static/browse/0.3.4/images/icons/apple-touch-icon.png",
+              "bookmark_cover": "https://static.arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png",
+              "copied_from_pointer": {
+                "id": "e31c568c-3cac-4d28-962f-179b3e6fbda4",
+                "table": "block",
+                "spaceId": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+              }
+            },
+            "created_time": 1693037598903,
+            "last_edited_time": 1693037598919,
+            "parent_id": "a49559dc-5155-4bf5-9e64-0dba69d8fa3b",
+            "parent_table": "block",
+            "alive": true,
+            "copied_from": "e31c568c-3cac-4d28-962f-179b3e6fbda4",
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "421c4585-632b-4681-919f-e884f6ff8bb5": {
+          "value": {
+            "id": "421c4585-632b-4681-919f-e884f6ff8bb5",
+            "version": 2,
+            "type": "text",
+            "properties": { "title": [["Red-teaming", [["b"]]]] },
+            "format": {
+              "copied_from_pointer": {
+                "id": "c470c31c-585b-4d75-b38b-1b67342d032c",
+                "table": "block",
+                "spaceId": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+              }
+            },
+            "created_time": 1693037598903,
+            "last_edited_time": 1693037598919,
+            "parent_id": "a49559dc-5155-4bf5-9e64-0dba69d8fa3b",
+            "parent_table": "block",
+            "alive": true,
+            "copied_from": "c470c31c-585b-4d75-b38b-1b67342d032c",
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "7a18893b-f00b-4395-be06-aa53f241cae8": {
+          "value": {
+            "id": "7a18893b-f00b-4395-be06-aa53f241cae8",
+            "version": 2,
+            "type": "bookmark",
+            "properties": {
+              "link": [["https://arxiv.org/abs/2307.15043"]],
+              "title": [
+                ["Universal and Transferable Adversarial Attacks on Aligned Language Models"]
+              ],
+              "description": [
+                [
+                  "Because \"out-of-the-box\" large language models are capable of generating a great deal of objectionable content, recent work has focused on aligning these models in an attempt to prevent..."
+                ]
+              ]
+            },
+            "format": {
+              "bookmark_icon": "https://static.arxiv.org/static/browse/0.3.4/images/icons/apple-touch-icon.png",
+              "bookmark_cover": "https://static.arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png",
+              "copied_from_pointer": {
+                "id": "20a1d417-eb37-4f3e-a386-9877dfec7fc7",
+                "table": "block",
+                "spaceId": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+              }
+            },
+            "created_time": 1693037598904,
+            "last_edited_time": 1693037598919,
+            "parent_id": "a49559dc-5155-4bf5-9e64-0dba69d8fa3b",
+            "parent_table": "block",
+            "alive": true,
+            "copied_from": "20a1d417-eb37-4f3e-a386-9877dfec7fc7",
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "141781d7-f10c-4c51-bd25-9b04e6425df9": {
+          "value": {
+            "id": "141781d7-f10c-4c51-bd25-9b04e6425df9",
+            "version": 2,
+            "type": "bookmark",
+            "properties": {
+              "link": [["https://arxiv.org/abs/2308.12833"]],
+              "title": [["Use of LLMs for Illicit Purposes: Threats, Prevention Measures,..."]],
+              "description": [
+                [
+                  "Spurred by the recent rapid increase in the development and distribution of large language models (LLMs) across industry and academia, much recent work has drawn attention to safety- and..."
+                ]
+              ]
+            },
+            "format": {
+              "block_color": "red_background",
+              "bookmark_icon": "https://static.arxiv.org/static/browse/0.3.4/images/icons/apple-touch-icon.png",
+              "bookmark_cover": "https://static.arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png",
+              "copied_from_pointer": {
+                "id": "6763b6f2-f86e-4b4a-9174-edfa7f7175d2",
+                "table": "block",
+                "spaceId": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+              }
+            },
+            "created_time": 1693037598904,
+            "last_edited_time": 1693037598919,
+            "parent_id": "a49559dc-5155-4bf5-9e64-0dba69d8fa3b",
+            "parent_table": "block",
+            "alive": true,
+            "copied_from": "6763b6f2-f86e-4b4a-9174-edfa7f7175d2",
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "bd6be43c-579e-4c97-a03c-4611f97c3781": {
+          "value": {
+            "id": "bd6be43c-579e-4c97-a03c-4611f97c3781",
+            "version": 2,
+            "type": "bookmark",
+            "properties": {
+              "link": [["https://arxiv.org/abs/2305.18462"]],
+              "title": [["Membership Inference Attacks against Language Models via..."]],
+              "description": [
+                [
+                  "Membership Inference attacks (MIAs) aim to predict whether a data sample was present in the training data of a machine learning model or not, and are widely used for assessing the privacy risks of..."
+                ]
+              ]
+            },
+            "format": {
+              "bookmark_icon": "https://static.arxiv.org/static/browse/0.3.4/images/icons/apple-touch-icon.png",
+              "bookmark_cover": "https://static.arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png",
+              "copied_from_pointer": {
+                "id": "7e3b21e4-f8f5-4bdf-86ef-ad89e4977434",
+                "table": "block",
+                "spaceId": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+              }
+            },
+            "created_time": 1693037598904,
+            "last_edited_time": 1693037598919,
+            "parent_id": "a49559dc-5155-4bf5-9e64-0dba69d8fa3b",
+            "parent_table": "block",
+            "alive": true,
+            "copied_from": "7e3b21e4-f8f5-4bdf-86ef-ad89e4977434",
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "33fff2b3-8c8e-4fe0-9952-be8c450ff668": {
+          "value": {
+            "id": "33fff2b3-8c8e-4fe0-9952-be8c450ff668",
+            "version": 44,
+            "type": "text",
+            "properties": { "title": [["Hallucination v.s. Factuality", [["b"]]]] },
+            "format": {
+              "copied_from_pointer": {
+                "id": "c7d622bd-0831-4c6d-823c-51565cdc8918",
+                "table": "block",
+                "spaceId": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+              }
+            },
+            "created_time": 1693037598904,
+            "last_edited_time": 1697350254260,
+            "parent_id": "a49559dc-5155-4bf5-9e64-0dba69d8fa3b",
+            "parent_table": "block",
+            "alive": true,
+            "copied_from": "c7d622bd-0831-4c6d-823c-51565cdc8918",
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "bd7bdd6c-a1f3-43ce-8d74-9b4d20907e99": {
+          "value": {
+            "id": "bd7bdd6c-a1f3-43ce-8d74-9b4d20907e99",
+            "version": 2,
+            "type": "external_object_instance",
+            "format": {
+              "domain": "github.com",
+              "original_url": "https://github.com/zjunlp/FactCHD"
+            },
+            "created_time": 1697350297355,
+            "last_edited_time": 1697350297355,
+            "parent_id": "a49559dc-5155-4bf5-9e64-0dba69d8fa3b",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "a65e99bb-c3b1-462a-bd7b-1af43854e2ec": {
+          "value": {
+            "id": "a65e99bb-c3b1-462a-bd7b-1af43854e2ec",
+            "version": 13,
+            "type": "image",
+            "properties": {
+              "size": [["135.4KB"]],
+              "title": [["Untitled"]],
+              "source": [
+                [
+                  "https://prod-files-secure.s3.us-west-2.amazonaws.com/cb537cc0-aa00-4959-8db9-80abdf2033d3/e075a3a3-d3e2-4842-8da8-b97f6efa6bd3/Untitled.png"
+                ]
+              ]
+            },
+            "format": {
+              "block_width": 707.9896240234375,
+              "display_source": "https://prod-files-secure.s3.us-west-2.amazonaws.com/cb537cc0-aa00-4959-8db9-80abdf2033d3/e075a3a3-d3e2-4842-8da8-b97f6efa6bd3/Untitled.png",
+              "block_full_width": false,
+              "block_page_width": true,
+              "block_aspect_ratio": 0.7195902688860435,
+              "block_preserve_scale": true
+            },
+            "created_time": 1697350320044,
+            "last_edited_time": 1734422578284,
+            "parent_id": "a49559dc-5155-4bf5-9e64-0dba69d8fa3b",
+            "parent_table": "block",
+            "alive": true,
+            "file_ids": ["e075a3a3-d3e2-4842-8da8-b97f6efa6bd3"],
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "9e25b9d6-5ec1-4ec5-9371-c1005778abc7": {
+          "value": {
+            "id": "9e25b9d6-5ec1-4ec5-9371-c1005778abc7",
+            "version": 2,
+            "type": "bookmark",
+            "properties": {
+              "link": [["https://arxiv.org/abs/2306.16564"]],
+              "title": [["LLM Calibration and Automatic Hallucination Detection via Pareto..."]],
+              "description": [
+                [
+                  "Large language models (LLMs) have demonstrated remarkable capabilities out of box for a wide range of applications, yet accuracy still remains a major growth area, especially in mission-critical..."
+                ]
+              ]
+            },
+            "format": {
+              "bookmark_icon": "https://static.arxiv.org/static/browse/0.3.4/images/icons/apple-touch-icon.png",
+              "bookmark_cover": "https://static.arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png",
+              "copied_from_pointer": {
+                "id": "65031cb0-ec37-4cf7-9b96-a43d824cb1da",
+                "table": "block",
+                "spaceId": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+              }
+            },
+            "created_time": 1693037598904,
+            "last_edited_time": 1693037598919,
+            "parent_id": "a49559dc-5155-4bf5-9e64-0dba69d8fa3b",
+            "parent_table": "block",
+            "alive": true,
+            "copied_from": "65031cb0-ec37-4cf7-9b96-a43d824cb1da",
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "77d95b0e-35d3-47c3-a2ef-f258d018e0b9": {
+          "value": {
+            "id": "77d95b0e-35d3-47c3-a2ef-f258d018e0b9",
+            "version": 12,
+            "type": "bookmark",
+            "properties": {
+              "link": [["https://arxiv.org/abs/2310.07521"]],
+              "title": [["Survey on Factuality in Large Language Models: Knowledge,..."]],
+              "description": [
+                [
+                  "This survey addresses the crucial issue of factuality in Large Language Models (LLMs). As LLMs find applications across diverse domains, the reliability and accuracy of their outputs become vital...."
+                ]
+              ]
+            },
+            "format": {
+              "block_color": "red_background",
+              "bookmark_icon": "https://static.arxiv.org/static/browse/0.3.4/images/icons/apple-touch-icon.png",
+              "bookmark_cover": "https://static.arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png"
+            },
+            "created_time": 1697350264487,
+            "last_edited_time": 1697350334849,
+            "parent_id": "a49559dc-5155-4bf5-9e64-0dba69d8fa3b",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "5fcd6148-5971-473a-9687-1e7af17c58b2": {
+          "value": {
+            "id": "5fcd6148-5971-473a-9687-1e7af17c58b2",
+            "version": 9,
+            "type": "text",
+            "properties": { "title": [["RAG"]] },
+            "created_time": 1697350404448,
+            "last_edited_time": 1697350406077,
+            "parent_id": "a49559dc-5155-4bf5-9e64-0dba69d8fa3b",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "f7918951-70ce-4017-a8de-ccfef105e29a": {
+          "value": {
+            "id": "f7918951-70ce-4017-a8de-ccfef105e29a",
+            "version": 10,
+            "type": "bookmark",
+            "properties": {
+              "link": [["https://arxiv.org/abs/2005.11401"]],
+              "title": [["Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks"]],
+              "description": [
+                [
+                  "Large pre-trained language models have been shown to store factual knowledge in their parameters, and achieve state-of-the-art results when fine-tuned on downstream NLP tasks. However, their..."
+                ]
+              ]
+            },
+            "format": {
+              "bookmark_icon": "https://static.arxiv.org/static/browse/0.3.4/images/icons/apple-touch-icon.png",
+              "bookmark_cover": "https://static.arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png"
+            },
+            "created_time": 1697350407886,
+            "last_edited_time": 1697350407890,
+            "parent_id": "a49559dc-5155-4bf5-9e64-0dba69d8fa3b",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "33a4cc1d-f192-42d5-8160-0e76741c8396": {
+          "value": {
+            "id": "33a4cc1d-f192-42d5-8160-0e76741c8396",
+            "version": 2,
+            "type": "text",
+            "properties": { "title": [["     ACL2023:"]] },
+            "format": {
+              "copied_from_pointer": {
+                "id": "d2829654-75f5-427d-b2f8-21a81b083ec3",
+                "table": "block",
+                "spaceId": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+              }
+            },
+            "created_time": 1693037598904,
+            "last_edited_time": 1693037598919,
+            "parent_id": "a49559dc-5155-4bf5-9e64-0dba69d8fa3b",
+            "parent_table": "block",
+            "alive": true,
+            "copied_from": "d2829654-75f5-427d-b2f8-21a81b083ec3",
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "29364569-f007-4c2c-b723-ff4570484fc2": {
+          "value": {
+            "id": "29364569-f007-4c2c-b723-ff4570484fc2",
+            "version": 2,
+            "type": "bookmark",
+            "properties": {
+              "link": [["https://arxiv.org/abs/2110.07166"]],
+              "title": [["CaPE: Contrastive Parameter Ensembling for Reducing Hallucination..."]],
+              "description": [
+                [
+                  "Hallucination is a known issue for neural abstractive summarization models. Recent work suggests that the degree of hallucination may depend on errors in the training data. In this work, we..."
+                ]
+              ]
+            },
+            "format": {
+              "bookmark_icon": "https://static.arxiv.org/static/browse/0.3.4/images/icons/apple-touch-icon.png",
+              "bookmark_cover": "https://static.arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png",
+              "copied_from_pointer": {
+                "id": "1460fbec-7524-473f-8a5d-9de53db211ad",
+                "table": "block",
+                "spaceId": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+              }
+            },
+            "created_time": 1693037598904,
+            "last_edited_time": 1693037598919,
+            "parent_id": "a49559dc-5155-4bf5-9e64-0dba69d8fa3b",
+            "parent_table": "block",
+            "alive": true,
+            "copied_from": "1460fbec-7524-473f-8a5d-9de53db211ad",
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "08283f43-4395-4d6d-bc8d-c735bbd8c94e": {
+          "value": {
+            "id": "08283f43-4395-4d6d-bc8d-c735bbd8c94e",
+            "version": 2,
+            "type": "bookmark",
+            "properties": {
+              "link": [["https://arxiv.org/abs/2212.01588"]],
+              "title": [["RHO ($ρ$): Reducing Hallucination in Open-domain Dialogues with..."]],
+              "description": [
+                [
+                  "Dialogue systems can leverage large pre-trained language models and knowledge to generate fluent and informative responses. However, these models are still prone to produce hallucinated responses..."
+                ]
+              ]
+            },
+            "format": {
+              "bookmark_icon": "https://static.arxiv.org/static/browse/0.3.4/images/icons/apple-touch-icon.png",
+              "bookmark_cover": "https://static.arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png",
+              "copied_from_pointer": {
+                "id": "504b4d2c-1f6e-410c-8bfe-eed1c40d2547",
+                "table": "block",
+                "spaceId": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+              }
+            },
+            "created_time": 1693037598905,
+            "last_edited_time": 1693037598919,
+            "parent_id": "a49559dc-5155-4bf5-9e64-0dba69d8fa3b",
+            "parent_table": "block",
+            "alive": true,
+            "copied_from": "504b4d2c-1f6e-410c-8bfe-eed1c40d2547",
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "e331e5ad-f082-43d9-9f60-39dafcaa0c18": {
+          "value": {
+            "id": "e331e5ad-f082-43d9-9f60-39dafcaa0c18",
+            "version": 2,
+            "type": "text",
+            "format": {
+              "copied_from_pointer": {
+                "id": "336e9dd9-4e61-418f-a1ea-9f357cf76599",
+                "table": "block",
+                "spaceId": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+              }
+            },
+            "created_time": 1693037598905,
+            "last_edited_time": 1693037598919,
+            "parent_id": "a49559dc-5155-4bf5-9e64-0dba69d8fa3b",
+            "parent_table": "block",
+            "alive": true,
+            "copied_from": "336e9dd9-4e61-418f-a1ea-9f357cf76599",
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "c08b325c-c9f6-471f-ba84-3b973523d7b6": {
+          "value": {
+            "id": "c08b325c-c9f6-471f-ba84-3b973523d7b6",
+            "version": 2,
+            "type": "text",
+            "properties": { "title": [["MPC", [["b"]]]] },
+            "format": {
+              "copied_from_pointer": {
+                "id": "6f720f98-412f-47e2-ad5f-8c7f94df12af",
+                "table": "block",
+                "spaceId": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+              }
+            },
+            "created_time": 1693037598905,
+            "last_edited_time": 1693037598919,
+            "parent_id": "a49559dc-5155-4bf5-9e64-0dba69d8fa3b",
+            "parent_table": "block",
+            "alive": true,
+            "copied_from": "6f720f98-412f-47e2-ad5f-8c7f94df12af",
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "5d88eae1-4d3b-41cb-a0aa-c321b721170f": {
+          "value": {
+            "id": "5d88eae1-4d3b-41cb-a0aa-c321b721170f",
+            "version": 2,
+            "type": "bookmark",
+            "properties": {
+              "link": [["https://arxiv.org/abs/2211.01452"]],
+              "title": [["MPCFormer: fast, performant and private Transformer inference with MPC"]],
+              "description": [
+                [
+                  "Enabling private inference is crucial for many cloud inference services that are based on Transformer models. However, existing private inference solutions can increase the inference latency by..."
+                ]
+              ]
+            },
+            "format": {
+              "bookmark_icon": "https://static.arxiv.org/static/browse/0.3.4/images/icons/apple-touch-icon.png",
+              "bookmark_cover": "https://static.arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png",
+              "copied_from_pointer": {
+                "id": "8d576d80-c52e-4f4c-add8-ab437e0dac8a",
+                "table": "block",
+                "spaceId": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+              }
+            },
+            "created_time": 1693037598905,
+            "last_edited_time": 1693037598919,
+            "parent_id": "a49559dc-5155-4bf5-9e64-0dba69d8fa3b",
+            "parent_table": "block",
+            "alive": true,
+            "copied_from": "8d576d80-c52e-4f4c-add8-ab437e0dac8a",
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "980be308-490e-4781-8a60-764a21e4edf6": {
+          "value": {
+            "id": "980be308-490e-4781-8a60-764a21e4edf6",
+            "version": 4,
+            "type": "text",
+            "created_time": 1695631726702,
+            "last_edited_time": 1695631726710,
+            "parent_id": "a49559dc-5155-4bf5-9e64-0dba69d8fa3b",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        }
+      },
+      "collection": {},
+      "collection_view": {},
+      "notion_user": {},
+      "collection_query": {},
+      "signed_urls": {
+        "a49559dc-5155-4bf5-9e64-0dba69d8fa3b": "https://file.notion.so/f/f/cb537cc0-aa00-4959-8db9-80abdf2033d3/7122a372-dd57-4ddd-8603-cf0861b7d3eb/bg2.gif?table=block&id=a49559dc-5155-4bf5-9e64-0dba69d8fa3b&spaceId=cb537cc0-aa00-4959-8db9-80abdf2033d3&expirationTimestamp=1756735200000&signature=cWq7GDMg9vdvFqg6ULDReTsULcQnQd3NqsuHzxYDdfk"
+      }
+    },
+    "authorDetails": [
+      {
+        "readingTime": { "text": "1 min read", "minutes": 0.145, "time": 8700, "words": 29 },
+        "slug": ["default"],
+        "fileName": "default.md",
+        "name": "Riino",
+        "avatar": "/static/images/logo_Nest.png",
+        "notion": "97ab7c51daf5470ea07e43c577169d24",
+        "date": null
+      }
+    ],
+    "prev": {
+      "layout": "post",
+      "title": "Risk of Large Language Models",
+      "tags": ["mdx", "LLM", "AI"],
+      "status": "WIP",
+      "slug": "2023-8-14-llm-risk",
+      "date": "2023-08-13T16:00:00.000Z"
+    },
+    "next": {
+      "layout": "post",
+      "title": "GNN Memo",
+      "tags": ["Notion", "GNN"],
+      "toc": true,
+      "auto-convert-img": true,
+      "notion": "f82ea17783334963b9053813312b6277",
+      "slug": "2023-08-26-notion-gnn-memo",
+      "date": "2023-08-26T00:00:00.000Z"
+    }
+  },
+  "__N_SSG": true
+}

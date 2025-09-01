@@ -1,0 +1,49 @@
+{
+  "pageProps": {
+    "post": {
+      "mdxSource": "var Component=(()=>{var c=Object.create;var r=Object.defineProperty;var o=Object.getOwnPropertyDescriptor;var p=Object.getOwnPropertyNames;var a=Object.getPrototypeOf,g=Object.prototype.hasOwnProperty;var n=l=>r(l,\"__esModule\",{value:!0});var h=(l,e)=>()=>(e||l((e={exports:{}}).exports,e),e.exports),P=(l,e)=>{n(l);for(var t in e)r(l,t,{get:e[t],enumerable:!0})},k=(l,e,t)=>{if(e&&typeof e==\"object\"||typeof e==\"function\")for(let s of p(e))!g.call(l,s)&&s!==\"default\"&&r(l,s,{get:()=>e[s],enumerable:!(t=o(e,s))||t.enumerable});return l},G=l=>k(n(r(l!=null?c(a(l)):{},\"default\",l&&l.__esModule&&\"default\"in l?{get:()=>l.default,enumerable:!0}:{value:l,enumerable:!0})),l);var d=h((_,m)=>{m.exports=_jsx_runtime});var x={};P(x,{default:()=>f,frontmatter:()=>J});var i=G(d()),J={layout:\"post\",title:\"Risk of Large Language Models\",tags:[\"LLM\",\"AI\"],status:\"WIP\"};function u(l={}){let{wrapper:e}=l.components||{};return e?(0,i.jsx)(e,Object.assign({},l,{children:(0,i.jsx)(t,{})})):t();function t(){let s=Object.assign({p:\"p\",img:\"img\"},l.components);return(0,i.jsxs)(i.Fragment,{children:[(0,i.jsx)(s.p,{children:\"Notes: This version is for Riinosite only and has been cropped. Please follow the Terms of Use and Privacy Statement, which can be found in the footer below.\"}),(0,i.jsx)(s.p,{children:(0,i.jsx)(s.img,{alt:\"slide3\",src:\"../img/in-post/2023-8-14-llm-risk/slide3.JPG\"})}),(0,i.jsx)(s.p,{children:(0,i.jsx)(s.img,{alt:\"slide5\",src:\"../img/in-post/2023-8-14-llm-risk/slide5.JPG\"})}),(0,i.jsx)(s.p,{children:(0,i.jsx)(s.img,{alt:\"slide6\",src:\"../img/in-post/2023-8-14-llm-risk/slide6.JPG\"})}),(0,i.jsx)(s.p,{children:(0,i.jsx)(s.img,{alt:\"slide7\",src:\"../img/in-post/2023-8-14-llm-risk/slide7.JPG\"})}),(0,i.jsx)(s.p,{children:(0,i.jsx)(s.img,{alt:\"slide9\",src:\"../img/in-post/2023-8-14-llm-risk/slide9.JPG\"})}),(0,i.jsx)(s.p,{children:(0,i.jsx)(s.img,{alt:\"slide10\",src:\"../img/in-post/2023-8-14-llm-risk/slide10.JPG\"})}),(0,i.jsx)(s.p,{children:(0,i.jsx)(s.img,{alt:\"slide11\",src:\"../img/in-post/2023-8-14-llm-risk/slide11.JPG\"})}),(0,i.jsx)(s.p,{children:(0,i.jsx)(s.img,{alt:\"slide12\",src:\"../img/in-post/2023-8-14-llm-risk/slide12.JPG\"})}),(0,i.jsx)(s.p,{children:(0,i.jsx)(s.img,{alt:\"slide13\",src:\"../img/in-post/2023-8-14-llm-risk/slide13.JPG\"})}),(0,i.jsx)(s.p,{children:(0,i.jsx)(s.img,{alt:\"slide14\",src:\"../img/in-post/2023-8-14-llm-risk/slide14.JPG\"})}),(0,i.jsx)(s.p,{children:(0,i.jsx)(s.img,{alt:\"slide15\",src:\"../img/in-post/2023-8-14-llm-risk/slide15.JPG\"})}),(0,i.jsx)(s.p,{children:(0,i.jsx)(s.img,{alt:\"slide16\",src:\"../img/in-post/2023-8-14-llm-risk/slide16.JPG\"})}),(0,i.jsx)(s.p,{children:(0,i.jsx)(s.img,{alt:\"slide17\",src:\"../img/in-post/2023-8-14-llm-risk/slide17.JPG\"})}),(0,i.jsx)(s.p,{children:(0,i.jsx)(s.img,{alt:\"slide18\",src:\"../img/in-post/2023-8-14-llm-risk/slide18.JPG\"})}),(0,i.jsx)(s.p,{children:(0,i.jsx)(s.img,{alt:\"slide19\",src:\"../img/in-post/2023-8-14-llm-risk/slide19.JPG\"})}),(0,i.jsx)(s.p,{children:(0,i.jsx)(s.img,{alt:\"slide22\",src:\"../img/in-post/2023-8-14-llm-risk/slide22.JPG\"})})]})}}var f=u;return x;})();\n;return Component;",
+      "toc": [],
+      "frontMatter": {
+        "readingTime": { "text": "1 min read", "minutes": 0.305, "time": 18300, "words": 61 },
+        "slug": "2023-8-14-llm-risk",
+        "fileName": "2023-8-14-llm-risk.md",
+        "layout": "post",
+        "title": "Risk of Large Language Models",
+        "tags": ["LLM", "AI"],
+        "status": "WIP",
+        "date": "2023-08-13T16:00:00.000Z"
+      }
+    },
+    "recordMap": null,
+    "authorDetails": [
+      {
+        "readingTime": { "text": "1 min read", "minutes": 0.145, "time": 8700, "words": 29 },
+        "slug": ["default"],
+        "fileName": "default.md",
+        "name": "Riino",
+        "avatar": "/static/images/logo_Nest.png",
+        "notion": "97ab7c51daf5470ea07e43c577169d24",
+        "date": null
+      }
+    ],
+    "prev": {
+      "layout": "post",
+      "title": "v4 Mermaid Benchmark",
+      "status": "test",
+      "tags": ["mdx"],
+      "slug": "2023-05-16-mermaid-benchmark",
+      "date": "2023-05-16T00:00:00.000Z"
+    },
+    "next": {
+      "layout": "post",
+      "title": "Secured AI Memo",
+      "tags": ["Notion", "LLM", "AI"],
+      "toc": true,
+      "auto-convert-img": true,
+      "notion": "a49559dc51554bf59e640dba69d8fa3b",
+      "slug": "2023-08-24-notion-secured-ai-memo",
+      "date": "2023-08-24T00:00:00.000Z"
+    }
+  },
+  "__N_SSG": true
+}

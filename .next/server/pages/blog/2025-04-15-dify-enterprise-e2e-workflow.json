@@ -1,0 +1,893 @@
+{
+  "pageProps": {
+    "post": {
+      "mdxSource": "var Component=(()=>{var c=Object.create;var a=Object.defineProperty;var m=Object.getOwnPropertyDescriptor;var f=Object.getOwnPropertyNames;var x=Object.getPrototypeOf,d=Object.prototype.hasOwnProperty;var i=t=>a(t,\"__esModule\",{value:!0});var p=(t,e)=>()=>(e||t((e={exports:{}}).exports,e),e.exports),g=(t,e)=>{i(t);for(var r in e)a(t,r,{get:e[r],enumerable:!0})},l=(t,e,r)=>{if(e&&typeof e==\"object\"||typeof e==\"function\")for(let o of f(e))!d.call(t,o)&&o!==\"default\"&&a(t,o,{get:()=>e[o],enumerable:!(r=m(e,o))||r.enumerable});return t},j=t=>l(i(a(t!=null?c(x(t)):{},\"default\",t&&t.__esModule&&\"default\"in t?{get:()=>t.default,enumerable:!0}:{value:t,enumerable:!0})),t);var u=p((A,s)=>{s.exports=_jsx_runtime});var M={};g(M,{default:()=>D,frontmatter:()=>_});var n=j(u()),_={layout:\"post\",title:\"Dify in Enterprise - E2E Order Processing Automation\",subtitle:\"\",tags:[\"LLM\",\"AI\",\"Dify\",\"Gradio\",\"OAuth\"],toc:!0,\"auto-convert-img\":!0,notion:\"1d568738b6758084a1f0c5869d4943a8\"};function y(t={}){let{wrapper:e}=t.components||{};return e?(0,n.jsx)(e,Object.assign({},t,{children:(0,n.jsx)(r,{})})):r();function r(){return(0,n.jsx)(n.Fragment,{})}}var D=y;return M;})();\n;return Component;",
+      "toc": [],
+      "frontMatter": {
+        "readingTime": { "text": "1 min read", "minutes": 0.18, "time": 10800, "words": 36 },
+        "slug": "2025-04-15-dify-enterprise-e2e-workflow",
+        "fileName": "2025-04-15-dify-enterprise-e2e-workflow.md",
+        "layout": "post",
+        "title": "Dify in Enterprise - E2E Order Processing Automation",
+        "subtitle": "",
+        "tags": ["LLM", "AI", "Dify", "Gradio", "OAuth"],
+        "toc": true,
+        "auto-convert-img": true,
+        "notion": "1d568738b6758084a1f0c5869d4943a8",
+        "date": "2025-04-15T00:00:00.000Z"
+      }
+    },
+    "recordMap": {
+      "block": {
+        "1d568738-b675-8084-a1f0-c5869d4943a8": {
+          "value": {
+            "id": "1d568738-b675-8084-a1f0-c5869d4943a8",
+            "version": 478,
+            "type": "page",
+            "properties": {
+              "title": [["Dify in Enterprise - E2E Order Processing Automation [Draft]"]]
+            },
+            "content": [
+              "1d568738-b675-805e-8c33-eb3975d9f91b",
+              "1d568738-b675-8068-bc17-d4e705157d0f",
+              "1d568738-b675-80db-bbc4-fdb14c71b6c7",
+              "1d568738-b675-80d2-b912-c0e597fdecba",
+              "1d568738-b675-80a1-8e70-cea26d5be3a8",
+              "1d568738-b675-809f-b9ab-e08df6d293e6",
+              "1d568738-b675-809e-9203-de70f0aafd9c",
+              "1d568738-b675-8029-82a9-c7dc7059c5ca",
+              "1d668738-b675-80f6-ba18-e98f3b60e27e",
+              "1d568738-b675-801e-96fb-e69f8f902cb4",
+              "1d568738-b675-8098-b6f6-efa41be5fa94",
+              "1d568738-b675-8086-91dd-fb94cdfb649f",
+              "1d568738-b675-8035-aa22-f0986c2f19bd",
+              "1d568738-b675-80a7-9b03-e1bc4e496e2f",
+              "1d668738-b675-80ca-ae3a-d41ff569362d",
+              "1d668738-b675-80a2-9a75-dff4047feecc",
+              "1d568738-b675-8006-afe4-d88867e9c980",
+              "1d568738-b675-8006-9dea-e989bcbf878f",
+              "1d568738-b675-802e-8270-ebfb587f37cb",
+              "1d568738-b675-80d5-9b61-eaaddec3e499",
+              "1d568738-b675-80bb-8e2c-e006ef07032d",
+              "1d568738-b675-80cc-9998-e9f05fe28eb5",
+              "1d568738-b675-80e6-b225-f56062a90a18",
+              "1d568738-b675-8039-8293-ef2b42649598",
+              "1d568738-b675-80cc-a83b-ee7c9e2c9fd0",
+              "1d568738-b675-8051-8419-f4877634d1a2",
+              "1d568738-b675-80da-a535-cbcc82001f6e",
+              "1d668738-b675-803e-a006-c4b5b1b2647c"
+            ],
+            "format": {
+              "site_id": "1d668738-b675-804f-b384-007934a90258",
+              "copied_from_pointer": {
+                "id": "15f68738-b675-80db-9f2a-c8b0b8f2b45c",
+                "table": "block",
+                "spaceId": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+              },
+              "page_cover_position": 0.6,
+              "social_media_image_preview_url": "attachment:627e799b-53a9-43f7-a3f3-43fd4b66bd20:SocialMediaPreviewImage.png"
+            },
+            "permissions": [
+              {
+                "role": "reader",
+                "type": "public_permission",
+                "is_site": true,
+                "added_timestamp": 1744685196298,
+                "allow_duplicate": false
+              }
+            ],
+            "created_time": 1744614122321,
+            "last_edited_time": 1750659510313,
+            "parent_id": "0b47e047-c965-4a4e-bfae-d4fe3ebaf12d",
+            "parent_table": "block",
+            "alive": true,
+            "copied_from": "15f68738-b675-80db-9f2a-c8b0b8f2b45c",
+            "file_ids": [
+              "dba54db2-dd85-4c7f-8c99-86eabce902e4",
+              "d4730a0a-10eb-448e-8835-a4abbd1c8a68",
+              "b17fe581-fe58-4b45-aaa8-6a1130249c4f",
+              "627e799b-53a9-43f7-a3f3-43fd4b66bd20"
+            ],
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "0b47e047-c965-4a4e-bfae-d4fe3ebaf12d": { "role": "none" },
+        "1d568738-b675-805e-8c33-eb3975d9f91b": {
+          "value": {
+            "id": "1d568738-b675-805e-8c33-eb3975d9f91b",
+            "version": 2,
+            "type": "image",
+            "properties": {
+              "size": [["6.1KB"]],
+              "title": [["NoEVoix.svg"]],
+              "source": [
+                [
+                  "https://s3-us-west-2.amazonaws.com/secure.notion-static.com/0dbb5076-5880-4711-98a7-b535696bea8d/NoEVoix.svg"
+                ]
+              ]
+            },
+            "format": {
+              "block_width": 208.80209350585938,
+              "block_height": 20,
+              "display_source": "https://s3-us-west-2.amazonaws.com/secure.notion-static.com/0dbb5076-5880-4711-98a7-b535696bea8d/NoEVoix.svg",
+              "block_alignment": "left",
+              "block_full_width": false,
+              "block_page_width": false,
+              "block_aspect_ratio": 0.09569377990430622,
+              "copied_from_pointer": {
+                "id": "16768738-b675-8080-bc97-cde57e03c319",
+                "table": "block",
+                "spaceId": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+              },
+              "block_preserve_scale": true
+            },
+            "created_time": 1744614122321,
+            "last_edited_time": 1744614122335,
+            "parent_id": "1d568738-b675-8084-a1f0-c5869d4943a8",
+            "parent_table": "block",
+            "alive": true,
+            "copied_from": "16768738-b675-8080-bc97-cde57e03c319",
+            "file_ids": ["0dbb5076-5880-4711-98a7-b535696bea8d"],
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "1d568738-b675-8068-bc17-d4e705157d0f": {
+          "value": {
+            "id": "1d568738-b675-8068-bc17-d4e705157d0f",
+            "version": 2,
+            "type": "divider",
+            "format": {
+              "copied_from_pointer": {
+                "id": "16768738-b675-80b9-87e5-e83a3143188a",
+                "table": "block",
+                "spaceId": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+              }
+            },
+            "created_time": 1744614122321,
+            "last_edited_time": 1744614122335,
+            "parent_id": "1d568738-b675-8084-a1f0-c5869d4943a8",
+            "parent_table": "block",
+            "alive": true,
+            "copied_from": "16768738-b675-80b9-87e5-e83a3143188a",
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "1d568738-b675-80db-bbc4-fdb14c71b6c7": {
+          "value": {
+            "id": "1d568738-b675-80db-bbc4-fdb14c71b6c7",
+            "version": 2,
+            "type": "text",
+            "properties": {
+              "title": [
+                ["Classification: ", [["b"]]],
+                ["[Public]", [["b"], ["h", "teal"]]],
+                ["\n⚠️ You agree that you have read and understanded the content in "],
+                [
+                  "Notion - Disclaimer & Terms of Use",
+                  [
+                    [
+                      "a",
+                      "https://www.notion.so/Notion-Disclaimer-Terms-of-Use-9c2494171a484236aeca99a9059596a4"
+                    ]
+                  ]
+                ],
+                [" before usage."]
+              ]
+            },
+            "format": {
+              "copied_from_pointer": {
+                "id": "15f68738-b675-8052-918f-d0f09aa0f3ae",
+                "table": "block",
+                "spaceId": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+              }
+            },
+            "created_time": 1744614122322,
+            "last_edited_time": 1744614122335,
+            "parent_id": "1d568738-b675-8084-a1f0-c5869d4943a8",
+            "parent_table": "block",
+            "alive": true,
+            "copied_from": "15f68738-b675-8052-918f-d0f09aa0f3ae",
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "1d568738-b675-80d2-b912-c0e597fdecba": {
+          "value": {
+            "id": "1d568738-b675-80d2-b912-c0e597fdecba",
+            "version": 2,
+            "type": "divider",
+            "format": {
+              "copied_from_pointer": {
+                "id": "16768738-b675-801b-95da-d3a60d1961d6",
+                "table": "block",
+                "spaceId": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+              }
+            },
+            "created_time": 1744614122322,
+            "last_edited_time": 1744614122335,
+            "parent_id": "1d568738-b675-8084-a1f0-c5869d4943a8",
+            "parent_table": "block",
+            "alive": true,
+            "copied_from": "16768738-b675-801b-95da-d3a60d1961d6",
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "1d568738-b675-80a1-8e70-cea26d5be3a8": {
+          "value": {
+            "id": "1d568738-b675-80a1-8e70-cea26d5be3a8",
+            "version": 4,
+            "type": "text",
+            "properties": {
+              "title": [
+                ["Copyright "],
+                ["NestAI", [["b"]]],
+                [" , for more information, please contact "],
+                ["sorphwer@gmail.com", [["a", "mailto:sorphwer@gmail.com"]]],
+                [" "]
+              ]
+            },
+            "format": {
+              "copied_from_pointer": {
+                "id": "15f68738-b675-8006-8ee7-d54364c958b3",
+                "table": "block",
+                "spaceId": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+              }
+            },
+            "created_time": 1744614122322,
+            "last_edited_time": 1744696137009,
+            "parent_id": "1d568738-b675-8084-a1f0-c5869d4943a8",
+            "parent_table": "block",
+            "alive": true,
+            "copied_from": "15f68738-b675-8006-8ee7-d54364c958b3",
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "1d568738-b675-809f-b9ab-e08df6d293e6": {
+          "value": {
+            "id": "1d568738-b675-809f-b9ab-e08df6d293e6",
+            "version": 2,
+            "type": "divider",
+            "format": {
+              "copied_from_pointer": {
+                "id": "15f68738-b675-8063-ac4e-c1a4b73a6528",
+                "table": "block",
+                "spaceId": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+              }
+            },
+            "created_time": 1744614122322,
+            "last_edited_time": 1744614122335,
+            "parent_id": "1d568738-b675-8084-a1f0-c5869d4943a8",
+            "parent_table": "block",
+            "alive": true,
+            "copied_from": "15f68738-b675-8063-ac4e-c1a4b73a6528",
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "1d568738-b675-809e-9203-de70f0aafd9c": {
+          "value": {
+            "id": "1d568738-b675-809e-9203-de70f0aafd9c",
+            "version": 60,
+            "type": "sub_header",
+            "properties": { "title": [["Abstract"]] },
+            "format": {
+              "list_start_index": 0,
+              "copied_from_pointer": {
+                "id": "15f68738-b675-806c-af05-d5d99a3843d1",
+                "table": "block",
+                "spaceId": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+              }
+            },
+            "created_time": 1744614122322,
+            "last_edited_time": 1744619330756,
+            "parent_id": "1d568738-b675-8084-a1f0-c5869d4943a8",
+            "parent_table": "block",
+            "alive": true,
+            "copied_from": "15f68738-b675-806c-af05-d5d99a3843d1",
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "1d568738-b675-8029-82a9-c7dc7059c5ca": {
+          "value": {
+            "id": "1d568738-b675-8029-82a9-c7dc7059c5ca",
+            "version": 635,
+            "type": "text",
+            "properties": {
+              "title": [
+                [
+                  "Order processing is a time-consuming challenge faced by the manufacturing industry. Traditionally, sales personnel manually filled out standard order forms by scanning various received order documents line by line, subsequently entering them into ERP systems to complete the order recognition and electronic creation process. In recent years, with the development of VL model and LLM, we have successfully achieved end-to-end automation and human-in-the-loop (HITL) based on these models. Our works include:"
+                ]
+              ]
+            },
+            "format": {
+              "copied_from_pointer": {
+                "id": "15f68738-b675-80db-8b5a-cbf237f7cf1b",
+                "table": "block",
+                "spaceId": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+              }
+            },
+            "created_time": 1744614122322,
+            "last_edited_time": 1744685349658,
+            "parent_id": "1d568738-b675-8084-a1f0-c5869d4943a8",
+            "parent_table": "block",
+            "alive": true,
+            "copied_from": "15f68738-b675-80db-8b5a-cbf237f7cf1b",
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "1d668738-b675-80f6-ba18-e98f3b60e27e": {
+          "value": {
+            "id": "1d668738-b675-80f6-ba18-e98f3b60e27e",
+            "version": 120,
+            "type": "text",
+            "properties": { "title": [["We build a LLM-driven workflow that:", [["b"]]]] },
+            "created_time": 1744684420453,
+            "last_edited_time": 1744685330383,
+            "parent_id": "1d568738-b675-8084-a1f0-c5869d4943a8",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "1d568738-b675-801e-96fb-e69f8f902cb4": {
+          "value": {
+            "id": "1d568738-b675-801e-96fb-e69f8f902cb4",
+            "version": 5,
+            "type": "bulleted_list",
+            "properties": {
+              "title": [["Free up 80% of the time spent on manual order recognition and finishing"]]
+            },
+            "created_time": 1744620084690,
+            "last_edited_time": 1744620152875,
+            "parent_id": "1d568738-b675-8084-a1f0-c5869d4943a8",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "1d568738-b675-8098-b6f6-efa41be5fa94": {
+          "value": {
+            "id": "1d568738-b675-8098-b6f6-efa41be5fa94",
+            "version": 21,
+            "type": "bulleted_list",
+            "properties": {
+              "title": [
+                ["Reducing the minimum order recognition time from 10 minutes to just 20 seconds"]
+              ]
+            },
+            "created_time": 1744619292652,
+            "last_edited_time": 1744619298569,
+            "parent_id": "1d568738-b675-8084-a1f0-c5869d4943a8",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "1d568738-b675-8086-91dd-fb94cdfb649f": {
+          "value": {
+            "id": "1d568738-b675-8086-91dd-fb94cdfb649f",
+            "version": 10,
+            "type": "bulleted_list",
+            "properties": {
+              "title": [
+                [
+                  "Achieving an accuracy rate of 90%, and providing transparent processing logic—where business administrators can control the arrangement of prompts (implemented by Dify)."
+                ]
+              ]
+            },
+            "created_time": 1744619298568,
+            "last_edited_time": 1744619300261,
+            "parent_id": "1d568738-b675-8084-a1f0-c5869d4943a8",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "1d568738-b675-8035-aa22-f0986c2f19bd": {
+          "value": {
+            "id": "1d568738-b675-8035-aa22-f0986c2f19bd",
+            "version": 415,
+            "type": "text",
+            "properties": { "title": [["We build a Dify-centric solution that:", [["b"]]]] },
+            "created_time": 1744619362924,
+            "last_edited_time": 1744685332027,
+            "parent_id": "1d568738-b675-8084-a1f0-c5869d4943a8",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "1d568738-b675-80a7-9b03-e1bc4e496e2f": {
+          "value": {
+            "id": "1d568738-b675-80a7-9b03-e1bc4e496e2f",
+            "version": 1449,
+            "type": "bulleted_list",
+            "properties": {
+              "title": [
+                [
+                  "Brings enterprise-level authentication into workflow access, support plug-&-play setup. (Supports any OAuth/OIDC vendors, and we tested Auth0 and Authing)"
+                ]
+              ]
+            },
+            "created_time": 1744619437199,
+            "last_edited_time": 1744684783140,
+            "parent_id": "1d568738-b675-8084-a1f0-c5869d4943a8",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "1d668738-b675-80ca-ae3a-d41ff569362d": {
+          "value": {
+            "id": "1d668738-b675-80ca-ae3a-d41ff569362d",
+            "version": 131,
+            "type": "bulleted_list",
+            "properties": { "title": [["Implements Better file upload, process and download."]] },
+            "created_time": 1744684692003,
+            "last_edited_time": 1744684781246,
+            "parent_id": "1d568738-b675-8084-a1f0-c5869d4943a8",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "1d668738-b675-80a2-9a75-dff4047feecc": {
+          "value": {
+            "id": "1d668738-b675-80a2-9a75-dff4047feecc",
+            "version": 205,
+            "type": "bulleted_list",
+            "properties": { "title": [["Concurrently calls Dify API and obtain 4x speed up."]] },
+            "created_time": 1744684704185,
+            "last_edited_time": 1744684809685,
+            "parent_id": "1d568738-b675-8084-a1f0-c5869d4943a8",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "1d568738-b675-8006-afe4-d88867e9c980": {
+          "value": {
+            "id": "1d568738-b675-8006-afe4-d88867e9c980",
+            "version": 115,
+            "type": "sub_header",
+            "properties": { "title": [["Our workflow"]] },
+            "created_time": 1744622121237,
+            "last_edited_time": 1744622145963,
+            "parent_id": "1d568738-b675-8084-a1f0-c5869d4943a8",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "1d568738-b675-8006-9dea-e989bcbf878f": {
+          "value": {
+            "id": "1d568738-b675-8006-9dea-e989bcbf878f",
+            "version": 13,
+            "type": "image",
+            "properties": {
+              "size": [["215.0KB"]],
+              "title": [["image.png"]],
+              "source": [["attachment:89411294-8182-4bc4-b151-9bcf33a2d6d0:image.png"]]
+            },
+            "format": {
+              "block_width": 709.9833984375,
+              "display_source": "attachment:89411294-8182-4bc4-b151-9bcf33a2d6d0:image.png",
+              "block_full_width": false,
+              "block_page_width": true,
+              "block_aspect_ratio": 0.6756329113924051,
+              "block_preserve_scale": true
+            },
+            "created_time": 1744623599705,
+            "last_edited_time": 1744623605199,
+            "parent_id": "1d568738-b675-8084-a1f0-c5869d4943a8",
+            "parent_table": "block",
+            "alive": true,
+            "file_ids": ["89411294-8182-4bc4-b151-9bcf33a2d6d0"],
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "1d568738-b675-802e-8270-ebfb587f37cb": {
+          "value": {
+            "id": "1d568738-b675-802e-8270-ebfb587f37cb",
+            "version": 368,
+            "type": "sub_header",
+            "properties": {
+              "title": [["Gradio+Dify+Authing/Auth0 = Enterprise Ready AI Workflow Solution"]]
+            },
+            "format": {
+              "copied_from_pointer": {
+                "id": "15f68738-b675-80f0-9927-d07ffcf008fa",
+                "table": "block",
+                "spaceId": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+              }
+            },
+            "created_time": 1744614122324,
+            "last_edited_time": 1744622187756,
+            "parent_id": "1d568738-b675-8084-a1f0-c5869d4943a8",
+            "parent_table": "block",
+            "alive": true,
+            "copied_from": "15f68738-b675-80f0-9927-d07ffcf008fa",
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "1d568738-b675-80d5-9b61-eaaddec3e499": {
+          "value": {
+            "id": "1d568738-b675-80d5-9b61-eaaddec3e499",
+            "version": 3,
+            "type": "text",
+            "created_time": 1744622189771,
+            "last_edited_time": 1744622189772,
+            "parent_id": "1d568738-b675-8084-a1f0-c5869d4943a8",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "1d568738-b675-80bb-8e2c-e006ef07032d": {
+          "value": {
+            "id": "1d568738-b675-80bb-8e2c-e006ef07032d",
+            "version": 13,
+            "type": "image",
+            "properties": {
+              "size": [["35.0KB"]],
+              "title": [["image.png"]],
+              "source": [["attachment:63810d88-e108-44a1-99eb-3cdad2d54bed:image.png"]]
+            },
+            "format": {
+              "block_width": 709.9833984375,
+              "display_source": "attachment:63810d88-e108-44a1-99eb-3cdad2d54bed:image.png",
+              "block_full_width": false,
+              "block_page_width": true,
+              "block_aspect_ratio": 0.42833876221498374,
+              "block_preserve_scale": true
+            },
+            "created_time": 1744622606391,
+            "last_edited_time": 1744622611291,
+            "parent_id": "1d568738-b675-8084-a1f0-c5869d4943a8",
+            "parent_table": "block",
+            "alive": true,
+            "file_ids": ["63810d88-e108-44a1-99eb-3cdad2d54bed"],
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "1d568738-b675-80cc-9998-e9f05fe28eb5": {
+          "value": {
+            "id": "1d568738-b675-80cc-9998-e9f05fe28eb5",
+            "version": 3,
+            "type": "text",
+            "created_time": 1744622167987,
+            "last_edited_time": 1744622167988,
+            "parent_id": "1d568738-b675-8084-a1f0-c5869d4943a8",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "1d568738-b675-80e6-b225-f56062a90a18": {
+          "value": {
+            "id": "1d568738-b675-80e6-b225-f56062a90a18",
+            "version": 154,
+            "type": "sub_header",
+            "properties": { "title": [["Detailed Data Process Approaches"]] },
+            "created_time": 1744622164869,
+            "last_edited_time": 1744622640576,
+            "parent_id": "1d568738-b675-8084-a1f0-c5869d4943a8",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "1d568738-b675-8039-8293-ef2b42649598": {
+          "value": {
+            "id": "1d568738-b675-8039-8293-ef2b42649598",
+            "version": 11,
+            "type": "image",
+            "properties": {
+              "size": [["180.6KB"]],
+              "title": [["image.png"]],
+              "source": [["attachment:d06308ee-f2b1-4db2-a81e-c237d3e9f17f:image.png"]]
+            },
+            "format": {
+              "block_width": 2227,
+              "display_source": "attachment:d06308ee-f2b1-4db2-a81e-c237d3e9f17f:image.png",
+              "block_full_width": false,
+              "block_page_width": true,
+              "block_aspect_ratio": 0.46205657835653346,
+              "block_preserve_scale": true
+            },
+            "created_time": 1744623566201,
+            "last_edited_time": 1744623570029,
+            "parent_id": "1d568738-b675-8084-a1f0-c5869d4943a8",
+            "parent_table": "block",
+            "alive": true,
+            "file_ids": ["d06308ee-f2b1-4db2-a81e-c237d3e9f17f"],
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "1d568738-b675-80cc-a83b-ee7c9e2c9fd0": {
+          "value": {
+            "id": "1d568738-b675-80cc-a83b-ee7c9e2c9fd0",
+            "version": 38,
+            "type": "sub_header",
+            "properties": { "title": [["The Challenges We Solved"]] },
+            "created_time": 1744623567914,
+            "last_edited_time": 1744685168807,
+            "parent_id": "1d568738-b675-8084-a1f0-c5869d4943a8",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "9c249417-1a48-4236-aeca-99a9059596a4": {
+          "value": {
+            "id": "9c249417-1a48-4236-aeca-99a9059596a4",
+            "version": 343,
+            "type": "page",
+            "properties": { "title": [["Notion - Disclaimer & Terms of Use"]] },
+            "content": [
+              "958bd60d-03e7-4e88-a655-47a5fe158624",
+              "52e81e3e-471f-4a2b-8c19-47241f195a22",
+              "1d9f1432-fae6-45dc-af23-ad9f41884450",
+              "1e47d755-bc4b-4237-94e4-16912e230e45",
+              "f71b7a03-5745-447d-b0b6-e80753e52d4b",
+              "658655cf-1552-4877-b27b-127c0239b648",
+              "f15a4141-171a-4aad-8a41-bf1b78c21ac3",
+              "21b68738-b675-809e-a25e-fba8c99265b1",
+              "21b68738-b675-8042-974e-fc56ea5ebf94",
+              "21b68738-b675-804c-8b9e-e1f49734e764",
+              "21b68738-b675-8082-b5bf-cbde3f17fc3e",
+              "21b68738-b675-8076-af1a-ef48d2ebf16f",
+              "21b68738-b675-8012-bfcc-f9fd712fa1f5",
+              "e29649c4-5245-4026-b8ad-7682921dd475",
+              "c9c6d4ac-0667-4286-9af3-44b64c622338",
+              "3a72b282-c848-4509-b17c-1192a663c025",
+              "21b68738-b675-808b-8d2b-c9ae05a3061d",
+              "21b68738-b675-8092-bdf2-c8bdef21bc60",
+              "21b68738-b675-80fa-900b-d6c67ef8361e",
+              "21b68738-b675-802c-9510-fbeea054bd7b",
+              "21b68738-b675-8093-b9da-e5436b56d301",
+              "21b68738-b675-80f2-908f-ea29deb706bb",
+              "004a8d67-865d-484b-83a5-3a3fdc65f3d7"
+            ],
+            "format": {
+              "site_id": "1b537cc0-aa00-81ed-a271-0079f1b47946",
+              "page_icon": "https://s3-us-west-2.amazonaws.com/secure.notion-static.com/48ea2f4b-ee9b-4c4f-b93f-3c7e11b29fd3/notion.png",
+              "page_cover": "https://s3-us-west-2.amazonaws.com/secure.notion-static.com/e98d71cc-6517-4320-98a5-e816b4276ccd/bg.gif",
+              "page_cover_position": 0.5
+            },
+            "permissions": [
+              {
+                "role": "editor",
+                "type": "user_permission",
+                "user_id": "83417450-12ca-42e8-a980-4100da082185"
+              },
+              {
+                "role": "reader",
+                "type": "public_permission",
+                "is_site": true,
+                "added_timestamp": 1682602988774
+              }
+            ],
+            "created_time": 1676178179037,
+            "last_edited_time": 1750659433485,
+            "parent_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3",
+            "parent_table": "space",
+            "alive": true,
+            "file_ids": [
+              "e98d71cc-6517-4320-98a5-e816b4276ccd",
+              "4eff9be4-72b0-482c-b0bb-995af220b88f",
+              "48ea2f4b-ee9b-4c4f-b93f-3c7e11b29fd3"
+            ],
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "1d568738-b675-8051-8419-f4877634d1a2": {
+          "value": {
+            "id": "1d568738-b675-8051-8419-f4877634d1a2",
+            "version": 101,
+            "type": "sub_sub_header",
+            "properties": { "title": [["8k LLM Output Limitation"]] },
+            "content": [
+              "1d668738-b675-8048-9690-c7bd2256031d",
+              "1d668738-b675-80a7-a7bc-e2041e4af702",
+              "1d668738-b675-8038-978e-fa77f95479c1",
+              "1d668738-b675-800a-a804-df48cfae6b85"
+            ],
+            "format": { "toggleable": true },
+            "created_time": 1744623714515,
+            "last_edited_time": 1744685175140,
+            "parent_id": "1d568738-b675-8084-a1f0-c5869d4943a8",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "1d568738-b675-80da-a535-cbcc82001f6e": {
+          "value": {
+            "id": "1d568738-b675-80da-a535-cbcc82001f6e",
+            "version": 276,
+            "type": "sub_sub_header",
+            "properties": { "title": [["Concurrent API Call to Speed up"]] },
+            "content": ["1d568738-b675-801b-ad92-e11d51a6897a"],
+            "format": { "toggleable": true },
+            "created_time": 1744623627560,
+            "last_edited_time": 1744685192866,
+            "parent_id": "1d568738-b675-8084-a1f0-c5869d4943a8",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "1d668738-b675-803e-a006-c4b5b1b2647c": {
+          "value": {
+            "id": "1d668738-b675-803e-a006-c4b5b1b2647c",
+            "version": 3,
+            "type": "text",
+            "created_time": 1744685165177,
+            "last_edited_time": 1744685165178,
+            "parent_id": "1d568738-b675-8084-a1f0-c5869d4943a8",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "1d668738-b675-8048-9690-c7bd2256031d": {
+          "value": {
+            "id": "1d668738-b675-8048-9690-c7bd2256031d",
+            "version": 275,
+            "type": "text",
+            "properties": {
+              "title": [
+                ["Python Sandbox Code - Dynamic Split Prompt to Avoid 8k LLM Output Limitation"]
+              ]
+            },
+            "created_time": 1744685032387,
+            "last_edited_time": 1744685112046,
+            "parent_id": "1d568738-b675-8051-8419-f4877634d1a2",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "1d668738-b675-80a7-a7bc-e2041e4af702": {
+          "value": {
+            "id": "1d668738-b675-80a7-a7bc-e2041e4af702",
+            "version": 18,
+            "type": "code",
+            "properties": {
+              "title": [
+                [
+                  "def main(arg1: str) -> dict:\n    def merge_pages(split_list):\n        max_length=7000\n        merged = []\n        current_chunk = []\n        current_length = 0\n        for elem in split_list:\n            elem_len = len(elem)\n            if current_chunk:\n                new_length = current_length + 7 + elem_len\n            else:\n                new_length = elem_len\n            if new_length <= max_length:\n                current_chunk.append(elem)\n                current_length = new_length\n            else:\n                if current_chunk:\n                    merged.append('--分页符--'.join(current_chunk))\n                    current_chunk = [elem]\n                    current_length = elem_len\n                else:\n                    merged.append(elem)\n                    current_chunk = []\n                    current_length = 0\n        if current_chunk:\n            merged.append('--分页符--'.join(current_chunk))\n        return merged\n\n    if '--分页符--' in arg1:\n        splited_result = arg1.split('--分页符--')\n    else:\n        splited_result = [arg1]\n    merged_result = merge_pages(splited_result)\n    return {\"splited_result\": merged_result}"
+                ]
+              ],
+              "language": [["Python"]]
+            },
+            "created_time": 1744685041893,
+            "last_edited_time": 1744685079382,
+            "parent_id": "1d568738-b675-8051-8419-f4877634d1a2",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "1d668738-b675-8038-978e-fa77f95479c1": {
+          "value": {
+            "id": "1d668738-b675-8038-978e-fa77f95479c1",
+            "version": 78,
+            "type": "text",
+            "properties": { "title": [["Python Sandbox Code - Merge CSV String"]] },
+            "created_time": 1744685076632,
+            "last_edited_time": 1744685124245,
+            "parent_id": "1d568738-b675-8051-8419-f4877634d1a2",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "1d668738-b675-800a-a804-df48cfae6b85": {
+          "value": {
+            "id": "1d668738-b675-800a-a804-df48cfae6b85",
+            "version": 31,
+            "type": "code",
+            "properties": {
+              "title": [
+                [
+                  "def main(csv_list) -> dict:\n    import csv\n    from io import StringIO\n    first_io = StringIO(csv_list[0])\n    reader = csv.reader(first_io)\n    rows = list(reader)\n    if not rows:\n        return \"\"\n    header = rows[0]\n    data = rows[1:]\n    for csv_str in csv_list[1:]:\n        current_io = StringIO(csv_str)\n        current_reader = csv.reader(current_io)\n        current_rows = list(current_reader)\n        if not current_rows:\n            continue\n        data.extend(current_rows[1:])\n    output = StringIO()\n    writer = csv.writer(output, lineterminator='\\n')\n    writer.writerow(header)\n    writer.writerows(data)\n    return {\n        \"result\": output.getvalue()\n    }"
+                ]
+              ],
+              "language": [["Python"]]
+            },
+            "created_time": 1744685124546,
+            "last_edited_time": 1744685160320,
+            "parent_id": "1d568738-b675-8051-8419-f4877634d1a2",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "1d568738-b675-801b-ad92-e11d51a6897a": {
+          "value": {
+            "id": "1d568738-b675-801b-ad92-e11d51a6897a",
+            "version": 570,
+            "type": "code",
+            "properties": {
+              "title": [
+                [
+                  "def dify_pdf_path_to_text_list(filepath, request: gr.Request):\n    \"\"\"\n    Extract each page from the uploaded PDF into an image and send a separate dedify to recognize the order text information.\n    Use multi-threaded concurrent processing, the maximum number of concurrent 4\n    Args:\n        filepath: pdf file path\n        request: Gradio request object\n    Returns:\n        Extracted text information for each page of the order (list), maintaining the original page order\n    \"\"\"\n    user_id = request.session['user']['username']\n    upload_dir = os.path.join(os.getcwd(), \"uploaded_files\")\n    os.makedirs(upload_dir, exist_ok=True)\n    image_paths = pdf_to_images(filepath, upload_dir)\n    if not image_paths:\n        return \"PDF conversion failed to generate images\"\n    results = [None] * len(image_paths)\n    errors = []\n    max_workers = 4\n    def process_image(index, image_path):\n        upload_response = dify_file_upload(request, file_path=image_path)\n        file_id = upload_response['id']\n        api_key = os.getenv('DIFY_READ_ORDER_IMG_KEY')\n        url = os.getenv('DIFY_URL') + '/workflows/run'\n        headers = {\n            'Authorization': f'Bearer {api_key}',\n            'Content-Type': 'application/json'\n        }\n        data = {\n            \"inputs\": {\n                \"Pic\": [{\n                    \"transfer_method\": \"local_file\",\n                    \"upload_file_id\": file_id,\n                    \"type\": \"image\"\n                }]\n            },\n            \"response_mode\": \"blocking\",\n            \"user\": user_id\n        }\n        try:\n            response = requests.post(url, headers=headers, json=data)\n            if response.status_code == 200:\n                print(f'[API] Page {index+1} Dify API Success')\n                return index, response.json()['data']['outputs']['text'], None\n            else:\n                error_msg = f'[API] Dify API Failed: {response.status_code}, {response.text}'\n                print(error_msg)\n                return index, None, error_msg\n        except Exception as e:\n            error_msg = f'[API] Error: {str(e)}'\n            print(error_msg)\n            return index, None, error_msg\n    \n    with concurrent.futures.ThreadPoolExecutor(max_workers=max_workers) as executor:\n        future_to_index = {\n            executor.submit(process_image, idx, img_path): idx \n            for idx, img_path in enumerate(image_paths)\n        }\n        for future in concurrent.futures.as_completed(future_to_index):\n            try:\n                idx, result, error = future.result()\n                if error:\n                    errors.append(f\"Page {idx+1} Failed: {error}\")\n                else:\n                    results[idx] = result\n            except Exception as exc:\n                idx = future_to_index[future]\n                print(f'Page {idx+1} got error: {exc}')\n                errors.append(f\"Page {idx+1} got error: {str(exc)}\")\n    if errors:\n        print(f\"Error Count: {len(errors)} \")\n        for err in errors:\n            print(err)\n    filtered_results = [r for r in results if r is not None]\n    \n    if not filtered_results and errors:\n        return errors[0]\n    return filtered_results"
+                ]
+              ],
+              "language": [["Python"]]
+            },
+            "created_time": 1744623720773,
+            "last_edited_time": 1744685065359,
+            "parent_id": "1d568738-b675-80da-a535-cbcc82001f6e",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        }
+      },
+      "collection": {},
+      "collection_view": {},
+      "notion_user": {},
+      "collection_query": {},
+      "signed_urls": {
+        "1d568738-b675-805e-8c33-eb3975d9f91b": "https://file.notion.so/f/f/cb537cc0-aa00-4959-8db9-80abdf2033d3/0dbb5076-5880-4711-98a7-b535696bea8d/NoEVoix.svg?table=block&id=1d568738-b675-805e-8c33-eb3975d9f91b&spaceId=cb537cc0-aa00-4959-8db9-80abdf2033d3&expirationTimestamp=1756735200000&signature=k_it41VuxLQ3URs4PmicG0-TisH5QDC044LucXx4Pjs"
+      }
+    },
+    "authorDetails": [
+      {
+        "readingTime": { "text": "1 min read", "minutes": 0.145, "time": 8700, "words": 29 },
+        "slug": ["default"],
+        "fileName": "default.md",
+        "name": "Riino",
+        "avatar": "/static/images/logo_Nest.png",
+        "notion": "97ab7c51daf5470ea07e43c577169d24",
+        "date": null
+      }
+    ],
+    "prev": {
+      "layout": "post",
+      "title": "Build a Gradio App with Auth0 & Dify for Secure AI Integration",
+      "subtitle": "Comprehensive Guide to Auth0, Dify and Gradio for AI Solutions",
+      "tags": ["mdx", "AI", "Dify", "Auth0", "Python-App-Development", "Secure-Login"],
+      "slug": "2024-10-29-Dify-in-Gradio",
+      "date": "2024-10-29T00:00:00.000Z"
+    },
+    "next": null
+  },
+  "__N_SSG": true
+}

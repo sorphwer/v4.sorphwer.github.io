@@ -1,0 +1,2234 @@
+{
+  "pageProps": {
+    "post": {
+      "mdxSource": "var Component=(()=>{var i=Object.create;var a=Object.defineProperty;var m=Object.getOwnPropertyDescriptor;var x=Object.getOwnPropertyNames;var f=Object.getPrototypeOf,l=Object.prototype.hasOwnProperty;var s=t=>a(t,\"__esModule\",{value:!0});var p=(t,e)=>()=>(e||t((e={exports:{}}).exports,e),e.exports),M=(t,e)=>{s(t);for(var n in e)a(t,n,{get:e[n],enumerable:!0})},L=(t,e,n)=>{if(e&&typeof e==\"object\"||typeof e==\"function\")for(let r of x(e))!l.call(t,r)&&r!==\"default\"&&a(t,r,{get:()=>e[r],enumerable:!(n=m(e,r))||n.enumerable});return t},d=t=>L(s(a(t!=null?i(f(t)):{},\"default\",t&&t.__esModule&&\"default\"in t?{get:()=>t.default,enumerable:!0}:{value:t,enumerable:!0})),t);var u=p((A,c)=>{c.exports=_jsx_runtime});var b={};M(b,{default:()=>_,frontmatter:()=>g});var o=d(u()),g={layout:\"post\",title:\"AI Memo\",subtitle:\"Papers, PLMs and tools of LLM\",tags:[\"LLM\",\"AI\"],toc:!0,\"auto-convert-img\":!0,notion:\"009dcf743a8e40cca778c55251123a9b\"};function j(t={}){let{wrapper:e}=t.components||{};return e?(0,o.jsx)(e,Object.assign({},t,{children:(0,o.jsx)(n,{})})):n();function n(){return(0,o.jsx)(o.Fragment,{})}}var _=j;return b;})();\n;return Component;",
+      "toc": [],
+      "frontMatter": {
+        "readingTime": { "text": "1 min read", "minutes": 0.175, "time": 10500, "words": 35 },
+        "slug": "2023-05-11-notion-ai-memo",
+        "fileName": "2023-05-11-notion-ai-memo.md",
+        "layout": "post",
+        "title": "AI Memo",
+        "subtitle": "Papers, PLMs and tools of LLM",
+        "tags": ["LLM", "AI"],
+        "toc": true,
+        "auto-convert-img": true,
+        "notion": "009dcf743a8e40cca778c55251123a9b",
+        "date": "2023-05-11T00:00:00.000Z"
+      }
+    },
+    "recordMap": {
+      "block": {
+        "009dcf74-3a8e-40cc-a778-c55251123a9b": {
+          "value": {
+            "id": "009dcf74-3a8e-40cc-a778-c55251123a9b",
+            "version": 625,
+            "type": "page",
+            "properties": { "title": [["Nest AI Research - LLM & Tasks"]] },
+            "content": [
+              "33326a6d-6ea1-4f46-8d2a-a156a1921fa1",
+              "9c01fb3c-d812-4150-bc5e-b752902764d2",
+              "5f49f3fb-0451-4f69-98d2-0898e9d73644",
+              "9638a528-8d89-4787-82a5-8a378c095d5f",
+              "a0aaca40-3cd5-461f-ba82-f66e5b39bd0f",
+              "e030223f-6452-42be-9da4-90c034abc30b",
+              "9924e276-8470-4e7b-907e-9ff8ca6e7592",
+              "a9278289-ba94-4385-bb6b-312b0b04ccfb",
+              "cfe93b73-2c2c-476a-8a00-a2c940c41b49",
+              "0d6d2346-a048-4a12-8362-ab7d9da3dae3",
+              "f6e32318-7e4c-487c-89e4-96e3588247f6",
+              "0d66deca-7e4b-483d-af79-cd86c4dcb124"
+            ],
+            "format": {
+              "site_id": "1b537cc0-aa00-8116-ae19-0079874bea6d",
+              "page_icon": "https://s3-us-west-2.amazonaws.com/secure.notion-static.com/c8e4c04e-bbcf-44b0-91e8-c3df063da38a/logo_search.png",
+              "page_cover": "https://s3-us-west-2.amazonaws.com/secure.notion-static.com/7122a372-dd57-4ddd-8603-cf0861b7d3eb/bg2.gif",
+              "page_full_width": false,
+              "page_cover_position": 0.5
+            },
+            "permissions": [
+              {
+                "role": "editor",
+                "type": "user_permission",
+                "user_id": "83417450-12ca-42e8-a980-4100da082185"
+              },
+              {
+                "role": "reader",
+                "type": "public_permission",
+                "is_site": true,
+                "added_timestamp": 1682238469909,
+                "allow_duplicate": false
+              }
+            ],
+            "created_time": 1682237203493,
+            "last_edited_time": 1699198690603,
+            "parent_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3",
+            "parent_table": "space",
+            "alive": true,
+            "file_ids": [
+              "c8e4c04e-bbcf-44b0-91e8-c3df063da38a",
+              "7122a372-dd57-4ddd-8603-cf0861b7d3eb"
+            ],
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "33326a6d-6ea1-4f46-8d2a-a156a1921fa1": {
+          "value": {
+            "id": "33326a6d-6ea1-4f46-8d2a-a156a1921fa1",
+            "version": 241,
+            "type": "text",
+            "created_time": 1682258623872,
+            "last_edited_time": 1684678735936,
+            "parent_id": "009dcf74-3a8e-40cc-a778-c55251123a9b",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "9c01fb3c-d812-4150-bc5e-b752902764d2": {
+          "value": {
+            "id": "9c01fb3c-d812-4150-bc5e-b752902764d2",
+            "version": 4,
+            "type": "text",
+            "properties": { "title": [["Selected Key Researches based on LLM"]] },
+            "created_time": 1682258623872,
+            "last_edited_time": 1684678735936,
+            "parent_id": "009dcf74-3a8e-40cc-a778-c55251123a9b",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "5f49f3fb-0451-4f69-98d2-0898e9d73644": {
+          "value": {
+            "id": "5f49f3fb-0451-4f69-98d2-0898e9d73644",
+            "version": 6,
+            "type": "text",
+            "created_time": 1697350139462,
+            "last_edited_time": 1697350139622,
+            "parent_id": "009dcf74-3a8e-40cc-a778-c55251123a9b",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "9638a528-8d89-4787-82a5-8a378c095d5f": {
+          "value": {
+            "id": "9638a528-8d89-4787-82a5-8a378c095d5f",
+            "version": 7,
+            "type": "table_of_contents",
+            "format": { "block_color": "gray" },
+            "created_time": 1699198084053,
+            "last_edited_time": 1699198087812,
+            "parent_id": "009dcf74-3a8e-40cc-a778-c55251123a9b",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "a0aaca40-3cd5-461f-ba82-f66e5b39bd0f": {
+          "value": {
+            "id": "a0aaca40-3cd5-461f-ba82-f66e5b39bd0f",
+            "version": 389,
+            "type": "sub_header",
+            "properties": { "title": [["Survey"]] },
+            "content": [
+              "8555eace-5c6f-49a5-abcd-cef78ecdbe76",
+              "74220f89-37a6-4ad3-833d-8620f5ca1e32",
+              "3c4f7aff-8540-44f9-890d-119d583c94e8",
+              "8a5ca022-5f0b-4027-b144-1cb21e80b443",
+              "10870d10-59f3-4f84-aee4-387ebccc8208",
+              "fe933c5b-be96-48ab-a9a1-f89350efa887",
+              "2215dc34-f454-4295-b0d1-8533e2d8eaa5"
+            ],
+            "format": { "toggleable": true },
+            "created_time": 1697350139462,
+            "last_edited_time": 1699198583053,
+            "parent_id": "009dcf74-3a8e-40cc-a778-c55251123a9b",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "e030223f-6452-42be-9da4-90c034abc30b": {
+          "value": {
+            "id": "e030223f-6452-42be-9da4-90c034abc30b",
+            "version": 54,
+            "type": "sub_header",
+            "properties": { "title": [["Tools:"]] },
+            "content": [
+              "9aadb77d-f2f2-4fc9-8d69-61eda686b8f8",
+              "1903dc27-74ee-44dd-969e-f0b48dd7ee50",
+              "01e6c6be-6bba-492b-8d7d-d72b26c35f54",
+              "70fb4297-05dd-41e4-93d2-5117eb730b8e",
+              "0c17ce57-7614-4de2-afca-f1f07b4f7505",
+              "d716d1ca-9c31-4ca9-8340-0368bedb2bdc",
+              "6412187d-bad0-465a-8646-215e390b8f9c"
+            ],
+            "format": { "toggleable": true },
+            "created_time": 1682237738001,
+            "last_edited_time": 1699198569049,
+            "parent_id": "009dcf74-3a8e-40cc-a778-c55251123a9b",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "9924e276-8470-4e7b-907e-9ff8ca6e7592": {
+          "value": {
+            "id": "9924e276-8470-4e7b-907e-9ff8ca6e7592",
+            "version": 38,
+            "type": "sub_header",
+            "properties": { "title": [["PLMs"]] },
+            "content": [
+              "0183f3b0-e1c4-476c-a259-fb0da77a662b",
+              "6b2819a9-9be9-4135-bafb-f1cbc9e5bc75",
+              "942eec0c-33fe-4bbe-bf31-729e4275bf00",
+              "a6d27200-96d8-4b26-986b-451aad54b797",
+              "220aab57-abe3-4922-af93-026a28dae2fd",
+              "536ae110-2b64-40a6-a507-746da41f0283",
+              "23bbd7ab-7619-4680-a2bc-bfe6c41b9667",
+              "d81c2fe2-910c-4cb3-89b9-4a487313a541",
+              "bde1df81-bbee-4614-94bf-a9681500d9da",
+              "2f452173-541e-4c3d-9965-2b4e914c687d",
+              "37c3e65b-fb99-4848-811f-1bed62fc1743",
+              "3d2b99aa-121a-4353-9d85-a3ea2d82fd4f"
+            ],
+            "format": { "toggleable": true },
+            "created_time": 1682238152701,
+            "last_edited_time": 1699198569049,
+            "parent_id": "009dcf74-3a8e-40cc-a778-c55251123a9b",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "a9278289-ba94-4385-bb6b-312b0b04ccfb": {
+          "value": {
+            "id": "a9278289-ba94-4385-bb6b-312b0b04ccfb",
+            "version": 96,
+            "type": "sub_header",
+            "properties": { "title": [["Factuality"]] },
+            "content": [
+              "4020a340-69ec-4e30-9db1-8dd81f99ef93",
+              "c12dbde4-4290-41e9-b8c3-7c48bd690026",
+              "83447ea8-6d91-4524-80a8-ff6f63776a6b",
+              "38eaac15-3ce9-4b17-b26c-931c4fe23336",
+              "e6264521-e714-460a-9f9f-c1e6daff9875",
+              "372fdb24-1cbd-4f62-9cb0-ce2f512ad5c2",
+              "d9406705-85ba-42ff-96c5-824d6adc71af",
+              "c92f002b-d51c-4013-9160-91f85565eb7b",
+              "54f947a8-dcb2-430c-9a2e-8da5db46d219",
+              "477e8051-924d-44fa-a796-ad31936a2c0f"
+            ],
+            "format": { "toggleable": true },
+            "created_time": 1699198066236,
+            "last_edited_time": 1699198720996,
+            "parent_id": "009dcf74-3a8e-40cc-a778-c55251123a9b",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "cfe93b73-2c2c-476a-8a00-a2c940c41b49": {
+          "value": {
+            "id": "cfe93b73-2c2c-476a-8a00-a2c940c41b49",
+            "version": 155,
+            "type": "sub_header",
+            "properties": { "title": [["Papers - LLM Enhancement"]] },
+            "content": [
+              "c17de15e-2e2a-40d5-8602-854afe22c8a4",
+              "ec976c6c-e496-4957-a944-74d0bae37279",
+              "24d236f9-6796-4b10-a755-ff4e19132a12",
+              "647b8bbd-894e-489d-a8e0-45f16a360ed7",
+              "5698c132-f353-4087-8166-d76082d3fa2d",
+              "42264489-baa7-4657-bd8f-d148b8cf140a",
+              "c180c421-0792-48a4-a1bb-bc5f8a2b0f57",
+              "9e8613c8-6d61-4c53-9627-3225fe07a071",
+              "15366732-fc8b-4be1-b092-f188da4ce39e",
+              "d745ed00-379c-4369-b27c-a291bcc3e075",
+              "1c1c14a4-c04e-465d-be83-d9b9885a7db7",
+              "3fc75f05-ec37-4323-9616-50988a1f2b6f",
+              "77d8aa0e-c960-45db-bd34-0c98777ab2ba",
+              "81126b5b-3755-40b9-b48e-8efe794084c0",
+              "c147ba74-c4d2-42bd-996b-54d8d3aec79e",
+              "c4a71ec9-73a6-43c7-abd4-0729ee8e4270",
+              "5dc041d0-3d8e-496d-8336-af0e5e62d407",
+              "5673578f-26dd-4ec3-824f-1b6be100cf05",
+              "f778c123-522e-4775-877a-6be1a6d8fa8d",
+              "2f82d769-e2c0-4b19-abe2-0875c8ea9b39",
+              "88ec0162-0011-4937-8e20-08760767e904",
+              "fa3f5d0a-e1ff-4d64-ad4d-2f9123a9d63f",
+              "1e76494d-7089-4c32-9aa1-1ace73e1d68c",
+              "e4c63733-3a57-44a7-9fbe-1f67b6eb8a4b",
+              "5a3722aa-1243-423e-a3d5-64e770485f02",
+              "24419125-ec6c-4a5f-a41b-fcdf69ea84d0",
+              "3a7ed5cb-02e2-479d-9661-411b190586e4",
+              "b4d648da-3cd5-41e0-8199-4e15a80c4819",
+              "a9d9aa6c-c26e-47f2-a2fc-9ac7eeb9c8a2"
+            ],
+            "format": { "toggleable": true },
+            "created_time": 1682237813886,
+            "last_edited_time": 1699198569049,
+            "parent_id": "009dcf74-3a8e-40cc-a778-c55251123a9b",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "0d6d2346-a048-4a12-8362-ab7d9da3dae3": {
+          "value": {
+            "id": "0d6d2346-a048-4a12-8362-ab7d9da3dae3",
+            "version": 113,
+            "type": "sub_header",
+            "properties": { "title": [["Backbones"]] },
+            "content": [
+              "f71263f7-6c00-4c58-98a5-6e264967b06e",
+              "bec65add-cbf5-4058-99ed-942424cc1037",
+              "9f277012-87ed-4859-ab8c-9db4eb22265a",
+              "5a828809-a7a0-4f4e-a648-bbfcf222721e",
+              "edee02ce-24aa-45a4-a29d-b615ce2fafd1",
+              "a4b46b59-baa1-4136-9783-adddbd17de4b",
+              "3374a67c-cff8-43d3-8bc5-2ccc4aa99ca6",
+              "c4b01665-64ca-4ccb-999b-48975c62183c",
+              "a11c3211-1b33-43e7-908c-212ebd6c1f7c",
+              "dfccf19c-ecab-43cd-b873-06e0312d053e",
+              "0970159b-9aa2-410b-a3d8-22a8b7f38133",
+              "29462105-1115-468e-9956-8514f7499d5a"
+            ],
+            "format": { "toggleable": true },
+            "created_time": 1684678353072,
+            "last_edited_time": 1699198569049,
+            "parent_id": "009dcf74-3a8e-40cc-a778-c55251123a9b",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "f6e32318-7e4c-487c-89e4-96e3588247f6": {
+          "value": {
+            "id": "f6e32318-7e4c-487c-89e4-96e3588247f6",
+            "version": 9,
+            "type": "text",
+            "created_time": 1699198532070,
+            "last_edited_time": 1699198569049,
+            "parent_id": "009dcf74-3a8e-40cc-a778-c55251123a9b",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "0d66deca-7e4b-483d-af79-cd86c4dcb124": {
+          "value": {
+            "id": "0d66deca-7e4b-483d-af79-cd86c4dcb124",
+            "version": 15,
+            "type": "text",
+            "created_time": 1699198096890,
+            "last_edited_time": 1699198569049,
+            "parent_id": "009dcf74-3a8e-40cc-a778-c55251123a9b",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "8555eace-5c6f-49a5-abcd-cef78ecdbe76": {
+          "value": {
+            "id": "8555eace-5c6f-49a5-abcd-cef78ecdbe76",
+            "version": 29,
+            "type": "bookmark",
+            "properties": {
+              "link": [["https://arxiv.org/abs/2303.18223"]],
+              "title": [["A Survey of Large Language Models"]],
+              "description": [
+                [
+                  "Language is essentially a complex, intricate system of human expressions governed by grammatical rules. It poses a significant challenge to develop capable AI algorithms for comprehending and..."
+                ]
+              ]
+            },
+            "format": {
+              "bookmark_icon": "https://static.arxiv.org/static/browse/0.3.4/images/icons/apple-touch-icon.png",
+              "bookmark_cover": "https://static.arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png"
+            },
+            "created_time": 1698156538748,
+            "last_edited_time": 1699198583053,
+            "parent_id": "a0aaca40-3cd5-461f-ba82-f66e5b39bd0f",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "74220f89-37a6-4ad3-833d-8620f5ca1e32": {
+          "value": {
+            "id": "74220f89-37a6-4ad3-833d-8620f5ca1e32",
+            "version": 29,
+            "type": "bookmark",
+            "properties": {
+              "link": [["https://arxiv.org/abs/2310.07521"]],
+              "title": [["Survey on Factuality in Large Language Models: Knowledge,..."]],
+              "description": [
+                [
+                  "This survey addresses the crucial issue of factuality in Large Language Models (LLMs). As LLMs find applications across diverse domains, the reliability and accuracy of their outputs become vital...."
+                ]
+              ]
+            },
+            "format": {
+              "bookmark_icon": "https://static.arxiv.org/static/browse/0.3.4/images/icons/apple-touch-icon.png",
+              "bookmark_cover": "https://static.arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png"
+            },
+            "created_time": 1697350151944,
+            "last_edited_time": 1699198583053,
+            "parent_id": "a0aaca40-3cd5-461f-ba82-f66e5b39bd0f",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "3c4f7aff-8540-44f9-890d-119d583c94e8": {
+          "value": {
+            "id": "3c4f7aff-8540-44f9-890d-119d583c94e8",
+            "version": 68,
+            "type": "image",
+            "properties": {
+              "size": [["507.9KB"]],
+              "title": [["Untitled"]],
+              "source": [
+                [
+                  "https://prod-files-secure.s3.us-west-2.amazonaws.com/cb537cc0-aa00-4959-8db9-80abdf2033d3/5e88fc2d-7217-477a-b848-b500ae371920/Untitled.png"
+                ]
+              ]
+            },
+            "format": {
+              "block_width": 480,
+              "display_source": "https://prod-files-secure.s3.us-west-2.amazonaws.com/cb537cc0-aa00-4959-8db9-80abdf2033d3/5e88fc2d-7217-477a-b848-b500ae371920/Untitled.png",
+              "block_alignment": "center",
+              "block_full_width": false,
+              "block_page_width": false,
+              "block_aspect_ratio": 1.1617777777777778,
+              "block_preserve_scale": true
+            },
+            "created_time": 1697350173432,
+            "last_edited_time": 1699198583053,
+            "parent_id": "a0aaca40-3cd5-461f-ba82-f66e5b39bd0f",
+            "parent_table": "block",
+            "alive": true,
+            "file_ids": ["5e88fc2d-7217-477a-b848-b500ae371920"],
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "8a5ca022-5f0b-4027-b144-1cb21e80b443": {
+          "value": {
+            "id": "8a5ca022-5f0b-4027-b144-1cb21e80b443",
+            "version": 51,
+            "type": "bookmark",
+            "properties": {
+              "link": [["https://arxiv.org/abs/2303.18223"]],
+              "title": [["A Survey of Large Language Models"]],
+              "description": [
+                [
+                  "Language is essentially a complex, intricate system of human expressions governed by grammatical rules. It poses a significant challenge to develop capable AI algorithms for comprehending and..."
+                ]
+              ]
+            },
+            "format": {
+              "bookmark_icon": "https://static.arxiv.org/static/browse/0.3.4/images/icons/apple-touch-icon.png",
+              "bookmark_cover": "https://static.arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png"
+            },
+            "created_time": 1697350208273,
+            "last_edited_time": 1699198583053,
+            "parent_id": "a0aaca40-3cd5-461f-ba82-f66e5b39bd0f",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "10870d10-59f3-4f84-aee4-387ebccc8208": {
+          "value": {
+            "id": "10870d10-59f3-4f84-aee4-387ebccc8208",
+            "version": 155,
+            "type": "text",
+            "properties": {
+              "title": [["LLM family survey "], ["(LLM Summary)", [["h", "yellow"]]]]
+            },
+            "created_time": 1682599435258,
+            "last_edited_time": 1699198583053,
+            "parent_id": "a0aaca40-3cd5-461f-ba82-f66e5b39bd0f",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "fe933c5b-be96-48ab-a9a1-f89350efa887": {
+          "value": {
+            "id": "fe933c5b-be96-48ab-a9a1-f89350efa887",
+            "version": 57,
+            "type": "bookmark",
+            "properties": {
+              "link": [["https://arxiv.org/abs/2304.13712"]],
+              "title": [
+                ["Harnessing the Power of LLMs in Practice: A Survey on ChatGPT and Beyond"]
+              ],
+              "description": [
+                [
+                  "This paper presents a comprehensive and practical guide for practitioners and end-users working with Large Language Models (LLMs) in their downstream natural language processing (NLP) tasks. We..."
+                ]
+              ]
+            },
+            "format": {
+              "bookmark_icon": "https://static.arxiv.org/static/browse/0.3.4/images/icons/apple-touch-icon.png",
+              "bookmark_cover": "https://static.arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png"
+            },
+            "created_time": 1682599425864,
+            "last_edited_time": 1699198583053,
+            "parent_id": "a0aaca40-3cd5-461f-ba82-f66e5b39bd0f",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "2215dc34-f454-4295-b0d1-8533e2d8eaa5": {
+          "value": {
+            "id": "2215dc34-f454-4295-b0d1-8533e2d8eaa5",
+            "version": 55,
+            "type": "image",
+            "properties": {
+              "size": [["513.9KB"]],
+              "title": [["Untitled"]],
+              "source": [
+                [
+                  "https://s3-us-west-2.amazonaws.com/secure.notion-static.com/60190b64-ff82-4be3-8723-d380a264fbfd/Untitled.png"
+                ]
+              ]
+            },
+            "format": {
+              "block_width": 1398,
+              "display_source": "https://s3-us-west-2.amazonaws.com/secure.notion-static.com/60190b64-ff82-4be3-8723-d380a264fbfd/Untitled.png",
+              "block_full_width": false,
+              "block_page_width": true,
+              "block_aspect_ratio": 0.9470672389127325,
+              "block_preserve_scale": true
+            },
+            "created_time": 1685169003374,
+            "last_edited_time": 1699198583053,
+            "parent_id": "a0aaca40-3cd5-461f-ba82-f66e5b39bd0f",
+            "parent_table": "block",
+            "alive": true,
+            "file_ids": ["60190b64-ff82-4be3-8723-d380a264fbfd"],
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "9aadb77d-f2f2-4fc9-8d69-61eda686b8f8": {
+          "value": {
+            "id": "9aadb77d-f2f2-4fc9-8d69-61eda686b8f8",
+            "version": 17,
+            "type": "text",
+            "created_time": 1684678727397,
+            "last_edited_time": 1699198547383,
+            "parent_id": "e030223f-6452-42be-9da4-90c034abc30b",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "1903dc27-74ee-44dd-969e-f0b48dd7ee50": {
+          "value": {
+            "id": "1903dc27-74ee-44dd-969e-f0b48dd7ee50",
+            "version": 14,
+            "type": "external_object_instance",
+            "format": {
+              "domain": "github.com",
+              "original_url": "https://github.com/microsoft/JARVIS"
+            },
+            "created_time": 1684644019936,
+            "last_edited_time": 1699198547383,
+            "parent_id": "e030223f-6452-42be-9da4-90c034abc30b",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "01e6c6be-6bba-492b-8d7d-d72b26c35f54": {
+          "value": {
+            "id": "01e6c6be-6bba-492b-8d7d-d72b26c35f54",
+            "version": 14,
+            "type": "external_object_instance",
+            "format": {
+              "domain": "github.com",
+              "original_url": "https://github.com/yizhongw/self-instruct"
+            },
+            "created_time": 1682237301266,
+            "last_edited_time": 1699198547383,
+            "parent_id": "e030223f-6452-42be-9da4-90c034abc30b",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "70fb4297-05dd-41e4-93d2-5117eb730b8e": {
+          "value": {
+            "id": "70fb4297-05dd-41e4-93d2-5117eb730b8e",
+            "version": 31,
+            "type": "bookmark",
+            "properties": {
+              "link": [["https://lets-unify.ai/docs/ivy/overview/contributing/open_tasks.html"]],
+              "title": [["Open Tasks — Ivy Documentation"]]
+            },
+            "format": {
+              "bookmark_icon": "https://github.com/unifyai/unifyai.github.io/blob/master/img/externally_linked/ivy_logo_only.png?raw=true"
+            },
+            "created_time": 1682237338935,
+            "last_edited_time": 1699198547383,
+            "parent_id": "e030223f-6452-42be-9da4-90c034abc30b",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "0c17ce57-7614-4de2-afca-f1f07b4f7505": {
+          "value": {
+            "id": "0c17ce57-7614-4de2-afca-f1f07b4f7505",
+            "version": 22,
+            "type": "bookmark",
+            "properties": {
+              "link": [["https://discord.com/channels/1046228027434086460/1046228593786748968"]],
+              "title": [["Discord - A New Way to Chat with Friends & Communities"]],
+              "description": [
+                [
+                  "Discord is the easiest way to communicate over voice, video, and text.  Chat, hang out, and stay close with your friends and communities."
+                ]
+              ]
+            },
+            "format": {
+              "bookmark_icon": "https://discord.com/assets/ec2c34cadd4b5f4594415127380a85e6.ico",
+              "bookmark_cover": "https://discord.com/channels/1046228027434086460/undefined//discord.com/assets/652f40427e1f5186ad54836074898279.png"
+            },
+            "created_time": 1682239425147,
+            "last_edited_time": 1699198547383,
+            "parent_id": "e030223f-6452-42be-9da4-90c034abc30b",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "d716d1ca-9c31-4ca9-8340-0368bedb2bdc": {
+          "value": {
+            "id": "d716d1ca-9c31-4ca9-8340-0368bedb2bdc",
+            "version": 22,
+            "type": "bookmark",
+            "properties": {
+              "link": [["https://learnprompting.org/docs/intro"]],
+              "title": [["Welcome | Learn Prompting"]],
+              "description": [["Welcome to our introductory course on prompt engineering!"]]
+            },
+            "format": { "bookmark_icon": "https://learnprompting.org/img/favicon.ico" },
+            "created_time": 1682258658290,
+            "last_edited_time": 1699198547383,
+            "parent_id": "e030223f-6452-42be-9da4-90c034abc30b",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "6412187d-bad0-465a-8646-215e390b8f9c": {
+          "value": {
+            "id": "6412187d-bad0-465a-8646-215e390b8f9c",
+            "version": 14,
+            "type": "external_object_instance",
+            "format": {
+              "domain": "github.com",
+              "original_url": "https://github.com/thunlp/PromptPapers"
+            },
+            "created_time": 1682239461561,
+            "last_edited_time": 1699198547383,
+            "parent_id": "e030223f-6452-42be-9da4-90c034abc30b",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "0183f3b0-e1c4-476c-a259-fb0da77a662b": {
+          "value": {
+            "id": "0183f3b0-e1c4-476c-a259-fb0da77a662b",
+            "version": 63,
+            "type": "text",
+            "properties": { "title": [["Colossal (based on LLAMA)", [["b"]]]] },
+            "created_time": 1686559141124,
+            "last_edited_time": 1699197940374,
+            "parent_id": "9924e276-8470-4e7b-907e-9ff8ca6e7592",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "6b2819a9-9be9-4135-bafb-f1cbc9e5bc75": {
+          "value": {
+            "id": "6b2819a9-9be9-4135-bafb-f1cbc9e5bc75",
+            "version": 8,
+            "type": "external_object_instance",
+            "format": {
+              "domain": "github.com",
+              "original_url": "https://github.com/hpcaitech/ColossalAI"
+            },
+            "created_time": 1686559139788,
+            "last_edited_time": 1699197940374,
+            "parent_id": "9924e276-8470-4e7b-907e-9ff8ca6e7592",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "942eec0c-33fe-4bbe-bf31-729e4275bf00": {
+          "value": {
+            "id": "942eec0c-33fe-4bbe-bf31-729e4275bf00",
+            "version": 33,
+            "type": "text",
+            "properties": { "title": [["Falcon", [["b"]]]] },
+            "created_time": 1685769403515,
+            "last_edited_time": 1699197940374,
+            "parent_id": "9924e276-8470-4e7b-907e-9ff8ca6e7592",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "a6d27200-96d8-4b26-986b-451aad54b797": {
+          "value": {
+            "id": "a6d27200-96d8-4b26-986b-451aad54b797",
+            "version": 16,
+            "type": "bookmark",
+            "properties": {
+              "link": [["https://huggingface.co/tiiuae/falcon-7b"]],
+              "title": [["tiiuae/falcon-7b · Hugging Face"]],
+              "description": [
+                [
+                  "We’re on a journey to advance and democratize artificial intelligence through open source and open science."
+                ]
+              ]
+            },
+            "format": {
+              "bookmark_icon": "https://huggingface.co/favicon.ico",
+              "bookmark_cover": "https://cdn-thumbnails.huggingface.co/social-thumbnails/models/tiiuae/falcon-7b.png"
+            },
+            "created_time": 1685769402039,
+            "last_edited_time": 1699197940374,
+            "parent_id": "9924e276-8470-4e7b-907e-9ff8ca6e7592",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "220aab57-abe3-4922-af93-026a28dae2fd": {
+          "value": {
+            "id": "220aab57-abe3-4922-af93-026a28dae2fd",
+            "version": 45,
+            "type": "text",
+            "properties": { "title": [["LaMini-Flan-T5", [["b"]]]] },
+            "created_time": 1682497234579,
+            "last_edited_time": 1699197940374,
+            "parent_id": "9924e276-8470-4e7b-907e-9ff8ca6e7592",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "536ae110-2b64-40a6-a507-746da41f0283": {
+          "value": {
+            "id": "536ae110-2b64-40a6-a507-746da41f0283",
+            "version": 18,
+            "type": "bookmark",
+            "properties": {
+              "link": [["https://huggingface.co/MBZUAI/LaMini-Flan-T5-783M"]],
+              "title": [["MBZUAI/LaMini-Flan-T5-783M · Hugging Face"]],
+              "description": [
+                [
+                  "We’re on a journey to advance and democratize artificial intelligence through open source and open science."
+                ]
+              ]
+            },
+            "format": {
+              "bookmark_icon": "https://huggingface.co/favicon.ico",
+              "bookmark_cover": "https://cdn-thumbnails.huggingface.co/social-thumbnails/models/MBZUAI/LaMini-Flan-T5-783M.png"
+            },
+            "created_time": 1682497232990,
+            "last_edited_time": 1699197940374,
+            "parent_id": "9924e276-8470-4e7b-907e-9ff8ca6e7592",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "23bbd7ab-7619-4680-a2bc-bfe6c41b9667": {
+          "value": {
+            "id": "23bbd7ab-7619-4680-a2bc-bfe6c41b9667",
+            "version": 25,
+            "type": "text",
+            "properties": { "title": [["Stable", [["b"]]]] },
+            "created_time": 1682238594310,
+            "last_edited_time": 1699197940374,
+            "parent_id": "9924e276-8470-4e7b-907e-9ff8ca6e7592",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "d81c2fe2-910c-4cb3-89b9-4a487313a541": {
+          "value": {
+            "id": "d81c2fe2-910c-4cb3-89b9-4a487313a541",
+            "version": 8,
+            "type": "external_object_instance",
+            "format": {
+              "domain": "github.com",
+              "original_url": "https://github.com/Stability-AI/StableLM"
+            },
+            "created_time": 1682238588526,
+            "last_edited_time": 1699197940374,
+            "parent_id": "9924e276-8470-4e7b-907e-9ff8ca6e7592",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "bde1df81-bbee-4614-94bf-a9681500d9da": {
+          "value": {
+            "id": "bde1df81-bbee-4614-94bf-a9681500d9da",
+            "version": 13,
+            "type": "text",
+            "properties": { "title": [["Vicuna : ", [["b"]]], ["99% GPT-3.5"]] },
+            "created_time": 1682237880813,
+            "last_edited_time": 1699197940374,
+            "parent_id": "9924e276-8470-4e7b-907e-9ff8ca6e7592",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "2f452173-541e-4c3d-9965-2b4e914c687d": {
+          "value": {
+            "id": "2f452173-541e-4c3d-9965-2b4e914c687d",
+            "version": 16,
+            "type": "bookmark",
+            "properties": {
+              "link": [["https://huggingface.co/lmsys/vicuna-13b-delta-v0"]],
+              "title": [["lmsys/vicuna-13b-delta-v0 · Hugging Face"]],
+              "description": [
+                [
+                  "We’re on a journey to advance and democratize artificial intelligence through open source and open science."
+                ]
+              ]
+            },
+            "format": {
+              "bookmark_icon": "https://huggingface.co/favicon.ico",
+              "bookmark_cover": "https://cdn-thumbnails.huggingface.co/social-thumbnails/models/lmsys/vicuna-13b-delta-v0.png"
+            },
+            "created_time": 1682237873330,
+            "last_edited_time": 1699197940374,
+            "parent_id": "9924e276-8470-4e7b-907e-9ff8ca6e7592",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "37c3e65b-fb99-4848-811f-1bed62fc1743": {
+          "value": {
+            "id": "37c3e65b-fb99-4848-811f-1bed62fc1743",
+            "version": 132,
+            "type": "text",
+            "properties": {
+              "title": [["Dolly V2 (Pythia) : ", [["b"]]], ["Business Lisence LLaMA "]]
+            },
+            "created_time": 1682237766402,
+            "last_edited_time": 1699197940374,
+            "parent_id": "9924e276-8470-4e7b-907e-9ff8ca6e7592",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "3d2b99aa-121a-4353-9d85-a3ea2d82fd4f": {
+          "value": {
+            "id": "3d2b99aa-121a-4353-9d85-a3ea2d82fd4f",
+            "version": 16,
+            "type": "bookmark",
+            "properties": {
+              "link": [["https://huggingface.co/databricks/dolly-v2-12b"]],
+              "title": [["databricks/dolly-v2-12b · Hugging Face"]],
+              "description": [
+                [
+                  "We’re on a journey to advance and democratize artificial intelligence through open source and open science."
+                ]
+              ]
+            },
+            "format": {
+              "bookmark_icon": "https://huggingface.co/favicon.ico",
+              "bookmark_cover": "https://cdn-thumbnails.huggingface.co/social-thumbnails/models/databricks/dolly-v2-12b.png"
+            },
+            "created_time": 1682237512652,
+            "last_edited_time": 1699197940374,
+            "parent_id": "9924e276-8470-4e7b-907e-9ff8ca6e7592",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "4020a340-69ec-4e30-9db1-8dd81f99ef93": {
+          "value": {
+            "id": "4020a340-69ec-4e30-9db1-8dd81f99ef93",
+            "version": 38,
+            "type": "text",
+            "properties": { "title": [["CONNER COmpreheNsive kNowledge Evaluation fRamework"]] },
+            "created_time": 1699198150479,
+            "last_edited_time": 1699198174230,
+            "parent_id": "a9278289-ba94-4385-bb6b-312b0b04ccfb",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "c12dbde4-4290-41e9-b8c3-7c48bd690026": {
+          "value": {
+            "id": "c12dbde4-4290-41e9-b8c3-7c48bd690026",
+            "version": 10,
+            "type": "bookmark",
+            "properties": {
+              "link": [["https://arxiv.org/abs/2310.07289"]],
+              "title": [["Beyond Factuality: A Comprehensive Evaluation of Large Language..."]],
+              "description": [
+                [
+                  "Large language models (LLMs) outperform information retrieval techniques for downstream knowledge-intensive tasks when being prompted to generate world knowledge. However, community concerns..."
+                ]
+              ]
+            },
+            "format": {
+              "bookmark_icon": "https://static.arxiv.org/static/browse/0.3.4/images/icons/apple-touch-icon.png",
+              "bookmark_cover": "https://static.arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png"
+            },
+            "created_time": 1699198162079,
+            "last_edited_time": 1699198162082,
+            "parent_id": "a9278289-ba94-4385-bb6b-312b0b04ccfb",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "83447ea8-6d91-4524-80a8-ff6f63776a6b": {
+          "value": {
+            "id": "83447ea8-6d91-4524-80a8-ff6f63776a6b",
+            "version": 10,
+            "type": "bookmark",
+            "properties": {
+              "link": [
+                [
+                  "https://direct.mit.edu/coli/article/38/2/261/2145/Are-You-Sure-That-This-Happened-Assessing-the"
+                ]
+              ],
+              "title": [
+                [
+                  "Are You Sure That This Happened? Assessing the Factuality Degree of Events in Text"
+                ]
+              ],
+              "description": [
+                [
+                  "Abstract. Identifying the veracity, or factuality, of event mentions in text is fundamental for reasoning about eventualities in discourse. Inferences derived from events judged as not having happened, or as being only possible, are different from those derived from events evaluated as factual. Event factuality involves two separate levels of information. On the one hand, it deals with polarity, which distinguishes between positive and negative instantiations of events. On the other, it has to do with degrees of certainty (e.g., possible, probable), an information level generally subsumed under the category of epistemic modality. This article aims at contributing to a better understanding of how event factuality is articulated in natural language. For that purpose, we put forward a linguistic-oriented computational model which has at its core an algorithm articulating the effect of factuality relations across levels of syntactic embedding. As a proof of concept, this model has been implemented in De Facto, a factuality profiler for eventualities mentioned in text, and tested against a corpus built specifically for the task, yielding an F1 of 0.70 (macro-averaging) and 0.80 (micro-averaging). These two measures mutually compensate for an over-emphasis present in the other (either on the lesser or greater populated categories), and can therefore be interpreted as the lower and upper bounds of the De Facto's performance."
+                ]
+              ]
+            },
+            "format": {
+              "bookmark_icon": "https://mitp.silverchair-cdn.com/Themes/Client/app/img/favicons/v-638316794539735606/apple-touch-icon.png",
+              "bookmark_cover": "https://mitp.silverchair-cdn.com/data/SiteBuilderAssets/Live/Images/coli/coli43644936.png"
+            },
+            "created_time": 1699198612787,
+            "last_edited_time": 1699198612791,
+            "parent_id": "a9278289-ba94-4385-bb6b-312b0b04ccfb",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "38eaac15-3ce9-4b17-b26c-931c4fe23336": {
+          "value": {
+            "id": "38eaac15-3ce9-4b17-b26c-931c4fe23336",
+            "version": 10,
+            "type": "bookmark",
+            "properties": {
+              "link": [["https://toloka.ai/blog/fact-checking-llm-generated-content/"]],
+              "title": [["Fact-checking LLM-generated content"]],
+              "description": [
+                [
+                  "In this article we’ll dive deeper into everything you need to know about fact-checking LLM-generated content, including why it’s important to fact-check content, how to verify accuracy, what to pay attention to, and more."
+                ]
+              ]
+            },
+            "format": {
+              "bookmark_icon": "https://tlkfrontprod.azureedge.net/portal-production/static/images/favicon-new/android-icon-192x192.png",
+              "bookmark_cover": "https://tlkfrontprod.azureedge.net/portal-production/static/uploaded/images/eecd8a17c6b0330a0b448da7239528bd/eecd8a17c6b0330a0b448da7239528bd_jpeg_1280_x1.jpeg"
+            },
+            "created_time": 1699198672208,
+            "last_edited_time": 1699198672211,
+            "parent_id": "a9278289-ba94-4385-bb6b-312b0b04ccfb",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "e6264521-e714-460a-9f9f-c1e6daff9875": {
+          "value": {
+            "id": "e6264521-e714-460a-9f9f-c1e6daff9875",
+            "version": 10,
+            "type": "bookmark",
+            "properties": {
+              "link": [["https://arxiv.org/abs/2109.05052"]],
+              "title": [["Entity-Based Knowledge Conflicts in Question Answering"]],
+              "description": [
+                [
+                  "Knowledge-dependent tasks typically use two sources of knowledge: parametric, learned at training time, and contextual, given as a passage at inference time. To understand how models use these..."
+                ]
+              ]
+            },
+            "format": {
+              "bookmark_icon": "https://static.arxiv.org/static/browse/0.3.4/images/icons/apple-touch-icon.png",
+              "bookmark_cover": "https://static.arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png"
+            },
+            "created_time": 1699198679517,
+            "last_edited_time": 1699198679520,
+            "parent_id": "a9278289-ba94-4385-bb6b-312b0b04ccfb",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "372fdb24-1cbd-4f62-9cb0-ce2f512ad5c2": {
+          "value": {
+            "id": "372fdb24-1cbd-4f62-9cb0-ce2f512ad5c2",
+            "version": 10,
+            "type": "bookmark",
+            "properties": {
+              "link": [["https://arxiv.org/abs/2305.13661"]],
+              "title": [["On the Risk of Misinformation Pollution with Large Language Models"]],
+              "description": [
+                [
+                  "In this paper, we comprehensively investigate the potential misuse of modern Large Language Models (LLMs) for generating credible-sounding misinformation and its subsequent impact on..."
+                ]
+              ]
+            },
+            "format": {
+              "bookmark_icon": "https://static.arxiv.org/static/browse/0.3.4/images/icons/apple-touch-icon.png",
+              "bookmark_cover": "https://static.arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png"
+            },
+            "created_time": 1699198692310,
+            "last_edited_time": 1699198692314,
+            "parent_id": "a9278289-ba94-4385-bb6b-312b0b04ccfb",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "d9406705-85ba-42ff-96c5-824d6adc71af": {
+          "value": {
+            "id": "d9406705-85ba-42ff-96c5-824d6adc71af",
+            "version": 10,
+            "type": "bookmark",
+            "properties": {
+              "link": [["https://arxiv.org/abs/2005.11401"]],
+              "title": [["Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks"]],
+              "description": [
+                [
+                  "Large pre-trained language models have been shown to store factual knowledge in their parameters, and achieve state-of-the-art results when fine-tuned on downstream NLP tasks. However, their..."
+                ]
+              ]
+            },
+            "format": {
+              "bookmark_icon": "https://static.arxiv.org/static/browse/0.3.4/images/icons/apple-touch-icon.png",
+              "bookmark_cover": "https://static.arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png"
+            },
+            "created_time": 1699198700449,
+            "last_edited_time": 1699198700452,
+            "parent_id": "a9278289-ba94-4385-bb6b-312b0b04ccfb",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "c92f002b-d51c-4013-9160-91f85565eb7b": {
+          "value": {
+            "id": "c92f002b-d51c-4013-9160-91f85565eb7b",
+            "version": 10,
+            "type": "bookmark",
+            "properties": {
+              "link": [["https://arxiv.org/abs/2201.11903"]],
+              "title": [["Chain-of-Thought Prompting Elicits Reasoning in Large Language Models"]],
+              "description": [
+                [
+                  "We explore how generating a chain of thought -- a series of intermediate reasoning steps -- significantly improves the ability of large language models to perform complex reasoning. In particular,..."
+                ]
+              ]
+            },
+            "format": {
+              "bookmark_icon": "https://static.arxiv.org/static/browse/0.3.4/images/icons/apple-touch-icon.png",
+              "bookmark_cover": "https://static.arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png"
+            },
+            "created_time": 1699198707490,
+            "last_edited_time": 1699198707493,
+            "parent_id": "a9278289-ba94-4385-bb6b-312b0b04ccfb",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "54f947a8-dcb2-430c-9a2e-8da5db46d219": {
+          "value": {
+            "id": "54f947a8-dcb2-430c-9a2e-8da5db46d219",
+            "version": 10,
+            "type": "bookmark",
+            "properties": {
+              "link": [["https://arxiv.org/abs/2209.14290"]],
+              "title": [["FiD-Light: Efficient and Effective Retrieval-Augmented Text Generation"]],
+              "description": [
+                [
+                  "Retrieval-augmented generation models offer many benefits over standalone language models: besides a textual answer to a given query they provide provenance items retrieved from an updateable..."
+                ]
+              ]
+            },
+            "format": {
+              "bookmark_icon": "https://static.arxiv.org/static/browse/0.3.4/images/icons/apple-touch-icon.png",
+              "bookmark_cover": "https://static.arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png"
+            },
+            "created_time": 1699198712786,
+            "last_edited_time": 1699198712789,
+            "parent_id": "a9278289-ba94-4385-bb6b-312b0b04ccfb",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "477e8051-924d-44fa-a796-ad31936a2c0f": {
+          "value": {
+            "id": "477e8051-924d-44fa-a796-ad31936a2c0f",
+            "version": 10,
+            "type": "bookmark",
+            "properties": {
+              "link": [["https://arxiv.org/abs/2301.04246"]],
+              "title": [["Generative Language Models and Automated Influence Operations:..."]],
+              "description": [
+                [
+                  "Generative language models have improved drastically, and can now produce realistic text outputs that are difficult to distinguish from human-written content. For malicious actors, these language..."
+                ]
+              ]
+            },
+            "format": {
+              "bookmark_icon": "https://static.arxiv.org/static/browse/0.3.4/images/icons/apple-touch-icon.png",
+              "bookmark_cover": "https://static.arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png"
+            },
+            "created_time": 1699198720992,
+            "last_edited_time": 1699198720997,
+            "parent_id": "a9278289-ba94-4385-bb6b-312b0b04ccfb",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "c17de15e-2e2a-40d5-8602-854afe22c8a4": {
+          "value": {
+            "id": "c17de15e-2e2a-40d5-8602-854afe22c8a4",
+            "version": 49,
+            "type": "text",
+            "properties": { "title": [["[Text-to-SQL]"]] },
+            "created_time": 1685164378307,
+            "last_edited_time": 1699197945806,
+            "parent_id": "cfe93b73-2c2c-476a-8a00-a2c940c41b49",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "ec976c6c-e496-4957-a944-74d0bae37279": {
+          "value": {
+            "id": "ec976c6c-e496-4957-a944-74d0bae37279",
+            "version": 16,
+            "type": "bookmark",
+            "properties": {
+              "link": [["https://arxiv.org/abs/2212.08902"]],
+              "title": [["Know What I don't Know: Handling Ambiguous and Unanswerable..."]],
+              "description": [
+                [
+                  "The task of text-to-SQL aims to convert a natural language question into its corresponding SQL query within the context of relational tables. Existing text-to-SQL parsers generate a \"plausible\"..."
+                ]
+              ]
+            },
+            "format": {
+              "bookmark_icon": "https://static.arxiv.org/static/browse/0.3.4/images/icons/apple-touch-icon.png",
+              "bookmark_cover": "https://static.arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png"
+            },
+            "created_time": 1693036742078,
+            "last_edited_time": 1699197945806,
+            "parent_id": "cfe93b73-2c2c-476a-8a00-a2c940c41b49",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "24d236f9-6796-4b10-a755-ff4e19132a12": {
+          "value": {
+            "id": "24d236f9-6796-4b10-a755-ff4e19132a12",
+            "version": 129,
+            "type": "text",
+            "properties": { "title": [["GNN to Transformer"]] },
+            "created_time": 1693142873150,
+            "last_edited_time": 1699197945806,
+            "parent_id": "cfe93b73-2c2c-476a-8a00-a2c940c41b49",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "647b8bbd-894e-489d-a8e0-45f16a360ed7": {
+          "value": {
+            "id": "647b8bbd-894e-489d-a8e0-45f16a360ed7",
+            "version": 16,
+            "type": "bookmark",
+            "properties": {
+              "link": [["https://graphdeeplearning.github.io/post/transformers-are-gnns/"]],
+              "title": [["Transformers are Graph Neural Networks | NTU Graph Deep Learning Lab"]],
+              "description": [
+                [
+                  "Engineer friends often ask me: Graph Deep Learning sounds great, but are there any big commercial success stories? Is it being deployed in practical applications? Besides the obvious ones–recommendation systems at Pinterest, Alibaba and Twitter–a slightly nuanced success story is the Transformer architecture, which has taken the NLP industry by storm. Through this post, I want to establish links between Graph Neural Networks (GNNs) and Transformers. I’ll talk about the intuitions behind model architectures in the NLP and GNN communities, make connections using equations and figures, and discuss how we could work together to drive progress."
+                ]
+              ]
+            },
+            "format": {
+              "bookmark_icon": "https://graphdeeplearning.github.io/images/icon_hu027d87ac1e37f4f802995042c9999554_21044_32x32_fill_lanczos_center_2.png",
+              "bookmark_cover": "https://graphdeeplearning.github.io/post/transformers-are-gnns/featured.jpeg"
+            },
+            "created_time": 1693142870876,
+            "last_edited_time": 1699197945806,
+            "parent_id": "cfe93b73-2c2c-476a-8a00-a2c940c41b49",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "5698c132-f353-4087-8166-d76082d3fa2d": {
+          "value": {
+            "id": "5698c132-f353-4087-8166-d76082d3fa2d",
+            "version": 16,
+            "type": "bookmark",
+            "properties": {
+              "link": [["https://arxiv.org/abs/2308.05481"]],
+              "title": [["LLM As DBA"]],
+              "description": [
+                [
+                  "Database administrators (DBAs) play a crucial role in managing, maintaining and optimizing a database system to ensure data availability, performance, and reliability. However, it is hard and..."
+                ]
+              ]
+            },
+            "format": {
+              "bookmark_icon": "https://static.arxiv.org/static/browse/0.3.4/images/icons/apple-touch-icon.png",
+              "bookmark_cover": "https://static.arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png"
+            },
+            "created_time": 1693036765094,
+            "last_edited_time": 1699197945806,
+            "parent_id": "cfe93b73-2c2c-476a-8a00-a2c940c41b49",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "42264489-baa7-4657-bd8f-d148b8cf140a": {
+          "value": {
+            "id": "42264489-baa7-4657-bd8f-d148b8cf140a",
+            "version": 11,
+            "type": "text",
+            "properties": {
+              "title": [
+                ["[M", [["h", "red"]]],
+                ["ultimodal] ", [["b"], ["h", "red"]]],
+                ["Single Diffuser for Video/Voice/Text/Image"]
+              ]
+            },
+            "created_time": 1685163862552,
+            "last_edited_time": 1699197945806,
+            "parent_id": "cfe93b73-2c2c-476a-8a00-a2c940c41b49",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "c180c421-0792-48a4-a1bb-bc5f8a2b0f57": {
+          "value": {
+            "id": "c180c421-0792-48a4-a1bb-bc5f8a2b0f57",
+            "version": 16,
+            "type": "bookmark",
+            "properties": {
+              "link": [["https://arxiv.org/abs/2305.11846"]],
+              "title": [["Any-to-Any Generation via Composable Diffusion"]],
+              "description": [
+                [
+                  "We present Composable Diffusion (CoDi), a novel generative model capable of generating any combination of output modalities, such as language, image, video, or audio, from any combination of input..."
+                ]
+              ]
+            },
+            "format": {
+              "bookmark_icon": "https://static.arxiv.org/static/browse/0.3.4/images/icons/apple-touch-icon.png",
+              "bookmark_cover": "https://static.arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png"
+            },
+            "created_time": 1685163860696,
+            "last_edited_time": 1699197945806,
+            "parent_id": "cfe93b73-2c2c-476a-8a00-a2c940c41b49",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "9e8613c8-6d61-4c53-9627-3225fe07a071": {
+          "value": {
+            "id": "9e8613c8-6d61-4c53-9627-3225fe07a071",
+            "version": 19,
+            "type": "image",
+            "properties": {
+              "size": [["316.6KB"]],
+              "title": [["Untitled"]],
+              "source": [
+                [
+                  "https://s3-us-west-2.amazonaws.com/secure.notion-static.com/a9901390-172d-4ffa-88cf-c5233341fa8d/Untitled.png"
+                ]
+              ]
+            },
+            "format": {
+              "block_width": 480,
+              "display_source": "https://s3-us-west-2.amazonaws.com/secure.notion-static.com/a9901390-172d-4ffa-88cf-c5233341fa8d/Untitled.png",
+              "block_full_width": false,
+              "block_page_width": false,
+              "block_aspect_ratio": 0.7722960151802657,
+              "block_preserve_scale": true
+            },
+            "created_time": 1685168890960,
+            "last_edited_time": 1699197945806,
+            "parent_id": "cfe93b73-2c2c-476a-8a00-a2c940c41b49",
+            "parent_table": "block",
+            "alive": true,
+            "file_ids": ["a9901390-172d-4ffa-88cf-c5233341fa8d"],
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "15366732-fc8b-4be1-b092-f188da4ce39e": {
+          "value": {
+            "id": "15366732-fc8b-4be1-b092-f188da4ce39e",
+            "version": 156,
+            "type": "text",
+            "properties": {
+              "title": [
+                ["[Model Structure", [["h", "pink"]]],
+                ["l] ", [["b"], ["h", "pink"]]],
+                ["RNN + Transfermer"]
+              ]
+            },
+            "created_time": 1685163792227,
+            "last_edited_time": 1699197945806,
+            "parent_id": "cfe93b73-2c2c-476a-8a00-a2c940c41b49",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "d745ed00-379c-4369-b27c-a291bcc3e075": {
+          "value": {
+            "id": "d745ed00-379c-4369-b27c-a291bcc3e075",
+            "version": 16,
+            "type": "bookmark",
+            "properties": {
+              "link": [["https://arxiv.org/abs/2305.13048"]],
+              "title": [["RWKV: Reinventing RNNs for the Transformer Era"]],
+              "description": [
+                [
+                  "Transformers have revolutionized almost all natural language processing (NLP) tasks but suffer from memory and computational complexity that scales quadratically with sequence length. In contrast,..."
+                ]
+              ]
+            },
+            "format": {
+              "bookmark_icon": "https://static.arxiv.org/static/browse/0.3.4/images/icons/apple-touch-icon.png",
+              "bookmark_cover": "https://static.arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png"
+            },
+            "created_time": 1685163794376,
+            "last_edited_time": 1699197945806,
+            "parent_id": "cfe93b73-2c2c-476a-8a00-a2c940c41b49",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "1c1c14a4-c04e-465d-be83-d9b9885a7db7": {
+          "value": {
+            "id": "1c1c14a4-c04e-465d-be83-d9b9885a7db7",
+            "version": 17,
+            "type": "image",
+            "properties": {
+              "size": [["120.5KB"]],
+              "title": [["Untitled"]],
+              "source": [
+                [
+                  "https://s3-us-west-2.amazonaws.com/secure.notion-static.com/e07c4790-057f-4b2c-b39b-b91c4e20609a/Untitled.png"
+                ]
+              ]
+            },
+            "format": {
+              "block_width": 1190,
+              "display_source": "https://s3-us-west-2.amazonaws.com/secure.notion-static.com/e07c4790-057f-4b2c-b39b-b91c4e20609a/Untitled.png",
+              "block_full_width": false,
+              "block_page_width": true,
+              "block_aspect_ratio": 0.3235294117647059,
+              "block_preserve_scale": true
+            },
+            "created_time": 1685168948313,
+            "last_edited_time": 1699197945806,
+            "parent_id": "cfe93b73-2c2c-476a-8a00-a2c940c41b49",
+            "parent_table": "block",
+            "alive": true,
+            "file_ids": ["e07c4790-057f-4b2c-b39b-b91c4e20609a"],
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "3fc75f05-ec37-4323-9616-50988a1f2b6f": {
+          "value": {
+            "id": "3fc75f05-ec37-4323-9616-50988a1f2b6f",
+            "version": 10,
+            "type": "text",
+            "properties": {
+              "title": [
+                ["[M", [["h", "red"]]],
+                ["ultimodal] ", [["b"], ["h", "red"]]],
+                ["Output Keyboard/Mouse Opeartion Command "],
+                ["(Recursive Criticism and Improvement (RCI))", [["h", "yellow"]]]
+              ]
+            },
+            "created_time": 1684644280125,
+            "last_edited_time": 1699197945806,
+            "parent_id": "cfe93b73-2c2c-476a-8a00-a2c940c41b49",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "77d8aa0e-c960-45db-bd34-0c98777ab2ba": {
+          "value": {
+            "id": "77d8aa0e-c960-45db-bd34-0c98777ab2ba",
+            "version": 16,
+            "type": "bookmark",
+            "properties": {
+              "link": [["https://arxiv.org/abs/2303.17491"]],
+              "title": [["Language Models can Solve Computer Tasks"]],
+              "description": [
+                [
+                  "Agents capable of carrying out general tasks on a computer can improve efficiency and productivity by automating repetitive tasks and assisting in complex problem-solving. Ideally, such agents..."
+                ]
+              ]
+            },
+            "format": {
+              "bookmark_icon": "https://static.arxiv.org/static/browse/0.3.4/images/icons/apple-touch-icon.png",
+              "bookmark_cover": "https://static.arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png"
+            },
+            "created_time": 1684644278399,
+            "last_edited_time": 1699197945806,
+            "parent_id": "cfe93b73-2c2c-476a-8a00-a2c940c41b49",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "81126b5b-3755-40b9-b48e-8efe794084c0": {
+          "value": {
+            "id": "81126b5b-3755-40b9-b48e-8efe794084c0",
+            "version": 16,
+            "type": "bookmark",
+            "properties": { "link": [["https://arxiv.org/pdf/2303.17491.pdf"]] },
+            "created_time": 1684678524254,
+            "last_edited_time": 1699197945806,
+            "parent_id": "cfe93b73-2c2c-476a-8a00-a2c940c41b49",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "c147ba74-c4d2-42bd-996b-54d8d3aec79e": {
+          "value": {
+            "id": "c147ba74-c4d2-42bd-996b-54d8d3aec79e",
+            "version": 56,
+            "type": "text",
+            "properties": {
+              "title": [
+                ["[M", [["h", "red"]]],
+                ["ultimodal] ", [["b"], ["h", "red"]]],
+                ["HuggingGPT: Solving AI Tasks with ChatGPT and its Friends in Hugging Face"],
+                ["(JARVIS)", [["h", "yellow"]]]
+              ]
+            },
+            "created_time": 1684643858239,
+            "last_edited_time": 1699197945806,
+            "parent_id": "cfe93b73-2c2c-476a-8a00-a2c940c41b49",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "c4a71ec9-73a6-43c7-abd4-0729ee8e4270": {
+          "value": {
+            "id": "c4a71ec9-73a6-43c7-abd4-0729ee8e4270",
+            "version": 16,
+            "type": "bookmark",
+            "properties": {
+              "link": [["https://arxiv.org/abs/2303.17580"]],
+              "title": [
+                ["HuggingGPT: Solving AI Tasks with ChatGPT and its Friends in HuggingFace"]
+              ],
+              "description": [
+                [
+                  "Solving complicated AI tasks with different domains and modalities is a key step toward advanced artificial intelligence. While there are abundant AI models available for different domains and..."
+                ]
+              ]
+            },
+            "format": {
+              "bookmark_icon": "https://static.arxiv.org/static/browse/0.3.4/images/icons/apple-touch-icon.png",
+              "bookmark_cover": "https://static.arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png"
+            },
+            "created_time": 1684643903304,
+            "last_edited_time": 1699197945806,
+            "parent_id": "cfe93b73-2c2c-476a-8a00-a2c940c41b49",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "5dc041d0-3d8e-496d-8336-af0e5e62d407": {
+          "value": {
+            "id": "5dc041d0-3d8e-496d-8336-af0e5e62d407",
+            "version": 16,
+            "type": "bookmark",
+            "properties": { "link": [["https://arxiv.org/pdf/2303.17580.pdf"]] },
+            "created_time": 1684678552367,
+            "last_edited_time": 1699197945806,
+            "parent_id": "cfe93b73-2c2c-476a-8a00-a2c940c41b49",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "5673578f-26dd-4ec3-824f-1b6be100cf05": {
+          "value": {
+            "id": "5673578f-26dd-4ec3-824f-1b6be100cf05",
+            "version": 10,
+            "type": "text",
+            "properties": {
+              "title": [
+                ["[Model Structure", [["h", "pink"]]],
+                ["l] ", [["b"], ["h", "pink"]]],
+                [" ", [["b"], ["h", "red"]]],
+                ["‘My story has several episodes, kindly watch the ‘previously on’ "],
+                ["(Amplify input length)", [["h", "yellow"]]]
+              ]
+            },
+            "created_time": 1682393133889,
+            "last_edited_time": 1699197945806,
+            "parent_id": "cfe93b73-2c2c-476a-8a00-a2c940c41b49",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "f778c123-522e-4775-877a-6be1a6d8fa8d": {
+          "value": {
+            "id": "f778c123-522e-4775-877a-6be1a6d8fa8d",
+            "version": 16,
+            "type": "bookmark",
+            "properties": {
+              "link": [["https://arxiv.org/abs/2304.11062"]],
+              "title": [["Scaling Transformer to 1M tokens and beyond with RMT"]],
+              "description": [
+                [
+                  "This technical report presents the application of a recurrent memory to extend the context length of BERT, one of the most effective Transformer-based models in natural language processing. By..."
+                ]
+              ]
+            },
+            "format": {
+              "bookmark_icon": "https://static.arxiv.org/static/browse/0.3.4/images/icons/apple-touch-icon.png",
+              "bookmark_cover": "https://static.arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png"
+            },
+            "created_time": 1682393131834,
+            "last_edited_time": 1699197945806,
+            "parent_id": "cfe93b73-2c2c-476a-8a00-a2c940c41b49",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "2f82d769-e2c0-4b19-abe2-0875c8ea9b39": {
+          "value": {
+            "id": "2f82d769-e2c0-4b19-abe2-0875c8ea9b39",
+            "version": 16,
+            "type": "bookmark",
+            "properties": { "link": [["https://arxiv.org/pdf/2304.11062.pdf"]] },
+            "created_time": 1684678606965,
+            "last_edited_time": 1699197945806,
+            "parent_id": "cfe93b73-2c2c-476a-8a00-a2c940c41b49",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "88ec0162-0011-4937-8e20-08760767e904": {
+          "value": {
+            "id": "88ec0162-0011-4937-8e20-08760767e904",
+            "version": 343,
+            "type": "text",
+            "properties": {
+              "title": [
+                ["‘GPT-4 will judge you, rather than me.’ "],
+                ["(LLM benchmark strategy)", [["h", "yellow"]]]
+              ]
+            },
+            "created_time": 1682238051434,
+            "last_edited_time": 1699197945806,
+            "parent_id": "cfe93b73-2c2c-476a-8a00-a2c940c41b49",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "fa3f5d0a-e1ff-4d64-ad4d-2f9123a9d63f": {
+          "value": {
+            "id": "fa3f5d0a-e1ff-4d64-ad4d-2f9123a9d63f",
+            "version": 16,
+            "type": "bookmark",
+            "properties": {
+              "link": [["https://arxiv.org/abs/2304.03277"]],
+              "title": [["Instruction Tuning with GPT-4"]],
+              "description": [
+                [
+                  "Prior work has shown that finetuning large language models (LLMs) using machine-generated instruction-following data enables such models to achieve remarkable zero-shot capabilities on new tasks,..."
+                ]
+              ]
+            },
+            "format": {
+              "bookmark_icon": "https://static.arxiv.org/static/browse/0.3.4/images/icons/apple-touch-icon.png",
+              "bookmark_cover": "https://static.arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png"
+            },
+            "created_time": 1682237565226,
+            "last_edited_time": 1699197945806,
+            "parent_id": "cfe93b73-2c2c-476a-8a00-a2c940c41b49",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "1e76494d-7089-4c32-9aa1-1ace73e1d68c": {
+          "value": {
+            "id": "1e76494d-7089-4c32-9aa1-1ace73e1d68c",
+            "version": 17,
+            "type": "image",
+            "properties": {
+              "size": [["180.7KB"]],
+              "title": [["Untitled"]],
+              "source": [
+                [
+                  "https://s3-us-west-2.amazonaws.com/secure.notion-static.com/78982233-5502-4da0-9fe1-3fa97c504cc7/Untitled.png"
+                ]
+              ]
+            },
+            "format": {
+              "block_width": 1109,
+              "display_source": "https://s3-us-west-2.amazonaws.com/secure.notion-static.com/78982233-5502-4da0-9fe1-3fa97c504cc7/Untitled.png",
+              "block_full_width": false,
+              "block_page_width": true,
+              "block_aspect_ratio": 0.721370604147881,
+              "block_preserve_scale": true
+            },
+            "created_time": 1686559244653,
+            "last_edited_time": 1699197945806,
+            "parent_id": "cfe93b73-2c2c-476a-8a00-a2c940c41b49",
+            "parent_table": "block",
+            "alive": true,
+            "file_ids": ["78982233-5502-4da0-9fe1-3fa97c504cc7"],
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "e4c63733-3a57-44a7-9fbe-1f67b6eb8a4b": {
+          "value": {
+            "id": "e4c63733-3a57-44a7-9fbe-1f67b6eb8a4b",
+            "version": 242,
+            "type": "text",
+            "properties": {
+              "title": [
+                ["‘You guys talk with each other’  "],
+                ["(GAN-like LLM tuning)", [["h", "yellow"]]]
+              ]
+            },
+            "created_time": 1682238330514,
+            "last_edited_time": 1699197945806,
+            "parent_id": "cfe93b73-2c2c-476a-8a00-a2c940c41b49",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "5a3722aa-1243-423e-a3d5-64e770485f02": {
+          "value": {
+            "id": "5a3722aa-1243-423e-a3d5-64e770485f02",
+            "version": 16,
+            "type": "bookmark",
+            "properties": {
+              "link": [["https://arxiv.org/abs/2303.17071"]],
+              "title": [["DERA: Enhancing Large Language Model Completions with..."]],
+              "description": [
+                [
+                  "Large language models (LLMs) have emerged as valuable tools for many natural language understanding tasks. In safety-critical applications such as healthcare, the utility of these models is..."
+                ]
+              ]
+            },
+            "format": {
+              "bookmark_icon": "https://static.arxiv.org/static/browse/0.3.4/images/icons/apple-touch-icon.png",
+              "bookmark_cover": "https://static.arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png"
+            },
+            "created_time": 1682238209760,
+            "last_edited_time": 1699197945806,
+            "parent_id": "cfe93b73-2c2c-476a-8a00-a2c940c41b49",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "24419125-ec6c-4a5f-a41b-fcdf69ea84d0": {
+          "value": {
+            "id": "24419125-ec6c-4a5f-a41b-fcdf69ea84d0",
+            "version": 289,
+            "type": "text",
+            "properties": {
+              "title": [
+                ["‘Look at what you just said.’ "],
+                ["(Key concept of AutoGPT family’)", [["h", "yellow"]]]
+              ]
+            },
+            "created_time": 1682238380610,
+            "last_edited_time": 1699197945806,
+            "parent_id": "cfe93b73-2c2c-476a-8a00-a2c940c41b49",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "3a7ed5cb-02e2-479d-9661-411b190586e4": {
+          "value": {
+            "id": "3a7ed5cb-02e2-479d-9661-411b190586e4",
+            "version": 16,
+            "type": "bookmark",
+            "properties": {
+              "link": [["https://arxiv.org/abs/2303.11366"]],
+              "title": [["Reflexion: an autonomous agent with dynamic memory and self-reflection"]],
+              "description": [
+                [
+                  "Recent advancements in decision-making large language model (LLM) agents have demonstrated impressive performance across various benchmarks. However, these state-of-the-art approaches typically..."
+                ]
+              ]
+            },
+            "format": {
+              "bookmark_icon": "https://static.arxiv.org/static/browse/0.3.4/images/icons/apple-touch-icon.png",
+              "bookmark_cover": "https://static.arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png"
+            },
+            "created_time": 1682238258128,
+            "last_edited_time": 1699197945806,
+            "parent_id": "cfe93b73-2c2c-476a-8a00-a2c940c41b49",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "b4d648da-3cd5-41e0-8199-4e15a80c4819": {
+          "value": {
+            "id": "b4d648da-3cd5-41e0-8199-4e15a80c4819",
+            "version": 709,
+            "type": "text",
+            "properties": {
+              "title": [
+                ["‘You can join the exam many times’ "],
+                ["(Self-consistency optimizing)", [["h", "yellow"]]]
+              ]
+            },
+            "created_time": 1682238088124,
+            "last_edited_time": 1699197945806,
+            "parent_id": "cfe93b73-2c2c-476a-8a00-a2c940c41b49",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "a9d9aa6c-c26e-47f2-a2fc-9ac7eeb9c8a2": {
+          "value": {
+            "id": "a9d9aa6c-c26e-47f2-a2fc-9ac7eeb9c8a2",
+            "version": 22,
+            "type": "bookmark",
+            "properties": {
+              "link": [["https://arxiv.org/abs/2203.11171"]],
+              "title": [
+                ["Self-Consistency Improves Chain of Thought Reasoning in Language Models"]
+              ],
+              "description": [
+                [
+                  "Chain-of-thought prompting combined with pre-trained large language models has achieved encouraging results on complex reasoning tasks. In this paper, we propose a new decoding strategy,..."
+                ]
+              ]
+            },
+            "format": {
+              "bookmark_icon": "https://static.arxiv.org/static/browse/0.3.4/images/icons/apple-touch-icon.png",
+              "bookmark_cover": "https://static.arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png"
+            },
+            "created_time": 1682237810015,
+            "last_edited_time": 1699197945806,
+            "parent_id": "cfe93b73-2c2c-476a-8a00-a2c940c41b49",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "f71263f7-6c00-4c58-98a5-6e264967b06e": {
+          "value": {
+            "id": "f71263f7-6c00-4c58-98a5-6e264967b06e",
+            "version": 745,
+            "type": "text",
+            "properties": {
+              "title": [
+                ["[Interpretability", [["h", "pink"]]],
+                ["]", [["b"], ["h", "pink"]]],
+                ["Elementary Proven of Relationships between "],
+                ["Neurons", [["b"]]],
+                [" in LLM and "],
+                ["Knowlege Relationships", [["b"]]],
+                [" (Selected  Relationships in Knowlege Graph) by "],
+                ["supressing", [["h", "red"]]],
+                [" or "],
+                ["amplifying ‘knowledge neurons’ while observing ", [["h", "red"]]],
+                ["Knowledge Attribution", [["h", "orange"]]]
+              ]
+            },
+            "created_time": 1685768510042,
+            "last_edited_time": 1699197956093,
+            "parent_id": "0d6d2346-a048-4a12-8362-ab7d9da3dae3",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "bec65add-cbf5-4058-99ed-942424cc1037": {
+          "value": {
+            "id": "bec65add-cbf5-4058-99ed-942424cc1037",
+            "version": 16,
+            "type": "bookmark",
+            "properties": {
+              "link": [["https://arxiv.org/abs/2104.08696"]],
+              "title": [["Knowledge Neurons in Pretrained Transformers"]],
+              "description": [
+                [
+                  "Large-scale pretrained language models are surprisingly good at recalling factual knowledge presented in the training corpus. In this paper, we present preliminary studies on how factual knowledge..."
+                ]
+              ]
+            },
+            "format": {
+              "bookmark_icon": "https://static.arxiv.org/static/browse/0.3.4/images/icons/apple-touch-icon.png",
+              "bookmark_cover": "https://static.arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png"
+            },
+            "created_time": 1685768508146,
+            "last_edited_time": 1699197956093,
+            "parent_id": "0d6d2346-a048-4a12-8362-ab7d9da3dae3",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "9f277012-87ed-4859-ab8c-9db4eb22265a": {
+          "value": {
+            "id": "9f277012-87ed-4859-ab8c-9db4eb22265a",
+            "version": 17,
+            "type": "image",
+            "properties": {
+              "size": [["407.9KB"]],
+              "title": [["Untitled"]],
+              "source": [
+                [
+                  "https://s3-us-west-2.amazonaws.com/secure.notion-static.com/c051230d-0916-42ee-8fde-f8683ce0c28b/Untitled.png"
+                ]
+              ]
+            },
+            "format": {
+              "block_width": 2050,
+              "display_source": "https://s3-us-west-2.amazonaws.com/secure.notion-static.com/c051230d-0916-42ee-8fde-f8683ce0c28b/Untitled.png",
+              "block_full_width": false,
+              "block_page_width": true,
+              "block_aspect_ratio": 0.6775609756097561,
+              "block_preserve_scale": true
+            },
+            "created_time": 1685768910635,
+            "last_edited_time": 1699197956093,
+            "parent_id": "0d6d2346-a048-4a12-8362-ab7d9da3dae3",
+            "parent_table": "block",
+            "alive": true,
+            "file_ids": ["c051230d-0916-42ee-8fde-f8683ce0c28b"],
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "5a828809-a7a0-4f4e-a648-bbfcf222721e": {
+          "value": {
+            "id": "5a828809-a7a0-4f4e-a648-bbfcf222721e",
+            "version": 47,
+            "type": "text",
+            "properties": { "title": [["A new Gradient descent method"]] },
+            "created_time": 1685168836178,
+            "last_edited_time": 1699197956093,
+            "parent_id": "0d6d2346-a048-4a12-8362-ab7d9da3dae3",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "edee02ce-24aa-45a4-a29d-b615ce2fafd1": {
+          "value": {
+            "id": "edee02ce-24aa-45a4-a29d-b615ce2fafd1",
+            "version": 19,
+            "type": "bookmark",
+            "properties": {
+              "link": [["https://arxiv.org/abs/2305.14342"]],
+              "title": [["Sophia: A Scalable Stochastic Second-order Optimizer for Language..."]],
+              "description": [
+                [
+                  "Given the massive cost of language model pre-training, a non-trivial improvement of the optimization algorithm would lead to a material reduction on the time and cost of training. Adam and its..."
+                ]
+              ]
+            },
+            "format": {
+              "bookmark_icon": "https://static.arxiv.org/static/browse/0.3.4/images/icons/apple-touch-icon.png",
+              "bookmark_cover": "https://static.arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png"
+            },
+            "created_time": 1685164376657,
+            "last_edited_time": 1699197956093,
+            "parent_id": "0d6d2346-a048-4a12-8362-ab7d9da3dae3",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "a4b46b59-baa1-4136-9783-adddbd17de4b": {
+          "value": {
+            "id": "a4b46b59-baa1-4136-9783-adddbd17de4b",
+            "version": 19,
+            "type": "image",
+            "properties": {
+              "size": [["825.6KB"]],
+              "title": [["Untitled"]],
+              "source": [
+                [
+                  "https://s3-us-west-2.amazonaws.com/secure.notion-static.com/818da2de-efd1-4bd5-bfa9-efc96686ea9a/Untitled.png"
+                ]
+              ]
+            },
+            "format": {
+              "block_width": 528,
+              "display_source": "https://s3-us-west-2.amazonaws.com/secure.notion-static.com/818da2de-efd1-4bd5-bfa9-efc96686ea9a/Untitled.png",
+              "block_full_width": false,
+              "block_page_width": false,
+              "block_aspect_ratio": 0.7895400126023945,
+              "block_preserve_scale": true
+            },
+            "created_time": 1685168820089,
+            "last_edited_time": 1699197956093,
+            "parent_id": "0d6d2346-a048-4a12-8362-ab7d9da3dae3",
+            "parent_table": "block",
+            "alive": true,
+            "file_ids": ["818da2de-efd1-4bd5-bfa9-efc96686ea9a"],
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "3374a67c-cff8-43d3-8bc5-2ccc4aa99ca6": {
+          "value": {
+            "id": "3374a67c-cff8-43d3-8bc5-2ccc4aa99ca6",
+            "version": 12,
+            "type": "text",
+            "properties": {
+              "title": [
+                ["[Model Structure", [["h", "pink"]]],
+                ["l]", [["b"], ["h", "pink"]]],
+                ["Soft Tuning"]
+              ]
+            },
+            "created_time": 1684678353072,
+            "last_edited_time": 1699197956093,
+            "parent_id": "0d6d2346-a048-4a12-8362-ab7d9da3dae3",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "c4b01665-64ca-4ccb-999b-48975c62183c": {
+          "value": {
+            "id": "c4b01665-64ca-4ccb-999b-48975c62183c",
+            "version": 16,
+            "type": "bookmark",
+            "properties": {
+              "link": [["https://arxiv.org/abs/2104.08691"]],
+              "title": [["The Power of Scale for Parameter-Efficient Prompt Tuning"]],
+              "description": [
+                [
+                  "In this work, we explore \"prompt tuning\", a simple yet effective mechanism for learning \"soft prompts\" to condition frozen language models to perform specific downstream tasks. Unlike the discrete..."
+                ]
+              ]
+            },
+            "format": {
+              "bookmark_icon": "https://static.arxiv.org/static/browse/0.3.4/images/icons/apple-touch-icon.png",
+              "bookmark_cover": "https://static.arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png"
+            },
+            "created_time": 1684678348558,
+            "last_edited_time": 1699197956093,
+            "parent_id": "0d6d2346-a048-4a12-8362-ab7d9da3dae3",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "a11c3211-1b33-43e7-908c-212ebd6c1f7c": {
+          "value": {
+            "id": "a11c3211-1b33-43e7-908c-212ebd6c1f7c",
+            "version": 19,
+            "type": "image",
+            "properties": {
+              "size": [["225.2KB"]],
+              "title": [["Untitled"]],
+              "source": [
+                [
+                  "https://s3-us-west-2.amazonaws.com/secure.notion-static.com/d57c170b-fd67-4c5f-9a6f-555f7cbe6c79/Untitled.png"
+                ]
+              ]
+            },
+            "format": {
+              "block_width": 336,
+              "display_source": "https://s3-us-west-2.amazonaws.com/secure.notion-static.com/d57c170b-fd67-4c5f-9a6f-555f7cbe6c79/Untitled.png",
+              "block_full_width": false,
+              "block_page_width": false,
+              "block_aspect_ratio": 1.1576011157601116,
+              "block_preserve_scale": true
+            },
+            "created_time": 1685169111955,
+            "last_edited_time": 1699197956093,
+            "parent_id": "0d6d2346-a048-4a12-8362-ab7d9da3dae3",
+            "parent_table": "block",
+            "alive": true,
+            "file_ids": ["d57c170b-fd67-4c5f-9a6f-555f7cbe6c79"],
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "dfccf19c-ecab-43cd-b873-06e0312d053e": {
+          "value": {
+            "id": "dfccf19c-ecab-43cd-b873-06e0312d053e",
+            "version": 50,
+            "type": "text",
+            "properties": {
+              "title": [
+                ["[Model Structure", [["h", "pink"]]],
+                ["l]", [["b"], ["h", "pink"]]],
+                ["Attention"]
+              ]
+            },
+            "created_time": 1684678382393,
+            "last_edited_time": 1699197956093,
+            "parent_id": "0d6d2346-a048-4a12-8362-ab7d9da3dae3",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "0970159b-9aa2-410b-a3d8-22a8b7f38133": {
+          "value": {
+            "id": "0970159b-9aa2-410b-a3d8-22a8b7f38133",
+            "version": 16,
+            "type": "bookmark",
+            "properties": {
+              "link": [["https://arxiv.org/abs/1706.03762"]],
+              "title": [["Attention Is All You Need"]],
+              "description": [
+                [
+                  "The dominant sequence transduction models are based on complex recurrent or convolutional neural networks in an encoder-decoder configuration. The best performing models also connect the encoder..."
+                ]
+              ]
+            },
+            "format": {
+              "bookmark_icon": "https://static.arxiv.org/static/browse/0.3.4/images/icons/apple-touch-icon.png",
+              "bookmark_cover": "https://static.arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png"
+            },
+            "created_time": 1684678705078,
+            "last_edited_time": 1699197956093,
+            "parent_id": "0d6d2346-a048-4a12-8362-ab7d9da3dae3",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "29462105-1115-468e-9956-8514f7499d5a": {
+          "value": {
+            "id": "29462105-1115-468e-9956-8514f7499d5a",
+            "version": 19,
+            "type": "image",
+            "properties": {
+              "size": [["183.1KB"]],
+              "title": [["Untitled"]],
+              "source": [
+                [
+                  "https://s3-us-west-2.amazonaws.com/secure.notion-static.com/588fca23-d226-43fc-941f-41c39b80d55c/Untitled.png"
+                ]
+              ]
+            },
+            "format": {
+              "block_width": 336,
+              "display_source": "https://s3-us-west-2.amazonaws.com/secure.notion-static.com/588fca23-d226-43fc-941f-41c39b80d55c/Untitled.png",
+              "block_full_width": false,
+              "block_page_width": false,
+              "block_aspect_ratio": 1.3960591133004927,
+              "block_preserve_scale": true
+            },
+            "created_time": 1685169205231,
+            "last_edited_time": 1699197956093,
+            "parent_id": "0d6d2346-a048-4a12-8362-ab7d9da3dae3",
+            "parent_table": "block",
+            "alive": true,
+            "file_ids": ["588fca23-d226-43fc-941f-41c39b80d55c"],
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        }
+      },
+      "collection": {},
+      "collection_view": {},
+      "notion_user": {},
+      "collection_query": {},
+      "signed_urls": {
+        "009dcf74-3a8e-40cc-a778-c55251123a9b": "https://file.notion.so/f/f/cb537cc0-aa00-4959-8db9-80abdf2033d3/7122a372-dd57-4ddd-8603-cf0861b7d3eb/bg2.gif?table=block&id=009dcf74-3a8e-40cc-a778-c55251123a9b&spaceId=cb537cc0-aa00-4959-8db9-80abdf2033d3&expirationTimestamp=1756735200000&signature=zkNjsEVxx-WS45mgX4MPyfETdgPOElPKUtXrITGwgx4",
+        "2215dc34-f454-4295-b0d1-8533e2d8eaa5": "https://file.notion.so/f/f/cb537cc0-aa00-4959-8db9-80abdf2033d3/60190b64-ff82-4be3-8723-d380a264fbfd/Untitled.png?table=block&id=2215dc34-f454-4295-b0d1-8533e2d8eaa5&spaceId=cb537cc0-aa00-4959-8db9-80abdf2033d3&expirationTimestamp=1756735200000&signature=2mCt1GgLG1gfmmskG1Qzz2TdnFgQjd2mepfY5sefuH4",
+        "9e8613c8-6d61-4c53-9627-3225fe07a071": "https://file.notion.so/f/f/cb537cc0-aa00-4959-8db9-80abdf2033d3/a9901390-172d-4ffa-88cf-c5233341fa8d/Untitled.png?table=block&id=9e8613c8-6d61-4c53-9627-3225fe07a071&spaceId=cb537cc0-aa00-4959-8db9-80abdf2033d3&expirationTimestamp=1756735200000&signature=GGB0177Z3oEn2Nlyo1mE3ak5KaYA8cQObYB7TRnORks",
+        "1c1c14a4-c04e-465d-be83-d9b9885a7db7": "https://file.notion.so/f/f/cb537cc0-aa00-4959-8db9-80abdf2033d3/e07c4790-057f-4b2c-b39b-b91c4e20609a/Untitled.png?table=block&id=1c1c14a4-c04e-465d-be83-d9b9885a7db7&spaceId=cb537cc0-aa00-4959-8db9-80abdf2033d3&expirationTimestamp=1756735200000&signature=15fbaCUZu7strG5w3pwv9VIJzERJR7juT_Y3oDEVelo",
+        "1e76494d-7089-4c32-9aa1-1ace73e1d68c": "https://file.notion.so/f/f/cb537cc0-aa00-4959-8db9-80abdf2033d3/78982233-5502-4da0-9fe1-3fa97c504cc7/Untitled.png?table=block&id=1e76494d-7089-4c32-9aa1-1ace73e1d68c&spaceId=cb537cc0-aa00-4959-8db9-80abdf2033d3&expirationTimestamp=1756735200000&signature=7c9FmzW5e8PQoUDeVSuD2lxajj2VVdF5tbRawd-XLls",
+        "9f277012-87ed-4859-ab8c-9db4eb22265a": "https://file.notion.so/f/f/cb537cc0-aa00-4959-8db9-80abdf2033d3/c051230d-0916-42ee-8fde-f8683ce0c28b/Untitled.png?table=block&id=9f277012-87ed-4859-ab8c-9db4eb22265a&spaceId=cb537cc0-aa00-4959-8db9-80abdf2033d3&expirationTimestamp=1756735200000&signature=AB1dFLEosiy5LsaP0ZPIB6lKP3c6TDZ6cC4byHWdPMg",
+        "a4b46b59-baa1-4136-9783-adddbd17de4b": "https://file.notion.so/f/f/cb537cc0-aa00-4959-8db9-80abdf2033d3/818da2de-efd1-4bd5-bfa9-efc96686ea9a/Untitled.png?table=block&id=a4b46b59-baa1-4136-9783-adddbd17de4b&spaceId=cb537cc0-aa00-4959-8db9-80abdf2033d3&expirationTimestamp=1756735200000&signature=kSKoEoDE9HcRqsICAytezgs7SFZaUVmX87LWFecNxMU",
+        "a11c3211-1b33-43e7-908c-212ebd6c1f7c": "https://file.notion.so/f/f/cb537cc0-aa00-4959-8db9-80abdf2033d3/d57c170b-fd67-4c5f-9a6f-555f7cbe6c79/Untitled.png?table=block&id=a11c3211-1b33-43e7-908c-212ebd6c1f7c&spaceId=cb537cc0-aa00-4959-8db9-80abdf2033d3&expirationTimestamp=1756735200000&signature=lvax0eJd6XC5FvwnOBm-Eo4BR7eodUTsu7WaVGNLxjI",
+        "29462105-1115-468e-9956-8514f7499d5a": "https://file.notion.so/f/f/cb537cc0-aa00-4959-8db9-80abdf2033d3/588fca23-d226-43fc-941f-41c39b80d55c/Untitled.png?table=block&id=29462105-1115-468e-9956-8514f7499d5a&spaceId=cb537cc0-aa00-4959-8db9-80abdf2033d3&expirationTimestamp=1756735200000&signature=N0121SGGo3tsyuCab-wNZIwmQMP_F9Y96AF2u243xG0"
+      }
+    },
+    "authorDetails": [
+      {
+        "readingTime": { "text": "1 min read", "minutes": 0.145, "time": 8700, "words": 29 },
+        "slug": ["default"],
+        "fileName": "default.md",
+        "name": "Riino",
+        "avatar": "/static/images/logo_Nest.png",
+        "notion": "97ab7c51daf5470ea07e43c577169d24",
+        "date": null
+      }
+    ],
+    "prev": {
+      "layout": "post",
+      "title": "Access New Bing in Chrome",
+      "subtitle": "How to Bypass Browser Restrictions for New Bing",
+      "tags": ["mdx", "web-access", "bing", "chrome", "user-agent"],
+      "auto-convert-img": true,
+      "slug": "2023-03-15-access-new-bing-in-chrome",
+      "date": "2023-03-15T00:00:00.000Z"
+    },
+    "next": {
+      "layout": "post",
+      "title": "v4 Mermaid Benchmark",
+      "status": "test",
+      "tags": ["mdx"],
+      "slug": "2023-05-16-mermaid-benchmark",
+      "date": "2023-05-16T00:00:00.000Z"
+    }
+  },
+  "__N_SSG": true
+}

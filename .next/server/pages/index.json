@@ -1,0 +1,621 @@
+{
+  "pageProps": {
+    "posts": [
+      {
+        "layout": "post",
+        "title": "Dify in Enterprise - E2E Order Processing Automation",
+        "subtitle": "",
+        "tags": ["Notion", "LLM", "AI", "Dify", "Gradio", "OAuth"],
+        "toc": true,
+        "auto-convert-img": true,
+        "notion": "1d568738b6758084a1f0c5869d4943a8",
+        "slug": "2025-04-15-dify-enterprise-e2e-workflow",
+        "date": "2025-04-15T00:00:00.000Z"
+      },
+      {
+        "layout": "post",
+        "title": "Build a Gradio App with Auth0 & Dify for Secure AI Integration",
+        "subtitle": "Comprehensive Guide to Auth0, Dify and Gradio for AI Solutions",
+        "tags": ["mdx", "AI", "Dify", "Auth0", "Python-App-Development", "Secure-Login"],
+        "slug": "2024-10-29-Dify-in-Gradio",
+        "date": "2024-10-29T00:00:00.000Z"
+      },
+      {
+        "layout": "post",
+        "title": "How to Launch Your First Email Phishing Drill for Effective Cybersecurity Training",
+        "subtitle": "Comprehensive Guide to Implementing Gophish and SMTP Email Services for Phishing Simulations",
+        "tags": [
+          "mdx",
+          "Pentest",
+          "Social-Engineering",
+          "Email-Phishing",
+          "Cybersecurity-Training",
+          "Gophish",
+          "SMTP-Services"
+        ],
+        "slug": "2024-10-29-email-phishing-101",
+        "date": "2024-10-29T00:00:00.000Z"
+      },
+      {
+        "layout": "post",
+        "title": "How to Deploy Local Dify for a Secure and Fast LLM Agentic Workflow",
+        "subtitle": "Complete Guide to Running Local Dify with Troubleshooting Tips",
+        "tags": ["mdx", "LLM", "AI", "Dify"],
+        "slug": "2024-07-21-local-dify-101",
+        "date": "2024-07-21T00:00:00.000Z"
+      },
+      {
+        "layout": "post",
+        "title": "Install Kind (Kubernetes in Docker) on WSL2",
+        "subtitle": "Step-by-Step Guide to Setting Up Kubernetes with Kind on WSL2",
+        "tags": ["mdx", "k8s", "kind", "docker", "wsl2"],
+        "slug": "2024-05-06-k8s-kind-in-wsl2",
+        "date": "2024-05-06T00:00:00.000Z"
+      },
+      {
+        "layout": "post",
+        "title": "Software Composition Analysis Tool Cheat Sheet",
+        "subtitle": "Guide to Efficiently Identifying Vulnerabilities in Software Components",
+        "tags": ["mdx", "software-composition-analysis", "cybersecurity"],
+        "slug": "2024-04-26-SCA-cheatsheet",
+        "date": "2024-04-26T00:00:00.000Z"
+      },
+      {
+        "layout": "post",
+        "title": "Recap of Machine Learning Foundation",
+        "subtitle": "Essential Concepts and Techniques in Machine Learning and Deep Learning",
+        "tags": ["mdx", "machine-learning", "deep-learning", "linear-regression"],
+        "slug": "2024-02-16-MLDL-Recap",
+        "date": "2024-02-16T00:00:00.000Z"
+      },
+      {
+        "layout": "post",
+        "title": "neo4j Vectors & Semantic Search",
+        "subtitle": "Enhancing LLM with Vector Search and Semantic Understanding",
+        "tags": ["mdx", "LLM", "AI", "neo4j", "semantic-search", "vector-search"],
+        "slug": "2023-11-26-neo4j_llm",
+        "date": "2023-11-26T00:00:00.000Z"
+      },
+      {
+        "layout": "post",
+        "title": "GNN Memo",
+        "tags": ["Notion", "GNN"],
+        "toc": true,
+        "auto-convert-img": true,
+        "notion": "f82ea17783334963b9053813312b6277",
+        "slug": "2023-08-26-notion-gnn-memo",
+        "date": "2023-08-26T00:00:00.000Z"
+      },
+      {
+        "layout": "post",
+        "title": "Secured AI Memo",
+        "tags": ["Notion", "LLM", "AI"],
+        "toc": true,
+        "auto-convert-img": true,
+        "notion": "a49559dc51554bf59e640dba69d8fa3b",
+        "slug": "2023-08-24-notion-secured-ai-memo",
+        "date": "2023-08-24T00:00:00.000Z"
+      },
+      {
+        "layout": "post",
+        "title": "Risk of Large Language Models",
+        "tags": ["mdx", "LLM", "AI"],
+        "status": "WIP",
+        "slug": "2023-8-14-llm-risk",
+        "date": "2023-08-13T16:00:00.000Z"
+      },
+      {
+        "layout": "post",
+        "title": "v4 Mermaid Benchmark",
+        "status": "test",
+        "tags": ["mdx"],
+        "slug": "2023-05-16-mermaid-benchmark",
+        "date": "2023-05-16T00:00:00.000Z"
+      },
+      {
+        "layout": "post",
+        "title": "AI Memo",
+        "subtitle": "Papers, PLMs and tools of LLM",
+        "tags": ["Notion", "LLM", "AI"],
+        "toc": true,
+        "auto-convert-img": true,
+        "notion": "009dcf743a8e40cca778c55251123a9b",
+        "slug": "2023-05-11-notion-ai-memo",
+        "date": "2023-05-11T00:00:00.000Z"
+      },
+      {
+        "layout": "post",
+        "title": "Access New Bing in Chrome",
+        "subtitle": "How to Bypass Browser Restrictions for New Bing",
+        "tags": ["mdx", "web-access", "bing", "chrome", "user-agent"],
+        "auto-convert-img": true,
+        "slug": "2023-03-15-access-new-bing-in-chrome",
+        "date": "2023-03-15T00:00:00.000Z"
+      },
+      {
+        "layout": "post",
+        "title": "Edit Anything in MS Word using Python docx",
+        "subtitle": "Edit MS Word documents with Python: w:ins, w:del, and more.",
+        "tags": ["mdx", "Python", "xml", "ms-word", "python-docx", "document-editing"],
+        "toc": true,
+        "hide": false,
+        "mathjax": true,
+        "mermaid": true,
+        "auto-convert-img": true,
+        "slug": "2023-03-10-insert-anything-in-docx",
+        "date": "2023-03-10T00:00:00.000Z"
+      },
+      {
+        "layout": "post",
+        "title": "Learning Pentest",
+        "last-modify": "2023-02-15 10:30:00 +0000",
+        "tags": ["mdx", "Pentest", "Cybersecurity"],
+        "slug": "2022-06-03-Learning-Pentest",
+        "date": "2023-02-15T10:30:00.000Z"
+      },
+      {
+        "layout": "post",
+        "title": "What is SSDLC and what isn't",
+        "subtitle": "Secured Software Development Life Cycle",
+        "tags": ["mdx", "S-SDLC", "software-engineering"],
+        "status": "WIP",
+        "toc": true,
+        "hide": false,
+        "hidden": true,
+        "mathjax": false,
+        "mermaid": true,
+        "auto-convert-img": true,
+        "slug": "2023-02-15-learning-SSDLC",
+        "date": "2023-02-15T00:00:00.000Z"
+      },
+      {
+        "layout": "post",
+        "title": "Overview of Web Crawler",
+        "subtitle": "Usage Limitation, Anti-Crawler and Risk",
+        "tags": ["mdx", "crawler", "web"],
+        "status": "WIP",
+        "toc": true,
+        "hide": false,
+        "hidden": false,
+        "mathjax": false,
+        "mermaid": true,
+        "auto-convert-img": true,
+        "slug": "2023-02-15-learning-crawler",
+        "date": "2023-02-15T00:00:00.000Z"
+      },
+      {
+        "layout": "post",
+        "title": "Low illuminance ends on 2022/10/30",
+        "subtitle": "what, why, how and overview of 2022",
+        "render_with_liquid": false,
+        "tags": ["mdx"],
+        "slug": "2022-10-30-milestone",
+        "date": "2022-10-30T00:00:00.000Z"
+      },
+      {
+        "layout": "post",
+        "title": "Threat Modeling using Neo4j Graph Database",
+        "subtitle": "Enhance Cybersecurity with Graph-Based Threat Analysis",
+        "render_with_liquid": false,
+        "toc": "inline",
+        "tags": ["mdx", "neo4j", "threat-modeling", "cybersecurity"],
+        "slug": "2022-08-08-Threat-Modeling-using-neo4j",
+        "date": "2022-08-08T00:00:00.000Z"
+      },
+      {
+        "layout": "post",
+        "title": "nmap Cheat Sheet All in One",
+        "subtitle": "Comprehensive Guide to nmap Commands and Usage",
+        "toc": false,
+        "tags": ["mdx", "cheat-sheet", "nmap"],
+        "slug": "2021-11-25-nmp",
+        "date": "2021-11-25T00:00:00.000Z"
+      },
+      {
+        "layout": "post",
+        "title": "GithubPage Theme vs Jekyll Theme Explained",
+        "subtitle": "Understanding the Differences and Benefits for Your Blog",
+        "tags": ["mdx", "Jekyll", "Ruby", "GithubPage", "JekyllTheme", "JekyllRemoteTheme"],
+        "slug": "2021-7-7-Why-GithubPage-Theme",
+        "date": "2021-07-06T16:00:00.000Z"
+      },
+      {
+        "layout": "post",
+        "title": "Combine Swagger, Flask and Python DB Driver",
+        "subtitle": "Integrating Swagger with Flask and Neo4j for Enhanced API Documentation",
+        "author": "Riino",
+        "tags": [
+          "mdx",
+          "neo4j",
+          "swagger",
+          "python",
+          "flask",
+          "graph-database",
+          "api-documentation"
+        ],
+        "slug": "2021-5-31-flask-neo4j-swagger",
+        "date": "2021-05-30T16:00:00.000Z"
+      },
+      {
+        "layout": "post",
+        "title": "Certification Test Minutes: Neo4j Certified Professional",
+        "subtitle": "Guide to Passing the Neo4j Certification Exam",
+        "status": "Minutes",
+        "tags": ["mdx", "neo4j", "certification-test", "graph-database", "cypher-language"],
+        "slug": "2021-5-31-neo4j-certification",
+        "date": "2021-05-30T16:00:00.000Z"
+      },
+      {
+        "layout": "post",
+        "title": "Learning Data Retrieval",
+        "subtitle": "TextRank",
+        "hide": true,
+        "tags": ["mdx", "algorithm"],
+        "mathjax": true,
+        "mermaid": false,
+        "slug": "2021-3-16-IR-TextRank",
+        "date": "2021-03-15T16:00:00.000Z"
+      },
+      {
+        "layout": "post",
+        "title": "Learning Q-gram Distance",
+        "subtitle": "Understanding Q-gram and N-gram Algorithms for String Comparison",
+        "tags": ["mdx", "algorithm", "q-gram", "n-gram", "string-comparison"],
+        "mathjax": true,
+        "mermaid": false,
+        "slug": "2021-02-26-Q-Gram",
+        "date": "2021-02-26T00:00:00.000Z"
+      },
+      {
+        "layout": "post",
+        "title": "Jekyll Cheat Sheet",
+        "subtitle": "Comprehensive Guide to Jekyll Setup and Usage",
+        "author": "Riino",
+        "status": "doc",
+        "tags": ["mdx", "jekyll", "documentation", "cheatsheet"],
+        "mathjax": false,
+        "mermaid": false,
+        "slug": "2021-1-13-Jekyll-CheatSheet",
+        "date": "2021-01-12T16:00:00.000Z"
+      },
+      {
+        "layout": "post",
+        "title": "Learning Path",
+        "subtitle": "Understanding Path Formats in Web and File Systems",
+        "author": "Riino",
+        "mathjax": false,
+        "sticky": false,
+        "toc": false,
+        "tags": ["mdx", "computer", "web", "path", "router", "path-navigation", "url-structure"],
+        "slug": "2020-10-14-Path",
+        "date": "2020-10-14T00:00:00.000Z"
+      },
+      {
+        "layout": "post",
+        "title": "What is DevOps and What isn't",
+        "subtitle": "A Comprehensive Guide to Agile Practices",
+        "author": "Riino",
+        "mathjax": false,
+        "sticky": false,
+        "tags": ["mdx", "software-engineering", "agile", "devops", "ci-cd"],
+        "slug": "2020-8-23-DevOps",
+        "date": "2020-08-22T16:00:00.000Z"
+      },
+      {
+        "layout": "post",
+        "title": "Unexpected Http Response",
+        "subtitle": "Handling Ajax Responses Effectively",
+        "author": "Riino",
+        "mathjax": false,
+        "sticky": false,
+        "tags": ["mdx", "http", "frontend", "ajax", "jquery"],
+        "slug": "2020-8-17-Unexpected http Response",
+        "date": "2020-08-16T16:00:00.000Z"
+      },
+      {
+        "layout": "post",
+        "title": "Learning Angular Part 2",
+        "subtitle": "Understanding Angular Template Syntax",
+        "author": "Riino",
+        "mathjax": false,
+        "sticky": false,
+        "tags": ["mdx", "web", "html", "frontend", "angular"],
+        "slug": "2020-8-8-Angular-P2",
+        "date": "2020-08-07T16:00:00.000Z"
+      },
+      {
+        "layout": "post",
+        "title": "What is Scrum and What isn't",
+        "subtitle": "Way towards agile",
+        "author": "Riino",
+        "mathjax": false,
+        "sticky": false,
+        "status": "Recommended",
+        "tags": ["mdx", "SoftwareEngineering", "Agile", "Scrum"],
+        "slug": "2020-8-8-Scrum",
+        "date": "2020-08-07T16:00:00.000Z"
+      },
+      {
+        "layout": "post",
+        "title": "Learning Angular NGRX",
+        "subtitle": "Mastering Component State Management and Effects",
+        "author": "Riino",
+        "mathjax": false,
+        "sticky": false,
+        "toc": "inline",
+        "tags": [
+          "mdx",
+          "Web",
+          "html",
+          "Frontend",
+          "Angular",
+          "Angular-NGRX",
+          "State-Management",
+          "Reactive-Programming"
+        ],
+        "slug": "2020-7-25-Angular-NGRX",
+        "date": "2020-07-24T16:00:00.000Z"
+      },
+      {
+        "layout": "post",
+        "title": "Learning Angular Part 1",
+        "subtitle": "First Look and Basic Structure",
+        "author": "Riino",
+        "mathjax": true,
+        "sticky": false,
+        "tags": [
+          "mdx",
+          "web-development",
+          "html",
+          "frontend-development",
+          "angular-framework",
+          "angular-tutorial"
+        ],
+        "slug": "2020-7-23-Angular-P1",
+        "date": "2020-07-22T16:00:00.000Z"
+      },
+      {
+        "layout": "post",
+        "title": "Learning Python3 Flask Part 3",
+        "subtitle": "Pyecharts and Echarts Integration",
+        "author": "Riino",
+        "mathjax": true,
+        "sticky": false,
+        "tags": ["mdx", "Python", "Flask", "Server", "Web", "html", "data-visualization"],
+        "slug": "2020-7-11-Python-SP(Flask)3",
+        "date": "2020-07-10T16:00:00.000Z"
+      },
+      {
+        "layout": "post",
+        "title": "Learning Python3 Flask Part 2",
+        "subtitle": "HTML and Jinja: A Comprehensive Guide",
+        "author": "Riino",
+        "mathjax": true,
+        "sticky": false,
+        "tags": [
+          "mdx",
+          "Python",
+          "Flask",
+          "Server",
+          "Web",
+          "html",
+          "html-and-jinja",
+          "python-flask-tutorial",
+          "web-development"
+        ],
+        "slug": "2020-7-6-Python-SP(Flask)2",
+        "date": "2020-07-05T16:00:00.000Z"
+      },
+      {
+        "layout": "post",
+        "title": "Learning Python3 Flask Part 1",
+        "subtitle": "Quick Start Guide to Flask",
+        "author": "Riino",
+        "mathjax": true,
+        "sticky": false,
+        "tags": ["mdx", "Python", "Flask", "Server", "Web-Development"],
+        "slug": "2020-6-21-Python-SP(Flask)1",
+        "date": "2020-06-20T16:00:00.000Z"
+      },
+      {
+        "layout": "post",
+        "title": "Learning Python3 C3",
+        "subtitle": "Dynamic Programming Techniques",
+        "author": "Riino",
+        "header-img": "img/lunur.jpg",
+        "header-mask": 0.3,
+        "mathjax": true,
+        "sticky": false,
+        "tags": ["mdx", "Python", "Algorithm", "Dynamic-Programming", "Coding-Tutorial"],
+        "slug": "2020-6-21-Python[3]",
+        "date": "2020-06-20T16:00:00.000Z"
+      },
+      {
+        "layout": "post",
+        "title": "Learning Python3 C4 ",
+        "subtitle": "Max/Min Stack",
+        "author": "Riino",
+        "header-img": "img/lunur.jpg",
+        "header-mask": 0.3,
+        "mathjax": true,
+        "sticky": false,
+        "status": "WIP",
+        "tags": ["mdx", "Python", "Algorithm"],
+        "slug": "2020-6-21-Python[4]",
+        "date": "2020-06-20T16:00:00.000Z"
+      },
+      {
+        "layout": "post",
+        "title": "Learning Python3 C5 ",
+        "subtitle": "Greedy Algorithm",
+        "author": "Riino",
+        "header-img": "img/lunur.jpg",
+        "header-mask": 0.3,
+        "mathjax": true,
+        "sticky": false,
+        "status": "WIP",
+        "tags": ["mdx", "Python", "Algorithm"],
+        "slug": "2020-6-21-Python[5]",
+        "date": "2020-06-20T16:00:00.000Z"
+      },
+      {
+        "layout": "post",
+        "title": "Learning Python3 Crawler",
+        "subtitle": "How to Collect Data from the Web Efficiently",
+        "author": "Riino",
+        "header-img": "img/lunur.jpg",
+        "header-mask": 0.3,
+        "mathjax": true,
+        "sticky": false,
+        "tags": ["mdx", "Python", "Crawler", "Web-Data-Collection"],
+        "slug": "2020-6-16-Python-SP(Crawler)",
+        "date": "2020-06-15T16:00:00.000Z"
+      },
+      {
+        "layout": "post",
+        "title": "VVC Experiment with VTM",
+        "subtitle": "A VTM Offical Benchmark Test Usage Report",
+        "author": "Riino Lin",
+        "mathjax": true,
+        "sticky": false,
+        "tags": ["mdx", "VVC-Coding", "Completed"],
+        "toc": "inline",
+        "slug": "2020-01-26-VVC-Experiment",
+        "date": "2020-01-26T00:00:00.000Z"
+      },
+      {
+        "layout": "post",
+        "subtitle": "Guide to Setting Up Motion Detection on Raspberry Pi and STM32",
+        "author": "Riino",
+        "header-img": "img/lunur.jpg",
+        "header-mask": 0.3,
+        "mathjax": true,
+        "sticky": false,
+        "tags": ["mdx", "Embedded-System", "Raspberry-Pi", "STM32"],
+        "slug": "2019-12-27-How-to-set-up-current-work-of-MotionDetect",
+        "date": "2019-12-27T00:00:00.000Z"
+      },
+      {
+        "layout": "post",
+        "title": "Learning Information Theory",
+        "subtitle": "An Introduction to Information Theory Concepts",
+        "tags": ["mdx", "Information-Theory"],
+        "slug": "2019-9-17-Introduction-Of-Info-Theory",
+        "date": "2019-09-16T16:00:00.000Z"
+      },
+      {
+        "layout": "post",
+        "title": "Learning Python3 C2",
+        "subtitle": "Guide to Sorted Lists in Python",
+        "author": "Riino",
+        "header-img": "img/lunur.jpg",
+        "header-mask": 0.3,
+        "mathjax": true,
+        "sticky": false,
+        "tags": ["mdx", "Python", "Algorithm", "Sorted-List"],
+        "slug": "2019-7-19-Python[2]",
+        "date": "2019-07-18T16:00:00.000Z"
+      },
+      {
+        "layout": "post",
+        "title": "Learning Python3 C1 ",
+        "subtitle": "Integer Math",
+        "author": "Riino",
+        "header-img": "img/lunur.jpg",
+        "header-mask": 0.3,
+        "mathjax": true,
+        "sticky": false,
+        "tags": ["mdx", "Python", "Algorithm"],
+        "slug": "2019-6-26-Python [1]",
+        "date": "2019-06-25T16:00:00.000Z"
+      },
+      {
+        "layout": "post",
+        "title": "Learning SQL Server: SQL & Data Binding in UWP",
+        "subtitle": "Mastering SQL Server and Data Binding Techniques in UWP Applications",
+        "author": "Riino",
+        "header-img": "img/sakura.jpg",
+        "header-mask": 0.3,
+        "mathjax": true,
+        "sticky": false,
+        "tags": ["mdx", "T-SQL", "Database", "SQL-Server", "Data-Binding", "UWP", "Completed"],
+        "slug": "2019-3-3-SQL [4]",
+        "date": "2019-03-02T16:00:00.000Z"
+      },
+      {
+        "layout": "post",
+        "title": "Learning SQL Server: Database,Table and Column",
+        "subtitle": "Comprehensive Guide to SQL Server Database Management",
+        "author": "Riino",
+        "header-img": "img/sakura.jpg",
+        "header-mask": 0.3,
+        "mathjax": true,
+        "sticky": false,
+        "tags": ["mdx", "T-SQL", "Database", "SQLServer", "DatabaseManagement", "Completed"],
+        "slug": "2019-3-2-SQL [1]",
+        "date": "2019-03-01T16:00:00.000Z"
+      },
+      {
+        "layout": "post",
+        "title": "Learning SQL Server: Select Query",
+        "subtitle": "Mastering SQL Server Select Queries for Efficient Data Retrieval",
+        "author": "Riino",
+        "header-img": "img/sakura.jpg",
+        "header-mask": 0.3,
+        "mathjax": true,
+        "sticky": false,
+        "tags": [
+          "mdx",
+          "T-SQL",
+          "Database",
+          "SQLServer",
+          "SelectQuery",
+          "DataRetrieval",
+          "Completed"
+        ],
+        "slug": "2019-3-2-SQL [2]",
+        "date": "2019-03-01T16:00:00.000Z"
+      },
+      {
+        "layout": "post",
+        "title": "Learning SQL Server: Limited Conditions & Trigger",
+        "subtitle": "Mastering SQL Server Constraints and Triggers",
+        "author": "Riino",
+        "header-img": "img/sakura.jpg",
+        "header-mask": 0.3,
+        "mathjax": true,
+        "sticky": false,
+        "tags": [
+          "mdx",
+          "T-SQL",
+          "Database",
+          "SQL-Server",
+          "Data-Integrity",
+          "Triggers",
+          "Completed"
+        ],
+        "slug": "2019-3-2-SQL [3]",
+        "date": "2019-03-01T16:00:00.000Z"
+      },
+      {
+        "layout": "post",
+        "title": "How to Use Json-cpp for Efficient JSON String Parsing in C++",
+        "subtitle": "A Comprehensive Guide to Parsing JSON Strings with Json-cpp in C++",
+        "author": "Riino",
+        "header-style": "text",
+        "sticky": false,
+        "tags": [
+          "mdx",
+          "JSON Parsing",
+          "Json-cpp Library",
+          "C++ Programming",
+          "JSON Handling",
+          "Software Development"
+        ],
+        "slug": "2018-8-28-Parse-by-Json-cpp",
+        "date": "2018-08-27T16:00:00.000Z"
+      }
+    ]
+  },
+  "__N_SSG": true
+}

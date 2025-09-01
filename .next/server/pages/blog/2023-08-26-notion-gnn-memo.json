@@ -1,0 +1,1504 @@
+{
+  "pageProps": {
+    "post": {
+      "mdxSource": "var Component=(()=>{var i=Object.create;var a=Object.defineProperty;var m=Object.getOwnPropertyDescriptor;var x=Object.getOwnPropertyNames;var f=Object.getPrototypeOf,p=Object.prototype.hasOwnProperty;var s=t=>a(t,\"__esModule\",{value:!0});var g=(t,e)=>()=>(e||t((e={exports:{}}).exports,e),e.exports),j=(t,e)=>{s(t);for(var n in e)a(t,n,{get:e[n],enumerable:!0})},l=(t,e,n)=>{if(e&&typeof e==\"object\"||typeof e==\"function\")for(let o of x(e))!p.call(t,o)&&o!==\"default\"&&a(t,o,{get:()=>e[o],enumerable:!(n=m(e,o))||n.enumerable});return t},_=t=>l(s(a(t!=null?i(f(t)):{},\"default\",t&&t.__esModule&&\"default\"in t?{get:()=>t.default,enumerable:!0}:{value:t,enumerable:!0})),t);var c=g((C,u)=>{u.exports=_jsx_runtime});var d={};j(d,{default:()=>b,frontmatter:()=>M});var r=_(c()),M={layout:\"post\",title:\"GNN Memo\",tags:[\"GNN\"],toc:!0,\"auto-convert-img\":!0,notion:\"f82ea17783334963b9053813312b6277\"};function N(t={}){let{wrapper:e}=t.components||{};return e?(0,r.jsx)(e,Object.assign({},t,{children:(0,r.jsx)(n,{})})):n();function n(){return(0,r.jsx)(r.Fragment,{})}}var b=N;return d;})();\n;return Component;",
+      "toc": [],
+      "frontMatter": {
+        "readingTime": { "text": "1 min read", "minutes": 0.15, "time": 9000, "words": 30 },
+        "slug": "2023-08-26-notion-gnn-memo",
+        "fileName": "2023-08-26-notion-gnn-memo.md",
+        "layout": "post",
+        "title": "GNN Memo",
+        "tags": ["GNN"],
+        "toc": true,
+        "auto-convert-img": true,
+        "notion": "f82ea17783334963b9053813312b6277",
+        "date": "2023-08-26T00:00:00.000Z"
+      }
+    },
+    "recordMap": {
+      "block": {
+        "f82ea177-8333-4963-b905-3813312b6277": {
+          "value": {
+            "id": "f82ea177-8333-4963-b905-3813312b6277",
+            "version": 540,
+            "type": "page",
+            "properties": { "title": [["Nest AI Research - GNN & APM"]] },
+            "content": [
+              "d40b351b-dc3f-43ab-b31d-c7957468cffc",
+              "a1a10ef2-d7ac-44ef-9807-9bf803d8e0e8",
+              "87628073-451e-4890-bf5b-24366f0d116e",
+              "05d86dbe-36bf-4e33-acd8-91802458af48",
+              "5e872c28-4140-4cb6-a734-97a023c40280",
+              "e9cec1fd-3ee7-4e70-b761-088a93f46044",
+              "0bfbdc14-ea7d-4b33-a546-1610cbfb90d2",
+              "d1fd4017-4f0b-4340-a9cb-a8b32af7d684",
+              "01139c56-63b8-4f1f-9971-56d1f84c4dea",
+              "98403376-6e0b-4044-9eb4-f1881c1b9441",
+              "7994af32-78a4-4bd9-a2f3-8598b913787d",
+              "fcf78f8e-22e7-4048-a4bb-ad4c4a17c8b2",
+              "de2617eb-9a12-42be-a07e-dcb8d66ad4ca",
+              "156a9b00-81c3-4728-8155-3e7779d670de",
+              "a9b7fcec-646e-43cd-8fd2-12f6d413874d",
+              "1186a848-b4a1-4f85-a44c-1d949a9fe767",
+              "7e64af83-841e-495b-b300-01cfc7358c39",
+              "c5d2c70b-e0ca-4e5e-a705-b0f79c779bc1",
+              "5e19e58e-e367-4010-8390-960cb5962f7c",
+              "fb2fb293-8eb4-4566-bf87-97f4dede6870",
+              "96d092bc-d610-4e0a-b96e-4201e8dbdf90",
+              "b127a8b8-d39d-4731-aa3c-af2e3d3aa6d9",
+              "6a882f5c-b992-43b6-8d1d-6041967e2aba",
+              "b4cdf771-7d28-471d-b6b4-73df5401ee93",
+              "2ec7bacf-6f62-448a-b83a-00f00ee02fd1",
+              "803b26d3-7294-4320-8a11-545de8d7be7a",
+              "d0210f63-807e-4b89-b943-b5236413c78f",
+              "9be7c75e-c345-4242-bb3d-456eab9459c5",
+              "f2d6780a-7395-4102-8e66-4719e85b16e1",
+              "2b964263-d3f3-4f5c-836e-25836bb61443",
+              "d061344e-5dbe-41a1-8384-ad0592fc49a1",
+              "52348b1b-a0fd-4b91-8694-540f533e6a89",
+              "f4d19f53-9704-4723-a10d-d88705bd85cc",
+              "ae9a4bf6-c640-4c95-af0b-18573c3a70c3",
+              "82a97f44-6d72-4f66-838d-c7e705a3f205",
+              "14c91a19-5459-4c4c-962a-0027d3cb02b3",
+              "867bbbfb-cedc-46c6-8699-f26ced0e51a6",
+              "58d1ecd2-99f4-423e-9704-24efe484d31c",
+              "4c481bc6-e468-45de-8436-985024bf8254",
+              "7baa622b-30d0-4706-aef1-e3c2cf849e7d",
+              "ef9dcd99-12cc-4514-85ce-c4b42184b5e4",
+              "f0d4c85d-0540-4bb9-b32d-1f2b31525e94",
+              "69c783ab-4f81-45a0-87c3-8cd1df45288f",
+              "ea514b76-46d5-4879-8296-0db9c17c88ac",
+              "534c199a-154e-4559-bf96-24372ccea603",
+              "eba84af8-fac5-4968-b40c-c98ca9598e13",
+              "3f236cf5-2e72-4aaf-be64-c40c77356446",
+              "1d7a1f65-a96b-4508-858c-e4b7afe17d25",
+              "ad1e7a06-6922-49f3-b713-8613151a3e75",
+              "d1d6e25d-483a-4568-a4d1-a41c38dc20bc",
+              "49d4b357-d71f-4824-b489-f2f461114c63",
+              "48285d69-2759-4d0d-b790-8d16928ea2b7",
+              "929005ee-ce04-4699-ad6e-b16cc553c277",
+              "719f09a8-88fb-40fe-aa69-2ca13fb57ebd",
+              "bb4ef5d3-fd71-41bf-91ba-b1cb8c4b5a8d",
+              "45bef551-27aa-4b76-b473-f6d7a3dcf9d3",
+              "195191fe-b52e-4eff-b2e4-a0d97eff0697",
+              "e8e4aa03-930a-4288-9032-818f982d5eab"
+            ],
+            "format": {
+              "site_id": "1b537cc0-aa00-81c3-bed4-00796874cc81",
+              "page_icon": "https://s3-us-west-2.amazonaws.com/secure.notion-static.com/c8e4c04e-bbcf-44b0-91e8-c3df063da38a/logo_search.png",
+              "page_cover": "https://s3-us-west-2.amazonaws.com/secure.notion-static.com/7122a372-dd57-4ddd-8603-cf0861b7d3eb/bg2.gif",
+              "page_full_width": false,
+              "copied_from_pointer": {
+                "id": "009dcf74-3a8e-40cc-a778-c55251123a9b",
+                "table": "block",
+                "spaceId": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+              },
+              "page_cover_position": 0.5
+            },
+            "permissions": [
+              {
+                "role": "editor",
+                "type": "user_permission",
+                "user_id": "83417450-12ca-42e8-a980-4100da082185"
+              },
+              {
+                "role": "reader",
+                "type": "public_permission",
+                "is_site": true,
+                "added_timestamp": 1693467276364,
+                "allow_duplicate": false
+              }
+            ],
+            "created_time": 1693034405682,
+            "last_edited_time": 1697551356084,
+            "parent_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3",
+            "parent_table": "space",
+            "alive": true,
+            "copied_from": "009dcf74-3a8e-40cc-a778-c55251123a9b",
+            "file_ids": [
+              "c8e4c04e-bbcf-44b0-91e8-c3df063da38a",
+              "7122a372-dd57-4ddd-8603-cf0861b7d3eb"
+            ],
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "d40b351b-dc3f-43ab-b31d-c7957468cffc": {
+          "value": {
+            "id": "d40b351b-dc3f-43ab-b31d-c7957468cffc",
+            "version": 91,
+            "type": "text",
+            "format": {
+              "copied_from_pointer": {
+                "id": "33326a6d-6ea1-4f46-8d2a-a156a1921fa1",
+                "table": "block",
+                "spaceId": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+              }
+            },
+            "created_time": 1693034405682,
+            "last_edited_time": 1693467384634,
+            "parent_id": "f82ea177-8333-4963-b905-3813312b6277",
+            "parent_table": "block",
+            "alive": true,
+            "copied_from": "33326a6d-6ea1-4f46-8d2a-a156a1921fa1",
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "a1a10ef2-d7ac-44ef-9807-9bf803d8e0e8": {
+          "value": {
+            "id": "a1a10ef2-d7ac-44ef-9807-9bf803d8e0e8",
+            "version": 7,
+            "type": "text",
+            "format": {
+              "copied_from_pointer": {
+                "id": "33326a6d-6ea1-4f46-8d2a-a156a1921fa1",
+                "table": "block",
+                "spaceId": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+              }
+            },
+            "created_time": 1693034405682,
+            "last_edited_time": 1693467385711,
+            "parent_id": "f82ea177-8333-4963-b905-3813312b6277",
+            "parent_table": "block",
+            "alive": true,
+            "copied_from": "33326a6d-6ea1-4f46-8d2a-a156a1921fa1",
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "87628073-451e-4890-bf5b-24366f0d116e": {
+          "value": {
+            "id": "87628073-451e-4890-bf5b-24366f0d116e",
+            "version": 7,
+            "type": "text",
+            "format": {
+              "copied_from_pointer": {
+                "id": "33326a6d-6ea1-4f46-8d2a-a156a1921fa1",
+                "table": "block",
+                "spaceId": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+              }
+            },
+            "created_time": 1693034405682,
+            "last_edited_time": 1693467386111,
+            "parent_id": "f82ea177-8333-4963-b905-3813312b6277",
+            "parent_table": "block",
+            "alive": true,
+            "copied_from": "33326a6d-6ea1-4f46-8d2a-a156a1921fa1",
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "05d86dbe-36bf-4e33-acd8-91802458af48": {
+          "value": {
+            "id": "05d86dbe-36bf-4e33-acd8-91802458af48",
+            "version": 5,
+            "type": "text",
+            "format": {
+              "copied_from_pointer": {
+                "id": "33326a6d-6ea1-4f46-8d2a-a156a1921fa1",
+                "table": "block",
+                "spaceId": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+              }
+            },
+            "created_time": 1693034405682,
+            "last_edited_time": 1693467386111,
+            "parent_id": "f82ea177-8333-4963-b905-3813312b6277",
+            "parent_table": "block",
+            "alive": true,
+            "copied_from": "33326a6d-6ea1-4f46-8d2a-a156a1921fa1",
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "5e872c28-4140-4cb6-a734-97a023c40280": {
+          "value": {
+            "id": "5e872c28-4140-4cb6-a734-97a023c40280",
+            "version": 5,
+            "type": "bulleted_list",
+            "properties": {
+              "title": [
+                [
+                  "Survey of Attack Graph Analysis Methods from the Perspective of Data and Knowledge Processing"
+                ]
+              ]
+            },
+            "format": {
+              "copied_from_pointer": {
+                "id": "33326a6d-6ea1-4f46-8d2a-a156a1921fa1",
+                "table": "block",
+                "spaceId": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+              }
+            },
+            "created_time": 1693034405682,
+            "last_edited_time": 1693467382414,
+            "parent_id": "f82ea177-8333-4963-b905-3813312b6277",
+            "parent_table": "block",
+            "alive": true,
+            "copied_from": "33326a6d-6ea1-4f46-8d2a-a156a1921fa1",
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "e9cec1fd-3ee7-4e70-b761-088a93f46044": {
+          "value": {
+            "id": "e9cec1fd-3ee7-4e70-b761-088a93f46044",
+            "version": 10,
+            "type": "bookmark",
+            "properties": {
+              "link": [["https://www.hindawi.com/journals/scn/2019/2031063/"]],
+              "title": [
+                [
+                  "Attack graph can simulate the possible paths used by attackers to invade the network. By using the attack graph, the administrator can evaluate the security of the network and analyze and predict the behavior of the attacker. Although there are many research studies on attack graph, there is no systematic survey for the related analysis methods. This paper firstly introduces the basic concepts, generation methods, and computing tasks of the attack graph, and then, several kinds of analysis methods of attack graph, namely, graph-based method, Bayesian network-based method, Markov model-based method, cost optimization method, and uncertainty analysis method, are described in detail. Finally, comparative study of the methods and future work are provided. We believe that this work would help the research community to understand the attack graph analysis method systematically."
+                ]
+              ],
+              "description": [
+                [
+                  "Survey of Attack Graph Analysis Methods from the Perspective of Data and Knowledge Processing"
+                ]
+              ]
+            },
+            "format": {
+              "bookmark_icon": "https://www.hindawi.com/favicon.ico",
+              "bookmark_cover": "https://images.hindawi.com/journals/scn/scn.banner.jpg"
+            },
+            "created_time": 1693141330015,
+            "last_edited_time": 1693141330038,
+            "parent_id": "f82ea177-8333-4963-b905-3813312b6277",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "0bfbdc14-ea7d-4b33-a546-1610cbfb90d2": {
+          "value": {
+            "id": "0bfbdc14-ea7d-4b33-a546-1610cbfb90d2",
+            "version": 12,
+            "type": "bulleted_list",
+            "properties": { "title": [["Two Formal Analyses of Attack Graphs"]] },
+            "format": {
+              "copied_from_pointer": {
+                "id": "33326a6d-6ea1-4f46-8d2a-a156a1921fa1",
+                "table": "block",
+                "spaceId": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+              }
+            },
+            "created_time": 1693034405682,
+            "last_edited_time": 1693141348975,
+            "parent_id": "f82ea177-8333-4963-b905-3813312b6277",
+            "parent_table": "block",
+            "alive": true,
+            "copied_from": "33326a6d-6ea1-4f46-8d2a-a156a1921fa1",
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "d1fd4017-4f0b-4340-a9cb-a8b32af7d684": {
+          "value": {
+            "id": "d1fd4017-4f0b-4340-a9cb-a8b32af7d684",
+            "version": 10,
+            "type": "bookmark",
+            "properties": { "link": [["https://www.cs.cmu.edu/~scenariograph/jha-wing.pdf"]] },
+            "created_time": 1693037664957,
+            "last_edited_time": 1693037664966,
+            "parent_id": "f82ea177-8333-4963-b905-3813312b6277",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "01139c56-63b8-4f1f-9971-56d1f84c4dea": {
+          "value": {
+            "id": "01139c56-63b8-4f1f-9971-56d1f84c4dea",
+            "version": 10,
+            "type": "bookmark",
+            "properties": {
+              "link": [["https://www.hindawi.com/journals/scn/2019/2031063/"]],
+              "title": [
+                [
+                  "Attack graph can simulate the possible paths used by attackers to invade the network. By using the attack graph, the administrator can evaluate the security of the network and analyze and predict the behavior of the attacker. Although there are many research studies on attack graph, there is no systematic survey for the related analysis methods. This paper firstly introduces the basic concepts, generation methods, and computing tasks of the attack graph, and then, several kinds of analysis methods of attack graph, namely, graph-based method, Bayesian network-based method, Markov model-based method, cost optimization method, and uncertainty analysis method, are described in detail. Finally, comparative study of the methods and future work are provided. We believe that this work would help the research community to understand the attack graph analysis method systematically."
+                ]
+              ],
+              "description": [
+                [
+                  "Survey of Attack Graph Analysis Methods from the Perspective of Data and Knowledge Processing"
+                ]
+              ]
+            },
+            "format": {
+              "bookmark_icon": "https://www.hindawi.com/favicon.ico",
+              "bookmark_cover": "https://images.hindawi.com/journals/scn/scn.banner.jpg"
+            },
+            "created_time": 1693037685508,
+            "last_edited_time": 1693037685514,
+            "parent_id": "f82ea177-8333-4963-b905-3813312b6277",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "98403376-6e0b-4044-9eb4-f1881c1b9441": {
+          "value": {
+            "id": "98403376-6e0b-4044-9eb4-f1881c1b9441",
+            "version": 10,
+            "type": "bookmark",
+            "properties": {
+              "link": [
+                [
+                  "https://books.google.com.tw/books?hl=zh-CN&lr=&id=7nm2EAAAQBAJ&oi=fnd&pg=PT7&ots=4EgbDKPGlI&sig=d10wKaXT08iVBdeMrpySavt1OEE&redir_esc=y#v=onepage&q&f=false"
+                ]
+              ],
+              "title": [["AI, Machine Learning and Deep Learning"]],
+              "description": [
+                [
+                  "Today, Artificial Intelligence (AI) and Machine Learning/ Deep Learning (ML/DL) have become the hottest areas in information technology. In our society, many intelligent devices rely on AI/ML/DL algorithms/tools for smart operations. Although AI/ML/DL algorithms and tools have been used in many internet applications and electronic devices, they are also vulnerable to various attacks and threats. AI parameters may be distorted by the internal attacker; the DL input samples may be polluted by adversaries; the ML model may be misled by changing the classification boundary, among many other attacks and threats. Such attacks can make AI products dangerous to use. While this discussion focuses on security issues in AI/ML/DL-based systems (i.e., securing the intelligent systems themselves), AI/ML/DL models and algorithms can actually also be used for cyber security (i.e., the use of AI to achieve security). Since AI/ML/DL security is a newly emergent field, many researchers and industry professionals cannot yet obtain a detailed, comprehensive understanding of this area. This book aims to provide a complete picture of the challenges and solutions to related security issues in various applications. It explains how different attacks can occur in advanced AI tools and the challenges of overcoming those attacks. Then, the book describes many sets of promising solutions to achieve AI security and privacy. The features of this book have seven aspects:  This is the first book to explain various practical attacks and countermeasures to AI systems Both quantitative math models and practical security implementations are provided It covers both \"securing the AI system itself\" and \"using AI to achieve security\" It covers all the advanced AI attacks and threats with detailed attack models It provides multiple solution spaces to the security and privacy issues in AI tools The differences among ML and DL security and privacy issues are explained Many practical security applications are covered"
+                ]
+              ]
+            },
+            "format": {
+              "bookmark_icon": "https://books.google.com.tw/favicon.ico",
+              "bookmark_cover": "https://books.google.com.tw/books/publisher/content?id=7nm2EAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&imgtk=AFLRE70_48Up-JqdyN8GUFDpNhc9n1FimiTRXUyWQ6S6Koti2vmeCOKuqg3P2BFDorC1UcI5R0pLypAsq6SOysIZDKPiZpKLi61abpBaVprgbJUcdisO78LUZIsEorokwaRvPYuEBkHW"
+            },
+            "created_time": 1693142480820,
+            "last_edited_time": 1693142480830,
+            "parent_id": "f82ea177-8333-4963-b905-3813312b6277",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "7994af32-78a4-4bd9-a2f3-8598b913787d": {
+          "value": {
+            "id": "7994af32-78a4-4bd9-a2f3-8598b913787d",
+            "version": 6,
+            "type": "text",
+            "created_time": 1693142553220,
+            "last_edited_time": 1693142553877,
+            "parent_id": "f82ea177-8333-4963-b905-3813312b6277",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "fcf78f8e-22e7-4048-a4bb-ad4c4a17c8b2": {
+          "value": {
+            "id": "fcf78f8e-22e7-4048-a4bb-ad4c4a17c8b2",
+            "version": 7,
+            "type": "text",
+            "created_time": 1693142553220,
+            "last_edited_time": 1693142554010,
+            "parent_id": "f82ea177-8333-4963-b905-3813312b6277",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "de2617eb-9a12-42be-a07e-dcb8d66ad4ca": {
+          "value": {
+            "id": "de2617eb-9a12-42be-a07e-dcb8d66ad4ca",
+            "version": 75,
+            "type": "sub_header",
+            "properties": { "title": [["Attack Graph Models", [["b"]]]] },
+            "created_time": 1693142553220,
+            "last_edited_time": 1693144656427,
+            "parent_id": "f82ea177-8333-4963-b905-3813312b6277",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "156a9b00-81c3-4728-8155-3e7779d670de": {
+          "value": {
+            "id": "156a9b00-81c3-4728-8155-3e7779d670de",
+            "version": 60,
+            "type": "bulleted_list",
+            "properties": {
+              "title": [
+                ["State-Enumeration  - A graph-based system for network-vulnerability analysis"],
+                [" ", [["b"], ["b"]]],
+                ["(1998)"]
+              ]
+            },
+            "created_time": 1693142579981,
+            "last_edited_time": 1693143512200,
+            "parent_id": "f82ea177-8333-4963-b905-3813312b6277",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "a9b7fcec-646e-43cd-8fd2-12f6d413874d": {
+          "value": {
+            "id": "a9b7fcec-646e-43cd-8fd2-12f6d413874d",
+            "version": 12,
+            "type": "bookmark",
+            "properties": {
+              "link": [["https://dl.acm.org/doi/10.1145/310889.310919"]],
+              "title": [
+                [
+                  "A graph-based system for network-vulnerability analysis | Proceedings of the 1998 workshop on New security paradigms"
+                ]
+              ],
+              "description": [["Sandia National Laboratories, MS 1110, Albuquerque, NM"]]
+            },
+            "format": {
+              "bookmark_icon": "https://dl.acm.org/pb-assets/head-metadata/apple-touch-icon-1574252172393.png",
+              "bookmark_cover": "https://dl.acm.org/cms/asset/2bf8e6b6-886b-4535-8bf9-cb4f09703299/310889.cover.jpg"
+            },
+            "created_time": 1693142578445,
+            "last_edited_time": 1693142582447,
+            "parent_id": "f82ea177-8333-4963-b905-3813312b6277",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "1186a848-b4a1-4f85-a44c-1d949a9fe767": {
+          "value": {
+            "id": "1186a848-b4a1-4f85-a44c-1d949a9fe767",
+            "version": 69,
+            "type": "bulleted_list",
+            "properties": {
+              "title": [["Scenario - Automated generation and analysis of attack graphs (2002)"]]
+            },
+            "created_time": 1693142630612,
+            "last_edited_time": 1693143471696,
+            "parent_id": "f82ea177-8333-4963-b905-3813312b6277",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "7e64af83-841e-495b-b300-01cfc7358c39": {
+          "value": {
+            "id": "7e64af83-841e-495b-b300-01cfc7358c39",
+            "version": 10,
+            "type": "bookmark",
+            "properties": { "link": [["https://ieeexplore.ieee.org/document/1004377"]] },
+            "created_time": 1693143354139,
+            "last_edited_time": 1693143354146,
+            "parent_id": "f82ea177-8333-4963-b905-3813312b6277",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "c5d2c70b-e0ca-4e5e-a705-b0f79c779bc1": {
+          "value": {
+            "id": "c5d2c70b-e0ca-4e5e-a705-b0f79c779bc1",
+            "version": 38,
+            "type": "bulleted_list",
+            "properties": {
+              "title": [["NetSPA - Practical Attack Graph Generation for Network Defense (2006)"]]
+            },
+            "created_time": 1693143111938,
+            "last_edited_time": 1693143469943,
+            "parent_id": "f82ea177-8333-4963-b905-3813312b6277",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "5e19e58e-e367-4010-8390-960cb5962f7c": {
+          "value": {
+            "id": "5e19e58e-e367-4010-8390-960cb5962f7c",
+            "version": 10,
+            "type": "bookmark",
+            "properties": { "link": [["https://ieeexplore.ieee.org/abstract/document/4041160"]] },
+            "created_time": 1693143110182,
+            "last_edited_time": 1693143110193,
+            "parent_id": "f82ea177-8333-4963-b905-3813312b6277",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "fb2fb293-8eb4-4566-bf87-97f4dede6870": {
+          "value": {
+            "id": "fb2fb293-8eb4-4566-bf87-97f4dede6870",
+            "version": 38,
+            "type": "bulleted_list",
+            "properties": {
+              "title": [["MulVal - A Scalable Approach to Attack Graph Generation (2006)"]]
+            },
+            "created_time": 1693143204630,
+            "last_edited_time": 1693143467535,
+            "parent_id": "f82ea177-8333-4963-b905-3813312b6277",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "96d092bc-d610-4e0a-b96e-4201e8dbdf90": {
+          "value": {
+            "id": "96d092bc-d610-4e0a-b96e-4201e8dbdf90",
+            "version": 10,
+            "type": "bookmark",
+            "properties": {
+              "link": [["https://dl.acm.org/doi/abs/10.1145/1180405.1180446"]],
+              "title": [
+                [
+                  "A scalable approach to attack graph generation | Proceedings of the 13th ACM conference on Computer and communications security"
+                ]
+              ],
+              "description": [["Purdue University"]]
+            },
+            "format": {
+              "bookmark_icon": "https://dl.acm.org/pb-assets/head-metadata/apple-touch-icon-1574252172393.png"
+            },
+            "created_time": 1693143201196,
+            "last_edited_time": 1693143201202,
+            "parent_id": "f82ea177-8333-4963-b905-3813312b6277",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "b127a8b8-d39d-4731-aa3c-af2e3d3aa6d9": {
+          "value": {
+            "id": "b127a8b8-d39d-4731-aa3c-af2e3d3aa6d9",
+            "version": 46,
+            "type": "bulleted_list",
+            "properties": {
+              "title": [["NetSPA - Practical Attack Graph Generation for Network Defense (2006)"]]
+            },
+            "created_time": 1693143768185,
+            "last_edited_time": 1693143810761,
+            "parent_id": "f82ea177-8333-4963-b905-3813312b6277",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "6a882f5c-b992-43b6-8d1d-6041967e2aba": {
+          "value": {
+            "id": "6a882f5c-b992-43b6-8d1d-6041967e2aba",
+            "version": 10,
+            "type": "bookmark",
+            "properties": { "link": [["https://ieeexplore.ieee.org/document/4041160"]] },
+            "created_time": 1693143795402,
+            "last_edited_time": 1693143795408,
+            "parent_id": "f82ea177-8333-4963-b905-3813312b6277",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "b4cdf771-7d28-471d-b6b4-73df5401ee93": {
+          "value": {
+            "id": "b4cdf771-7d28-471d-b6b4-73df5401ee93",
+            "version": 142,
+            "type": "bulleted_list",
+            "properties": {
+              "title": [
+                [
+                  "[Ours] TMG - Threat Modeling based on Graph Database (2022)",
+                  [["h", "teal_background"]]
+                ]
+              ]
+            },
+            "created_time": 1693143202372,
+            "last_edited_time": 1693143827293,
+            "parent_id": "f82ea177-8333-4963-b905-3813312b6277",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "2ec7bacf-6f62-448a-b83a-00f00ee02fd1": {
+          "value": {
+            "id": "2ec7bacf-6f62-448a-b83a-00f00ee02fd1",
+            "version": 10,
+            "type": "bookmark",
+            "properties": {
+              "link": [["https://v4.riino.site/blog/2022-08-08-Threat-Modeling-using-neo4j"]],
+              "title": [["Threat Modeling using Neo4j Graph Database"]],
+              "description": [["THIS VERSION IS FOR RIINOSITE USAGE"]]
+            },
+            "format": {
+              "bookmark_icon": "https://v4.riino.site/static/favicons/favicon.ico",
+              "bookmark_cover": "https://v4.riino.site/static/images/bg.gif"
+            },
+            "created_time": 1693143416913,
+            "last_edited_time": 1693143416917,
+            "parent_id": "f82ea177-8333-4963-b905-3813312b6277",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "803b26d3-7294-4320-8a11-545de8d7be7a": {
+          "value": {
+            "id": "803b26d3-7294-4320-8a11-545de8d7be7a",
+            "version": 58,
+            "type": "text",
+            "properties": { "title": [["Summary from "], ["LAM-RAG", [["b"]]]] },
+            "created_time": 1693143974563,
+            "last_edited_time": 1693144110815,
+            "parent_id": "f82ea177-8333-4963-b905-3813312b6277",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "d0210f63-807e-4b89-b943-b5236413c78f": {
+          "value": {
+            "id": "d0210f63-807e-4b89-b943-b5236413c78f",
+            "version": 10,
+            "type": "bookmark",
+            "properties": {
+              "link": [["https://arxiv.org/abs/2206.06934"]],
+              "title": [["A Layered Reference Model for Penetration Testing with..."]],
+              "description": [
+                [
+                  "This paper considers key challenges to using reinforcement learning (RL) with attack graphs to automate penetration testing in real-world applications from a systems perspective. RL approaches to..."
+                ]
+              ]
+            },
+            "format": {
+              "bookmark_icon": "https://static.arxiv.org/static/browse/0.3.4/images/icons/apple-touch-icon.png",
+              "bookmark_cover": "https://static.arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png"
+            },
+            "created_time": 1693143969003,
+            "last_edited_time": 1693143969010,
+            "parent_id": "f82ea177-8333-4963-b905-3813312b6277",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "9be7c75e-c345-4242-bb3d-456eab9459c5": {
+          "value": {
+            "id": "9be7c75e-c345-4242-bb3d-456eab9459c5",
+            "version": 3,
+            "type": "text",
+            "created_time": 1693143972562,
+            "last_edited_time": 1693143972566,
+            "parent_id": "f82ea177-8333-4963-b905-3813312b6277",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "f2d6780a-7395-4102-8e66-4719e85b16e1": {
+          "value": {
+            "id": "f2d6780a-7395-4102-8e66-4719e85b16e1",
+            "version": 15,
+            "type": "table",
+            "content": [
+              "85e01cd9-7131-4133-9e62-7c2cd573aa1c",
+              "6e2c70e7-9f27-4cc7-a192-d3d20bebbe36",
+              "89a577e4-7a3d-481e-bc02-e8cbee999fdf",
+              "56767654-fa2e-478f-b0b2-ab21524d1621",
+              "94e6b60c-821c-4eb6-b068-a3218717e503",
+              "8158e9f7-b6d3-4005-b606-66732549a12e"
+            ],
+            "format": { "table_block_column_order": ["~\\UO", "OzH|", "fuTv", "tLtM"] },
+            "created_time": 1693143647668,
+            "last_edited_time": 1693143856755,
+            "parent_id": "f82ea177-8333-4963-b905-3813312b6277",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "2b964263-d3f3-4f5c-836e-25836bb61443": {
+          "value": {
+            "id": "2b964263-d3f3-4f5c-836e-25836bb61443",
+            "version": 8,
+            "type": "text",
+            "created_time": 1693143020937,
+            "last_edited_time": 1693143439241,
+            "parent_id": "f82ea177-8333-4963-b905-3813312b6277",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "d061344e-5dbe-41a1-8384-ad0592fc49a1": {
+          "value": {
+            "id": "d061344e-5dbe-41a1-8384-ad0592fc49a1",
+            "version": 7,
+            "type": "text",
+            "properties": { "title": [["DeepHunter"]] },
+            "created_time": 1693143020937,
+            "last_edited_time": 1693452282095,
+            "parent_id": "f82ea177-8333-4963-b905-3813312b6277",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "52348b1b-a0fd-4b91-8694-540f533e6a89": {
+          "value": {
+            "id": "52348b1b-a0fd-4b91-8694-540f533e6a89",
+            "version": 12,
+            "type": "bookmark",
+            "properties": {
+              "link": [["https://arxiv.org/abs/2104.09806"]],
+              "title": [["DeepHunter: A Graph Neural Network Based Approach for Robust Cyber..."]],
+              "description": [
+                [
+                  "Cyber Threat hunting is a proactive search for known attack behaviors in the organizational information system. It is an important component to mitigate advanced persistent threats (APTs)...."
+                ]
+              ]
+            },
+            "format": {
+              "bookmark_icon": "https://static.arxiv.org/static/browse/0.3.4/images/icons/apple-touch-icon.png",
+              "bookmark_cover": "https://static.arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png"
+            },
+            "created_time": 1693143017033,
+            "last_edited_time": 1693143020051,
+            "parent_id": "f82ea177-8333-4963-b905-3813312b6277",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "f4d19f53-9704-4723-a10d-d88705bd85cc": {
+          "value": {
+            "id": "f4d19f53-9704-4723-a10d-d88705bd85cc",
+            "version": 13,
+            "type": "bookmark",
+            "properties": {
+              "link": [["https://graphdeeplearning.github.io/post/transformers-are-gnns/"]],
+              "title": [["Transformers are Graph Neural Networks | NTU Graph Deep Learning Lab"]],
+              "description": [
+                [
+                  "Engineer friends often ask me: Graph Deep Learning sounds great, but are there any big commercial success stories? Is it being deployed in practical applications? Besides the obvious ones–recommendation systems at Pinterest, Alibaba and Twitter–a slightly nuanced success story is the Transformer architecture, which has taken the NLP industry by storm. Through this post, I want to establish links between Graph Neural Networks (GNNs) and Transformers. I’ll talk about the intuitions behind model architectures in the NLP and GNN communities, make connections using equations and figures, and discuss how we could work together to drive progress."
+                ]
+              ]
+            },
+            "format": {
+              "bookmark_icon": "https://graphdeeplearning.github.io/images/icon_hu027d87ac1e37f4f802995042c9999554_21044_32x32_fill_lanczos_center_2.png",
+              "bookmark_cover": "https://graphdeeplearning.github.io/post/transformers-are-gnns/featured.jpeg"
+            },
+            "created_time": 1693231975668,
+            "last_edited_time": 1693236911351,
+            "parent_id": "f82ea177-8333-4963-b905-3813312b6277",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "ae9a4bf6-c640-4c95-af0b-18573c3a70c3": {
+          "value": {
+            "id": "ae9a4bf6-c640-4c95-af0b-18573c3a70c3",
+            "version": 207,
+            "type": "text",
+            "properties": { "title": [["Neiborhood Aggregation Strategy"]] },
+            "created_time": 1693143107589,
+            "last_edited_time": 1693236878577,
+            "parent_id": "f82ea177-8333-4963-b905-3813312b6277",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "82a97f44-6d72-4f66-838d-c7e705a3f205": {
+          "value": {
+            "id": "82a97f44-6d72-4f66-838d-c7e705a3f205",
+            "version": 83,
+            "type": "bulleted_list",
+            "properties": { "title": [["Soft similarity - GAN"]] },
+            "created_time": 1693237067128,
+            "last_edited_time": 1693452278890,
+            "parent_id": "f82ea177-8333-4963-b905-3813312b6277",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "14c91a19-5459-4c4c-962a-0027d3cb02b3": {
+          "value": {
+            "id": "14c91a19-5459-4c4c-962a-0027d3cb02b3",
+            "version": 13,
+            "type": "bookmark",
+            "properties": {
+              "link": [["https://arxiv.org/abs/1710.10903"]],
+              "title": [["Graph Attention Networks"]],
+              "description": [
+                [
+                  "We present graph attention networks (GATs), novel neural network architectures that operate on graph-structured data, leveraging masked self-attentional layers to address the shortcomings of prior..."
+                ]
+              ]
+            },
+            "format": {
+              "bookmark_icon": "https://static.arxiv.org/static/browse/0.3.4/images/icons/apple-touch-icon.png",
+              "bookmark_cover": "https://static.arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png"
+            },
+            "created_time": 1693231314365,
+            "last_edited_time": 1693237070239,
+            "parent_id": "f82ea177-8333-4963-b905-3813312b6277",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "867bbbfb-cedc-46c6-8699-f26ced0e51a6": {
+          "value": {
+            "id": "867bbbfb-cedc-46c6-8699-f26ced0e51a6",
+            "version": 11,
+            "type": "image",
+            "properties": {
+              "size": [["56.7KB"]],
+              "title": [["Untitled"]],
+              "source": [
+                [
+                  "https://s3-us-west-2.amazonaws.com/secure.notion-static.com/71ea0268-6d2f-47b3-933a-807c08532026/Untitled.png"
+                ]
+              ]
+            },
+            "format": {
+              "block_width": 1128,
+              "display_source": "https://s3-us-west-2.amazonaws.com/secure.notion-static.com/71ea0268-6d2f-47b3-933a-807c08532026/Untitled.png",
+              "block_full_width": false,
+              "block_page_width": true,
+              "block_aspect_ratio": 0.20567375886524822,
+              "block_preserve_scale": true
+            },
+            "created_time": 1693237409222,
+            "last_edited_time": 1693237428046,
+            "parent_id": "f82ea177-8333-4963-b905-3813312b6277",
+            "parent_table": "block",
+            "alive": true,
+            "file_ids": ["71ea0268-6d2f-47b3-933a-807c08532026"],
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "58d1ecd2-99f4-423e-9704-24efe484d31c": {
+          "value": {
+            "id": "58d1ecd2-99f4-423e-9704-24efe484d31c",
+            "version": 11,
+            "type": "image",
+            "properties": {
+              "size": [["20.5KB"]],
+              "title": [["Untitled"]],
+              "source": [
+                [
+                  "https://s3-us-west-2.amazonaws.com/secure.notion-static.com/f5da7069-cbc8-4b0c-9f22-d41ab649531e/Untitled.png"
+                ]
+              ]
+            },
+            "format": {
+              "block_width": 563,
+              "block_height": 163,
+              "display_source": "https://s3-us-west-2.amazonaws.com/secure.notion-static.com/f5da7069-cbc8-4b0c-9f22-d41ab649531e/Untitled.png",
+              "block_full_width": false,
+              "block_page_width": false,
+              "block_aspect_ratio": 0.2895204262877442,
+              "block_preserve_scale": true
+            },
+            "created_time": 1693237512664,
+            "last_edited_time": 1693237516748,
+            "parent_id": "f82ea177-8333-4963-b905-3813312b6277",
+            "parent_table": "block",
+            "alive": true,
+            "file_ids": ["f5da7069-cbc8-4b0c-9f22-d41ab649531e"],
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "4c481bc6-e468-45de-8436-985024bf8254": {
+          "value": {
+            "id": "4c481bc6-e468-45de-8436-985024bf8254",
+            "version": 142,
+            "type": "bulleted_list",
+            "properties": { "title": [["Sampling different level of aggregated feature"]] },
+            "created_time": 1693237046056,
+            "last_edited_time": 1693237065097,
+            "parent_id": "f82ea177-8333-4963-b905-3813312b6277",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "7baa622b-30d0-4706-aef1-e3c2cf849e7d": {
+          "value": {
+            "id": "7baa622b-30d0-4706-aef1-e3c2cf849e7d",
+            "version": 10,
+            "type": "bookmark",
+            "properties": {
+              "link": [
+                [
+                  "https://ietresearch.onlinelibrary.wiley.com/doi/10.1049/cit2.12166#pane-pcw-figures"
+                ]
+              ],
+              "title": [
+                ["Feature selection: Key to enhance node classification with graph neural networks"]
+              ],
+              "description": [
+                [
+                  "Graphs help to define the relationships between entities in the data. These relationships, represented by edges, often provide additional context information which can be utilised to discover pattern..."
+                ]
+              ]
+            },
+            "format": {
+              "bookmark_icon": "https://ietresearch.onlinelibrary.wiley.com/favicon.ico",
+              "bookmark_cover": "https://ietresearch.onlinelibrary.wiley.com/cms/asset/87a8bd09-bded-43b2-bda3-bdcd3e109e19/cit2.v8.1.cover.jpg?trick=1693237028095"
+            },
+            "created_time": 1693237026370,
+            "last_edited_time": 1693237026378,
+            "parent_id": "f82ea177-8333-4963-b905-3813312b6277",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "ef9dcd99-12cc-4514-85ce-c4b42184b5e4": {
+          "value": {
+            "id": "ef9dcd99-12cc-4514-85ce-c4b42184b5e4",
+            "version": 174,
+            "type": "equation",
+            "properties": { "title": [["A = A \\space or \\space \\widetilde{A}=A+I"]] },
+            "created_time": 1693238053443,
+            "last_edited_time": 1693238137399,
+            "parent_id": "f82ea177-8333-4963-b905-3813312b6277",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "f0d4c85d-0540-4bb9-b32d-1f2b31525e94": {
+          "value": {
+            "id": "f0d4c85d-0540-4bb9-b32d-1f2b31525e94",
+            "version": 465,
+            "type": "equation",
+            "properties": {
+              "title": [
+                [
+                  "\\mathcal{X^k} = A^{x-1}X, A\\in \\bold{Adj}^{n\\times n},X \\in \\bold{R}^{n\\times d}"
+                ]
+              ]
+            },
+            "created_time": 1693237660120,
+            "last_edited_time": 1693237994657,
+            "parent_id": "f82ea177-8333-4963-b905-3813312b6277",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "69c783ab-4f81-45a0-87c3-8cd1df45288f": {
+          "value": {
+            "id": "69c783ab-4f81-45a0-87c3-8cd1df45288f",
+            "version": 167,
+            "type": "equation",
+            "properties": { "title": [["Sample = \\mathcal{X}'\\subseteq {\\{X_1,X_2...X_k}\\}"]] },
+            "created_time": 1693238010289,
+            "last_edited_time": 1693238184862,
+            "parent_id": "f82ea177-8333-4963-b905-3813312b6277",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "ea514b76-46d5-4879-8296-0db9c17c88ac": {
+          "value": {
+            "id": "ea514b76-46d5-4879-8296-0db9c17c88ac",
+            "version": 133,
+            "type": "text",
+            "properties": { "title": [["Graph pre-training and fine-tuning"]] },
+            "created_time": 1693231315177,
+            "last_edited_time": 1693236904329,
+            "parent_id": "f82ea177-8333-4963-b905-3813312b6277",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "534c199a-154e-4559-bf96-24372ccea603": {
+          "value": {
+            "id": "534c199a-154e-4559-bf96-24372ccea603",
+            "version": 13,
+            "type": "bookmark",
+            "properties": {
+              "link": [["https://arxiv.org/abs/1905.12265"]],
+              "title": [["Strategies for Pre-training Graph Neural Networks"]],
+              "description": [
+                [
+                  "Many applications of machine learning require a model to make accurate pre-dictions on test examples that are distributionally different from training ones, while task-specific labels are scarce..."
+                ]
+              ]
+            },
+            "format": {
+              "bookmark_icon": "https://static.arxiv.org/static/browse/0.3.4/images/icons/apple-touch-icon.png",
+              "bookmark_cover": "https://static.arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png"
+            },
+            "created_time": 1693231200602,
+            "last_edited_time": 1693236897091,
+            "parent_id": "f82ea177-8333-4963-b905-3813312b6277",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "eba84af8-fac5-4968-b40c-c98ca9598e13": {
+          "value": {
+            "id": "eba84af8-fac5-4968-b40c-c98ca9598e13",
+            "version": 13,
+            "type": "bookmark",
+            "properties": {
+              "link": [["https://arxiv.org/abs/2302.08043"]],
+              "title": [["GraphPrompt: Unifying Pre-Training and Downstream Tasks for Graph..."]],
+              "description": [
+                [
+                  "Graphs can model complex relationships between objects, enabling a myriad of Web applications such as online page/article classification and social recommendation. While graph neural..."
+                ]
+              ]
+            },
+            "format": {
+              "bookmark_icon": "https://static.arxiv.org/static/browse/0.3.4/images/icons/apple-touch-icon.png",
+              "bookmark_cover": "https://static.arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png"
+            },
+            "created_time": 1693230876996,
+            "last_edited_time": 1693236893124,
+            "parent_id": "f82ea177-8333-4963-b905-3813312b6277",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "3f236cf5-2e72-4aaf-be64-c40c77356446": {
+          "value": {
+            "id": "3f236cf5-2e72-4aaf-be64-c40c77356446",
+            "version": 10,
+            "type": "bookmark",
+            "properties": {
+              "link": [["https://arxiv.org/abs/2303.07275"]],
+              "title": [["A Survey of Graph Prompting Methods: Techniques, Applications, and..."]],
+              "description": [
+                [
+                  "The recent \"pre-train, prompt, predict training\" paradigm has gained popularity as a way to learn generalizable models with limited labeled data. The approach involves using a pre-trained model..."
+                ]
+              ]
+            },
+            "format": {
+              "bookmark_icon": "https://static.arxiv.org/static/browse/0.3.4/images/icons/apple-touch-icon.png",
+              "bookmark_cover": "https://static.arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png"
+            },
+            "created_time": 1693238470067,
+            "last_edited_time": 1693238470075,
+            "parent_id": "f82ea177-8333-4963-b905-3813312b6277",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "1d7a1f65-a96b-4508-858c-e4b7afe17d25": {
+          "value": {
+            "id": "1d7a1f65-a96b-4508-858c-e4b7afe17d25",
+            "version": 5,
+            "type": "text",
+            "properties": { "title": [["Multimodal "]] },
+            "created_time": 1693231315177,
+            "last_edited_time": 1693236883420,
+            "parent_id": "f82ea177-8333-4963-b905-3813312b6277",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "ad1e7a06-6922-49f3-b713-8613151a3e75": {
+          "value": {
+            "id": "ad1e7a06-6922-49f3-b713-8613151a3e75",
+            "version": 10,
+            "type": "bookmark",
+            "properties": {
+              "link": [["https://dl.acm.org/doi/abs/10.1145/142621.142641"]],
+              "title": [
+                [
+                  "The role of natural language in a multimodal interface | Proceedings of the 5th annual ACM symposium on User interface software and technology"
+                ]
+              ],
+              "description": [["This alert has been successfully added and will be sent to:"]]
+            },
+            "format": {
+              "bookmark_icon": "https://dl.acm.org/pb-assets/head-metadata/apple-touch-icon-1574252172393.png"
+            },
+            "created_time": 1693231995556,
+            "last_edited_time": 1693231995564,
+            "parent_id": "f82ea177-8333-4963-b905-3813312b6277",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "d1d6e25d-483a-4568-a4d1-a41c38dc20bc": {
+          "value": {
+            "id": "d1d6e25d-483a-4568-a4d1-a41c38dc20bc",
+            "version": 6,
+            "type": "text",
+            "created_time": 1693232905025,
+            "last_edited_time": 1693452018425,
+            "parent_id": "f82ea177-8333-4963-b905-3813312b6277",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "85e01cd9-7131-4133-9e62-7c2cd573aa1c": {
+          "value": {
+            "id": "85e01cd9-7131-4133-9e62-7c2cd573aa1c",
+            "version": 140,
+            "type": "table_row",
+            "properties": {
+              "OzH|": [["Growth Rate in Hosts n"]],
+              "fuTv": [["Are node hosts?"]],
+              "tLtM": [["Is the graph acyclic?"]],
+              "~\\UO": [["Method"]]
+            },
+            "created_time": 1693143647668,
+            "last_edited_time": 1693143708831,
+            "parent_id": "f2d6780a-7395-4102-8e66-4719e85b16e1",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "6e2c70e7-9f27-4cc7-a192-d3d20bebbe36": {
+          "value": {
+            "id": "6e2c70e7-9f27-4cc7-a192-d3d20bebbe36",
+            "version": 94,
+            "type": "table_row",
+            "properties": {
+              "OzH|": [["O(2^n)"]],
+              "fuTv": [["Yes"]],
+              "tLtM": [["No"]],
+              "~\\UO": [["State-Enumeration"]]
+            },
+            "created_time": 1693143647668,
+            "last_edited_time": 1693143890902,
+            "parent_id": "f2d6780a-7395-4102-8e66-4719e85b16e1",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "89a577e4-7a3d-481e-bc02-e8cbee999fdf": {
+          "value": {
+            "id": "89a577e4-7a3d-481e-bc02-e8cbee999fdf",
+            "version": 44,
+            "type": "table_row",
+            "properties": {
+              "OzH|": [["O(2^n)"]],
+              "fuTv": [["Partially"]],
+              "tLtM": [["Yes"]],
+              "~\\UO": [["Scenario"]]
+            },
+            "created_time": 1693143647669,
+            "last_edited_time": 1693143892752,
+            "parent_id": "f2d6780a-7395-4102-8e66-4719e85b16e1",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "56767654-fa2e-478f-b0b2-ab21524d1621": {
+          "value": {
+            "id": "56767654-fa2e-478f-b0b2-ab21524d1621",
+            "version": 36,
+            "type": "table_row",
+            "properties": {
+              "OzH|": [["O(n^2)"]],
+              "fuTv": [["No"]],
+              "tLtM": [["Yes"]],
+              "~\\UO": [["MulVal"]]
+            },
+            "created_time": 1693143721076,
+            "last_edited_time": 1693143894040,
+            "parent_id": "f2d6780a-7395-4102-8e66-4719e85b16e1",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "94e6b60c-821c-4eb6-b068-a3218717e503": {
+          "value": {
+            "id": "94e6b60c-821c-4eb6-b068-a3218717e503",
+            "version": 88,
+            "type": "table_row",
+            "properties": {
+              "OzH|": [["O(nlogn)"]],
+              "fuTv": [["Sometimes"]],
+              "tLtM": [["No"]],
+              "~\\UO": [["NetSPA"]]
+            },
+            "created_time": 1693143728066,
+            "last_edited_time": 1693143895461,
+            "parent_id": "f2d6780a-7395-4102-8e66-4719e85b16e1",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "8158e9f7-b6d3-4005-b606-66732549a12e": {
+          "value": {
+            "id": "8158e9f7-b6d3-4005-b606-66732549a12e",
+            "version": 36,
+            "type": "table_row",
+            "properties": {
+              "OzH|": [["O(n^2)"]],
+              "fuTv": [["Partially"]],
+              "tLtM": [["Yes"]],
+              "~\\UO": [
+                ["TMG ", [["h", "teal_background"]]],
+                ["(Ours)", [["b"], ["h", "teal_background"]]]
+              ]
+            },
+            "created_time": 1693143856754,
+            "last_edited_time": 1693143904936,
+            "parent_id": "f2d6780a-7395-4102-8e66-4719e85b16e1",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "49d4b357-d71f-4824-b489-f2f461114c63": {
+          "value": {
+            "id": "49d4b357-d71f-4824-b489-f2f461114c63",
+            "version": 31,
+            "type": "text",
+            "properties": { "title": [["Meta-path"]] },
+            "created_time": 1693232905025,
+            "last_edited_time": 1693452026869,
+            "parent_id": "f82ea177-8333-4963-b905-3813312b6277",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "48285d69-2759-4d0d-b790-8d16928ea2b7": {
+          "value": {
+            "id": "48285d69-2759-4d0d-b790-8d16928ea2b7",
+            "version": 26,
+            "type": "bulleted_list",
+            "properties": { "title": [["GTN"]] },
+            "created_time": 1693452287957,
+            "last_edited_time": 1693452303193,
+            "parent_id": "f82ea177-8333-4963-b905-3813312b6277",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "929005ee-ce04-4699-ad6e-b16cc553c277": {
+          "value": {
+            "id": "929005ee-ce04-4699-ad6e-b16cc553c277",
+            "version": 10,
+            "type": "bookmark",
+            "properties": {
+              "link": [["https://arxiv.org/abs/1911.06455"]],
+              "title": [["Graph Transformer Networks"]],
+              "description": [
+                [
+                  "Graph neural networks (GNNs) have been widely used in representation learning on graphs and achieved state-of-the-art performance in tasks such as node classification and link prediction. However,..."
+                ]
+              ]
+            },
+            "format": {
+              "bookmark_icon": "https://static.arxiv.org/static/browse/0.3.4/images/icons/apple-touch-icon.png",
+              "bookmark_cover": "https://static.arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png"
+            },
+            "created_time": 1693837659956,
+            "last_edited_time": 1693837659969,
+            "parent_id": "f82ea177-8333-4963-b905-3813312b6277",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "719f09a8-88fb-40fe-aa69-2ca13fb57ebd": {
+          "value": {
+            "id": "719f09a8-88fb-40fe-aa69-2ca13fb57ebd",
+            "version": 30,
+            "type": "bulleted_list",
+            "properties": { "title": [["FastGTN"]] },
+            "created_time": 1693452294970,
+            "last_edited_time": 1693452300888,
+            "parent_id": "f82ea177-8333-4963-b905-3813312b6277",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "bb4ef5d3-fd71-41bf-91ba-b1cb8c4b5a8d": {
+          "value": {
+            "id": "bb4ef5d3-fd71-41bf-91ba-b1cb8c4b5a8d",
+            "version": 10,
+            "type": "bookmark",
+            "properties": {
+              "link": [["https://www.sciencedirect.com/science/article/pii/S0893608022002003"]],
+              "title": [["Graph Transformer Networks: Learning meta-path graphs to improve GNNs"]],
+              "description": [
+                [
+                  "Graph Neural Networks (GNNs) have been widely applied to various fields due to their powerful representations of graph-structured data. Despite the su…"
+                ]
+              ]
+            },
+            "format": {
+              "bookmark_icon": "https://sdfestaticassets-us-east-1.sciencedirectassets.com/shared-assets/13/images/favSD.ico",
+              "bookmark_cover": "https://ars.els-cdn.com/content/image/1-s2.0-S0893608022X00075-cov150h.gif"
+            },
+            "created_time": 1693452317273,
+            "last_edited_time": 1693452317280,
+            "parent_id": "f82ea177-8333-4963-b905-3813312b6277",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "45bef551-27aa-4b76-b473-f6d7a3dcf9d3": {
+          "value": {
+            "id": "45bef551-27aa-4b76-b473-f6d7a3dcf9d3",
+            "version": 24,
+            "type": "bulleted_list",
+            "properties": { "title": [["Meta"]] },
+            "created_time": 1693452304989,
+            "last_edited_time": 1693452311202,
+            "parent_id": "f82ea177-8333-4963-b905-3813312b6277",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "195191fe-b52e-4eff-b2e4-a0d97eff0697": {
+          "value": {
+            "id": "195191fe-b52e-4eff-b2e4-a0d97eff0697",
+            "version": 10,
+            "type": "bookmark",
+            "properties": {
+              "link": [["https://arxiv.org/abs/2112.12845"]],
+              "title": [["Automatic Meta-Path Discovery for Effective Graph-Based Recommendation"]],
+              "description": [
+                [
+                  "Heterogeneous Information Networks (HINs) are labeled graphs that depict relationships among different types of entities (e.g., users, movies and directors). For HINs, meta-path-based recommenders..."
+                ]
+              ]
+            },
+            "format": {
+              "bookmark_icon": "https://static.arxiv.org/static/browse/0.3.4/images/icons/apple-touch-icon.png",
+              "bookmark_cover": "https://static.arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png"
+            },
+            "created_time": 1693452044102,
+            "last_edited_time": 1693452044111,
+            "parent_id": "f82ea177-8333-4963-b905-3813312b6277",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "e8e4aa03-930a-4288-9032-818f982d5eab": {
+          "value": {
+            "id": "e8e4aa03-930a-4288-9032-818f982d5eab",
+            "version": 4,
+            "type": "text",
+            "created_time": 1697551356077,
+            "last_edited_time": 1697551356084,
+            "parent_id": "f82ea177-8333-4963-b905-3813312b6277",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        }
+      },
+      "collection": {},
+      "collection_view": {},
+      "notion_user": {},
+      "collection_query": {},
+      "signed_urls": {
+        "f82ea177-8333-4963-b905-3813312b6277": "https://file.notion.so/f/f/cb537cc0-aa00-4959-8db9-80abdf2033d3/7122a372-dd57-4ddd-8603-cf0861b7d3eb/bg2.gif?table=block&id=f82ea177-8333-4963-b905-3813312b6277&spaceId=cb537cc0-aa00-4959-8db9-80abdf2033d3&expirationTimestamp=1756735200000&signature=ev7ZhVt7cjxd_UVxQY1rcryAOixMI0GabaZ3TQhNAdE",
+        "867bbbfb-cedc-46c6-8699-f26ced0e51a6": "https://file.notion.so/f/f/cb537cc0-aa00-4959-8db9-80abdf2033d3/71ea0268-6d2f-47b3-933a-807c08532026/Untitled.png?table=block&id=867bbbfb-cedc-46c6-8699-f26ced0e51a6&spaceId=cb537cc0-aa00-4959-8db9-80abdf2033d3&expirationTimestamp=1756735200000&signature=Oqcp86QytGs_UR5u53AptAXr1MrFVmUMK4BQhw5yqmU",
+        "58d1ecd2-99f4-423e-9704-24efe484d31c": "https://file.notion.so/f/f/cb537cc0-aa00-4959-8db9-80abdf2033d3/f5da7069-cbc8-4b0c-9f22-d41ab649531e/Untitled.png?table=block&id=58d1ecd2-99f4-423e-9704-24efe484d31c&spaceId=cb537cc0-aa00-4959-8db9-80abdf2033d3&expirationTimestamp=1756735200000&signature=9Oviw2cw3auVgusO33370algvEvzhwAR2NMqPsJ4brM"
+      }
+    },
+    "authorDetails": [
+      {
+        "readingTime": { "text": "1 min read", "minutes": 0.145, "time": 8700, "words": 29 },
+        "slug": ["default"],
+        "fileName": "default.md",
+        "name": "Riino",
+        "avatar": "/static/images/logo_Nest.png",
+        "notion": "97ab7c51daf5470ea07e43c577169d24",
+        "date": null
+      }
+    ],
+    "prev": {
+      "layout": "post",
+      "title": "Secured AI Memo",
+      "tags": ["Notion", "LLM", "AI"],
+      "toc": true,
+      "auto-convert-img": true,
+      "notion": "a49559dc51554bf59e640dba69d8fa3b",
+      "slug": "2023-08-24-notion-secured-ai-memo",
+      "date": "2023-08-24T00:00:00.000Z"
+    },
+    "next": {
+      "layout": "post",
+      "title": "neo4j Vectors & Semantic Search",
+      "subtitle": "Enhancing LLM with Vector Search and Semantic Understanding",
+      "tags": ["mdx", "LLM", "AI", "neo4j", "semantic-search", "vector-search"],
+      "slug": "2023-11-26-neo4j_llm",
+      "date": "2023-11-26T00:00:00.000Z"
+    }
+  },
+  "__N_SSG": true
+}

@@ -9,7 +9,7 @@
 /coverage
 
 # next.js
-/.next/
+# /.next/  # Commented out to allow committing built files for Vercel deployment
 /out/
 public/sitemap.xml
 .vercel

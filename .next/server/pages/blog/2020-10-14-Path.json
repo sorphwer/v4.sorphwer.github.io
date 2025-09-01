@@ -1,0 +1,61 @@
+{
+  "pageProps": {
+    "post": {
+      "mdxSource": "var Component=(()=>{var i=Object.create;var t=Object.defineProperty;var h=Object.getOwnPropertyDescriptor;var p=Object.getOwnPropertyNames;var d=Object.getPrototypeOf,m=Object.prototype.hasOwnProperty;var l=a=>t(a,\"__esModule\",{value:!0});var u=(a,s)=>()=>(s||a((s={exports:{}}).exports,s),s.exports),N=(a,s)=>{l(a);for(var c in s)t(a,c,{get:s[c],enumerable:!0})},g=(a,s,c)=>{if(s&&typeof s==\"object\"||typeof s==\"function\")for(let n of p(s))!m.call(a,n)&&n!==\"default\"&&t(a,n,{get:()=>s[n],enumerable:!(c=h(s,n))||c.enumerable});return a},k=a=>g(l(t(a!=null?i(d(a)):{},\"default\",a&&a.__esModule&&\"default\"in a?{get:()=>a.default,enumerable:!0}:{value:a,enumerable:!0})),a);var r=u((v,o)=>{o.exports=_jsx_runtime});var x={};N(x,{default:()=>y,frontmatter:()=>f});var e=k(r()),f={layout:\"post\",title:\"Learning Path\",subtitle:\"Understanding Path Formats in Web and File Systems\",author:\"Riino\",mathjax:!1,sticky:!1,toc:!1,tags:[\"computer\",\"web\",\"path\",\"router\",\"path-navigation\",\"url-structure\"]};function w(a={}){let{wrapper:s}=a.components||{};return s?(0,e.jsx)(s,Object.assign({},a,{children:(0,e.jsx)(c,{})})):c();function c(){let n=Object.assign({h1:\"h1\",a:\"a\",span:\"span\",p:\"p\",code:\"code\",strong:\"strong\",pre:\"pre\",h2:\"h2\"},a.components);return(0,e.jsxs)(e.Fragment,{children:[(0,e.jsxs)(n.h1,{id:\"path\",children:[(0,e.jsx)(n.a,{href:\"#path\",\"aria-hidden\":\"true\",tabIndex:\"-1\",children:(0,e.jsx)(n.span,{className:\"icon icon-link\"})}),\"Path\"]}),(0,e.jsxs)(n.p,{children:[\"Generally we use 'path' in web or in file system, to aim a target where we want to navigate. The format, sometimes is confusing, when we are using changeable \",(0,e.jsx)(n.code,{children:\"base_url\"}),\".\"]}),(0,e.jsxs)(n.p,{children:[\"For example, when this jekyll blog runs in local, the \",(0,e.jsx)(n.code,{children:\"base_url\"}),\" is \",(0,e.jsx)(n.code,{children:\"localhost\"}),\", while it is \",(0,e.jsx)(n.code,{children:\"riino.site\"}),\" now. In other cases, the situation might be more complex. For example, in dev env, the \",(0,e.jsx)(n.code,{children:\"base_url\"}),\" is \",(0,e.jsx)(n.strong,{children:\"example.com\"}),\", while in prod env, it become \",(0,e.jsx)(n.strong,{children:\"example.com/welcome!\"})]}),(0,e.jsx)(n.p,{children:\"When we handle this, the final method is\"}),(0,e.jsx)(n.pre,{className:\"language-javascript\",children:(0,e.jsx)(n.code,{className:\"language-javascript code-highlight\",children:(0,e.jsxs)(n.span,{className:\"code-line\",children:[(0,e.jsx)(n.span,{className:\"token dom variable\",children:\"location\"}),(0,e.jsx)(n.span,{className:\"token punctuation\",children:\".\"}),(0,e.jsx)(n.span,{className:\"token property-access\",children:\"href\"}),\" \",(0,e.jsx)(n.span,{className:\"token operator\",children:\"=\"}),\" \",(0,e.jsx)(n.span,{className:\"token string\",children:\"'example.html'\"}),\" \",(0,e.jsx)(n.span,{className:\"token comment\",children:\"//with history\"}),`\n`]})})}),(0,e.jsx)(n.p,{children:\"or\"}),(0,e.jsx)(n.pre,{className:\"language-javascript\",children:(0,e.jsx)(n.code,{className:\"language-javascript code-highlight\",children:(0,e.jsxs)(n.span,{className:\"code-line\",children:[(0,e.jsx)(n.span,{className:\"token dom variable\",children:\"location\"}),(0,e.jsx)(n.span,{className:\"token punctuation\",children:\".\"}),(0,e.jsx)(n.span,{className:\"token property-access function method\",children:\"replace\"}),(0,e.jsx)(n.span,{className:\"token punctuation\",children:\"(\"}),(0,e.jsx)(n.span,{className:\"token string\",children:\"'example.html'\"}),(0,e.jsx)(n.span,{className:\"token punctuation\",children:\")\"}),\" \",(0,e.jsx)(n.span,{className:\"token comment\",children:\"//without history\"}),`\n`]})})}),(0,e.jsxs)(n.p,{children:[\"Of course, we can also use other 'location' to navigate from \",(0,e.jsx)(n.strong,{children:\"different source\"}),\":\"]}),(0,e.jsx)(n.pre,{className:\"language-javascript\",children:(0,e.jsxs)(n.code,{className:\"language-javascript code-highlight\",children:[(0,e.jsxs)(n.span,{className:\"code-line\",children:[\"self\",(0,e.jsx)(n.span,{className:\"token punctuation\",children:\".\"}),(0,e.jsx)(n.span,{className:\"token property-access\",children:\"location\"}),(0,e.jsx)(n.span,{className:\"token punctuation\",children:\".\"}),(0,e.jsx)(n.span,{className:\"token property-access\",children:\"href\"}),\" \",(0,e.jsx)(n.span,{className:\"token comment\",children:\"//Current page\"}),`\n`]}),(0,e.jsxs)(n.span,{className:\"code-line\",children:[(0,e.jsx)(n.span,{className:\"token dom variable\",children:\"window\"}),(0,e.jsx)(n.span,{className:\"token punctuation\",children:\".\"}),(0,e.jsx)(n.span,{className:\"token property-access\",children:\"location\"}),(0,e.jsx)(n.span,{className:\"token punctuation\",children:\".\"}),(0,e.jsx)(n.span,{className:\"token property-access\",children:\"href\"}),\" \",(0,e.jsx)(n.span,{className:\"token comment\",children:\"//Current page\"}),`\n`]}),(0,e.jsxs)(n.span,{className:\"code-line\",children:[(0,e.jsx)(n.span,{className:\"token keyword\",children:\"this\"}),(0,e.jsx)(n.span,{className:\"token punctuation\",children:\".\"}),(0,e.jsx)(n.span,{className:\"token property-access\",children:\"location\"}),(0,e.jsx)(n.span,{className:\"token punctuation\",children:\".\"}),(0,e.jsx)(n.span,{className:\"token property-access\",children:\"href\"}),\" \",(0,e.jsx)(n.span,{className:\"token comment\",children:\"//Current page\"}),`\n`]}),(0,e.jsxs)(n.span,{className:\"code-line\",children:[(0,e.jsx)(n.span,{className:\"token dom variable\",children:\"location\"}),(0,e.jsx)(n.span,{className:\"token punctuation\",children:\".\"}),(0,e.jsx)(n.span,{className:\"token property-access\",children:\"href\"}),\" \",(0,e.jsx)(n.span,{className:\"token comment\",children:\"// Current page\"}),`\n`]}),(0,e.jsxs)(n.span,{className:\"code-line\",children:[\"parent\",(0,e.jsx)(n.span,{className:\"token punctuation\",children:\".\"}),(0,e.jsx)(n.span,{className:\"token property-access\",children:\"location\"}),(0,e.jsx)(n.span,{className:\"token punctuation\",children:\".\"}),(0,e.jsx)(n.span,{className:\"token property-access\",children:\"href\"}),\" \",(0,e.jsx)(n.span,{className:\"token comment\",children:\"//Parent page\"}),`\n`]}),(0,e.jsxs)(n.span,{className:\"code-line\",children:[\"top\",(0,e.jsx)(n.span,{className:\"token punctuation\",children:\".\"}),(0,e.jsx)(n.span,{className:\"token property-access\",children:\"location\"}),(0,e.jsx)(n.span,{className:\"token punctuation\",children:\".\"}),(0,e.jsx)(n.span,{className:\"token property-access\",children:\"href\"}),\" \",(0,e.jsx)(n.span,{className:\"token comment\",children:\"//Top page\"}),`\n`]})]})}),(0,e.jsxs)(n.p,{children:[\"However, how can we manage the \",(0,e.jsx)(n.strong,{children:\"format\"}),\" of path?\"]}),(0,e.jsxs)(n.h2,{id:\"download-playground-html\",children:[(0,e.jsx)(n.a,{href:\"#download-playground-html\",\"aria-hidden\":\"true\",tabIndex:\"-1\",children:(0,e.jsx)(n.span,{className:\"icon icon-link\"})}),\"Download Playground html\"]}),(0,e.jsx)(n.p,{children:\"Click to download this playground html file :\"}),(0,e.jsx)(n.p,{children:(0,e.jsx)(n.a,{href:\"https://riino.site/download/pat_test.html\",children:\"Download\"})})]})}}var y=w;return x;})();\n;return Component;",
+      "toc": [
+        { "value": "Path", "url": "#path", "depth": 1 },
+        { "value": "Download Playground html", "url": "#download-playground-html", "depth": 2 }
+      ],
+      "frontMatter": {
+        "readingTime": { "text": "2 min read", "minutes": 1.135, "time": 68100, "words": 227 },
+        "slug": "2020-10-14-Path",
+        "fileName": "2020-10-14-Path.md",
+        "layout": "post",
+        "title": "Learning Path",
+        "subtitle": "Understanding Path Formats in Web and File Systems",
+        "author": "Riino",
+        "mathjax": false,
+        "sticky": false,
+        "toc": false,
+        "tags": ["computer", "web", "path", "router", "path-navigation", "url-structure"],
+        "date": "2020-10-14T00:00:00.000Z"
+      }
+    },
+    "recordMap": null,
+    "authorDetails": [
+      {
+        "readingTime": { "text": "1 min read", "minutes": 0.145, "time": 8700, "words": 29 },
+        "slug": ["default"],
+        "fileName": "default.md",
+        "name": "Riino",
+        "avatar": "/static/images/logo_Nest.png",
+        "notion": "97ab7c51daf5470ea07e43c577169d24",
+        "date": null
+      }
+    ],
+    "prev": {
+      "layout": "post",
+      "title": "What is DevOps and What isn't",
+      "subtitle": "A Comprehensive Guide to Agile Practices",
+      "author": "Riino",
+      "mathjax": false,
+      "sticky": false,
+      "tags": ["mdx", "software-engineering", "agile", "devops", "ci-cd"],
+      "slug": "2020-8-23-DevOps",
+      "date": "2020-08-22T16:00:00.000Z"
+    },
+    "next": {
+      "layout": "post",
+      "title": "Jekyll Cheat Sheet",
+      "subtitle": "Comprehensive Guide to Jekyll Setup and Usage",
+      "author": "Riino",
+      "status": "doc",
+      "tags": ["mdx", "jekyll", "documentation", "cheatsheet"],
+      "mathjax": false,
+      "mermaid": false,
+      "slug": "2021-1-13-Jekyll-CheatSheet",
+      "date": "2021-01-12T16:00:00.000Z"
+    }
+  },
+  "__N_SSG": true
+}

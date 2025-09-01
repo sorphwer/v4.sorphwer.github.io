@@ -1,0 +1,84 @@
+{
+  "pageProps": {
+    "post": {
+      "mdxSource": "var Component=(()=>{var o=Object.create;var t=Object.defineProperty;var d=Object.getOwnPropertyDescriptor;var h=Object.getOwnPropertyNames;var m=Object.getPrototypeOf,p=Object.prototype.hasOwnProperty;var s=a=>t(a,\"__esModule\",{value:!0});var g=(a,i)=>()=>(i||a((i={exports:{}}).exports,i),i.exports),k=(a,i)=>{s(a);for(var r in i)t(a,r,{get:i[r],enumerable:!0})},u=(a,i,r)=>{if(i&&typeof i==\"object\"||typeof i==\"function\")for(let n of h(i))!p.call(a,n)&&n!==\"default\"&&t(a,n,{get:()=>i[n],enumerable:!(r=d(i,n))||r.enumerable});return a},y=a=>u(s(t(a!=null?o(m(a)):{},\"default\",a&&a.__esModule&&\"default\"in a?{get:()=>a.default,enumerable:!0}:{value:a,enumerable:!0})),a);var c=g((v,l)=>{l.exports=_jsx_runtime});var b={};k(b,{default:()=>f,frontmatter:()=>N});var e=y(c()),N={layout:\"post\",title:\"Learning SQL Server: Limited Conditions & Trigger\",subtitle:\"Mastering SQL Server Constraints and Triggers\",author:\"Riino\",\"header-img\":\"img/sakura.jpg\",\"header-mask\":.3,mathjax:!0,sticky:!1,tags:[\"T-SQL\",\"Database\",\"SQL-Server\",\"Data-Integrity\",\"Triggers\",\"Completed\"]};function w(a={}){let{wrapper:i}=a.components||{};return i?(0,e.jsx)(i,Object.assign({},a,{children:(0,e.jsx)(r,{})})):r();function r(){let n=Object.assign({p:\"p\",strong:\"strong\",h1:\"h1\",a:\"a\",span:\"span\",h2:\"h2\",pre:\"pre\",code:\"code\"},a.components);return(0,e.jsxs)(e.Fragment,{children:[(0,e.jsx)(n.p,{children:(0,e.jsx)(n.strong,{children:\"Menu\"})}),(0,e.jsx)(n.p,{children:\"[TOC]\"}),(0,e.jsxs)(n.h1,{id:\"t-sql--limited-conditions--trigger\",children:[(0,e.jsx)(n.a,{\"aria-hidden\":\"true\",href:\"#t-sql--limited-conditions--trigger\",tabIndex:\"-1\",children:(0,e.jsx)(n.span,{className:\"icon icon-link\"})}),\"T-SQL : Limited Conditions & Trigger\"]}),(0,e.jsxs)(n.h2,{id:\"entity-integrality\",children:[(0,e.jsx)(n.a,{\"aria-hidden\":\"true\",href:\"#entity-integrality\",tabIndex:\"-1\",children:(0,e.jsx)(n.span,{className:\"icon icon-link\"})}),\"Entity Integrality\"]}),(0,e.jsx)(n.p,{children:\"All in all, there should be a \\u2018Primary Key\\u2019 to be a kind of \\u2018Index\\u2019 to the tuple(row) it belongs to, and we can refer to specific tuple(row) by checking primary key. Primary is unique for its tuple, and it should represent this tuple very well.We call those columns which can be a primary key \\u2018Candidate Key\\u2019. A \\u2018Key\\u2019 also could be a combination of several columns. A row can only have one Primary key, but it can hold many candidate key.\"}),(0,e.jsx)(n.p,{children:\"If a tuple have a column name, which is a primary key of another tuple, it will be named as \\u2018Foreign Key\\u2019. Foreign is a reminder saying :\\u201CI am a Primary Key somewhere!\\u201D\"}),(0,e.jsx)(n.p,{children:\"It\\u2019s easy to set these keys when establishing tables or we can alter columns after building the table.\"}),(0,e.jsx)(n.pre,{className:\"language-sql\",children:(0,e.jsx)(n.code,{className:\"language-sql code-highlight\",children:(0,e.jsxs)(n.span,{className:\"code-line\",children:[(0,e.jsx)(n.span,{className:\"token keyword\",children:\"add\"}),\" \",(0,e.jsx)(n.span,{className:\"token keyword\",children:\"constraint\"}),\" pk_columnName \",(0,e.jsx)(n.span,{className:\"token keyword\",children:\"primary\"}),\" \",(0,e.jsx)(n.span,{className:\"token keyword\",children:\"key\"}),(0,e.jsx)(n.span,{className:\"token punctuation\",children:\"(\"}),\"columnName\",(0,e.jsx)(n.span,{className:\"token punctuation\",children:\")\"}),`\n`]})})}),(0,e.jsxs)(n.p,{children:[\"Here the \",(0,e.jsx)(n.code,{children:\"pk_columnName\"}),\" is a name of an entity, for the \\u2018keys\\u2019 will be saved as entities in SQL server. Because there\\u2019re other type that will be also saved as entities, we use \",(0,e.jsx)(n.code,{children:\"Hungarian Notation\"}),\" to add a \",(0,e.jsx)(n.code,{children:\"pk_\"}),\" in front of it. Here\\u2019s another example of adding a foreign key.\"]}),(0,e.jsx)(n.pre,{className:\"language-sql\",children:(0,e.jsxs)(n.code,{className:\"language-sql code-highlight\",children:[(0,e.jsxs)(n.span,{className:\"code-line\",children:[(0,e.jsx)(n.span,{className:\"token keyword\",children:\"alter\"}),\" \",(0,e.jsx)(n.span,{className:\"token keyword\",children:\"table\"}),` tablename\n`]}),(0,e.jsxs)(n.span,{className:\"code-line\",children:[(0,e.jsx)(n.span,{className:\"token keyword\",children:\"add\"}),\" \",(0,e.jsx)(n.span,{className:\"token keyword\",children:\"constraint\"}),` fk_columnName\n`]}),(0,e.jsxs)(n.span,{className:\"code-line\",children:[(0,e.jsx)(n.span,{className:\"token keyword\",children:\"foreign\"}),\" \",(0,e.jsx)(n.span,{className:\"token keyword\",children:\"key\"}),(0,e.jsx)(n.span,{className:\"token punctuation\",children:\"(\"}),\"columnName\",(0,e.jsx)(n.span,{className:\"token punctuation\",children:\")\"}),\" \",(0,e.jsx)(n.span,{className:\"token keyword\",children:\"references\"}),\" TableName\",(0,e.jsx)(n.span,{className:\"token punctuation\",children:\"(\"}),\"ColumnName\",(0,e.jsx)(n.span,{className:\"token punctuation\",children:\")\"}),`\n`]})]})}),(0,e.jsxs)(n.h2,{id:\"reference-integrality\",children:[(0,e.jsx)(n.a,{\"aria-hidden\":\"true\",href:\"#reference-integrality\",tabIndex:\"-1\",children:(0,e.jsx)(n.span,{className:\"icon icon-link\"})}),\"Reference Integrality\"]}),(0,e.jsx)(n.p,{children:\"Some times, we can add custom rules to limit the value of a column.\"}),(0,e.jsx)(n.p,{children:\"//TODO\"}),(0,e.jsxs)(n.h2,{id:\"trigger\",children:[(0,e.jsx)(n.a,{\"aria-hidden\":\"true\",href:\"#trigger\",tabIndex:\"-1\",children:(0,e.jsx)(n.span,{className:\"icon icon-link\"})}),\"Trigger\"]}),(0,e.jsxs)(n.p,{children:[\"A trigger is just like a IFTTT , which contains 2 part: Condition and Function. The former decide \",(0,e.jsx)(n.strong,{children:\"when\"}),\" the trigger is activated, and the latter decide \",(0,e.jsx)(n.strong,{children:\"what\"}),\" the trigger will do when activated.\"]}),(0,e.jsxs)(n.p,{children:[\"For the condition one, we have 3 options : \",(0,e.jsx)(n.strong,{children:\"delete, alter and insert\"}),\", all in literal meanings. And the trigger\\u2019s format is basically like this:\"]}),(0,e.jsx)(n.pre,{className:\"language-sql\",children:(0,e.jsxs)(n.code,{className:\"language-sql code-highlight\",children:[(0,e.jsxs)(n.span,{className:\"code-line\",children:[(0,e.jsx)(n.span,{className:\"token keyword\",children:\"create\"}),\" \",(0,e.jsx)(n.span,{className:\"token keyword\",children:\"trigger\"}),\" triggername \",(0,e.jsx)(n.span,{className:\"token keyword\",children:\"on\"}),\" tablename \",(0,e.jsx)(n.span,{className:\"token keyword\",children:\"for\"}),\" \",(0,e.jsx)(n.span,{className:\"token keyword\",children:\"delete\"}),(0,e.jsx)(n.span,{className:\"token operator\",children:\"/\"}),(0,e.jsx)(n.span,{className:\"token keyword\",children:\"alter\"}),(0,e.jsx)(n.span,{className:\"token operator\",children:\"/\"}),(0,e.jsx)(n.span,{className:\"token keyword\",children:\"insert\"}),`\n`]}),(0,e.jsxs)(n.span,{className:\"code-line\",children:[(0,e.jsx)(n.span,{className:\"token keyword\",children:\"as\"}),`\n`]}),(0,e.jsxs)(n.span,{className:\"code-line\",children:[(0,e.jsx)(n.span,{className:\"token keyword\",children:\"begin\"}),`\n`]}),(0,e.jsxs)(n.span,{className:\"code-line\",children:[\"\t\",(0,e.jsx)(n.span,{className:\"token comment\",children:\"--what the trigger will do (you can declare something, select something and update/delete/insert)\"}),`\n`]}),(0,e.jsxs)(n.span,{className:\"code-line\",children:[(0,e.jsx)(n.span,{className:\"token keyword\",children:\"end\"}),`\n`]})]})}),(0,e.jsx)(n.p,{children:\"when you use trigger, actually there\\u2019re some tables for you :\"}),(0,e.jsxs)(n.p,{children:[(0,e.jsx)(n.code,{children:\"inserted\"}),\" , \",(0,e.jsx)(n.code,{children:\"deleted\"}),\" and \",(0,e.jsx)(n.code,{children:\"altered\"}),\" , which hold the changed data.\"]})]})}}var f=w;return b;})();\n;return Component;",
+      "toc": [
+        {
+          "value": "T-SQL : Limited Conditions & Trigger",
+          "url": "#t-sql--limited-conditions--trigger",
+          "depth": 1
+        },
+        { "value": "Entity Integrality", "url": "#entity-integrality", "depth": 2 },
+        { "value": "Reference Integrality", "url": "#reference-integrality", "depth": 2 },
+        { "value": "Trigger", "url": "#trigger", "depth": 2 }
+      ],
+      "frontMatter": {
+        "readingTime": { "text": "2 min read", "minutes": 1.97, "time": 118200, "words": 394 },
+        "slug": "2019-3-2-SQL [3]",
+        "fileName": "2019-3-2-SQL [3].md",
+        "layout": "post",
+        "title": "Learning SQL Server: Limited Conditions & Trigger",
+        "subtitle": "Mastering SQL Server Constraints and Triggers",
+        "author": "Riino",
+        "header-img": "img/sakura.jpg",
+        "header-mask": 0.3,
+        "mathjax": true,
+        "sticky": false,
+        "tags": ["T-SQL", "Database", "SQL-Server", "Data-Integrity", "Triggers", "Completed"],
+        "date": "2019-03-01T16:00:00.000Z"
+      }
+    },
+    "recordMap": null,
+    "authorDetails": [
+      {
+        "readingTime": { "text": "1 min read", "minutes": 0.145, "time": 8700, "words": 29 },
+        "slug": ["default"],
+        "fileName": "default.md",
+        "name": "Riino",
+        "avatar": "/static/images/logo_Nest.png",
+        "notion": "97ab7c51daf5470ea07e43c577169d24",
+        "date": null
+      }
+    ],
+    "prev": {
+      "layout": "post",
+      "title": "How to Use Json-cpp for Efficient JSON String Parsing in C++",
+      "subtitle": "A Comprehensive Guide to Parsing JSON Strings with Json-cpp in C++",
+      "author": "Riino",
+      "header-style": "text",
+      "sticky": false,
+      "tags": [
+        "mdx",
+        "JSON Parsing",
+        "Json-cpp Library",
+        "C++ Programming",
+        "JSON Handling",
+        "Software Development"
+      ],
+      "slug": "2018-8-28-Parse-by-Json-cpp",
+      "date": "2018-08-27T16:00:00.000Z"
+    },
+    "next": {
+      "layout": "post",
+      "title": "Learning SQL Server: Select Query",
+      "subtitle": "Mastering SQL Server Select Queries for Efficient Data Retrieval",
+      "author": "Riino",
+      "header-img": "img/sakura.jpg",
+      "header-mask": 0.3,
+      "mathjax": true,
+      "sticky": false,
+      "tags": [
+        "mdx",
+        "T-SQL",
+        "Database",
+        "SQLServer",
+        "SelectQuery",
+        "DataRetrieval",
+        "Completed"
+      ],
+      "slug": "2019-3-2-SQL [2]",
+      "date": "2019-03-01T16:00:00.000Z"
+    }
+  },
+  "__N_SSG": true
+}

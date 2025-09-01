@@ -1,0 +1,58 @@
+{
+  "pageProps": {
+    "post": {
+      "mdxSource": "var Component=(()=>{var s=Object.create;var o=Object.defineProperty;var c=Object.getOwnPropertyDescriptor;var d=Object.getOwnPropertyNames;var m=Object.getPrototypeOf,u=Object.prototype.hasOwnProperty;var h=t=>o(t,\"__esModule\",{value:!0});var y=(t,i)=>()=>(i||t((i={exports:{}}).exports,i),i.exports),g=(t,i)=>{h(t);for(var l in i)o(t,l,{get:i[l],enumerable:!0})},b=(t,i,l)=>{if(i&&typeof i==\"object\"||typeof i==\"function\")for(let n of d(i))!u.call(t,n)&&n!==\"default\"&&o(t,n,{get:()=>i[n],enumerable:!(l=c(i,n))||l.enumerable});return t},f=t=>b(h(o(t!=null?s(m(t)):{},\"default\",t&&t.__esModule&&\"default\"in t?{get:()=>t.default,enumerable:!0}:{value:t,enumerable:!0})),t);var r=y((_,a)=>{a.exports=_jsx_runtime});var j={};g(j,{default:()=>k,frontmatter:()=>p});var e=f(r()),p={layout:\"post\",title:\"GithubPage Theme vs Jekyll Theme Explained\",subtitle:\"Understanding the Differences and Benefits for Your Blog\",tags:[\"Jekyll\",\"Ruby\",\"GithubPage\",\"JekyllTheme\",\"JekyllRemoteTheme\"]};function w(t={}){let{wrapper:i}=t.components||{};return i?(0,e.jsx)(i,Object.assign({},t,{children:(0,e.jsx)(l,{})})):l();function l(){let n=Object.assign({h2:\"h2\",a:\"a\",span:\"span\",p:\"p\",strong:\"strong\",code:\"code\"},t.components);return(0,e.jsxs)(e.Fragment,{children:[(0,e.jsxs)(n.h2,{id:\"introduction\",children:[(0,e.jsx)(n.a,{href:\"#introduction\",\"aria-hidden\":\"true\",tabIndex:\"-1\",children:(0,e.jsx)(n.span,{className:\"icon icon-link\"})}),\"Introduction\"]}),(0,e.jsx)(n.p,{children:\"(This post is for beginners of jekyll plug-ins and gem who want to learn about jekyll theme and jekyll-remote-theme)\"}),(0,e.jsx)(n.p,{children:\"A theme form help isolate the update of theme files and post files. For we can choose to update style files and the posts independently. But why Riinosite, and even most GitHubPage Blogs do not use theme?\"}),(0,e.jsxs)(n.h2,{id:\"how-jekyll-theme-works\",children:[(0,e.jsx)(n.a,{href:\"#how-jekyll-theme-works\",\"aria-hidden\":\"true\",tabIndex:\"-1\",children:(0,e.jsx)(n.span,{className:\"icon icon-link\"})}),\"How Jekyll Theme works\"]}),(0,e.jsxs)(n.p,{children:[\"Theme is a type of \",(0,e.jsx)(n.strong,{children:\"Gem\"}),\", which is managed by Bundler, a Ruby library management tool. Typically a gem is a pre-built package of files, which can be ruby codes or Jekyll \",(0,e.jsx)(n.strong,{children:\"theme\"}),\" template files. It can be initiate by \",(0,e.jsx)(n.code,{children:\"jekyll new-theme jekyll-theme-awesome\"}),\", you can check the \",(0,e.jsx)(n.a,{href:\"https://jekyllrb.com/docs/themes/\",children:\"jekyll theme doc\"}),\". Normally when you declare the name of gems in \",(0,e.jsx)(n.code,{children:\"Gemfile\"}),\" and use \",(0,e.jsx)(n.code,{children:\"bundle install\"}),\" , bundler will scan your \",(0,e.jsx)(n.strong,{children:\"Gemfile\"}),\" config and download all gems, including your theme gem file.Then you have to declare \",(0,e.jsx)(n.code,{children:\"theme: theme-name\"}),\" in \",(0,e.jsx)(n.code,{children:\"_config.yml\"}),\" in your Jekyll to let your Jekyll site know that \",(0,e.jsx)(n.strong,{children:\"it can use a gem file downloaded by bundler whose name is 'theme-name' as the theme\"})]}),(0,e.jsxs)(n.h2,{id:\"but-github-page-does-not-follow-the-rule-above\",children:[(0,e.jsx)(n.a,{href:\"#but-github-page-does-not-follow-the-rule-above\",\"aria-hidden\":\"true\",tabIndex:\"-1\",children:(0,e.jsx)(n.span,{className:\"icon icon-link\"})}),\"But GitHub Page does not follow the rule above\"]}),(0,e.jsxs)(n.p,{children:[\"First, GitHub Page has a \",(0,e.jsx)(n.a,{href:\"https://pages.github.com/versions/\",children:\"gem whitelist\"}),\", which means \",(0,e.jsx)(n.strong,{children:\"only the gems in this whitelist can be installed\"}),\", where few theme gems is available, and the default one is the \",(0,e.jsx)(n.strong,{children:\"jekyll-theme-minimal\"}),\", you can use \",(0,e.jsx)(n.code,{children:\"theme: minimal\"}),\" in your \",(0,e.jsx)(n.code,{children:\"_config.yml\"}),\" to enable this theme, which is also the default theme when generating a new jekyll blog. Therefore, although you can write, build and publish your own gem called \",(0,e.jsx)(n.code,{children:\"jekyll-theme-mytheme\"}),\", you can not use this gem in your GitHubPage.\"]}),(0,e.jsxs)(n.p,{children:[\"However, there's a gem in this whitelist called \",(0,e.jsx)(n.a,{href:\"https://github.com/benbalter/jekyll-remote-theme\",children:\"jekyll-remote-theme\"}),\", which allows you to use a new key in \",(0,e.jsx)(n.code,{children:\"_config.yml\"}),\" called \",(0,e.jsx)(n.strong,{children:\"remote_theme\"}),\". Where you can use a \",(0,e.jsx)(n.strong,{children:\"theme repo\"}),\" in same \",(0,e.jsx)(n.strong,{children:\"github hoster\"}),\".\"]}),(0,e.jsxs)(n.p,{children:[\"For example, if you have a theme in \",(0,e.jsx)(n.code,{children:\"your-github-name/your-theme\"}),\", and your blog is in \",(0,e.jsx)(n.code,{children:\"your-github-name/your-github-name.github.io\"}),\", you can use \",(0,e.jsx)(n.code,{children:\"remote_theme: your-github-name/your-theme\"}),\" in your \",(0,e.jsx)(n.code,{children:\"_config.yml\"}),\".\"]}),(0,e.jsxs)(n.h2,{id:\"conclusion\",children:[(0,e.jsx)(n.a,{href:\"#conclusion\",\"aria-hidden\":\"true\",tabIndex:\"-1\",children:(0,e.jsx)(n.span,{className:\"icon icon-link\"})}),\"Conclusion\"]}),(0,e.jsxs)(n.p,{children:[\"To install a theme out of GitHubPage whitelist in GitHubPage, you have to install gem jekyll-remote-theme and fork or create a theme repo, then use \",(0,e.jsx)(n.strong,{children:\"remote_theme\"})]}),(0,e.jsxs)(n.p,{children:[\"While you can install any theme in your own jekyll site using \",(0,e.jsx)(n.strong,{children:\"theme\"}),\" in config file, if the theme gem is published in your bundler source.\"]})]})}}var k=w;return j;})();\n;return Component;",
+      "toc": [
+        { "value": "Introduction", "url": "#introduction", "depth": 2 },
+        { "value": "How Jekyll Theme works", "url": "#how-jekyll-theme-works", "depth": 2 },
+        {
+          "value": "But GitHub Page does not follow the rule above",
+          "url": "#but-github-page-does-not-follow-the-rule-above",
+          "depth": 2
+        },
+        { "value": "Conclusion", "url": "#conclusion", "depth": 2 }
+      ],
+      "frontMatter": {
+        "readingTime": { "text": "3 min read", "minutes": 2.015, "time": 120900, "words": 403 },
+        "slug": "2021-7-7-Why-GithubPage-Theme",
+        "fileName": "2021-7-7-Why-GithubPage-Theme.md",
+        "layout": "post",
+        "title": "GithubPage Theme vs Jekyll Theme Explained",
+        "subtitle": "Understanding the Differences and Benefits for Your Blog",
+        "tags": ["Jekyll", "Ruby", "GithubPage", "JekyllTheme", "JekyllRemoteTheme"],
+        "date": "2021-07-06T16:00:00.000Z"
+      }
+    },
+    "recordMap": null,
+    "authorDetails": [
+      {
+        "readingTime": { "text": "1 min read", "minutes": 0.145, "time": 8700, "words": 29 },
+        "slug": ["default"],
+        "fileName": "default.md",
+        "name": "Riino",
+        "avatar": "/static/images/logo_Nest.png",
+        "notion": "97ab7c51daf5470ea07e43c577169d24",
+        "date": null
+      }
+    ],
+    "prev": {
+      "layout": "post",
+      "title": "Combine Swagger, Flask and Python DB Driver",
+      "subtitle": "Integrating Swagger with Flask and Neo4j for Enhanced API Documentation",
+      "author": "Riino",
+      "tags": ["mdx", "neo4j", "swagger", "python", "flask", "graph-database", "api-documentation"],
+      "slug": "2021-5-31-flask-neo4j-swagger",
+      "date": "2021-05-30T16:00:00.000Z"
+    },
+    "next": {
+      "layout": "post",
+      "title": "nmap Cheat Sheet All in One",
+      "subtitle": "Comprehensive Guide to nmap Commands and Usage",
+      "toc": false,
+      "tags": ["mdx", "cheat-sheet", "nmap"],
+      "slug": "2021-11-25-nmp",
+      "date": "2021-11-25T00:00:00.000Z"
+    }
+  },
+  "__N_SSG": true
+}

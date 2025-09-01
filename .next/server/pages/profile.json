@@ -1,0 +1,1247 @@
+{
+  "pageProps": {
+    "authorDetails": {
+      "mdxSource": "var Component=(()=>{var m=Object.create;var o=Object.defineProperty;var u=Object.getOwnPropertyDescriptor;var x=Object.getOwnPropertyNames;var f=Object.getPrototypeOf,g=Object.prototype.hasOwnProperty;var s=t=>o(t,\"__esModule\",{value:!0});var p=(t,e)=>()=>(e||t((e={exports:{}}).exports,e),e.exports),_=(t,e)=>{s(t);for(var n in e)o(t,n,{get:e[n],enumerable:!0})},d=(t,e,n)=>{if(e&&typeof e==\"object\"||typeof e==\"function\")for(let r of x(e))!g.call(t,r)&&r!==\"default\"&&o(t,r,{get:()=>e[r],enumerable:!(n=u(e,r))||n.enumerable});return t},j=t=>d(s(o(t!=null?m(f(t)):{},\"default\",t&&t.__esModule&&\"default\"in t?{get:()=>t.default,enumerable:!0}:{value:t,enumerable:!0})),t);var c=p((F,i)=>{i.exports=_jsx_runtime});var C={};_(C,{default:()=>b,frontmatter:()=>l});var a=j(c()),l={name:\"Riino\",avatar:\"/static/images/logo_Nest.png\",notion:\"97ab7c51daf5470ea07e43c577169d24\"};function M(t={}){let{wrapper:e}=t.components||{};return e?(0,a.jsx)(e,Object.assign({},t,{children:(0,a.jsx)(n,{})})):n();function n(){return(0,a.jsx)(a.Fragment,{})}}var b=M;return C;})();\n;return Component;",
+      "toc": [],
+      "frontMatter": {
+        "readingTime": { "text": "1 min read", "minutes": 0.145, "time": 8700, "words": 29 },
+        "slug": ["default"],
+        "fileName": "default.md",
+        "name": "Riino",
+        "avatar": "/static/images/logo_Nest.png",
+        "notion": "97ab7c51daf5470ea07e43c577169d24",
+        "date": null
+      }
+    },
+    "recordMap": {
+      "block": {
+        "97ab7c51-daf5-470e-a07e-43c577169d24": {
+          "value": {
+            "id": "97ab7c51-daf5-470e-a07e-43c577169d24",
+            "version": 282,
+            "type": "page",
+            "properties": { "title": [["Profile"]] },
+            "content": [
+              "bbb76129-887b-48bd-9766-0cc052e56c35",
+              "8a2895f0-0376-45ac-88dd-c6d1b656f651",
+              "94e9976c-379f-4109-a884-0a66ec16d45b",
+              "a5a22f70-a56c-4038-8a6b-4f95cbceae85",
+              "2ad2a7f7-c305-4056-9caf-5aef843bb150",
+              "a397dbb1-5199-4f85-8984-c4549a00e670",
+              "95033e50-5df6-4b40-b7f2-1b3f130fddac",
+              "9e98092f-fec4-4508-ac4d-b57d888e5636",
+              "732c9885-6141-441d-ba9b-0ef063e5852f",
+              "69909b77-a7d8-42e3-9945-a7134cc30757",
+              "140d4fa6-c6ed-49f9-a165-6e22e875e7d6",
+              "2c2c515c-db4d-4bc0-aaaf-fcae1b907978"
+            ],
+            "format": {
+              "site_id": "1b537cc0-aa00-81d2-948f-0079e6d8e037",
+              "page_icon": "/icons/tabs-user_lightgray.svg",
+              "page_cover": "https://s3-us-west-2.amazonaws.com/secure.notion-static.com/af35451c-fe18-4cd2-8e3c-3fab118fd68f/bg.gif",
+              "page_cover_position": 0.5,
+              "social_media_image_preview_url": "https://prod-files-secure.s3.us-west-2.amazonaws.com/cb537cc0-aa00-4959-8db9-80abdf2033d3/e454c461-d9a7-4470-9f0d-749400e73451/SocialMediaPreviewImage.png"
+            },
+            "permissions": [
+              {
+                "role": "reader",
+                "type": "public_permission",
+                "is_site": true,
+                "added_timestamp": 1684655604933
+              }
+            ],
+            "created_time": 1684322609210,
+            "last_edited_time": 1754449444602,
+            "parent_id": "0b47e047-c965-4a4e-bfae-d4fe3ebaf12d",
+            "parent_table": "block",
+            "alive": true,
+            "file_ids": [
+              "af35451c-fe18-4cd2-8e3c-3fab118fd68f",
+              "e454c461-d9a7-4470-9f0d-749400e73451"
+            ],
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3",
+            "crdt_format_version": 1,
+            "crdt_data": {
+              "title": {
+                "r": "3KVnjRiSFApEeIhT85D-9Q,\"start\",\"end\"",
+                "n": {
+                  "3KVnjRiSFApEeIhT85D-9Q,\"start\",\"end\"": {
+                    "s": {
+                      "x": "3KVnjRiSFApEeIhT85D-9Q",
+                      "i": [
+                        { "t": "s" },
+                        {
+                          "t": "t",
+                          "i": ["AurKGNkWLTJC", 1],
+                          "o": "start",
+                          "l": 7,
+                          "c": "Profile"
+                        },
+                        { "t": "e" }
+                      ],
+                      "l": ""
+                    },
+                    "c": []
+                  }
+                }
+              }
+            }
+          },
+          "role": "reader"
+        },
+        "0b47e047-c965-4a4e-bfae-d4fe3ebaf12d": { "role": "none" },
+        "bbb76129-887b-48bd-9766-0cc052e56c35": {
+          "value": {
+            "id": "bbb76129-887b-48bd-9766-0cc052e56c35",
+            "version": 36,
+            "type": "text",
+            "created_time": 1684673281879,
+            "last_edited_time": 1684673281879,
+            "parent_id": "97ab7c51-daf5-470e-a07e-43c577169d24",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "8a2895f0-0376-45ac-88dd-c6d1b656f651": {
+          "value": {
+            "id": "8a2895f0-0376-45ac-88dd-c6d1b656f651",
+            "version": 121,
+            "type": "text",
+            "created_time": 1684655957214,
+            "last_edited_time": 1684914359346,
+            "parent_id": "97ab7c51-daf5-470e-a07e-43c577169d24",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "94e9976c-379f-4109-a884-0a66ec16d45b": {
+          "value": {
+            "id": "94e9976c-379f-4109-a884-0a66ec16d45b",
+            "version": 26,
+            "type": "text",
+            "properties": {
+              "title": [
+                [
+                  "Consultant in GenAI, Secured-SDLC, Software Security, Threat Modelling, Code Audit"
+                ]
+              ]
+            },
+            "created_time": 1684914354488,
+            "last_edited_time": 1721550788011,
+            "parent_id": "97ab7c51-daf5-470e-a07e-43c577169d24",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "a5a22f70-a56c-4038-8a6b-4f95cbceae85": {
+          "value": {
+            "id": "a5a22f70-a56c-4038-8a6b-4f95cbceae85",
+            "version": 2,
+            "type": "text",
+            "properties": { "title": [["Also a Web Developer / Python Progammer"]] },
+            "created_time": 1684914354489,
+            "last_edited_time": 1684914354505,
+            "parent_id": "97ab7c51-daf5-470e-a07e-43c577169d24",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "2ad2a7f7-c305-4056-9caf-5aef843bb150": {
+          "value": {
+            "id": "2ad2a7f7-c305-4056-9caf-5aef843bb150",
+            "version": 50,
+            "type": "text",
+            "properties": {
+              "title": [["CISA | CDPSE | CCSK | HCCDP-AI | Neo4j Certificed Professional"]]
+            },
+            "created_time": 1684914354489,
+            "last_edited_time": 1721550775362,
+            "parent_id": "97ab7c51-daf5-470e-a07e-43c577169d24",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "a397dbb1-5199-4f85-8984-c4549a00e670": {
+          "value": {
+            "id": "a397dbb1-5199-4f85-8984-c4549a00e670",
+            "version": 133,
+            "type": "text",
+            "created_time": 1684914354489,
+            "last_edited_time": 1754449499371,
+            "parent_id": "97ab7c51-daf5-470e-a07e-43c577169d24",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3",
+            "crdt_format_version": 1,
+            "crdt_data": {
+              "title": {
+                "r": "77G0Rf9DkK22n0lBDIhY9A,\"start\",\"end\"",
+                "n": {
+                  "77G0Rf9DkK22n0lBDIhY9A,\"start\",\"end\"": {
+                    "s": {
+                      "x": "77G0Rf9DkK22n0lBDIhY9A",
+                      "i": [
+                        { "t": "s" },
+                        {
+                          "t": "t",
+                          "i": ["augeQTbHcmRF", 1],
+                          "o": "start",
+                          "l": -12,
+                          "a": [
+                            {
+                              "t": "r",
+                              "x": "77G0Rf9DkK22n0lBDIhY9A",
+                              "l": "",
+                              "i": ["WDOrpiCkRj4Q", 31],
+                              "s": { "i": ["augeQTbHcmRF", 12], "a": "a" },
+                              "e": { "i": ["augeQTbHcmRF", 16], "a": "b" },
+                              "k": "a"
+                            }
+                          ]
+                        },
+                        {
+                          "t": "t",
+                          "i": ["augeQTbHcmRF", 13],
+                          "o": ["augeQTbHcmRF", 12],
+                          "l": -3,
+                          "b": [
+                            {
+                              "t": "a",
+                              "x": "77G0Rf9DkK22n0lBDIhY9A",
+                              "l": "",
+                              "i": ["augeQTbHcmRF", 30],
+                              "s": { "i": ["augeQTbHcmRF", 13], "a": "b" },
+                              "e": { "i": ["augeQTbHcmRF", 29], "a": "a" },
+                              "a": ["a", "https://riino.site"]
+                            },
+                            {
+                              "t": "r",
+                              "x": "77G0Rf9DkK22n0lBDIhY9A",
+                              "l": "",
+                              "i": ["WDOrpiCkRj4Q", 31],
+                              "s": { "i": ["augeQTbHcmRF", 12], "a": "a" },
+                              "e": { "i": ["augeQTbHcmRF", 16], "a": "b" },
+                              "k": "a"
+                            },
+                            {
+                              "t": "a",
+                              "x": "77G0Rf9DkK22n0lBDIhY9A",
+                              "l": "",
+                              "i": ["WDOrpiCkRj4Q", 32],
+                              "s": { "i": ["augeQTbHcmRF", 13], "a": "b" },
+                              "e": { "i": ["augeQTbHcmRF", 15], "a": "a" },
+                              "a": ["a", "https://riino.site"]
+                            }
+                          ],
+                          "a": [
+                            {
+                              "t": "a",
+                              "x": "77G0Rf9DkK22n0lBDIhY9A",
+                              "l": "",
+                              "i": ["augeQTbHcmRF", 30],
+                              "s": { "i": ["augeQTbHcmRF", 13], "a": "b" },
+                              "e": { "i": ["augeQTbHcmRF", 29], "a": "a" },
+                              "a": ["a", "https://riino.site"]
+                            },
+                            {
+                              "t": "r",
+                              "x": "77G0Rf9DkK22n0lBDIhY9A",
+                              "l": "",
+                              "i": ["WDOrpiCkRj4Q", 31],
+                              "s": { "i": ["augeQTbHcmRF", 12], "a": "a" },
+                              "e": { "i": ["augeQTbHcmRF", 16], "a": "b" },
+                              "k": "a"
+                            }
+                          ]
+                        },
+                        {
+                          "t": "t",
+                          "i": ["augeQTbHcmRF", 16],
+                          "o": ["augeQTbHcmRF", 15],
+                          "l": -14,
+                          "b": [
+                            {
+                              "t": "a",
+                              "x": "77G0Rf9DkK22n0lBDIhY9A",
+                              "l": "",
+                              "i": ["augeQTbHcmRF", 30],
+                              "s": { "i": ["augeQTbHcmRF", 13], "a": "b" },
+                              "e": { "i": ["augeQTbHcmRF", 29], "a": "a" },
+                              "a": ["a", "https://riino.site"]
+                            }
+                          ],
+                          "a": []
+                        },
+                        { "t": "e" }
+                      ],
+                      "l": ""
+                    },
+                    "c": []
+                  }
+                }
+              }
+            }
+          },
+          "role": "reader"
+        },
+        "95033e50-5df6-4b40-b7f2-1b3f130fddac": {
+          "value": {
+            "id": "95033e50-5df6-4b40-b7f2-1b3f130fddac",
+            "version": 11,
+            "type": "text",
+            "properties": {
+              "title": [
+                ["Github:  "],
+                ["https://github.com/sorphwer", [["a", "https://github.com/sorphwer"]]]
+              ]
+            },
+            "created_time": 1684914354490,
+            "last_edited_time": 1721550664175,
+            "parent_id": "97ab7c51-daf5-470e-a07e-43c577169d24",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "9e98092f-fec4-4508-ac4d-b57d888e5636": {
+          "value": {
+            "id": "9e98092f-fec4-4508-ac4d-b57d888e5636",
+            "version": 3,
+            "type": "text",
+            "created_time": 1721550666551,
+            "last_edited_time": 1721550666554,
+            "parent_id": "97ab7c51-daf5-470e-a07e-43c577169d24",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "732c9885-6141-441d-ba9b-0ef063e5852f": {
+          "value": {
+            "id": "732c9885-6141-441d-ba9b-0ef063e5852f",
+            "version": 24,
+            "type": "sub_header",
+            "properties": { "title": [["Projects"]] },
+            "created_time": 1684656123568,
+            "last_edited_time": 1688790887690,
+            "parent_id": "97ab7c51-daf5-470e-a07e-43c577169d24",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "69909b77-a7d8-42e3-9945-a7134cc30757": {
+          "value": {
+            "id": "69909b77-a7d8-42e3-9945-a7134cc30757",
+            "version": 11,
+            "type": "collection_view",
+            "view_ids": ["10d8502c-2ef6-466f-acb1-d85a6419c555"],
+            "created_time": 1684655590007,
+            "last_edited_time": 1735095924442,
+            "parent_id": "97ab7c51-daf5-470e-a07e-43c577169d24",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3",
+            "format": {
+              "page_icon": "https://s3-us-west-2.amazonaws.com/secure.notion-static.com/d824e0d4-9f79-4596-bb3f-dd021a788b84/favicon.ico"
+            }
+          },
+          "role": "reader"
+        },
+        "140d4fa6-c6ed-49f9-a165-6e22e875e7d6": {
+          "value": {
+            "id": "140d4fa6-c6ed-49f9-a165-6e22e875e7d6",
+            "version": 27,
+            "type": "sub_header",
+            "created_time": 1684656058131,
+            "last_edited_time": 1754449482936,
+            "parent_id": "97ab7c51-daf5-470e-a07e-43c577169d24",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3",
+            "crdt_format_version": 1,
+            "crdt_data": {
+              "title": {
+                "r": "F_H0hZggxbA_4zaUUuMNPA,\"start\",\"end\"",
+                "n": {
+                  "F_H0hZggxbA_4zaUUuMNPA,\"start\",\"end\"": {
+                    "s": {
+                      "x": "F_H0hZggxbA_4zaUUuMNPA",
+                      "i": [
+                        { "t": "s" },
+                        {
+                          "t": "t",
+                          "i": ["lXeGM1crP1Cf", 1],
+                          "o": "start",
+                          "l": -2,
+                          "b": [
+                            {
+                              "t": "a",
+                              "x": "F_H0hZggxbA_4zaUUuMNPA",
+                              "l": "",
+                              "i": ["lXeGM1crP1Cf", 3],
+                              "s": { "i": ["lXeGM1crP1Cf", 1], "a": "b" },
+                              "e": { "i": "end", "a": "b" },
+                              "a": ["b"]
+                            }
+                          ]
+                        },
+                        { "t": "e", "b": [] }
+                      ],
+                      "l": ""
+                    },
+                    "c": []
+                  }
+                }
+              }
+            }
+          },
+          "role": "reader"
+        },
+        "2c2c515c-db4d-4bc0-aaaf-fcae1b907978": {
+          "value": {
+            "id": "2c2c515c-db4d-4bc0-aaaf-fcae1b907978",
+            "version": 4,
+            "type": "text",
+            "created_time": 1684656059485,
+            "last_edited_time": 1684656059487,
+            "parent_id": "97ab7c51-daf5-470e-a07e-43c577169d24",
+            "parent_table": "block",
+            "alive": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "cee7a248-4fec-4949-9b40-95fbd08c0e24": {
+          "value": {
+            "id": "cee7a248-4fec-4949-9b40-95fbd08c0e24",
+            "version": 149,
+            "type": "collection_view_page",
+            "view_ids": [
+              "52da712f-f5fb-4987-b84e-8cea7a01e76c",
+              "f38d371d-2bbf-4c51-a43f-ed132d209f0a"
+            ],
+            "collection_id": "7e2e28a4-60b3-4828-a554-fee6b24d56c5",
+            "format": {
+              "site_id": "1b537cc0-aa00-8155-8fc3-007936b7cae1",
+              "block_locked": false,
+              "block_locked_by": "83417450-12ca-42e8-a980-4100da082185",
+              "collection_pointer": {
+                "id": "7e2e28a4-60b3-4828-a554-fee6b24d56c5",
+                "table": "collection",
+                "spaceId": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+              }
+            },
+            "permissions": [
+              {
+                "role": "editor",
+                "type": "user_permission",
+                "user_id": "83417450-12ca-42e8-a980-4100da082185"
+              },
+              {
+                "role": "reader",
+                "type": "public_permission",
+                "is_site": true,
+                "added_timestamp": 1676792498392
+              }
+            ],
+            "created_time": 1676112198915,
+            "last_edited_time": 1735095788971,
+            "parent_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3",
+            "parent_table": "space",
+            "alive": true,
+            "file_ids": ["d824e0d4-9f79-4596-bb3f-dd021a788b84"],
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "0ffd6227-0b38-4423-8329-ea3b59789f7d": {
+          "value": {
+            "id": "0ffd6227-0b38-4423-8329-ea3b59789f7d",
+            "version": 118,
+            "type": "page",
+            "properties": {
+              "IygZ": [["Done"]],
+              "SCV=": [["Dify"]],
+              "eZa:": [["RAG system testing/evaluation"]],
+              "title": [["RAG Benchmark"]]
+            },
+            "created_time": 1700483153062,
+            "last_edited_time": 1721550900809,
+            "parent_id": "7e2e28a4-60b3-4828-a554-fee6b24d56c5",
+            "parent_table": "collection",
+            "alive": true,
+            "created_by_table": "notion_user",
+            "created_by_id": "83417450-12ca-42e8-a980-4100da082185",
+            "last_edited_by_table": "notion_user",
+            "last_edited_by_id": "83417450-12ca-42e8-a980-4100da082185",
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "111e96e9-6200-4b84-9fc1-fb06c7f716ad": {
+          "value": {
+            "id": "111e96e9-6200-4b84-9fc1-fb06c7f716ad",
+            "version": 355,
+            "type": "page",
+            "properties": {
+              "IygZ": [["Done"]],
+              "SCV=": [["JavaScript,Tailwind,Next.js"]],
+              "ZJO]": [
+                [
+                  "https://github.com/sorphwer/v4.sorphwer.github.io",
+                  [["a", "https://github.com/sorphwer/v4.sorphwer.github.io"]]
+                ]
+              ],
+              "eZa:": [
+                [
+                  "A next.js blog that support both mdx render pipeline and notion page based on react-notion"
+                ]
+              ],
+              "title": [["riinosite4"]]
+            },
+            "created_time": 1692100357746,
+            "last_edited_time": 1729829818162,
+            "parent_id": "7e2e28a4-60b3-4828-a554-fee6b24d56c5",
+            "parent_table": "collection",
+            "alive": true,
+            "created_by_table": "notion_user",
+            "created_by_id": "83417450-12ca-42e8-a980-4100da082185",
+            "last_edited_by_table": "notion_user",
+            "last_edited_by_id": "83417450-12ca-42e8-a980-4100da082185",
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "12a68738-b675-80d2-a496-f5b8dbb1bb63": {
+          "value": {
+            "id": "12a68738-b675-80d2-a496-f5b8dbb1bb63",
+            "version": 292,
+            "type": "page",
+            "properties": {
+              "IygZ": [["In progress"]],
+              "SCV=": [["Python,Web,Dify,Gradio,Auth0"]],
+              "ZJO]": [["https://tool.riino.site"]],
+              "eZa:": [["Power Dify AI Workflow as your custom Web App"]],
+              "title": [["AIToobox(D.Hub)"]]
+            },
+            "format": {
+              "social_media_image_preview_url": "https://prod-files-secure.s3.us-west-2.amazonaws.com/cb537cc0-aa00-4959-8db9-80abdf2033d3/400ce9aa-e69d-459f-a8a1-3c635b71dd2f/SocialMediaPreviewImage.png"
+            },
+            "created_time": 1729829733132,
+            "last_edited_time": 1735095729092,
+            "parent_id": "7e2e28a4-60b3-4828-a554-fee6b24d56c5",
+            "parent_table": "collection",
+            "alive": true,
+            "file_ids": ["400ce9aa-e69d-459f-a8a1-3c635b71dd2f"],
+            "created_by_table": "notion_user",
+            "created_by_id": "83417450-12ca-42e8-a980-4100da082185",
+            "last_edited_by_table": "notion_user",
+            "last_edited_by_id": "83417450-12ca-42e8-a980-4100da082185",
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "16768738-b675-80f1-bf53-c1c77c8e7426": {
+          "value": {
+            "id": "16768738-b675-80f1-bf53-c1c77c8e7426",
+            "version": 150,
+            "type": "page",
+            "properties": {
+              "IygZ": [["Done"]],
+              "SCV=": [["Python"]],
+              "ZJO]": [
+                [
+                  "https://pypi.org/project/livekit-plugins-dify/",
+                  [["a", "https://pypi.org/project/livekit-plugins-dify/"]]
+                ]
+              ],
+              "eZa:": [["Chat with Dify via phone"]],
+              "title": [["livekit-plugins-dify"]]
+            },
+            "created_time": 1735095730937,
+            "last_edited_time": 1735095847274,
+            "parent_id": "7e2e28a4-60b3-4828-a554-fee6b24d56c5",
+            "parent_table": "collection",
+            "alive": true,
+            "created_by_table": "notion_user",
+            "created_by_id": "83417450-12ca-42e8-a980-4100da082185",
+            "last_edited_by_table": "notion_user",
+            "last_edited_by_id": "83417450-12ca-42e8-a980-4100da082185",
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "17fd2001-6db9-4570-a0c3-dfc0a036a46f": {
+          "value": {
+            "id": "17fd2001-6db9-4570-a0c3-dfc0a036a46f",
+            "version": 300,
+            "type": "page",
+            "properties": {
+              "IygZ": [["Done"]],
+              "SCV=": [["Python"]],
+              "ZJO]": [
+                [
+                  "https://v4.riino.site/blog/2023-03-10-insert-anything-in-docx",
+                  [["a", "https://v4.riino.site/blog/2023-03-10-insert-anything-in-docx"]]
+                ]
+              ],
+              "eZa:": [
+                ["Control Word elements via Python by bypassing the proxy pattern of python docx"]
+              ],
+              "title": [["pyFreeWordEditor"]]
+            },
+            "created_time": 1686232825221,
+            "last_edited_time": 1700483149617,
+            "parent_id": "7e2e28a4-60b3-4828-a554-fee6b24d56c5",
+            "parent_table": "collection",
+            "alive": true,
+            "created_by_table": "notion_user",
+            "created_by_id": "83417450-12ca-42e8-a980-4100da082185",
+            "last_edited_by_table": "notion_user",
+            "last_edited_by_id": "83417450-12ca-42e8-a980-4100da082185",
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "60d89c2b-2f30-4c89-a58f-3d58ff794e08": {
+          "value": {
+            "id": "60d89c2b-2f30-4c89-a58f-3d58ff794e08",
+            "version": 412,
+            "type": "page",
+            "properties": {
+              "IygZ": [["Done"]],
+              "SCV=": [["Graph,Python,neo4j,Threat Modelling"]],
+              "ZJO]": [["Not an opensouce peoject"]],
+              "eZa:": [["Compute attack chain score using CVSS3 with given asset graph."]],
+              "title": [["Threat Modelling Graph"]]
+            },
+            "created_time": 1676122464294,
+            "last_edited_time": 1692100336868,
+            "parent_id": "7e2e28a4-60b3-4828-a554-fee6b24d56c5",
+            "parent_table": "collection",
+            "alive": true,
+            "created_by_table": "notion_user",
+            "created_by_id": "83417450-12ca-42e8-a980-4100da082185",
+            "last_edited_by_table": "notion_user",
+            "last_edited_by_id": "83417450-12ca-42e8-a980-4100da082185",
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "8905f29a-6753-4809-b907-068a64261e81": {
+          "value": {
+            "id": "8905f29a-6753-4809-b907-068a64261e81",
+            "version": 295,
+            "type": "page",
+            "properties": {
+              "IygZ": [["Done"]],
+              "SCV=": [["JavaScript,Web"]],
+              "ZJO]": [
+                [
+                  "https://github.com/sorphwer/jekyll-search-bar",
+                  [["a", "https://github.com/sorphwer/jekyll-search-bar"]]
+                ]
+              ],
+              "eZa:": [["A global search bar plugin for jekyll blog, with fuzzy query feature."]],
+              "title": [["jekyll-search-bar"]]
+            },
+            "created_time": 1676112198915,
+            "last_edited_time": 1676260885029,
+            "parent_id": "7e2e28a4-60b3-4828-a554-fee6b24d56c5",
+            "parent_table": "collection",
+            "alive": true,
+            "created_by_table": "notion_user",
+            "created_by_id": "83417450-12ca-42e8-a980-4100da082185",
+            "last_edited_by_table": "notion_user",
+            "last_edited_by_id": "83417450-12ca-42e8-a980-4100da082185",
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "c024d857-c9f6-48b8-a72d-1f6c32fc5ff2": {
+          "value": {
+            "id": "c024d857-c9f6-48b8-a72d-1f6c32fc5ff2",
+            "version": 468,
+            "type": "page",
+            "properties": {
+              "IygZ": [["Done"]],
+              "SCV=": [["ML,Python,IoT"]],
+              "ZJO]": [
+                [
+                  "https://github.com/NTUEE-ESLab/2019-MotionDetect",
+                  [["a", "https://github.com/NTUEE-ESLab/2019-MotionDetect"]]
+                ]
+              ],
+              "eZa:": [
+                [
+                  "A Torch ML model for classification from gyroscope sensor of STM32 as remote live data."
+                ]
+              ],
+              "title": [["MotionDetect"]]
+            },
+            "created_time": 1676122260171,
+            "last_edited_time": 1676261018263,
+            "parent_id": "7e2e28a4-60b3-4828-a554-fee6b24d56c5",
+            "parent_table": "collection",
+            "alive": true,
+            "created_by_table": "notion_user",
+            "created_by_id": "83417450-12ca-42e8-a980-4100da082185",
+            "last_edited_by_table": "notion_user",
+            "last_edited_by_id": "83417450-12ca-42e8-a980-4100da082185",
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "d0a05d6c-ef33-4559-9d2f-f64ca73fe7a9": {
+          "value": {
+            "id": "d0a05d6c-ef33-4559-9d2f-f64ca73fe7a9",
+            "version": 235,
+            "type": "page",
+            "properties": {
+              "IygZ": [["Done"]],
+              "SCV=": [["jekyll,JavaScript,Ruby,Web"]],
+              "ZJO]": [
+                [
+                  "https://github.com/sorphwer/jekyll-theme-panda",
+                  [["a", "https://github.com/sorphwer/jekyll-theme-panda"]]
+                ]
+              ],
+              "eZa:": [
+                ["A monochrome style jekyll theme, inspired by ms-doc, supports remote-theme"]
+              ],
+              "title": [["jekyll-theme-panda"]]
+            },
+            "format": {
+              "page_cover": "/images/page-cover/rijksmuseum_avercamp_1608.jpg",
+              "page_cover_position": 0.3
+            },
+            "created_time": 1676112198915,
+            "last_edited_time": 1676260845664,
+            "parent_id": "7e2e28a4-60b3-4828-a554-fee6b24d56c5",
+            "parent_table": "collection",
+            "alive": true,
+            "created_by_table": "notion_user",
+            "created_by_id": "83417450-12ca-42e8-a980-4100da082185",
+            "last_edited_by_table": "notion_user",
+            "last_edited_by_id": "83417450-12ca-42e8-a980-4100da082185",
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "ea79abab-a1f5-4529-9b31-bdef5e9272ea": {
+          "value": {
+            "id": "ea79abab-a1f5-4529-9b31-bdef5e9272ea",
+            "version": 88,
+            "type": "page",
+            "properties": {
+              "IygZ": [["Done"]],
+              "SCV=": [["Python,Media"]],
+              "ZJO]": [
+                [
+                  "https://github.com/sorphwer/YUVtool",
+                  [["a", "https://github.com/sorphwer/YUVtool"]]
+                ]
+              ],
+              "eZa:": [["Python YUV format editor."]],
+              "title": [["YUVtool"]]
+            },
+            "created_time": 1676122168260,
+            "last_edited_time": 1676260926732,
+            "parent_id": "7e2e28a4-60b3-4828-a554-fee6b24d56c5",
+            "parent_table": "collection",
+            "alive": true,
+            "created_by_table": "notion_user",
+            "created_by_id": "83417450-12ca-42e8-a980-4100da082185",
+            "last_edited_by_table": "notion_user",
+            "last_edited_by_id": "83417450-12ca-42e8-a980-4100da082185",
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "efa35eec-8514-4717-abaf-f899dbebf149": {
+          "value": {
+            "id": "efa35eec-8514-4717-abaf-f899dbebf149",
+            "version": 190,
+            "type": "page",
+            "properties": {
+              "IygZ": [["Done"]],
+              "SCV=": [["Python,neo4j"]],
+              "ZJO]": [
+                [
+                  "https://gist.github.com/sorphwer/a00132a1d9818ec85fa61b13e9def8bd",
+                  [["a", "https://gist.github.com/sorphwer/a00132a1d9818ec85fa61b13e9def8bd"]]
+                ]
+              ],
+              "eZa:": [["Convert excel into neo4j graph with given meta-structure schema"]],
+              "title": [["excel2neo4j"]]
+            },
+            "created_time": 1676122366795,
+            "last_edited_time": 1676261039854,
+            "parent_id": "7e2e28a4-60b3-4828-a554-fee6b24d56c5",
+            "parent_table": "collection",
+            "alive": true,
+            "created_by_table": "notion_user",
+            "created_by_id": "83417450-12ca-42e8-a980-4100da082185",
+            "last_edited_by_table": "notion_user",
+            "last_edited_by_id": "83417450-12ca-42e8-a980-4100da082185",
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "fd766bfc-fb9a-472e-8b67-99794b8f9868": {
+          "value": {
+            "id": "fd766bfc-fb9a-472e-8b67-99794b8f9868",
+            "version": 315,
+            "type": "page",
+            "properties": {
+              "IygZ": [["Done"]],
+              "SCV=": [["Python,Selenium,Python Shell"]],
+              "ZJO]": [
+                [
+                  "https://github.com/sorphwer/checkmarx_workspace",
+                  [["a", "https://github.com/sorphwer/checkmarx_workspace"]]
+                ]
+              ],
+              "eZa:": [["Python Shell for Checkmarx Code Review, Automated result filling, etc."]],
+              "title": [["checkmarx workspace", [["b"]]]]
+            },
+            "created_time": 1676112198915,
+            "last_edited_time": 1684672584698,
+            "parent_id": "7e2e28a4-60b3-4828-a554-fee6b24d56c5",
+            "parent_table": "collection",
+            "alive": true,
+            "created_by_table": "notion_user",
+            "created_by_id": "83417450-12ca-42e8-a980-4100da082185",
+            "last_edited_by_table": "notion_user",
+            "last_edited_by_id": "83417450-12ca-42e8-a980-4100da082185",
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        }
+      },
+      "collection_view": {
+        "10d8502c-2ef6-466f-acb1-d85a6419c555": {
+          "value": {
+            "id": "10d8502c-2ef6-466f-acb1-d85a6419c555",
+            "version": 58,
+            "type": "gallery",
+            "name": "",
+            "format": {
+              "board_columns": [
+                {
+                  "value": {
+                    "type": "status",
+                    "value": { "type": "by_option", "option": "In progress" }
+                  },
+                  "property": "IygZ"
+                },
+                {
+                  "value": { "type": "status", "value": { "type": "by_option", "option": "Done" } },
+                  "property": "IygZ"
+                },
+                {
+                  "value": {
+                    "type": "status",
+                    "value": { "type": "by_option", "option": "Not started" }
+                  },
+                  "property": "IygZ",
+                  "emptyHidden": true
+                }
+              ],
+              "show_page_icon": true,
+              "list_properties": [{ "visible": true, "property": "IygZ" }],
+              "board_columns_by": {
+                "sort": { "type": "ascending" },
+                "type": "status",
+                "groupBy": "option",
+                "property": "IygZ",
+                "hideEmptyGroups": true
+              },
+              "collection_pointer": {
+                "id": "7e2e28a4-60b3-4828-a554-fee6b24d56c5",
+                "table": "collection",
+                "spaceId": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+              },
+              "gallery_cover_size": "medium",
+              "gallery_properties": [
+                { "visible": true, "property": "title" },
+                { "visible": true, "property": "SCV=" },
+                { "visible": true, "property": "ZJO]" },
+                { "visible": true, "property": "eZa:" },
+                { "visible": true, "property": "IygZ" }
+              ],
+              "gallery_cover_aspect": "cover",
+              "hide_linked_collection_name": true
+            },
+            "parent_id": "69909b77-a7d8-42e3-9945-a7134cc30757",
+            "parent_table": "block",
+            "alive": true,
+            "page_sort": [
+              "0ffd6227-0b38-4423-8329-ea3b59789f7d",
+              "16768738-b675-80f1-bf53-c1c77c8e7426",
+              "111e96e9-6200-4b84-9fc1-fb06c7f716ad",
+              "17fd2001-6db9-4570-a0c3-dfc0a036a46f",
+              "57e86ce9-2384-4569-8f31-b626f9278393",
+              "60d89c2b-2f30-4c89-a58f-3d58ff794e08",
+              "efa35eec-8514-4717-abaf-f899dbebf149",
+              "c024d857-c9f6-48b8-a72d-1f6c32fc5ff2",
+              "ea79abab-a1f5-4529-9b31-bdef5e9272ea",
+              "8905f29a-6753-4809-b907-068a64261e81",
+              "d0a05d6c-ef33-4559-9d2f-f64ca73fe7a9",
+              "fd766bfc-fb9a-472e-8b67-99794b8f9868",
+              "12a68738-b675-80d2-a496-f5b8dbb1bb63",
+              "ecf680f5-d235-4dff-8ec9-03d6387c351a"
+            ],
+            "query2": { "calendar_by": "Rbqp", "timeline_by": "Rbqp" },
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "52da712f-f5fb-4987-b84e-8cea7a01e76c": {
+          "value": {
+            "id": "52da712f-f5fb-4987-b84e-8cea7a01e76c",
+            "version": 24,
+            "type": "table",
+            "name": "Raw",
+            "format": {
+              "table_wrap": true,
+              "table_properties": [
+                { "width": 276, "visible": true, "property": "title" },
+                { "width": 200, "visible": true, "property": "eZa:" },
+                { "width": 200, "visible": true, "property": "SCV=" },
+                { "width": 200, "visible": true, "property": "ZJO]" },
+                { "width": 200, "visible": true, "property": "IygZ" }
+              ],
+              "collection_pointer": {
+                "id": "7e2e28a4-60b3-4828-a554-fee6b24d56c5",
+                "table": "collection",
+                "spaceId": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+              }
+            },
+            "parent_id": "cee7a248-4fec-4949-9b40-95fbd08c0e24",
+            "parent_table": "block",
+            "alive": true,
+            "page_sort": [
+              "16768738-b675-80f1-bf53-c1c77c8e7426",
+              "111e96e9-6200-4b84-9fc1-fb06c7f716ad",
+              "0ffd6227-0b38-4423-8329-ea3b59789f7d",
+              "d0a05d6c-ef33-4559-9d2f-f64ca73fe7a9",
+              "8905f29a-6753-4809-b907-068a64261e81",
+              "fd766bfc-fb9a-472e-8b67-99794b8f9868",
+              "ec7633db-3d05-415c-bdab-949dd596fda3",
+              "6e54ceeb-ba13-474f-bcca-9f9edf74d1c6",
+              "ea79abab-a1f5-4529-9b31-bdef5e9272ea",
+              "479419fa-4deb-43e1-94be-136f8f4a9a4a",
+              "c024d857-c9f6-48b8-a72d-1f6c32fc5ff2",
+              "efa35eec-8514-4717-abaf-f899dbebf149",
+              "60d89c2b-2f30-4c89-a58f-3d58ff794e08",
+              "57e86ce9-2384-4569-8f31-b626f9278393",
+              "17fd2001-6db9-4570-a0c3-dfc0a036a46f",
+              "12a68738-b675-80d2-a496-f5b8dbb1bb63",
+              "9133a8e7-8044-4c5e-834e-c66d125cd5d0",
+              "f6b50b65-306b-40b7-93ad-da32f1df382e",
+              "c7f152f4-f600-41c3-b0bf-fe3864fe6e7f"
+            ],
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        },
+        "f38d371d-2bbf-4c51-a43f-ed132d209f0a": {
+          "value": {
+            "id": "f38d371d-2bbf-4c51-a43f-ed132d209f0a",
+            "version": 36,
+            "type": "gallery",
+            "name": "",
+            "format": {
+              "collection_pointer": {
+                "id": "7e2e28a4-60b3-4828-a554-fee6b24d56c5",
+                "table": "collection",
+                "spaceId": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+              },
+              "gallery_cover_size": "medium",
+              "gallery_properties": [
+                { "visible": true, "property": "title" },
+                { "visible": true, "property": "SCV=" },
+                { "visible": true, "property": "ZJO]" },
+                { "visible": true, "property": "eZa:" },
+                { "visible": true, "property": "IygZ" }
+              ],
+              "gallery_cover_aspect": "contain"
+            },
+            "parent_id": "cee7a248-4fec-4949-9b40-95fbd08c0e24",
+            "parent_table": "block",
+            "alive": true,
+            "page_sort": [
+              "12a68738-b675-80d2-a496-f5b8dbb1bb63",
+              "60d89c2b-2f30-4c89-a58f-3d58ff794e08",
+              "efa35eec-8514-4717-abaf-f899dbebf149",
+              "c024d857-c9f6-48b8-a72d-1f6c32fc5ff2",
+              "ea79abab-a1f5-4529-9b31-bdef5e9272ea",
+              "8905f29a-6753-4809-b907-068a64261e81",
+              "d0a05d6c-ef33-4559-9d2f-f64ca73fe7a9",
+              "fd766bfc-fb9a-472e-8b67-99794b8f9868",
+              "17fd2001-6db9-4570-a0c3-dfc0a036a46f",
+              "0ffd6227-0b38-4423-8329-ea3b59789f7d",
+              "111e96e9-6200-4b84-9fc1-fb06c7f716ad",
+              "57e86ce9-2384-4569-8f31-b626f9278393"
+            ],
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        }
+      },
+      "collection": {
+        "7e2e28a4-60b3-4828-a554-fee6b24d56c5": {
+          "value": {
+            "id": "7e2e28a4-60b3-4828-a554-fee6b24d56c5",
+            "version": 104,
+            "name": [["Development Projects (DevPaP)"]],
+            "description": [
+              [""],
+              ["Classification: [Public]", [["b"]]],
+              ["\n⚠️ You agree that you have read and understanded the content in"],
+              [
+                "Notion - Disclaimer & Terms of Use",
+                [
+                  [
+                    "a",
+                    "https://www.notion.so/Notion-Disclaimer-Terms-of-Use-9c2494171a484236aeca99a9059596a4"
+                  ]
+                ]
+              ],
+              [" before usage."]
+            ],
+            "schema": {
+              "IygZ": {
+                "name": "Status",
+                "type": "status",
+                "groups": [
+                  {
+                    "id": "841fa885-3203-4762-abb3-51640a2a39dc",
+                    "name": "To-do",
+                    "color": "gray",
+                    "optionIds": ["74ee660e-d702-4c3a-b9b0-a4096553ecb3"]
+                  },
+                  {
+                    "id": "3eed4d94-8ea9-49ad-bbc9-b90c591bf840",
+                    "name": "In progress",
+                    "color": "blue",
+                    "optionIds": ["3ebb73af-caec-4e01-a085-3172b59c6a6a"]
+                  },
+                  {
+                    "id": "0d734c4f-61e0-4e79-8274-88ba8d3cbe53",
+                    "name": "Complete",
+                    "color": "green",
+                    "optionIds": ["ce30deda-d52d-42e1-95d5-1520fc790d17"]
+                  }
+                ],
+                "options": [
+                  {
+                    "id": "74ee660e-d702-4c3a-b9b0-a4096553ecb3",
+                    "value": "Not started",
+                    "collectionIds": ["7e2e28a4-60b3-4828-a554-fee6b24d56c5"]
+                  },
+                  {
+                    "id": "3ebb73af-caec-4e01-a085-3172b59c6a6a",
+                    "color": "blue",
+                    "value": "In progress",
+                    "collectionIds": ["7e2e28a4-60b3-4828-a554-fee6b24d56c5"]
+                  },
+                  {
+                    "id": "ce30deda-d52d-42e1-95d5-1520fc790d17",
+                    "color": "green",
+                    "value": "Done",
+                    "collectionIds": ["7e2e28a4-60b3-4828-a554-fee6b24d56c5"]
+                  }
+                ],
+                "defaultOption": "Not started"
+              },
+              "Rbqp": { "name": "Date", "type": "date" },
+              "SCV=": {
+                "name": "Tags",
+                "type": "multi_select",
+                "options": [
+                  {
+                    "id": "47cc266c-a490-4354-acec-42aaf14da8db",
+                    "color": "yellow",
+                    "value": "jekyll",
+                    "collectionIds": ["7e2e28a4-60b3-4828-a554-fee6b24d56c5"]
+                  },
+                  {
+                    "id": "27b890e9-b9dd-4032-8d7e-e08d746ba3d1",
+                    "color": "brown",
+                    "value": "JavaScript",
+                    "collectionIds": ["7e2e28a4-60b3-4828-a554-fee6b24d56c5"]
+                  },
+                  {
+                    "id": "451b54ad-5972-4743-8258-ab142e50ded6",
+                    "color": "green",
+                    "value": "Ruby",
+                    "collectionIds": ["7e2e28a4-60b3-4828-a554-fee6b24d56c5"]
+                  },
+                  {
+                    "id": "417504db-07c3-442d-9569-f0c0b8fa9249",
+                    "color": "orange",
+                    "value": "Web",
+                    "collectionIds": ["7e2e28a4-60b3-4828-a554-fee6b24d56c5"]
+                  },
+                  {
+                    "id": "151e389c-1a52-4af1-b3e1-103c45f27865",
+                    "color": "blue",
+                    "value": "Python",
+                    "collectionIds": ["7e2e28a4-60b3-4828-a554-fee6b24d56c5"]
+                  },
+                  {
+                    "id": "8f24cd81-39c1-421a-83d2-0e29d92384e4",
+                    "color": "pink",
+                    "value": "Selenium",
+                    "collectionIds": ["7e2e28a4-60b3-4828-a554-fee6b24d56c5"]
+                  },
+                  {
+                    "id": "3e5af6a1-80f5-42a6-9c72-6d06be91ed9f",
+                    "color": "default",
+                    "value": "Decoder",
+                    "collectionIds": ["7e2e28a4-60b3-4828-a554-fee6b24d56c5"]
+                  },
+                  {
+                    "id": "b60e14b0-cb64-4108-a29c-3451287c33b6",
+                    "color": "red",
+                    "value": "Media",
+                    "collectionIds": ["7e2e28a4-60b3-4828-a554-fee6b24d56c5"]
+                  },
+                  {
+                    "id": "09a3fcd9-8bb4-48eb-85aa-7488fa7fe5df",
+                    "color": "gray",
+                    "value": "ML",
+                    "collectionIds": ["7e2e28a4-60b3-4828-a554-fee6b24d56c5"]
+                  },
+                  {
+                    "id": "3a047fcc-505d-40ef-957f-6407ccf48e65",
+                    "color": "gray",
+                    "value": "IoT",
+                    "collectionIds": ["7e2e28a4-60b3-4828-a554-fee6b24d56c5"]
+                  },
+                  {
+                    "id": "9ea4bdd5-dbda-4b63-b247-1824ca27b9ce",
+                    "color": "purple",
+                    "value": "neo4j",
+                    "collectionIds": ["7e2e28a4-60b3-4828-a554-fee6b24d56c5"]
+                  },
+                  {
+                    "id": "2ee6495c-3ccc-46c2-8a78-b78cca3657bb",
+                    "color": "gray",
+                    "value": "Graph",
+                    "collectionIds": ["7e2e28a4-60b3-4828-a554-fee6b24d56c5"]
+                  },
+                  {
+                    "id": "1bc068bd-f9cd-4322-b4e9-a9b07db3761c",
+                    "color": "green",
+                    "value": "bot",
+                    "collectionIds": ["7e2e28a4-60b3-4828-a554-fee6b24d56c5"]
+                  },
+                  {
+                    "id": "dd0e82e5-bcb9-4f42-a4ce-94d8442785fc",
+                    "color": "gray",
+                    "value": "Python Shell",
+                    "collectionIds": ["7e2e28a4-60b3-4828-a554-fee6b24d56c5"]
+                  },
+                  {
+                    "id": "aaabd830-5366-408b-bccd-92d3419bdcd5",
+                    "color": "red",
+                    "value": "Threat Modelling",
+                    "collectionIds": ["7e2e28a4-60b3-4828-a554-fee6b24d56c5"]
+                  },
+                  {
+                    "id": "10508137-c710-48e7-a454-105ae49c72cf",
+                    "color": "default",
+                    "value": "Tailwind",
+                    "collectionIds": ["7e2e28a4-60b3-4828-a554-fee6b24d56c5"]
+                  },
+                  {
+                    "id": "5907c0d6-ac97-4eff-8a2b-41c6581154d3",
+                    "color": "yellow",
+                    "value": "Next.js",
+                    "collectionIds": ["7e2e28a4-60b3-4828-a554-fee6b24d56c5"]
+                  },
+                  {
+                    "id": "db458b19-7804-4dbd-bb80-5ab40bb342b9",
+                    "color": "orange",
+                    "value": "Dify",
+                    "collectionIds": ["7e2e28a4-60b3-4828-a554-fee6b24d56c5"]
+                  },
+                  {
+                    "id": "df85411a-93d4-4e59-a622-04e56982ae81",
+                    "color": "purple",
+                    "value": "Gradio",
+                    "collectionIds": ["7e2e28a4-60b3-4828-a554-fee6b24d56c5"]
+                  },
+                  {
+                    "id": "f28f36dd-170a-4d3b-a879-032b83184a06",
+                    "color": "red",
+                    "value": "Auth0",
+                    "collectionIds": ["7e2e28a4-60b3-4828-a554-fee6b24d56c5"]
+                  }
+                ]
+              },
+              "ZJO]": { "name": "URL", "type": "text" },
+              "eZa:": { "name": "Description", "type": "text" },
+              "title": { "name": "Name", "type": "title" }
+            },
+            "icon": "https://s3-us-west-2.amazonaws.com/secure.notion-static.com/d824e0d4-9f79-4596-bb3f-dd021a788b84/favicon.ico",
+            "format": { "collection_page_properties": [{ "visible": true, "property": "SCV=" }] },
+            "parent_id": "cee7a248-4fec-4949-9b40-95fbd08c0e24",
+            "parent_table": "block",
+            "alive": true,
+            "file_ids": ["d824e0d4-9f79-4596-bb3f-dd021a788b84"],
+            "migrated": true,
+            "space_id": "cb537cc0-aa00-4959-8db9-80abdf2033d3"
+          },
+          "role": "reader"
+        }
+      },
+      "notion_user": {},
+      "collection_query": {
+        "7e2e28a4-60b3-4828-a554-fee6b24d56c5": {
+          "10d8502c-2ef6-466f-acb1-d85a6419c555": {
+            "collection_group_results": {
+              "type": "results",
+              "blockIds": [
+                "0ffd6227-0b38-4423-8329-ea3b59789f7d",
+                "16768738-b675-80f1-bf53-c1c77c8e7426",
+                "111e96e9-6200-4b84-9fc1-fb06c7f716ad",
+                "17fd2001-6db9-4570-a0c3-dfc0a036a46f",
+                "60d89c2b-2f30-4c89-a58f-3d58ff794e08",
+                "efa35eec-8514-4717-abaf-f899dbebf149",
+                "c024d857-c9f6-48b8-a72d-1f6c32fc5ff2",
+                "ea79abab-a1f5-4529-9b31-bdef5e9272ea",
+                "8905f29a-6753-4809-b907-068a64261e81",
+                "d0a05d6c-ef33-4559-9d2f-f64ca73fe7a9",
+                "fd766bfc-fb9a-472e-8b67-99794b8f9868",
+                "12a68738-b675-80d2-a496-f5b8dbb1bb63"
+              ],
+              "hasMore": false
+            }
+          }
+        }
+      },
+      "signed_urls": {
+        "97ab7c51-daf5-470e-a07e-43c577169d24": "https://file.notion.so/f/f/cb537cc0-aa00-4959-8db9-80abdf2033d3/af35451c-fe18-4cd2-8e3c-3fab118fd68f/bg.gif?table=block&id=97ab7c51-daf5-470e-a07e-43c577169d24&spaceId=cb537cc0-aa00-4959-8db9-80abdf2033d3&expirationTimestamp=1756735200000&signature=Bcs4ueGDU-NuafpL8UvKdcPfMe89gDi-0FYOwKpfL00"
+      }
+    }
+  },
+  "__N_SSG": true
+}

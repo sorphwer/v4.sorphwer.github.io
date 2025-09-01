@@ -1,0 +1,901 @@
+{
+  "version": 3,
+  "routes": {
+    "/tags": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": null,
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/tags.json"
+    },
+    "/blog": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": null,
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/blog.json"
+    },
+    "/profile": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": null,
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/profile.json"
+    },
+    "/about": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": null,
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/about.json"
+    },
+    "/tags/mdx": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/tags/[tag]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/tags/mdx.json"
+    },
+    "/tags/json-parsing": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/tags/[tag]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/tags/json-parsing.json"
+    },
+    "/tags/json-cpp-library": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/tags/[tag]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/tags/json-cpp-library.json"
+    },
+    "/tags/c-programming": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/tags/[tag]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/tags/c-programming.json"
+    },
+    "/tags/json-handling": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/tags/[tag]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/tags/json-handling.json"
+    },
+    "/tags/software-development": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/tags/[tag]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/tags/software-development.json"
+    },
+    "/tags/embedded-system": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/tags/[tag]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/tags/embedded-system.json"
+    },
+    "/tags/raspberry-pi": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/tags/[tag]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/tags/raspberry-pi.json"
+    },
+    "/tags/stm32": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/tags/[tag]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/tags/stm32.json"
+    },
+    "/tags/t-sql": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/tags/[tag]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/tags/t-sql.json"
+    },
+    "/tags/database": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/tags/[tag]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/tags/database.json"
+    },
+    "/tags/sqlserver": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/tags/[tag]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/tags/sqlserver.json"
+    },
+    "/tags/databasemanagement": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/tags/[tag]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/tags/databasemanagement.json"
+    },
+    "/tags/completed": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/tags/[tag]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/tags/completed.json"
+    },
+    "/tags/selectquery": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/tags/[tag]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/tags/selectquery.json"
+    },
+    "/tags/dataretrieval": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/tags/[tag]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/tags/dataretrieval.json"
+    },
+    "/tags/sql-server": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/tags/[tag]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/tags/sql-server.json"
+    },
+    "/tags/data-integrity": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/tags/[tag]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/tags/data-integrity.json"
+    },
+    "/tags/triggers": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/tags/[tag]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/tags/triggers.json"
+    },
+    "/tags/data-binding": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/tags/[tag]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/tags/data-binding.json"
+    },
+    "/tags/uwp": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/tags/[tag]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/tags/uwp.json"
+    },
+    "/tags/python": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/tags/[tag]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/tags/python.json"
+    },
+    "/tags/algorithm": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/tags/[tag]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/tags/algorithm.json"
+    },
+    "/tags/sorted-list": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/tags/[tag]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/tags/sorted-list.json"
+    },
+    "/tags/information-theory": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/tags/[tag]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/tags/information-theory.json"
+    },
+    "/tags/vvc-coding": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/tags/[tag]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/tags/vvc-coding.json"
+    },
+    "/tags/computer": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/tags/[tag]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/tags/computer.json"
+    },
+    "/tags/web": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/tags/[tag]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/tags/web.json"
+    },
+    "/tags/path": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/tags/[tag]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/tags/path.json"
+    },
+    "/tags/router": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/tags/[tag]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/tags/router.json"
+    },
+    "/tags/path-navigation": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/tags/[tag]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/tags/path-navigation.json"
+    },
+    "/tags/url-structure": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/tags/[tag]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/tags/url-structure.json"
+    },
+    "/tags/crawler": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/tags/[tag]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/tags/crawler.json"
+    },
+    "/tags/web-data-collection": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/tags/[tag]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/tags/web-data-collection.json"
+    },
+    "/tags/flask": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/tags/[tag]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/tags/flask.json"
+    },
+    "/tags/server": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/tags/[tag]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/tags/server.json"
+    },
+    "/tags/web-development": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/tags/[tag]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/tags/web-development.json"
+    },
+    "/tags/dynamic-programming": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/tags/[tag]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/tags/dynamic-programming.json"
+    },
+    "/tags/coding-tutorial": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/tags/[tag]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/tags/coding-tutorial.json"
+    },
+    "/tags/html": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/tags/[tag]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/tags/html.json"
+    },
+    "/tags/data-visualization": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/tags/[tag]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/tags/data-visualization.json"
+    },
+    "/tags/frontend-development": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/tags/[tag]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/tags/frontend-development.json"
+    },
+    "/tags/angular-framework": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/tags/[tag]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/tags/angular-framework.json"
+    },
+    "/tags/angular-tutorial": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/tags/[tag]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/tags/angular-tutorial.json"
+    },
+    "/tags/frontend": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/tags/[tag]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/tags/frontend.json"
+    },
+    "/tags/angular": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/tags/[tag]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/tags/angular.json"
+    },
+    "/tags/angular-ngrx": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/tags/[tag]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/tags/angular-ngrx.json"
+    },
+    "/tags/state-management": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/tags/[tag]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/tags/state-management.json"
+    },
+    "/tags/reactive-programming": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/tags/[tag]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/tags/reactive-programming.json"
+    },
+    "/tags/html-and-jinja": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/tags/[tag]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/tags/html-and-jinja.json"
+    },
+    "/tags/python-flask-tutorial": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/tags/[tag]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/tags/python-flask-tutorial.json"
+    },
+    "/tags/http": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/tags/[tag]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/tags/http.json"
+    },
+    "/tags/ajax": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/tags/[tag]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/tags/ajax.json"
+    },
+    "/tags/jquery": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/tags/[tag]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/tags/jquery.json"
+    },
+    "/tags/software-engineering": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/tags/[tag]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/tags/software-engineering.json"
+    },
+    "/tags/agile": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/tags/[tag]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/tags/agile.json"
+    },
+    "/tags/devops": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/tags/[tag]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/tags/devops.json"
+    },
+    "/tags/ci-cd": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/tags/[tag]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/tags/ci-cd.json"
+    },
+    "/tags/softwareengineering": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/tags/[tag]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/tags/softwareengineering.json"
+    },
+    "/tags/scrum": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/tags/[tag]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/tags/scrum.json"
+    },
+    "/tags/q-gram": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/tags/[tag]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/tags/q-gram.json"
+    },
+    "/tags/n-gram": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/tags/[tag]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/tags/n-gram.json"
+    },
+    "/tags/string-comparison": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/tags/[tag]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/tags/string-comparison.json"
+    },
+    "/tags/jekyll": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/tags/[tag]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/tags/jekyll.json"
+    },
+    "/tags/documentation": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/tags/[tag]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/tags/documentation.json"
+    },
+    "/tags/cheatsheet": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/tags/[tag]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/tags/cheatsheet.json"
+    },
+    "/tags/cheat-sheet": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/tags/[tag]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/tags/cheat-sheet.json"
+    },
+    "/tags/nmap": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/tags/[tag]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/tags/nmap.json"
+    },
+    "/tags/neo4j": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/tags/[tag]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/tags/neo4j.json"
+    },
+    "/tags/swagger": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/tags/[tag]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/tags/swagger.json"
+    },
+    "/tags/graph-database": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/tags/[tag]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/tags/graph-database.json"
+    },
+    "/tags/api-documentation": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/tags/[tag]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/tags/api-documentation.json"
+    },
+    "/tags/certification-test": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/tags/[tag]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/tags/certification-test.json"
+    },
+    "/tags/cypher-language": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/tags/[tag]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/tags/cypher-language.json"
+    },
+    "/tags/ruby": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/tags/[tag]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/tags/ruby.json"
+    },
+    "/tags/githubpage": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/tags/[tag]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/tags/githubpage.json"
+    },
+    "/tags/jekylltheme": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/tags/[tag]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/tags/jekylltheme.json"
+    },
+    "/tags/jekyllremotetheme": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/tags/[tag]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/tags/jekyllremotetheme.json"
+    },
+    "/tags/pentest": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/tags/[tag]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/tags/pentest.json"
+    },
+    "/tags/cybersecurity": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/tags/[tag]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/tags/cybersecurity.json"
+    },
+    "/tags/threat-modeling": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/tags/[tag]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/tags/threat-modeling.json"
+    },
+    "/tags/s-sdlc": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/tags/[tag]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/tags/s-sdlc.json"
+    },
+    "/tags/xml": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/tags/[tag]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/tags/xml.json"
+    },
+    "/tags/ms-word": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/tags/[tag]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/tags/ms-word.json"
+    },
+    "/tags/python-docx": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/tags/[tag]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/tags/python-docx.json"
+    },
+    "/tags/document-editing": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/tags/[tag]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/tags/document-editing.json"
+    },
+    "/tags/web-access": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/tags/[tag]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/tags/web-access.json"
+    },
+    "/tags/bing": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/tags/[tag]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/tags/bing.json"
+    },
+    "/tags/chrome": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/tags/[tag]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/tags/chrome.json"
+    },
+    "/tags/user-agent": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/tags/[tag]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/tags/user-agent.json"
+    },
+    "/tags/notion": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/tags/[tag]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/tags/notion.json"
+    },
+    "/tags/llm": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/tags/[tag]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/tags/llm.json"
+    },
+    "/tags/ai": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/tags/[tag]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/tags/ai.json"
+    },
+    "/tags/gnn": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/tags/[tag]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/tags/gnn.json"
+    },
+    "/tags/semantic-search": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/tags/[tag]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/tags/semantic-search.json"
+    },
+    "/tags/vector-search": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/tags/[tag]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/tags/vector-search.json"
+    },
+    "/tags/machine-learning": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/tags/[tag]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/tags/machine-learning.json"
+    },
+    "/tags/deep-learning": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/tags/[tag]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/tags/deep-learning.json"
+    },
+    "/tags/linear-regression": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/tags/[tag]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/tags/linear-regression.json"
+    },
+    "/tags/software-composition-analysis": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/tags/[tag]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/tags/software-composition-analysis.json"
+    },
+    "/tags/k8s": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/tags/[tag]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/tags/k8s.json"
+    },
+    "/tags/kind": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/tags/[tag]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/tags/kind.json"
+    },
+    "/tags/docker": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/tags/[tag]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/tags/docker.json"
+    },
+    "/tags/wsl2": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/tags/[tag]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/tags/wsl2.json"
+    },
+    "/tags/dify": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/tags/[tag]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/tags/dify.json"
+    },
+    "/tags/auth0": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/tags/[tag]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/tags/auth0.json"
+    },
+    "/tags/python-app-development": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/tags/[tag]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/tags/python-app-development.json"
+    },
+    "/tags/secure-login": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/tags/[tag]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/tags/secure-login.json"
+    },
+    "/tags/social-engineering": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/tags/[tag]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/tags/social-engineering.json"
+    },
+    "/tags/email-phishing": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/tags/[tag]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/tags/email-phishing.json"
+    },
+    "/tags/cybersecurity-training": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/tags/[tag]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/tags/cybersecurity-training.json"
+    },
+    "/tags/gophish": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/tags/[tag]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/tags/gophish.json"
+    },
+    "/tags/smtp-services": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/tags/[tag]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/tags/smtp-services.json"
+    },
+    "/tags/gradio": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/tags/[tag]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/tags/gradio.json"
+    },
+    "/tags/oauth": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/tags/[tag]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/tags/oauth.json"
+    },
+    "/blog/page/1": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/blog/page/[page]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/blog/page/1.json"
+    },
+    "/blog/page/2": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/blog/page/[page]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/blog/page/2.json"
+    },
+    "/blog/page/3": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/blog/page/[page]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/blog/page/3.json"
+    },
+    "/": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": null,
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/index.json"
+    },
+    "/blog/2018-8-28-Parse-by-Json-cpp": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/blog/[...slug]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/blog/2018-8-28-Parse-by-Json-cpp.json"
+    },
+    "/blog/2019-12-27-How-to-set-up-current-work-of-MotionDetect": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/blog/[...slug]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/blog/2019-12-27-How-to-set-up-current-work-of-MotionDetect.json"
+    },
+    "/blog/2019-3-2-SQL [1]": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/blog/[...slug]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/blog/2019-3-2-SQL [1].json"
+    },
+    "/blog/2019-3-2-SQL [2]": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/blog/[...slug]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/blog/2019-3-2-SQL [2].json"
+    },
+    "/blog/2019-3-2-SQL [3]": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/blog/[...slug]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/blog/2019-3-2-SQL [3].json"
+    },
+    "/blog/2019-3-3-SQL [4]": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/blog/[...slug]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/blog/2019-3-3-SQL [4].json"
+    },
+    "/blog/2019-6-26-Python [1]": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/blog/[...slug]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/blog/2019-6-26-Python [1].json"
+    },
+    "/blog/2019-7-19-Python[2]": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/blog/[...slug]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/blog/2019-7-19-Python[2].json"
+    },
+    "/blog/2019-9-17-Introduction-Of-Info-Theory": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/blog/[...slug]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/blog/2019-9-17-Introduction-Of-Info-Theory.json"
+    },
+    "/blog/2020-01-26-VVC-Experiment": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/blog/[...slug]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/blog/2020-01-26-VVC-Experiment.json"
+    },
+    "/blog/2020-10-14-Path": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/blog/[...slug]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/blog/2020-10-14-Path.json"
+    },
+    "/blog/2020-6-16-Python-SP(Crawler)": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/blog/[...slug]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/blog/2020-6-16-Python-SP(Crawler).json"
+    },
+    "/blog/2020-6-21-Python-SP(Flask)1": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/blog/[...slug]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/blog/2020-6-21-Python-SP(Flask)1.json"
+    },
+    "/blog/2020-6-21-Python[3]": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/blog/[...slug]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/blog/2020-6-21-Python[3].json"
+    },
+    "/blog/2020-6-21-Python[4]": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/blog/[...slug]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/blog/2020-6-21-Python[4].json"
+    },
+    "/blog/2020-6-21-Python[5]": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/blog/[...slug]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/blog/2020-6-21-Python[5].json"
+    },
+    "/blog/2020-7-11-Python-SP(Flask)3": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/blog/[...slug]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/blog/2020-7-11-Python-SP(Flask)3.json"
+    },
+    "/blog/2020-7-23-Angular-P1": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/blog/[...slug]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/blog/2020-7-23-Angular-P1.json"
+    },
+    "/blog/2020-7-25-Angular-NGRX": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/blog/[...slug]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/blog/2020-7-25-Angular-NGRX.json"
+    },
+    "/blog/2020-7-6-Python-SP(Flask)2": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/blog/[...slug]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/blog/2020-7-6-Python-SP(Flask)2.json"
+    },
+    "/blog/2020-8-17-Unexpected http Response": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/blog/[...slug]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/blog/2020-8-17-Unexpected http Response.json"
+    },
+    "/blog/2020-8-23-DevOps": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/blog/[...slug]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/blog/2020-8-23-DevOps.json"
+    },
+    "/blog/2020-8-8-Angular-P2": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/blog/[...slug]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/blog/2020-8-8-Angular-P2.json"
+    },
+    "/blog/2020-8-8-Scrum": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/blog/[...slug]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/blog/2020-8-8-Scrum.json"
+    },
+    "/blog/2021-02-26-Q-Gram": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/blog/[...slug]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/blog/2021-02-26-Q-Gram.json"
+    },
+    "/blog/2021-1-13-Jekyll-CheatSheet": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/blog/[...slug]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/blog/2021-1-13-Jekyll-CheatSheet.json"
+    },
+    "/blog/2021-11-25-nmp": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/blog/[...slug]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/blog/2021-11-25-nmp.json"
+    },
+    "/blog/2021-3-16-IR-TextRank": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/blog/[...slug]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/blog/2021-3-16-IR-TextRank.json"
+    },
+    "/blog/2021-5-31-flask-neo4j-swagger": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/blog/[...slug]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/blog/2021-5-31-flask-neo4j-swagger.json"
+    },
+    "/blog/2021-5-31-neo4j-certification": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/blog/[...slug]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/blog/2021-5-31-neo4j-certification.json"
+    },
+    "/blog/2021-7-7-Why-GithubPage-Theme": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/blog/[...slug]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/blog/2021-7-7-Why-GithubPage-Theme.json"
+    },
+    "/blog/2022-06-03-Learning-Pentest": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/blog/[...slug]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/blog/2022-06-03-Learning-Pentest.json"
+    },
+    "/blog/2022-08-08-Threat-Modeling-using-neo4j": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/blog/[...slug]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/blog/2022-08-08-Threat-Modeling-using-neo4j.json"
+    },
+    "/blog/2022-10-30-milestone": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/blog/[...slug]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/blog/2022-10-30-milestone.json"
+    },
+    "/blog/2023-02-15-learning-SSDLC": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/blog/[...slug]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/blog/2023-02-15-learning-SSDLC.json"
+    },
+    "/blog/2023-02-15-learning-crawler": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/blog/[...slug]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/blog/2023-02-15-learning-crawler.json"
+    },
+    "/blog/2023-03-10-insert-anything-in-docx": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/blog/[...slug]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/blog/2023-03-10-insert-anything-in-docx.json"
+    },
+    "/blog/2023-03-15-access-new-bing-in-chrome": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/blog/[...slug]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/blog/2023-03-15-access-new-bing-in-chrome.json"
+    },
+    "/blog/2023-05-11-notion-ai-memo": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/blog/[...slug]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/blog/2023-05-11-notion-ai-memo.json"
+    },
+    "/blog/2023-05-16-mermaid-benchmark": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/blog/[...slug]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/blog/2023-05-16-mermaid-benchmark.json"
+    },
+    "/blog/2023-08-24-notion-secured-ai-memo": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/blog/[...slug]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/blog/2023-08-24-notion-secured-ai-memo.json"
+    },
+    "/blog/2023-08-26-notion-gnn-memo": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/blog/[...slug]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/blog/2023-08-26-notion-gnn-memo.json"
+    },
+    "/blog/2023-11-26-neo4j_llm": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/blog/[...slug]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/blog/2023-11-26-neo4j_llm.json"
+    },
+    "/blog/2023-8-14-llm-risk": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/blog/[...slug]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/blog/2023-8-14-llm-risk.json"
+    },
+    "/blog/2024-02-16-MLDL-Recap": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/blog/[...slug]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/blog/2024-02-16-MLDL-Recap.json"
+    },
+    "/blog/2024-04-26-SCA-cheatsheet": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/blog/[...slug]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/blog/2024-04-26-SCA-cheatsheet.json"
+    },
+    "/blog/2024-05-06-k8s-kind-in-wsl2": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/blog/[...slug]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/blog/2024-05-06-k8s-kind-in-wsl2.json"
+    },
+    "/blog/2024-07-21-local-dify-101": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/blog/[...slug]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/blog/2024-07-21-local-dify-101.json"
+    },
+    "/blog/2024-10-29-Dify-in-Gradio": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/blog/[...slug]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/blog/2024-10-29-Dify-in-Gradio.json"
+    },
+    "/blog/2024-10-29-email-phishing-101": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/blog/[...slug]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/blog/2024-10-29-email-phishing-101.json"
+    },
+    "/blog/2025-04-15-dify-enterprise-e2e-workflow": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/blog/[...slug]",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/blog/2025-04-15-dify-enterprise-e2e-workflow.json"
+    }
+  },
+  "dynamicRoutes": {
+    "/tags/[tag]": {
+      "routeRegex": "^/tags/([^/]+?)(?:/)?$",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/tags/[tag].json",
+      "fallback": false,
+      "dataRouteRegex": "^/_next/data/0RqhHLUQSTw5UXtm7iVOv/tags/([^/]+?)\\.json$"
+    },
+    "/blog/page/[page]": {
+      "routeRegex": "^/blog/page/([^/]+?)(?:/)?$",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/blog/page/[page].json",
+      "fallback": false,
+      "dataRouteRegex": "^/_next/data/0RqhHLUQSTw5UXtm7iVOv/blog/page/([^/]+?)\\.json$"
+    },
+    "/blog/[...slug]": {
+      "routeRegex": "^/blog/(.+?)(?:/)?$",
+      "dataRoute": "/_next/data/0RqhHLUQSTw5UXtm7iVOv/blog/[...slug].json",
+      "fallback": false,
+      "dataRouteRegex": "^/_next/data/0RqhHLUQSTw5UXtm7iVOv/blog/(.+?)\\.json$"
+    }
+  },
+  "notFoundRoutes": [],
+  "preview": {
+    "previewModeId": "985c21471ddf4fd8909852b8a016aa28",
+    "previewModeSigningKey": "e3d68a5eda2b1adb1c1ce541785b2c07e74d0a731269e636cdb5242f9b66759d",
+    "previewModeEncryptionKey": "a3b9cdc68bc7924132e404bdcdfc674b09f11a05b73aa64b473719e6225505ff"
+  }
+}

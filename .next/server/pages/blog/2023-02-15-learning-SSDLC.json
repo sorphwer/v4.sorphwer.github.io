@@ -1,0 +1,61 @@
+{
+  "pageProps": {
+    "post": {
+      "mdxSource": "var Component=(()=>{var m=Object.create;var o=Object.defineProperty;var c=Object.getOwnPropertyDescriptor;var f=Object.getOwnPropertyNames;var l=Object.getPrototypeOf,d=Object.prototype.hasOwnProperty;var s=t=>o(t,\"__esModule\",{value:!0});var x=(t,e)=>()=>(e||t((e={exports:{}}).exports,e),e.exports),g=(t,e)=>{s(t);for(var r in e)o(t,r,{get:e[r],enumerable:!0})},p=(t,e,r)=>{if(e&&typeof e==\"object\"||typeof e==\"function\")for(let a of f(e))!d.call(t,a)&&a!==\"default\"&&o(t,a,{get:()=>e[a],enumerable:!(r=c(e,a))||r.enumerable});return t},h=t=>p(s(o(t!=null?m(l(t)):{},\"default\",t&&t.__esModule&&\"default\"in t?{get:()=>t.default,enumerable:!0}:{value:t,enumerable:!0})),t);var u=x((w,i)=>{i.exports=_jsx_runtime});var D={};g(D,{default:()=>C,frontmatter:()=>j});var n=h(u()),j={layout:\"post\",title:\"What is SSDLC and what isn't\",subtitle:\"Secured Software Development Life Cycle\",tags:[\"S-SDLC\",\"software-engineering\"],status:\"WIP\",toc:!0,hide:!1,hidden:!0,mathjax:!1,mermaid:!0,\"auto-convert-img\":!0};function S(t={}){let{wrapper:e}=t.components||{};return e?(0,n.jsx)(e,Object.assign({},t,{children:(0,n.jsx)(r,{})})):r();function r(){return(0,n.jsx)(n.Fragment,{})}}var C=S;return D;})();\n;return Component;",
+      "toc": [],
+      "frontMatter": {
+        "readingTime": { "text": "1 min read", "minutes": 0.19, "time": 11400, "words": 38 },
+        "slug": "2023-02-15-learning-SSDLC",
+        "fileName": "2023-02-15-learning-SSDLC.md",
+        "layout": "post",
+        "title": "What is SSDLC and what isn't",
+        "subtitle": "Secured Software Development Life Cycle",
+        "tags": ["S-SDLC", "software-engineering"],
+        "status": "WIP",
+        "toc": true,
+        "hide": false,
+        "hidden": true,
+        "mathjax": false,
+        "mermaid": true,
+        "auto-convert-img": true,
+        "date": "2023-02-15T00:00:00.000Z"
+      }
+    },
+    "recordMap": null,
+    "authorDetails": [
+      {
+        "readingTime": { "text": "1 min read", "minutes": 0.145, "time": 8700, "words": 29 },
+        "slug": ["default"],
+        "fileName": "default.md",
+        "name": "Riino",
+        "avatar": "/static/images/logo_Nest.png",
+        "notion": "97ab7c51daf5470ea07e43c577169d24",
+        "date": null
+      }
+    ],
+    "prev": {
+      "layout": "post",
+      "title": "Overview of Web Crawler",
+      "subtitle": "Usage Limitation, Anti-Crawler and Risk",
+      "tags": ["mdx", "crawler", "web"],
+      "status": "WIP",
+      "toc": true,
+      "hide": false,
+      "hidden": false,
+      "mathjax": false,
+      "mermaid": true,
+      "auto-convert-img": true,
+      "slug": "2023-02-15-learning-crawler",
+      "date": "2023-02-15T00:00:00.000Z"
+    },
+    "next": {
+      "layout": "post",
+      "title": "Learning Pentest",
+      "last-modify": "2023-02-15 10:30:00 +0000",
+      "tags": ["mdx", "Pentest", "Cybersecurity"],
+      "slug": "2022-06-03-Learning-Pentest",
+      "date": "2023-02-15T10:30:00.000Z"
+    }
+  },
+  "__N_SSG": true
+}

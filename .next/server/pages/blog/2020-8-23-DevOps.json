@@ -1,0 +1,69 @@
+{
+  "pageProps": {
+    "post": {
+      "mdxSource": "var Component=(()=>{var h=Object.create;var r=Object.defineProperty;var c=Object.getOwnPropertyDescriptor;var p=Object.getOwnPropertyNames;var m=Object.getPrototypeOf,u=Object.prototype.hasOwnProperty;var l=n=>r(n,\"__esModule\",{value:!0});var g=(n,t)=>()=>(t||n((t={exports:{}}).exports,t),t.exports),v=(n,t)=>{l(n);for(var o in t)r(n,o,{get:t[o],enumerable:!0})},y=(n,t,o)=>{if(t&&typeof t==\"object\"||typeof t==\"function\")for(let i of p(t))!u.call(n,i)&&i!==\"default\"&&r(n,i,{get:()=>t[i],enumerable:!(o=c(t,i))||o.enumerable});return n},f=n=>y(l(r(n!=null?h(m(n)):{},\"default\",n&&n.__esModule&&\"default\"in n?{get:()=>n.default,enumerable:!0}:{value:n,enumerable:!0})),n);var d=g((x,s)=>{s.exports=_jsx_runtime});var I={};v(I,{default:()=>C,frontmatter:()=>w});var e=f(d()),w={layout:\"post\",title:\"What is DevOps and What isn't\",subtitle:\"A Comprehensive Guide to Agile Practices\",author:\"Riino\",mathjax:!1,sticky:!1,tags:[\"software-engineering\",\"agile\",\"devops\",\"ci-cd\"]};function b(n={}){let{wrapper:t}=n.components||{};return t?(0,e.jsx)(t,Object.assign({},n,{children:(0,e.jsx)(o,{})})):o();function o(){let i=Object.assign({h2:\"h2\",a:\"a\",span:\"span\",blockquote:\"blockquote\",p:\"p\",strong:\"strong\",em:\"em\",div:\"div\",ol:\"ol\",li:\"li\",ul:\"ul\"},n.components),{Image:a}=i;return a||D(\"Image\",!0),(0,e.jsxs)(e.Fragment,{children:[(0,e.jsxs)(i.h2,{id:\"what-is-devops\",children:[(0,e.jsx)(i.a,{href:\"#what-is-devops\",\"aria-hidden\":\"true\",tabIndex:\"-1\",children:(0,e.jsx)(i.span,{className:\"icon icon-link\"})}),\"What is DevOps?\"]}),(0,e.jsx)(i.blockquote,{children:(0,e.jsx)(i.p,{children:\"DevOps = Development + Operation?\"})}),(0,e.jsxs)(i.p,{children:[\"Actually, DevOps is not the combination of development and operation. The key point is \\u201C\",(0,e.jsx)(i.strong,{children:\"Developing , while operating\"}),\"\\u201D\"]}),(0,e.jsx)(i.p,{children:\"And, DevOps highlights that development and operation should be hold in same place, rather than 2 individual teams.\"}),(0,e.jsxs)(i.h2,{id:\"final-goal-continuous-deliverycd\",children:[(0,e.jsx)(i.a,{href:\"#final-goal-continuous-deliverycd\",\"aria-hidden\":\"true\",tabIndex:\"-1\",children:(0,e.jsx)(i.span,{className:\"icon icon-link\"})}),\"Final Goal: Continuous Delivery\\uFF08CD\\uFF09\"]}),(0,e.jsxs)(i.blockquote,{children:[(0,e.jsxs)(i.p,{children:[(0,e.jsx)(i.strong,{children:\"*1\"}),\" Our highest priority is to satisfy the customer through early and continuous delivery of valuable software.*\"]}),(0,e.jsxs)(i.p,{children:[\"------\",(0,e.jsx)(i.a,{href:\"https://www.agilealliance.org/agile101/12-principles-behind-the-agile-manifesto/\",children:\"12 Principles Behind the Agile Manifesto\"})]})]}),(0,e.jsxs)(i.blockquote,{children:[(0,e.jsx)(i.p,{children:\"Continuous delivery is the ability to get changes of all type, including new features,configuration change, bug fixes and experiments, into production, safely and quickly in a sustainable way.\"}),(0,e.jsxs)(i.p,{children:[\"------Jezz Humble , \",(0,e.jsx)(i.em,{children:\"Continuous Delivery\"})]})]}),(0,e.jsxs)(i.p,{children:[\"For Continuous delivery, we must build \",(0,e.jsx)(i.strong,{children:\"deployment pipeline\"}),\", which means that every changes will go through all test before deployment. (DOD, definition of done), and we call it Continuous \",(0,e.jsx)(i.strong,{children:\"Deployment\"}),\" , and DOD means \\u201Cready for deploy\\u201D\"]}),(0,e.jsx)(i.div,{children:(0,e.jsx)(a,{alt:\"image-20200823120603092\",src:\"/img/assets/image-20200823120603092.png\",width:\"1070\",height:\"490\"})}),(0,e.jsxs)(i.h2,{id:\"why-devops\",children:[(0,e.jsx)(i.a,{href:\"#why-devops\",\"aria-hidden\":\"true\",tabIndex:\"-1\",children:(0,e.jsx)(i.span,{className:\"icon icon-link\"})}),\"Why DevOps\"]}),(0,e.jsx)(i.p,{children:\"Let\\u2019s use LEAN value chian as example.\"}),(0,e.jsx)(i.p,{children:(0,e.jsx)(i.strong,{children:\"Reason 1 : DevOps removed requirement of communication between multiple teams and save our time via automation:\"})}),(0,e.jsx)(i.div,{children:(0,e.jsx)(a,{alt:\"image-20200823120401029\",src:\"/img/assets/image-20200823120401029.png\",width:\"989\",height:\"402\"})}),(0,e.jsx)(i.p,{children:\"Thus, to enable DevOps, we need to make the procedure from build to deploy automated:\"}),(0,e.jsx)(i.div,{children:(0,e.jsx)(a,{alt:\"image-20200823120501543\",src:\"/img/assets/image-20200823120501543.png\",width:\"1071\",height:\"536\"})}),(0,e.jsx)(i.p,{children:(0,e.jsx)(i.strong,{children:\"Reason 2 : DevOps changes structure of testing:\"})}),(0,e.jsx)(i.div,{children:(0,e.jsx)(a,{alt:\"image-20200823120623622\",src:\"/img/assets/image-20200823120623622.png\",width:\"1063\",height:\"568\"})}),(0,e.jsx)(i.p,{children:\"The left is traditional test and the left is DevOps, the larger the area is, the more efforts there should be .\"}),(0,e.jsx)(i.p,{children:\"The key point is to move UI test into more standard interface test. And break down project into maintainable modules.\"}),(0,e.jsxs)(i.h2,{id:\"ci-with-devops\",children:[(0,e.jsx)(i.a,{href:\"#ci-with-devops\",\"aria-hidden\":\"true\",tabIndex:\"-1\",children:(0,e.jsx)(i.span,{className:\"icon icon-link\"})}),\"CI with DevOps\"]}),(0,e.jsx)(i.div,{children:(0,e.jsx)(a,{alt:\"image-20200823121600179\",src:\"/img/assets/image-20200823121600179.png\",width:\"755\",height:\"421\"})}),(0,e.jsxs)(i.p,{children:[\"To archive our goal of CD, we need CI: Continuous Integration. CI defines a serious \",(0,e.jsx)(i.strong,{children:\"methodologies\"}),\" as a guidance for developer about how to maintain \",(0,e.jsx)(i.strong,{children:\"development procedure\"}),\". The CI and CD always be regraded as a whole unit called CI/CD. Because **to enable CD we must build CI, and the CI\\u2019s goal is exactly to archive CD **, in this way, you can not \",(0,e.jsx)(i.strong,{children:\"isolate CI and CD\"})]}),(0,e.jsxs)(i.p,{children:[\"CI is a \",(0,e.jsx)(i.strong,{children:\"hard\"}),\" thing to do, and many people think that they are using Ci, but it\\u2019s not true.\"]}),(0,e.jsxs)(i.p,{children:[\"To archive \",(0,e.jsx)(i.strong,{children:\"complete CI\"}),\", you have to follow these basic principle:\"]}),(0,e.jsxs)(i.ol,{children:[(0,e.jsxs)(i.li,{children:[\"If you are using feature branch, you are \",(0,e.jsx)(i.strong,{children:\"NOT\"}),\" using CI.\"]}),(0,e.jsxs)(i.li,{children:[\"Everyone commit to \",(0,e.jsx)(i.strong,{children:\"master branch\"}),\". (Every change will be in deployment finally.)\"]}),(0,e.jsx)(i.li,{children:\"If build and test fails, it can be repaired within 10 min.\"})]}),(0,e.jsxs)(i.h2,{id:\"deployment-toggles\",children:[(0,e.jsx)(i.a,{href:\"#deployment-toggles\",\"aria-hidden\":\"true\",tabIndex:\"-1\",children:(0,e.jsx)(i.span,{className:\"icon icon-link\"})}),\"Deployment Toggles\"]}),(0,e.jsxs)(i.p,{children:[\"In most cases, release procedure won\\u2019t follow deployment procedure. So there\\u2019s should be manual toggle to let us \",(0,e.jsx)(i.strong,{children:\"switch the case of release environment (proc environment)\"}),\", while the real deployment may have be done several weeks ago. And PM can decide \",(0,e.jsx)(i.strong,{children:\"when to release next update\"}),\" if client don\\u2019t like to get updates frequently.\"]}),(0,e.jsx)(i.p,{children:\"Via such toggles, we can easily modify proc environment, while make no effect and without any issues.\"}),(0,e.jsxs)(i.p,{children:[\"Now, some technology are trying to make this automated too, like \",(0,e.jsx)(i.strong,{children:\"Auto Scaling\"}),\" in remote servers.\"]}),(0,e.jsxs)(i.h2,{id:\"code-style\",children:[(0,e.jsx)(i.a,{href:\"#code-style\",\"aria-hidden\":\"true\",tabIndex:\"-1\",children:(0,e.jsx)(i.span,{className:\"icon icon-link\"})}),\"Code Style\"]}),(0,e.jsx)(i.p,{children:\"To master CI/CD, the code style itself also should follow these principles:\"}),(0,e.jsxs)(i.ol,{children:[(0,e.jsx)(i.li,{children:(0,e.jsxs)(i.p,{children:[(0,e.jsx)(i.strong,{children:\"Declarative\"}),\" : Only write \\u201Cdo what\\u201D, rather than \\u201Chow\\u201D in config. Like the God said : \\u201CLet there be light.\\u201D\"]})}),(0,e.jsx)(i.li,{children:(0,e.jsxs)(i.p,{children:[(0,e.jsx)(i.strong,{children:\"Immutable\"}),\" : When develop next version, checkout into a new branch, them merge it to old version(always have a functional version). Keep everything in version control\"]})})]}),(0,e.jsxs)(i.h2,{id:\"improvement\",children:[(0,e.jsx)(i.a,{href:\"#improvement\",\"aria-hidden\":\"true\",tabIndex:\"-1\",children:(0,e.jsx)(i.span,{className:\"icon icon-link\"})}),\"Improvement\"]}),(0,e.jsx)(i.p,{children:(0,e.jsx)(i.strong,{children:\"If you can\\u2019t quantify it , you can\\u2019t improve it.\"})}),(0,e.jsx)(i.p,{children:\"To improve CI/CD pipeline, you have these tools as examples:\"}),(0,e.jsxs)(i.ul,{children:[(0,e.jsx)(i.li,{children:(0,e.jsx)(i.p,{children:\"Time between change commit to deploy\"})}),(0,e.jsx)(i.li,{children:(0,e.jsx)(i.p,{children:\"Mean time to recover (mttr)\"})}),(0,e.jsx)(i.li,{children:(0,e.jsx)(i.p,{children:\"Failure rate\"})}),(0,e.jsxs)(i.li,{children:[(0,e.jsx)(i.p,{children:\"Cycle time\"}),(0,e.jsx)(i.p,{children:\"etc.\"})]})]})]})}}var C=b;function D(n,t){throw new Error(\"Expected \"+(t?\"component\":\"object\")+\" `\"+n+\"` to be defined: you likely forgot to import, pass, or provide it.\")}return I;})();\n;return Component;",
+      "toc": [
+        { "value": "What is DevOps?", "url": "#what-is-devops", "depth": 2 },
+        {
+          "value": "Final Goal: Continuous Delivery（CD）",
+          "url": "#final-goal-continuous-deliverycd",
+          "depth": 2
+        },
+        { "value": "Why DevOps", "url": "#why-devops", "depth": 2 },
+        { "value": "CI with DevOps", "url": "#ci-with-devops", "depth": 2 },
+        { "value": "Deployment Toggles", "url": "#deployment-toggles", "depth": 2 },
+        { "value": "Code Style", "url": "#code-style", "depth": 2 },
+        { "value": "Improvement", "url": "#improvement", "depth": 2 }
+      ],
+      "frontMatter": {
+        "readingTime": { "text": "3 min read", "minutes": 2.9, "time": 174000, "words": 580 },
+        "slug": "2020-8-23-DevOps",
+        "fileName": "2020-8-23-DevOps.md",
+        "layout": "post",
+        "title": "What is DevOps and What isn't",
+        "subtitle": "A Comprehensive Guide to Agile Practices",
+        "author": "Riino",
+        "mathjax": false,
+        "sticky": false,
+        "tags": ["software-engineering", "agile", "devops", "ci-cd"],
+        "date": "2020-08-22T16:00:00.000Z"
+      }
+    },
+    "recordMap": null,
+    "authorDetails": [
+      {
+        "readingTime": { "text": "1 min read", "minutes": 0.145, "time": 8700, "words": 29 },
+        "slug": ["default"],
+        "fileName": "default.md",
+        "name": "Riino",
+        "avatar": "/static/images/logo_Nest.png",
+        "notion": "97ab7c51daf5470ea07e43c577169d24",
+        "date": null
+      }
+    ],
+    "prev": {
+      "layout": "post",
+      "title": "Unexpected Http Response",
+      "subtitle": "Handling Ajax Responses Effectively",
+      "author": "Riino",
+      "mathjax": false,
+      "sticky": false,
+      "tags": ["mdx", "http", "frontend", "ajax", "jquery"],
+      "slug": "2020-8-17-Unexpected http Response",
+      "date": "2020-08-16T16:00:00.000Z"
+    },
+    "next": {
+      "layout": "post",
+      "title": "Learning Path",
+      "subtitle": "Understanding Path Formats in Web and File Systems",
+      "author": "Riino",
+      "mathjax": false,
+      "sticky": false,
+      "toc": false,
+      "tags": ["mdx", "computer", "web", "path", "router", "path-navigation", "url-structure"],
+      "slug": "2020-10-14-Path",
+      "date": "2020-10-14T00:00:00.000Z"
+    }
+  },
+  "__N_SSG": true
+}

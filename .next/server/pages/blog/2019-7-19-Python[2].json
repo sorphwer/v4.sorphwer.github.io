@@ -1,0 +1,57 @@
+{
+  "pageProps": {
+    "post": {
+      "mdxSource": "var Component=(()=>{var c=Object.create;var a=Object.defineProperty;var d=Object.getOwnPropertyDescriptor;var h=Object.getOwnPropertyNames;var m=Object.getPrototypeOf,p=Object.prototype.hasOwnProperty;var r=i=>a(i,\"__esModule\",{value:!0});var u=(i,t)=>()=>(t||i((t={exports:{}}).exports,t),t.exports),g=(i,t)=>{r(i);for(var s in t)a(i,s,{get:t[s],enumerable:!0})},x=(i,t,s)=>{if(t&&typeof t==\"object\"||typeof t==\"function\")for(let n of h(t))!p.call(i,n)&&n!==\"default\"&&a(i,n,{get:()=>t[n],enumerable:!(s=d(t,n))||s.enumerable});return i},f=i=>x(r(a(i!=null?c(m(i)):{},\"default\",i&&i.__esModule&&\"default\"in i?{get:()=>i.default,enumerable:!0}:{value:i,enumerable:!0})),i);var o=u((P,l)=>{l.exports=_jsx_runtime});var N={};g(N,{default:()=>k,frontmatter:()=>j});var e=f(o()),j={layout:\"post\",title:\"Learning Python3 C2\",subtitle:\"Guide to Sorted Lists in Python\",author:\"Riino\",\"header-img\":\"img/lunur.jpg\",\"header-mask\":.3,mathjax:!0,sticky:!1,tags:[\"Python\",\"Algorithm\",\"Sorted-List\"]};function y(i={}){let{wrapper:t}=i.components||{};return t?(0,e.jsx)(t,Object.assign({},i,{children:(0,e.jsx)(s,{})})):s();function s(){let n=Object.assign({p:\"p\",h1:\"h1\",a:\"a\",span:\"span\",code:\"code\",strong:\"strong\",pre:\"pre\"},i.components);return(0,e.jsxs)(e.Fragment,{children:[(0,e.jsx)(n.p,{children:\"[TOC]\"}),(0,e.jsxs)(n.h1,{id:\"panorama\",children:[(0,e.jsx)(n.a,{\"aria-hidden\":\"true\",href:\"#panorama\",tabIndex:\"-1\",children:(0,e.jsx)(n.span,{className:\"icon icon-link\"})}),\"Panorama\"]}),(0,e.jsxs)(n.p,{children:[\"This serious of problems are based on a sorted list (or linked list). Generally we need to make implementation of \",(0,e.jsx)(n.code,{children:\"insert\"}),\" \",(0,e.jsx)(n.code,{children:\"delete elements\"}),\" and \",(0,e.jsx)(n.code,{children:\"combine\"}),\".\"]}),(0,e.jsxs)(n.p,{children:[(0,e.jsx)(n.strong,{children:\"insert\"}),\" is quite easy, in list it takes O(n), and in linked list it takes O(1), for example we insert an element in list[P]\"]}),(0,e.jsx)(n.pre,{children:(0,e.jsxs)(n.code,{className:\"code-highlight\",children:[(0,e.jsx)(n.span,{className:\"code-line\",children:`i = len(list)-1\n`}),(0,e.jsx)(n.span,{className:\"code-line\",children:`WHILE i > P\n`}),(0,e.jsx)(n.span,{className:\"code-line\",children:`\tlist[i+1]=list[i] //move the array\n`}),(0,e.jsx)(n.span,{className:\"code-line\",children:`\ti--\n`}),(0,e.jsx)(n.span,{className:\"code-line\",children:`list[i]=list[P]\n`})]})}),(0,e.jsx)(n.pre,{children:(0,e.jsx)(n.code,{className:\"code-highlight\"})})]})}}var k=y;return N;})();\n;return Component;",
+      "toc": [{ "value": "Panorama", "url": "#panorama", "depth": 1 }],
+      "frontMatter": {
+        "readingTime": { "text": "1 min read", "minutes": 0.5, "time": 30000, "words": 100 },
+        "slug": "2019-7-19-Python[2]",
+        "fileName": "2019-7-19-Python[2].md",
+        "layout": "post",
+        "title": "Learning Python3 C2",
+        "subtitle": "Guide to Sorted Lists in Python",
+        "author": "Riino",
+        "header-img": "img/lunur.jpg",
+        "header-mask": 0.3,
+        "mathjax": true,
+        "sticky": false,
+        "tags": ["Python", "Algorithm", "Sorted-List"],
+        "date": "2019-07-18T16:00:00.000Z"
+      }
+    },
+    "recordMap": null,
+    "authorDetails": [
+      {
+        "readingTime": { "text": "1 min read", "minutes": 0.145, "time": 8700, "words": 29 },
+        "slug": ["default"],
+        "fileName": "default.md",
+        "name": "Riino",
+        "avatar": "/static/images/logo_Nest.png",
+        "notion": "97ab7c51daf5470ea07e43c577169d24",
+        "date": null
+      }
+    ],
+    "prev": {
+      "layout": "post",
+      "title": "Learning Python3 C1 ",
+      "subtitle": "Integer Math",
+      "author": "Riino",
+      "header-img": "img/lunur.jpg",
+      "header-mask": 0.3,
+      "mathjax": true,
+      "sticky": false,
+      "tags": ["mdx", "Python", "Algorithm"],
+      "slug": "2019-6-26-Python [1]",
+      "date": "2019-06-25T16:00:00.000Z"
+    },
+    "next": {
+      "layout": "post",
+      "title": "Learning Information Theory",
+      "subtitle": "An Introduction to Information Theory Concepts",
+      "tags": ["mdx", "Information-Theory"],
+      "slug": "2019-9-17-Introduction-Of-Info-Theory",
+      "date": "2019-09-16T16:00:00.000Z"
+    }
+  },
+  "__N_SSG": true
+}

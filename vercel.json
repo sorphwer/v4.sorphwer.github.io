@@ -1,0 +1,6 @@
+{
+  "buildCommand": "echo 'Using pre-built files from .next directory'",
+  "outputDirectory": ".next",
+  "installCommand": "echo 'Skipping install - using pre-built files'",
+  "framework": "nextjs"
+}

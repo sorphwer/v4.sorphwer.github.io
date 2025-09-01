@@ -1,0 +1,55 @@
+{
+  "pageProps": {
+    "post": {
+      "mdxSource": "var Component=(()=>{var d=Object.create;var r=Object.defineProperty;var s=Object.getOwnPropertyDescriptor;var h=Object.getOwnPropertyNames;var u=Object.getPrototypeOf,p=Object.prototype.hasOwnProperty;var l=i=>r(i,\"__esModule\",{value:!0});var f=(i,t)=>()=>(t||i((t={exports:{}}).exports,t),t.exports),g=(i,t)=>{l(i);for(var o in t)r(i,o,{get:t[o],enumerable:!0})},y=(i,t,o)=>{if(t&&typeof t==\"object\"||typeof t==\"function\")for(let n of h(t))!p.call(i,n)&&n!==\"default\"&&r(i,n,{get:()=>t[n],enumerable:!(o=s(t,n))||o.enumerable});return i},b=i=>y(l(r(i!=null?d(u(i)):{},\"default\",i&&i.__esModule&&\"default\"in i?{get:()=>i.default,enumerable:!0}:{value:i,enumerable:!0})),i);var a=f((v,c)=>{c.exports=_jsx_runtime});var E={};g(E,{default:()=>w,frontmatter:()=>m});var e=b(a()),m={layout:\"post\",title:\"Certification Test Minutes: Neo4j Certified Professional\",subtitle:\"Guide to Passing the Neo4j Certification Exam\",status:\"Minutes\",tags:[\"neo4j\",\"certification-test\",\"graph-database\",\"cypher-language\"]};function j(i={}){let{wrapper:t}=i.components||{};return t?(0,e.jsx)(t,Object.assign({},i,{children:(0,e.jsx)(o,{})})):o();function o(){let n=Object.assign({h2:\"h2\",a:\"a\",span:\"span\",p:\"p\",ul:\"ul\",li:\"li\",code:\"code\",strong:\"strong\"},i.components);return(0,e.jsxs)(e.Fragment,{children:[(0,e.jsxs)(n.h2,{id:\"whats-neo4j-certification\",children:[(0,e.jsx)(n.a,{\"aria-hidden\":\"true\",href:\"#whats-neo4j-certification\",tabIndex:\"-1\",children:(0,e.jsx)(n.span,{className:\"icon icon-link\"})}),\"What's neo4j certification?\"]}),(0,e.jsx)(n.p,{children:\"In neo4j's official cource page you can explore a serious of materials to learn about neo4j, with a final online test attached. When finished that online test that contains 80 single selection questions with over 80% score you can be issued a certification by neo4j to prove that you have essential knowledge about neo4j. I recently took one and passed successfully, and if you want to prepare for such test, you can check the rest content for main points that this test will cover, or the points that you may ignore during learning.\"}),(0,e.jsxs)(n.h2,{id:\"test-structure\",children:[(0,e.jsx)(n.a,{\"aria-hidden\":\"true\",href:\"#test-structure\",tabIndex:\"-1\",children:(0,e.jsx)(n.span,{className:\"icon icon-link\"})}),\"Test structure\"]}),(0,e.jsx)(n.p,{children:\"The test will be devided into 3 parts in my perspective, the very first one is the basic concept of neo4j like the protocol, the primary structure of graph database, which will mainly cover these aspects:\"}),(0,e.jsxs)(n.ul,{children:[(0,e.jsxs)(n.li,{children:[\"Valid protocol of neo4j : \",(0,e.jsx)(n.code,{children:\"+ssc\"})]}),(0,e.jsxs)(n.li,{children:[\"What is \",(0,e.jsx)(n.code,{children:\"Bolt\"}),\" protocol\"]}),(0,e.jsx)(n.li,{children:\"In which default port does neo4j browser run and neo4j bolt run\"}),(0,e.jsxs)(n.li,{children:[\"In which folder does neo4j entity save its file and backup (\",(0,e.jsx)(n.code,{children:\"database\"}),\" and \",(0,e.jsx)(n.code,{children:\"transaction\"}),\")\"]}),(0,e.jsx)(n.li,{children:\"What protocol is used for drivers for programming language like java? (JMS? RMI? TLS? Bolt?)\"}),(0,e.jsx)(n.li,{children:\"Features of Bolt, is the information compressed or encoded?\"})]}),(0,e.jsx)(n.p,{children:\"Second part will cover the concept of database and the tools that you can use to control neo4j.\"}),(0,e.jsxs)(n.ul,{children:[(0,e.jsxs)(n.li,{children:[\"When to use \",(0,e.jsx)(n.code,{children:\":use database\"}),\" (in Cypher-shell)\"]}),(0,e.jsxs)(n.li,{children:[\"Different operations in \",(0,e.jsx)(n.code,{children:\"system\"}),\" database and normal database in \",(0,e.jsx)(n.strong,{children:\"neo4j browser\"})]}),(0,e.jsx)(n.li,{children:\"Hom many database will be created when initiating an neo4j instance (0)\"}),(0,e.jsxs)(n.li,{children:[\"4 primary data type of neo4j : \",(0,e.jsx)(n.strong,{children:\"node, relationship,propety,label\"})]}),(0,e.jsxs)(n.li,{children:[\"Invalid name of a database: \",(0,e.jsx)(n.strong,{children:\"graph.db, _test1, my\"})]}),(0,e.jsxs)(n.li,{children:[\"Does a relationship must have a direction? \",(0,e.jsx)(n.strong,{children:\"YES\"})]}),(0,e.jsx)(n.li,{children:\"Import & export data type supported by neo4j, with corresponding tools\"})]}),(0,e.jsx)(n.p,{children:\"Finally, the neo4j script language, Cypher itself.\"}),(0,e.jsx)(n.p,{children:\"You will be asked about the function of Cypher with senarios.\"}),(0,e.jsxs)(n.ul,{children:[(0,e.jsxs)(n.li,{children:[\"What does \",(0,e.jsx)(n.code,{children:\"CREATE\"}),\", \",(0,e.jsx)(n.code,{children:\"MERGE\"}),\", \",(0,e.jsx)(n.code,{children:\"DELETE\"}),\", \",(0,e.jsx)(n.code,{children:\"SET\"}),\" do?\"]}),(0,e.jsxs)(n.li,{children:[\"Will \",(0,e.jsx)(n.code,{children:\"SET\"}),\" reset all propeties? \",(0,e.jsx)(n.strong,{children:\"No\"})]}),(0,e.jsxs)(n.li,{children:[\"Do we have \",(0,e.jsx)(n.code,{children:\"CONNECT\"}),\", \",(0,e.jsx)(n.code,{children:\"JOIN\"}),\" ,\",(0,e.jsx)(n.code,{children:\"FILTER\"}),\" like sql? \",(0,e.jsx)(n.strong,{children:\"No\"})]}),(0,e.jsxs)(n.li,{children:[\"Do we have a python-like operator \",(0,e.jsx)(n.code,{children:\"IN\"}),\"? \",(0,e.jsx)(n.strong,{children:\"Actually yes\"})]}),(0,e.jsxs)(n.li,{children:[\"Use \",(0,e.jsx)(n.code,{children:\"UNION\"}),\" to merge two or more matching results.\"]}),(0,e.jsxs)(n.li,{children:[\"Understand when to use \",(0,e.jsx)(n.code,{children:\"PROFILE MATCH\"}),\", \",(0,e.jsx)(n.code,{children:\"OPTIONAL MATCH\"}),\",etc.\"]}),(0,e.jsxs)(n.li,{children:[\"Use \",(0,e.jsx)(n.code,{children:\"WITH\"}),\" to create sub-query.\"]}),(0,e.jsxs)(n.li,{children:[\"Usage of \",(0,e.jsx)(n.code,{children:\"IMPORT CSV\"})]}),(0,e.jsxs)(n.li,{children:[\"Use \",(0,e.jsx)(n.code,{children:\"START DATABASE\"}),\", \",(0,e.jsx)(n.code,{children:\"CREATE [OR REPLACE] DATABASE\"}),\",etc. in system database.\"]})]}),(0,e.jsx)(n.p,{children:\"Besides, the test will cover if a function is available.\"}),(0,e.jsxs)(n.ul,{children:[(0,e.jsxs)(n.li,{children:[\"All function in db, \",(0,e.jsx)(n.code,{children:\"db.*\"})]}),(0,e.jsxs)(n.li,{children:[\"Method to call a function : use \",(0,e.jsx)(n.code,{children:\"CALL\"})]}),(0,e.jsxs)(n.li,{children:[\"Get a node's label, get a relationship's type (use \",(0,e.jsx)(n.code,{children:\"type()\"}),\")\"]}),(0,e.jsxs)(n.li,{children:[\"Basic function like \",(0,e.jsx)(n.code,{children:\"count()\"}),\" and \",(0,e.jsx)(n.code,{children:\"count(*)\"}),\" (counting nodes and rows)\"]}),(0,e.jsxs)(n.li,{children:[\"What is \",(0,e.jsx)(n.strong,{children:\"aggregation function\"}),\" and when to use one.\"]})]})]})}}var w=j;return E;})();\n;return Component;",
+      "toc": [
+        { "value": "What's neo4j certification?", "url": "#whats-neo4j-certification", "depth": 2 },
+        { "value": "Test structure", "url": "#test-structure", "depth": 2 }
+      ],
+      "frontMatter": {
+        "readingTime": { "text": "3 min read", "minutes": 2.115, "time": 126900, "words": 423 },
+        "slug": "2021-5-31-neo4j-certification",
+        "fileName": "2021-5-31-neo4j-certification.md",
+        "layout": "post",
+        "title": "Certification Test Minutes: Neo4j Certified Professional",
+        "subtitle": "Guide to Passing the Neo4j Certification Exam",
+        "status": "Minutes",
+        "tags": ["neo4j", "certification-test", "graph-database", "cypher-language"],
+        "date": "2021-05-30T16:00:00.000Z"
+      }
+    },
+    "recordMap": null,
+    "authorDetails": [
+      {
+        "readingTime": { "text": "1 min read", "minutes": 0.145, "time": 8700, "words": 29 },
+        "slug": ["default"],
+        "fileName": "default.md",
+        "name": "Riino",
+        "avatar": "/static/images/logo_Nest.png",
+        "notion": "97ab7c51daf5470ea07e43c577169d24",
+        "date": null
+      }
+    ],
+    "prev": {
+      "layout": "post",
+      "title": "Learning Data Retrieval",
+      "subtitle": "TextRank",
+      "hide": true,
+      "tags": ["mdx", "algorithm"],
+      "mathjax": true,
+      "mermaid": false,
+      "slug": "2021-3-16-IR-TextRank",
+      "date": "2021-03-15T16:00:00.000Z"
+    },
+    "next": {
+      "layout": "post",
+      "title": "Combine Swagger, Flask and Python DB Driver",
+      "subtitle": "Integrating Swagger with Flask and Neo4j for Enhanced API Documentation",
+      "author": "Riino",
+      "tags": ["mdx", "neo4j", "swagger", "python", "flask", "graph-database", "api-documentation"],
+      "slug": "2021-5-31-flask-neo4j-swagger",
+      "date": "2021-05-30T16:00:00.000Z"
+    }
+  },
+  "__N_SSG": true
+}

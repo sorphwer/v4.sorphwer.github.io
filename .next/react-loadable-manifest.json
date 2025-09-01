@@ -1,0 +1,43 @@
+{
+  "../components/ClientReload.js -> socket.io-client": {
+    "id": 2488,
+    "files": ["static/chunks/764.c2efe3ac6bb23895.js", "static/chunks/488.1322ca4d4a3413b9.js"]
+  },
+  "../components/MDXComponents.js -> react-notion-x/build/third-party/code": {
+    "id": 1794,
+    "files": ["static/chunks/794.9da4bb710530fe6b.js"]
+  },
+  "../components/MDXComponents.js -> react-notion-x/build/third-party/collection": {
+    "id": 635,
+    "files": ["static/chunks/3607272e.2a1c70a2cc89f47f.js", "static/chunks/853.b67412d7156a51a8.js"]
+  },
+  "../components/MDXComponents.js -> react-notion-x/build/third-party/equation": {
+    "id": 7274,
+    "files": ["static/chunks/175675d1.6dbfc42f11a750f0.js", "static/chunks/274.ff5cb71dfc13410a.js"]
+  },
+  "../components/MDXComponents.js -> react-notion-x/build/third-party/modal": {
+    "id": 6873,
+    "files": ["static/chunks/873.2b2da233307345ce.js"]
+  },
+  "../components/MDXComponents.js -> react-notion-x/build/third-party/pdf": {
+    "id": 6402,
+    "files": [
+      "static/chunks/906a09f8.4cff493e1629df7d.js",
+      "static/chunks/764.c2efe3ac6bb23895.js",
+      "static/chunks/509.b553a09ca1710020.js",
+      "static/chunks/738.bacd146cf1ccdd57.js"
+    ]
+  },
+  "../components/comments/index.js -> @/components/comments/Disqus": {
+    "id": 257,
+    "files": ["static/chunks/257.c56f8cdce4229b2b.js"]
+  },
+  "../components/comments/index.js -> @/components/comments/Giscus": {
+    "id": 732,
+    "files": ["static/chunks/732.9844f656e14f738e.js"]
+  },
+  "../components/comments/index.js -> @/components/comments/Utterances": {
+    "id": 8806,
+    "files": ["static/chunks/806.6ae914a7317aef72.js"]
+  }
+}
