@@ -1,0 +1,19 @@
+{
+  "buildCommand": "npm run build:vercel",
+  "installCommand": "npm install",
+  "functions": {
+    "pages/api/**/*.js": {
+      "runtime": "nodejs20.x"
+    }
+  },
+  "build": {
+    "env": {
+      "PUPPETEER_SKIP_CHROMIUM_DOWNLOAD": "true",
+      "PUPPETEER_EXECUTABLE_PATH": "/usr/bin/google-chrome-stable",
+      "NODE_ENV": "production"
+    }
+  },
+  "github": {
+    "silent": true
+  }
+}
