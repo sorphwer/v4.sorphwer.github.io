@@ -12,8 +12,7 @@
     "build:vercel": "cross-env PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true PUPPETEER_EXECUTABLE_PATH=/usr/bin/google-chrome-stable next build && node ./scripts/generate-sitemap",
     "serve": "next start",
     "analyze": "cross-env ANALYZE=true next build",
-    "lint": "next lint --fix --dir pages --dir components --dir lib --dir layouts --dir scripts",
-    "postinstall": "patch-package"
+    "lint": "next lint --fix --dir pages --dir components --dir lib --dir layouts --dir scripts"
   },
   "dependencies": {
     "@auth0/nextjs-auth0": "^2.6.0",
