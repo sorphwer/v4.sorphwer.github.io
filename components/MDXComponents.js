@@ -23,12 +23,18 @@ const Pdf = dynamic(() => import('react-notion-x/build/third-party/pdf').then((m
 const Modal = dynamic(() => import('react-notion-x/build/third-party/modal').then((m) => m.Modal), {
   ssr: false,
 })
+// Client-only: mdx-mermaid's Mermaid component calls mermaid.render in an effect.
+const Mermaid = dynamic(() => import('mdx-mermaid/lib/Mermaid').then((m) => m.Mermaid), {
+  ssr: false,
+})
 export const MDXComponents = {
   Image,
   TOCInline,
   a: CustomLink,
   pre: Pre,
   BlogNewsletterForm: BlogNewsletterForm,
+  mermaid: Mermaid,
+  Mermaid,
   wrapper: ({ components, layout, ...rest }) => {
     const Layout = require(`../layouts/${layout}`).default
     return <Layout {...rest} />
