@@ -1,8 +1,12 @@
 ---
 layout: post # must be 'post'
 title: 'Access New Bing in Chrome'
-tags: #optional
-  - Web
+subtitle: 'How to Bypass Browser Restrictions for New Bing'
+tags:
+  - web-access
+  - bing
+  - chrome
+  - user-agent
 auto-convert-img: true
 ---
 

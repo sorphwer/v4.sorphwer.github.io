@@ -3,7 +3,7 @@ import PageTitle from '@/components/PageTitle'
 import generateRss from '@/lib/generate-rss'
 import { MDXLayoutRenderer } from '@/components/MDXComponents'
 import { formatSlug, getAllFilesFrontMatter, getFileBySlug, getFiles } from '@/lib/mdx'
-import { NotionAPI } from 'notion-client'
+import { getNotionPage } from '@/lib/notion'
 import { NotionRenderer } from 'react-notion-x'
 export async function getStaticPaths() {
   const posts = getFiles('blog')
@@ -38,10 +38,7 @@ export async function getStaticProps({ params }) {
 
   //notion
   if (post.frontMatter.notion) {
-    const notion = new NotionAPI()
-    recordMap = await notion.getPage(post.frontMatter.notion)
-  } else {
-    recordMap = null
+    recordMap = await getNotionPage(post.frontMatter.notion)
   }
 
   return { props: { post, recordMap, authorDetails, prev, next } }

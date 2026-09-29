@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 'Learning Python3 Flask Part 3'
-subtitle: 'Pyecharts & Echarts'
+subtitle: 'Pyecharts and Echarts Integration'
 author: 'Riino'
 mathjax: true
 sticky: false
@@ -11,7 +11,7 @@ tags:
   - Server
   - Web
   - html
-  - visualization
+  - data-visualization
 ---
 
 # Pyecharts

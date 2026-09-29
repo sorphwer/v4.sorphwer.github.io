@@ -4,6 +4,8 @@ title: 'v4 Mermaid Benchmark'
 status: test
 ---
 
+This post is used to test riinosite 4 functionality only
+
 ## Flowchart
 
 ```mermaid

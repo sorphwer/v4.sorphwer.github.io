@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 'Learning Python3 Flask Part 2'
-subtitle: 'Html and Jinja'
+subtitle: 'HTML and Jinja: A Comprehensive Guide'
 author: 'Riino'
 mathjax: true
 sticky: false
@@ -11,6 +11,9 @@ tags:
   - Server
   - Web
   - html
+  - html-and-jinja
+  - python-flask-tutorial
+  - web-development
 ---
 
 # Web Source Structure

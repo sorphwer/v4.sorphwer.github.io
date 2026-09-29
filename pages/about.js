@@ -1,6 +1,6 @@
 import { MDXLayoutRenderer } from '@/components/MDXComponents'
 import { getFileBySlug } from '@/lib/mdx'
-import { NotionAPI } from 'notion-client'
+import { getNotionPage } from '@/lib/notion'
 import { NotionRenderer } from 'react-notion-x'
 const DEFAULT_LAYOUT = 'AuthorLayout'
 // const DEFAULT_LAYOUT = 'NotionLayout'
@@ -11,10 +11,7 @@ export async function getStaticProps() {
   //notion
   let recordMap = null
   if (aboutDetails.frontMatter.notion) {
-    const notion = new NotionAPI()
-    recordMap = await notion.getPage(aboutDetails.frontMatter.notion)
-  } else {
-    recordMap = null
+    recordMap = await getNotionPage(aboutDetails.frontMatter.notion)
   }
   return { props: { aboutDetails, recordMap } }
 }

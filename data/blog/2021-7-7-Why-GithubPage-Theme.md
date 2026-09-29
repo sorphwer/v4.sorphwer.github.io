@@ -1,10 +1,13 @@
 ---
 layout: post
-title: 'GithubPage theme vs Jekyll theme, explained'
-
-tags: #optional
+title: 'GithubPage Theme vs Jekyll Theme Explained'
+subtitle: 'Understanding the Differences and Benefits for Your Blog'
+tags:
   - Jekyll
   - Ruby
+  - GithubPage
+  - JekyllTheme
+  - JekyllRemoteTheme
 ---
 
 ## Introduction

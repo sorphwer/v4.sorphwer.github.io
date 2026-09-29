@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 'Learning Python3 Crawler'
-subtitle: 'Collect Data from Web'
+subtitle: 'How to Collect Data from the Web Efficiently'
 author: 'Riino'
 header-img: 'img/lunur.jpg'
 header-mask: 0.3
@@ -10,7 +10,7 @@ sticky: false
 tags:
   - Python
   - Crawler
-  - Web
+  - Web-Data-Collection
 ---
 
 # Selenium

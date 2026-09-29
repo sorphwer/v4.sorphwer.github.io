@@ -33,7 +33,23 @@ export default function Footer() {
         </div>
         <div className="mb-2 flex space-x-2 text-sm text-gray-500 dark:text-gray-400">
           <div className="text-center">
-            Nest of Etamine Study - 10th Anniversary <br /> 2012-2022
+            <p className="mb-3 mt-3 text-black dark:text-white">
+              <Link className="hover:text-primary-light" href="https://riino.site/terms_of_use">
+                Terms of Use
+              </Link>{' '}
+              |{' '}
+              <Link
+                className="hover:text-primary-light"
+                href="https://riino.site/privacy_statement/"
+              >
+                Privacy Statement
+              </Link>
+            </p>
+
+            <p>Designed, Developed,and Deployed by Riino</p>
+            <p>
+              Nest of Etamine Study - 10th Anniversary <br /> 2012-2022
+            </p>
           </div>
         </div>
       </div>

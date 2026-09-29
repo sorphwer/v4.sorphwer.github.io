@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 'Unexpected Http Response'
-subtitle: 'when using ajax'
+subtitle: 'Handling Ajax Responses Effectively'
 author: 'Riino'
 mathjax: false
 sticky: false

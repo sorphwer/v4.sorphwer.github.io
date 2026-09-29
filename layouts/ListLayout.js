@@ -8,7 +8,13 @@ import Pagination from '@/components/Pagination'
 import formatDate from '@/lib/utils/formatDate'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import SocialIcon from '@/components/social-icons'
-export default function ListLayout({ posts, title, initialDisplayPosts = [], pagination }) {
+export default function ListLayout({
+  posts,
+  title,
+  initialDisplayPosts = [],
+  pagination,
+  enableSearch = true,
+}) {
   const [searchValue, setSearchValue] = useState('')
   // posts is the all frontmatter
   // console.log(posts)
@@ -29,29 +35,31 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], pag
           {/* <h1 className="font-rs text-2xl font-bold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
             {title}
           </h1> */}
-          <div className=" relative max-w-4xl ">
-            <input
-              aria-label="Search articles"
-              type="text"
-              onChange={(e) => setSearchValue(e.target.value)}
-              placeholder="Search articles"
-              className="block w-full rounded-md border border-gray-300 bg-white px-4 py-2 text-gray-900 focus:border-primary-500 focus:ring-primary-500 dark:border-gray-900 dark:bg-gray-800 dark:text-gray-100"
-            />
-            <svg
-              className="absolute right-3 top-3 h-5 w-5 text-gray-400 dark:text-gray-300"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+          {enableSearch && (
+            <div className=" relative max-w-4xl ">
+              <input
+                aria-label="Search articles"
+                type="text"
+                onChange={(e) => setSearchValue(e.target.value)}
+                placeholder="Search articles"
+                className="block w-full rounded-md border border-gray-300 bg-white px-4 py-2 text-gray-900 focus:border-primary-500 focus:ring-primary-500 dark:border-gray-900 dark:bg-gray-800 dark:text-gray-100"
               />
-            </svg>
-          </div>
+              <svg
+                className="absolute right-3 top-3 h-5 w-5 text-gray-400 dark:text-gray-300"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                />
+              </svg>
+            </div>
+          )}
         </div>
         <ul>
           {!filteredBlogPosts.length && 'No posts found.'}
@@ -78,14 +86,15 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], pag
                     <div>
                       <div>
                         <h3 className="text-2xl font-bold leading-8 tracking-tight ">
-                          {title && (
+                          {
                             <Link
                               href={`/blog/${slug}`}
                               className="text-gray-900 hover:text-primary-600 dark:text-gray-100 dark:hover:text-primary-400"
                             >
-                              {title}
+                              {title ? title : slug}
                             </Link>
-                          )}
+                          }
+
                           {frontMatter.status && (
                             <span className="align-top text-sm font-normal text-RSpink">
                               {' [' + frontMatter.status + ']'}

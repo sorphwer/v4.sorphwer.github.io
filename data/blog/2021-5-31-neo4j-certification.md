@@ -1,10 +1,13 @@
 ---
 layout: post
 title: 'Certification Test Minutes: Neo4j Certified Professional'
+subtitle: 'Guide to Passing the Neo4j Certification Exam'
 status: Minutes
 tags: #optional
   - neo4j
-  - certification
+  - certification-test
+  - graph-database
+  - cypher-language
 ---
 
 ## What's neo4j certification?
