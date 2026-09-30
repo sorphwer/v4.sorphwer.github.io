@@ -1,9 +1,7 @@
 import Link from '@/components/Link'
-import siteMetadata from '@/data/siteMetadata'
+import formatDate, { SHORT_DATE } from '@/lib/utils/formatDate'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import PostArt, { CARD_ART_WIDTH } from './PostArt'
-
-const cardDate = { year: 'numeric', month: 'short', day: 'numeric' }
 
 function CardLabel({ kind, label }) {
   if (kind === 'prev') return <span>&larr; {label}</span>
@@ -55,7 +53,7 @@ export default function RelatedPosts({ posts }) {
                       dateTime={post.date}
                       className="mb-3 text-xs text-gray-500 dark:text-gray-400"
                     >
-                      {new Date(post.date).toLocaleDateString(siteMetadata.locale, cardDate)}
+                      {formatDate(post.date, SHORT_DATE)}
                     </time>
                   )}
                   <h3 className="font-rs text-lg font-medium leading-snug text-gray-900 line-clamp-4 group-hover:text-primary-500 dark:text-gray-100 dark:group-hover:text-primary-400">
