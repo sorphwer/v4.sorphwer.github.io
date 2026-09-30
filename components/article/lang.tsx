@@ -1,10 +1,10 @@
 /**
  * Post-scoped bilingual machinery. A post whose frontmatter has `titleZh` is
  * wrapped in LangProvider by PostArticle, which also puts LangToggle in the
- * post header; the body renders every string twice via `T` / `useT`
- * (English default, Chinese via toggle). The rest of the app stays
- * monolingual, so this deliberately stays a context instead of an i18n
- * framework.
+ * post header; the body renders every string twice via `T` / `useT`, or, in
+ * MDX prose, whole blocks via `En` / `Zh` (English default, Chinese via
+ * toggle). The rest of the app stays monolingual, so this deliberately stays
+ * a context instead of an i18n framework.
  */
 
 import { createContext, useContext, useEffect, useState, type ReactNode } from 'react'
@@ -52,6 +52,16 @@ export function T({ en, zh }: { en: ReactNode; zh: ReactNode }) {
 export function useT(): (en: string, zh: string) => string {
   const lang = useLang()
   return (en, zh) => (lang === 'en' ? en : zh)
+}
+
+/** MDX prose block shown only in English; pair with `Zh`. */
+export function En({ children }: { children: ReactNode }) {
+  return useLang() === 'en' ? <>{children}</> : null
+}
+
+/** MDX prose block shown only in Chinese; pair with `En`. */
+export function Zh({ children }: { children: ReactNode }) {
+  return useLang() === 'zh' ? <>{children}</> : null
 }
 
 export function LangToggle() {

@@ -101,9 +101,9 @@ export const FEATS = [
   { key: 'embedding', kind: 'kw', c: 4, x: 235, y: 490 },
 ]
 export const KIND = {
-  kw: { tone: 'green', name: '关键词' },
-  ver: { tone: 'blue', name: '版本' },
-  link: { tone: 'purple', name: '外部链接' },
+  kw: { tone: 'green', name: ['Keyword', '关键词'] },
+  ver: { tone: 'blue', name: ['Version', '版本'] },
+  link: { tone: 'purple', name: ['External link', '外部链接'] },
 }
 export const fIdx = (key) => FEATS.findIndex((f) => f.key === key)
 
@@ -126,13 +126,16 @@ export const G = (() => {
       id: '2948',
       c: 0,
       fs: [fIdx('sandbox'), fIdx('seccomp'), fIdx('3.9.x')],
-      title: 'dify 升级到 3.9.5 后代码执行报错',
+      title: [
+        'Code execution fails after upgrading dify to 3.9.5',
+        'dify 升级到 3.9.5 后代码执行报错',
+      ],
     },
     {
       id: '3256',
       c: 0,
       fs: [fIdx('sandbox'), fIdx('3.9.x'), fIdx('dify-sandbox #232')],
-      title: 'Sandbox unable to run in v3.9.5, …',
+      title: ['Sandbox unable to run in v3.9.5, …', 'Sandbox unable to run in v3.9.5, …'],
     },
   ]
   SIZES.forEach((n, c) => {

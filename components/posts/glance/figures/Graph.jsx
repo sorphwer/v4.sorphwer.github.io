@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { T, useT } from '@/components/article/lang'
 import { G, KIND, TONE, Tag, featR } from '../shared'
 
 const RARITIES = G.feats.map((x) => x.rarity)
@@ -53,15 +54,18 @@ const focusOf = (sel) => {
 }
 
 function TicketSide({ me, nb }) {
+  const t = useT()
   const max = nb.length ? nb[0].s : 1
   return (
     <>
-      <div className="mut">工单</div>
+      <div className="mut">{t('Ticket', '工单')}</div>
       <div className="ttl">
         <span style={{ fontFamily: 'var(--mono)' }}>#{me.id}</span>
       </div>
       {me.title && (
-        <div style={{ color: 'var(--mut)', fontSize: '13.5px', marginBottom: 6 }}>{me.title}</div>
+        <div style={{ color: 'var(--mut)', fontSize: '13.5px', marginBottom: 6 }}>
+          {t(...me.title)}
+        </div>
       )}
       <div className="row" style={{ margin: '6px 0 12px' }}>
         {me.fs.map((f) => (
@@ -69,7 +73,10 @@ function TicketSide({ me, nb }) {
         ))}
       </div>
       <div className="mut" style={{ marginBottom: 4 }}>
-        通过这 {me.fs.length} 个特征连到 {nb.length} 张工单。按共享特征的稀有度打分，最近的邻居：
+        {t(
+          `Linked to ${nb.length} tickets through these ${me.fs.length} features. Scored by the rarity of what they share, the nearest neighbours:`,
+          `通过这 ${me.fs.length} 个特征连到 ${nb.length} 张工单。按共享特征的稀有度打分，最近的邻居：`
+        )}
       </div>
       {nb.slice(0, 6).map((n) => (
         <div className="nb" key={n.j}>
@@ -89,30 +96,45 @@ function TicketSide({ me, nb }) {
 }
 
 function FeatSide({ j }) {
+  const t = useT()
   const f = G.feats[j]
   const rr = (f.rarity - MIN_R) / (MAX_R - MIN_R || 1)
   return (
     <>
-      <div className="mut">{KIND[f.kind].name}</div>
+      <div className="mut">{t(...KIND[f.kind].name)}</div>
       <div className="ttl">
         <FeatTag f={j} />
       </div>
       <div style={{ margin: '10px 0 4px' }}>
-        被 <b>{f.deg}</b> 张工单共享
+        <T
+          en={
+            <>
+              Shared by <b>{f.deg}</b> tickets
+            </>
+          }
+          zh={
+            <>
+              被 <b>{f.deg}</b> 张工单共享
+            </>
+          }
+        />
       </div>
-      <div className="mut">稀有度</div>
+      <div className="mut">{t('Rarity', '稀有度')}</div>
       <div className="meter" style={{ height: 8, margin: '4px 0 12px' }}>
         <i style={{ width: `${8 + rr * 92}%` }} />
       </div>
       <div className="mut">
-        共享它的工单越少，“这两张工单相关”的证据就越强。这里的稀有度取 1 / log₂(1 +
-        工单数)，仅作示意。
+        {t(
+          'The fewer tickets share it, the stronger the evidence that two tickets are related. Rarity here is 1 / log₂(1 + tickets), for illustration only.',
+          '共享它的工单越少，“这两张工单相关”的证据就越强。这里的稀有度取 1 / log₂(1 + 工单数)，仅作示意。'
+        )}
       </div>
     </>
   )
 }
 
 export default function Graph() {
+  const t = useT()
   // `pinned` is the clicked selection; `hover` overrides it until the pointer leaves the svg.
   const [pinned, setPinned] = useState({ t: 0 })
   const [hover, setHover] = useState(null)
@@ -144,7 +166,7 @@ export default function Graph() {
               className="focus"
               viewBox="0 0 1000 560"
               role="img"
-              aria-label="可交互的知识图谱示意"
+              aria-label={t('Interactive knowledge graph (illustrative)', '可交互的知识图谱示意')}
               onMouseLeave={() => setHover(null)}
               onClick={() => pin({ t: 0 })}
             >
@@ -223,21 +245,23 @@ export default function Graph() {
             <div className="legend">
               <span>
                 <i style={{ background: 'var(--ink)', opacity: 0.8 }} />
-                工单
+                {t('Ticket', '工单')}
               </span>
               <span>
                 <i style={{ background: 'var(--green)' }} />
-                关键词
+                {t(...KIND.kw.name)}
               </span>
               <span>
                 <i style={{ background: 'var(--blue)' }} />
-                版本
+                {t(...KIND.ver.name)}
               </span>
               <span>
                 <i style={{ background: 'var(--purple)' }} />
-                外部链接
+                {t(...KIND.link.name)}
               </span>
-              <span>特征节点越大，共享它的工单越多</span>
+              <span>
+                {t('Bigger feature node = more tickets share it', '特征节点越大，共享它的工单越多')}
+              </span>
             </div>
           </div>
           <div className="side">
@@ -250,7 +274,10 @@ export default function Graph() {
         </div>
       </div>
       <figcaption className="cap">
-        悬停或点击任一工单，看它通过哪些特征连到别的工单；点击特征，看有哪些工单共享它。右侧的“邻居”按共享特征的稀有度打分，这正是后面“图关系”这一路检索的思路。示意数据。
+        {t(
+          'Hover or click any ticket to see which features link it to others; click a feature to see which tickets share it. The “neighbours” on the right are scored by the rarity of shared features — the same idea behind the graph channel of retrieval later on. Illustrative data.',
+          '悬停或点击任一工单，看它通过哪些特征连到别的工单；点击特征，看有哪些工单共享它。右侧的“邻居”按共享特征的稀有度打分，这正是后面“图关系”这一路检索的思路。示意数据。'
+        )}
       </figcaption>
     </figure>
   )

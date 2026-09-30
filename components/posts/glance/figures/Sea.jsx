@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
+import { T, useLang, useT } from '@/components/article/lang'
 import {
   G,
   KIND,
@@ -20,6 +21,8 @@ const LABEL_STYLE = {
 }
 
 export default function Sea() {
+  const t = useT()
+  const lang = useLang()
   const [svgRef, revealed] = useReveal(0.6)
   const tagTxRef = useRef(null)
   // P = animation progress (0 scattered, 1 graph), eased towards target in the rAF loop.
@@ -87,6 +90,12 @@ export default function Sea() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
+  // The tag's text changes with the language; re-measure it even when the rAF loop is idle.
+  useEffect(() => {
+    snap(performance.now())
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [lang])
+
   useEffect(() => {
     if (!revealed) return
     const id = setTimeout(() => {
@@ -112,23 +121,44 @@ export default function Sea() {
       <div className="panel" style={{ padding: 0, overflow: 'hidden' }}>
         <div className="lab">
           {target ? (
-            <>
-              <b>连成一张图</b>相似的问题聚在一起
-            </>
+            <T
+              en={
+                <>
+                  <b>Linked</b>similar issues cluster
+                </>
+              }
+              zh={
+                <>
+                  <b>连成一张图</b>相似的问题聚在一起
+                </>
+              }
+            />
           ) : (
-            <>
-              <b>已关闭的工单</b>各自孤立
-            </>
+            <T
+              en={
+                <>
+                  <b>Closed tickets</b>isolated
+                </>
+              }
+              zh={
+                <>
+                  <b>已关闭的工单</b>各自孤立
+                </>
+              }
+            />
           )}
         </div>
         <button className="btn ctl" onClick={() => set(target ? 0 : 1)}>
-          {target ? '打散' : '把它们连起来'}
+          {target ? t('Scatter', '打散') : t('Link them', '把它们连起来')}
         </button>
         <svg
           ref={svgRef}
           viewBox="0 0 1000 560"
           role="img"
-          aria-label="一片灰点代表已关闭的工单，连起来后按关键词、版本和链接形成一张图"
+          aria-label={t(
+            'Gray dots are closed tickets; once connected by keyword, version and link, they form a graph',
+            '一片灰点代表已关闭的工单，连起来后按关键词、版本和链接形成一张图'
+          )}
         >
           <g>
             {G.edges.map((e, k) => {
@@ -223,15 +253,17 @@ export default function Sea() {
                 y={hy - 26}
                 style={{ font: '600 13px var(--mono)', fill: 'var(--ink)' }}
               >
-                #2948 · 已关闭 · 半年前
+                {t('#2948 · closed · 6 months ago', '#2948 · 已关闭 · 半年前')}
               </text>
             </g>
           </g>
         </svg>
       </div>
       <figcaption className="cap">
-        每个灰点是一张已关闭的工单，圈出来的那张就是开头短片里半年前的
-        #2948。按关键词（绿）、版本（蓝）、外部链接（紫）连起来之后，相似的问题自然聚成一簇。示意图，布局与数量都不代表真实数据。
+        <T
+          en="Each gray dot is a closed ticket; the circled one is #2948, the ticket from six months earlier in the opening film. Once they are connected by keyword (green), version (blue) and external link (purple), similar issues fall into clusters on their own. Illustrative only: neither the layout nor the counts reflect real data."
+          zh="每个灰点是一张已关闭的工单，圈出来的那张就是开头短片里半年前的 #2948。按关键词（绿）、版本（蓝）、外部链接（紫）连起来之后，相似的问题自然聚成一簇。示意图，布局与数量都不代表真实数据。"
+        />
       </figcaption>
     </figure>
   )

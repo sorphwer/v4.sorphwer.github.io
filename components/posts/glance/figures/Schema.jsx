@@ -1,3 +1,4 @@
+import { useLang, useT } from '@/components/article/lang'
 import { useReveal } from '../shared'
 
 const EDGE = { stroke: 'var(--edge)' }
@@ -22,6 +23,9 @@ function Attr({ x, y, delay, ink, wash, label }) {
 }
 
 export default function Schema() {
+  const t = useT()
+  // English "summary · vector · full text" needs a wider ticket box; keep it centred on x=250
+  const boxW = useLang() === 'en' ? 156 : 108
   const [ref, revealed] = useReveal(0.4)
 
   return (
@@ -30,7 +34,10 @@ export default function Schema() {
         <svg
           viewBox="0 0 660 300"
           role="img"
-          aria-label="图的结构：工单连向关键词、版本、链接、处理人；客户组织、原始标签等没有放进图"
+          aria-label={t(
+            'Graph structure: tickets link to keywords, versions, links and assignees; customer org, raw tags and the like are left out',
+            '图的结构：工单连向关键词、版本、链接、处理人；客户组织、原始标签等没有放进图'
+          )}
         >
           <g style={{ fontFamily: 'var(--sans)' }}>
             <path
@@ -63,23 +70,23 @@ export default function Schema() {
             />
             <g fontSize="11.5" style={{ fill: 'var(--sub)' }}>
               <text x="168" y="96" textAnchor="middle">
-                带有
+                {t('has', '带有')}
               </text>
               <text x="168" y="214" textAnchor="middle">
-                影响版本
+                {t('affects', '影响版本')}
               </text>
               <text x="334" y="96" textAnchor="middle">
-                引用
+                {t('cites', '引用')}
               </text>
               <text x="334" y="214" textAnchor="middle">
-                处理人
+                {t('assignee', '处理人')}
               </text>
             </g>
             <g className="nd" style={{ transitionDelay: '.0s' }}>
               <rect
-                x="196"
+                x={250 - boxW / 2}
                 y="122"
-                width="108"
+                width={boxW}
                 height="56"
                 rx="10"
                 strokeWidth="1.6"
@@ -93,7 +100,7 @@ export default function Schema() {
                 fontWeight="700"
                 style={{ fill: 'var(--ink)' }}
               >
-                工单
+                {t('Ticket', '工单')}
               </text>
               <text
                 x="250"
@@ -102,7 +109,7 @@ export default function Schema() {
                 fontSize="11"
                 style={{ fill: 'var(--sub)' }}
               >
-                摘要 · 向量 · 全文
+                {t('summary · vector · full text', '摘要 · 向量 · 全文')}
               </text>
             </g>
             <Attr
@@ -111,7 +118,7 @@ export default function Schema() {
               delay=".35s"
               ink="var(--green)"
               wash="var(--green-bg)"
-              label="关键词"
+              label={t('Keywords', '关键词')}
             />
             <Attr
               x={96}
@@ -119,7 +126,7 @@ export default function Schema() {
               delay=".45s"
               ink="var(--blue)"
               wash="var(--blue-bg)"
-              label="版本"
+              label={t('Versions', '版本')}
             />
             <Attr
               x={404}
@@ -127,7 +134,7 @@ export default function Schema() {
               delay=".55s"
               ink="var(--purple)"
               wash="var(--purple-bg)"
-              label="外部链接"
+              label={t('External links', '外部链接')}
             />
             <Attr
               x={404}
@@ -135,7 +142,7 @@ export default function Schema() {
               delay=".65s"
               ink="var(--gray)"
               wash="var(--gray-bg)"
-              label="支持工程师"
+              label={t('Support engineer', '支持工程师')}
             />
             <line
               x1="474"
@@ -147,30 +154,35 @@ export default function Schema() {
             />
             <g className="nd" style={{ transitionDelay: '.9s' }}>
               <text x="500" y="44" fontSize="12.5" style={{ fill: 'var(--sub)' }}>
-                刻意没放进去的
+                {t('Deliberately left out', '刻意没放进去的')}
               </text>
               <g fontSize="13.5" textDecoration="line-through" style={{ fill: 'var(--faint)' }}>
                 <text x="500" y="84">
-                  客户组织
+                  {t('Customer org', '客户组织')}
                 </text>
                 <text x="500" y="120">
-                  工单系统原始标签
+                  {t('Raw helpdesk tags', '工单系统原始标签')}
                 </text>
                 <text x="500" y="156">
-                  产品线
+                  {t('Product line', '产品线')}
                 </text>
                 <text x="500" y="192">
-                  环境描述
+                  {t('Environment notes', '环境描述')}
                 </text>
                 <text x="500" y="228">
-                  客户侧联系人
+                  {t('Customer contacts', '客户侧联系人')}
                 </text>
               </g>
             </g>
           </g>
         </svg>
       </div>
-      <figcaption className="cap">图的全部结构。右侧这些信息都在原文里，只是不进图。</figcaption>
+      <figcaption className="cap">
+        {t(
+          'The whole graph schema. Everything on the right is in the ticket text; it just stays out of the graph.',
+          '图的全部结构。右侧这些信息都在原文里，只是不进图。'
+        )}
+      </figcaption>
     </figure>
   )
 }

@@ -8,6 +8,7 @@ import { BlogNewsletterForm } from './NewsletterForm'
 import { NotionRenderer } from 'react-notion-x'
 import { getPageTitle } from 'notion-utils'
 import dynamic from 'next/dynamic'
+import { En, T, Zh } from './article/lang'
 
 // Interactive post bodies live in components/posts/* and are registered here
 // (webpack side) rather than imported from the .mdx: mdx-bundler would inline
@@ -65,6 +66,10 @@ export const MDXComponents = {
   PaperArticle,
   Film,
   Glance,
+  // Bilingual prose for posts with `titleZh` (components/article/lang).
+  En,
+  Zh,
+  T,
   wrapper: ({ components, layout, ...rest }) => {
     const Layout = require(`../layouts/${layout}`).default
     return <Layout {...rest} />

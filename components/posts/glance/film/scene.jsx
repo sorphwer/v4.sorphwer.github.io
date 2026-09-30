@@ -31,6 +31,7 @@
        B003: 14 tickets, 28/28 citations verified; steps abridged) */
 import { createElement as h, useState } from 'react'
 import { Easing as E, Sprite, Stage, useTime } from './engine'
+import { useLang, useT } from '@/components/article/lang'
 // palette, fonts and time helpers are shared with the art module (art.jsx)
 import {
   INK,
@@ -165,12 +166,16 @@ const T = {
 }
 
 // ---------- real strings ----------
+// bilingual strings are [en, zh] pairs, resolved at render with useT: tx(...pair)
 const OLD = {
   id: '2948',
-  subj: 'dify 升级到 3.9.5 后代码执行报错',
+  subj: ['Code execution fails after upgrading Dify to 3.9.5', 'dify 升级到 3.9.5 后代码执行报错'],
   claim:
     'The failure occurred during Sandbox DifySeccomp initialization, not in the customer’s Python logic.',
-  quote: '当前错误发生在 sandbox 初始化 DifySeccomp 阶段，不是代码逻辑本身的问题。',
+  quote: [
+    'The error occurs while the sandbox initializes DifySeccomp, not in your code logic.',
+    '当前错误发生在 sandbox 初始化 DifySeccomp 阶段，不是代码逻辑本身的问题。',
+  ],
   quoteId: 'comment_id=…5924',
 }
 const NEIGHBOR = { id: '3256', subj: 'Sandbox unable to run in v3.9.5, …' }
@@ -286,16 +291,34 @@ const G = (() => {
 })()
 
 const CH = [
-  { name: '语义', desc: '意思相近的旧工单', icon: 'ripple', tone: TONE.ink, t: T.channels + 0.2 },
-  { name: '原文', desc: '报错串一字不差', icon: 'text', tone: TONE.gray, t: T.channels + 1.3 },
   {
-    name: '关键词',
-    desc: '关键词、版本号相同',
+    name: ['Semantic', '语义'],
+    desc: ['Old tickets that mean the same', '意思相近的旧工单'],
+    icon: 'ripple',
+    tone: TONE.ink,
+    t: T.channels + 0.2,
+  },
+  {
+    name: ['Exact text', '原文'],
+    desc: ['The error string, verbatim', '报错串一字不差'],
+    icon: 'text',
+    tone: TONE.gray,
+    t: T.channels + 1.3,
+  },
+  {
+    name: ['Keyword', '关键词'],
+    desc: ['Same keywords and versions', '关键词、版本号相同'],
     icon: 'tag',
     tone: TONE.green,
     t: T.channels + 2.4,
   },
-  { name: '图关系', desc: '在图里彼此相邻', icon: 'nodes', tone: TONE.blue, t: T.channels + 3.5 },
+  {
+    name: ['Graph', '图关系'],
+    desc: ['Neighbours in the graph', '在图里彼此相邻'],
+    icon: 'nodes',
+    tone: TONE.blue,
+    t: T.channels + 3.5,
+  },
 ]
 
 // cameras: world → screen
@@ -702,6 +725,7 @@ const LINK = [
 ]
 function SupportIntro() {
   const t = useTime()
+  const tx = useT()
   const o = 1 - seg(t, T.buried - 0.6, T.buried, E.easeInOutQuad)
   if (o <= 0) return null
   const title = 1 - seg(t, T.ticket - 0.5, T.ticket, E.easeInOutQuad)
@@ -721,12 +745,12 @@ function SupportIntro() {
       h(
         'div',
         { style: serif(46, INK, { fontWeight: 700, letterSpacing: '-0.01em', lineHeight: 1.35 }) },
-        '售后工程师的一天，'
+        tx('A support engineer’s day', '售后工程师的一天，')
       ),
       h(
         'div',
         { style: serif(46, INK, { fontWeight: 700, letterSpacing: '-0.01em', lineHeight: 1.35 }) },
-        '从一条求助开始。'
+        tx('starts with a request.', '从一条求助开始。')
       )
     ),
     card(
@@ -751,7 +775,11 @@ function SupportIntro() {
         t: Math.max(0, t - 1.9),
         sw: 1.6,
       }),
-      h('span', { style: sans(15, INK, { fontWeight: 500 }) }, '客户发来一条求助')
+      h(
+        'span',
+        { style: sans(15, INK, { fontWeight: 500 }) },
+        tx('New help request', '客户发来一条求助')
+      )
     ),
     h(
       'svg',
@@ -792,15 +820,16 @@ const propRow = (label, value, key, style) =>
 
 function NewTicket() {
   const t = useTime()
+  const tx = useT()
   const o = win(t, T.ticket + 0.2, T.buried, 0.6, 0.6)
   if (o <= 0) return null
   const inn = seg(t, T.ticket + 0.2, T.ticket + 0.9, E.easeOutCubic)
   const body = seg(t, T.ticket + 0.9, T.ticket + 1.5, E.easeOutCubic)
   const trait = (k) => seg(t, T.traits + k * 0.45, T.traits + 0.45 + k * 0.45, E.easeOutBack)
   const TRAITS = [
-    ['重复出现', TONE.ink],
-    ['版本相关', TONE.blue],
-    ['要翻源码', TONE.purple],
+    [['Recurring', '重复出现'], TONE.ink],
+    [['Version-specific', '版本相关'], TONE.blue],
+    [['Needs the source', '要翻源码'], TONE.purple],
   ]
   return card(
     {
@@ -811,7 +840,7 @@ function NewTicket() {
       opacity: o,
       transform: `translateY(${(1 - inn) * 14}px)`,
     },
-    h('div', { style: sans(13, SUB) }, '新工单 · 刚刚'),
+    h('div', { style: sans(13, SUB) }, tx('New ticket · just now', '新工单 · 刚刚')),
     h(
       'div',
       {
@@ -822,14 +851,14 @@ function NewTicket() {
           marginBottom: 12,
         }),
       },
-      'K8s 部署，3.8.0 升级到 3.9.8'
+      tx('K8s: upgrading 3.8.0 → 3.9.8', 'K8s 部署，3.8.0 升级到 3.9.8')
     ),
-    propRow('状态', tag('新建', TONE.pink), 's'),
-    propRow('版本', h('span', { style: sans(14, INK) }, '3.8.0 → 3.9.8'), 'v'),
+    propRow(tx('Status', '状态'), tag(tx('New', '新建'), TONE.pink), 's'),
+    propRow(tx('Version', '版本'), h('span', { style: sans(14, INK) }, '3.8.0 → 3.9.8'), 'v'),
     propRow(
-      '特点',
+      tx('Traits', '特点'),
       TRAITS.map(([txt, tone], k) =>
-        h('span', { key: txt, style: popStyle(trait(k), '0 50%') }, tag(txt, tone))
+        h('span', { key: k, style: popStyle(trait(k), '0 50%') }, tag(tx(...txt), tone))
       ),
       'x'
     ),
@@ -837,7 +866,11 @@ function NewTicket() {
     h(
       'div',
       { style: rise(body, 8) },
-      h('div', { style: sans(15, INK, { marginBottom: 10 }) }, '升级后，代码节点直接崩：'),
+      h(
+        'div',
+        { style: sans(15, INK, { marginBottom: 10 }) },
+        tx('After the upgrade, the Code node crashes outright:', '升级后，代码节点直接崩：')
+      ),
       h(
         'div',
         { style: { background: WASH, borderRadius: 6, padding: '12px 14px' } },
@@ -856,6 +889,7 @@ function NewTicket() {
 // =====================================================================
 function BuriedTag() {
   const t = useTime()
+  const tx = useT()
   const o = win(t, T.buried + 1.2, T.connect + 0.3, 0.4, 0.4)
   if (o <= 0) return null
   const p = toScreen(CAM1, T0.x0, T0.y0)
@@ -885,16 +919,17 @@ function BuriedTag() {
         'div',
         { style: { display: 'flex', gap: 8, alignItems: 'center' } },
         h('span', { style: mono(12.5, INK, { fontWeight: 600 }) }, '#' + OLD.id),
-        tag('已关闭', TONE.gray, { size: 11.5 }),
-        h('span', { style: sans(12, SUB) }, '半年前')
+        tag(tx('Closed', '已关闭'), TONE.gray, { size: 11.5 }),
+        h('span', { style: sans(12, SUB) }, tx('6 months ago', '半年前'))
       ),
-      h('div', { style: sans(13, MUT, { marginTop: 5, whiteSpace: 'nowrap' }) }, OLD.subj)
+      h('div', { style: sans(13, MUT, { marginTop: 5, whiteSpace: 'nowrap' }) }, tx(...OLD.subj))
     )
   )
 }
 
 function CountUp() {
   const t = useTime()
+  const tx = useT()
   const o = win(t, T.connect + 0.1, T.promise, 0.5, 0.5)
   if (o <= 0) return null
   const n = Math.round(3400 * seg(t, T.connect + 0.2, T.connect + 2.2, E.easeOutCubic))
@@ -913,12 +948,13 @@ function CountUp() {
       n.toLocaleString('en-US'),
       h('span', { style: { opacity: plus } }, '+')
     ),
-    h('span', { style: sans(16, MUT) }, '张已关闭工单')
+    h('span', { style: sans(16, MUT) }, tx('closed tickets', '张已关闭工单'))
   )
 }
 
 function PromiseScene() {
   const t = useTime()
+  const tx = useT()
   const o = win(t, T.promise, T.secForm, 0.6, 0.5)
   if (o <= 0) return null
   const line = (k) => seg(t, T.promise + 0.4 + k * 0.35, T.promise + 1.0 + k * 0.35, E.easeOutCubic)
@@ -926,7 +962,14 @@ function PromiseScene() {
   return abs(
     { inset: 0, opacity: o },
     abs({ left: 90, top: 176 }, h(Engineer, { t: t - T.promise, pose: 'relaxed' })),
-    abs({ left: 128, top: 134 }, h('div', { style: sans(18, MUT) }, '这次，不用从头翻了。')),
+    abs(
+      { left: 128, top: 134 },
+      h(
+        'div',
+        { style: sans(18, MUT) },
+        tx('This time, no digging from scratch.', '这次，不用从头翻了。')
+      )
+    ),
     abs(
       { left: 650, top: 150, width: 560 },
       h(
@@ -944,7 +987,7 @@ function PromiseScene() {
           t: t,
           sw: 1.8,
         }),
-        '历史工单知识库'
+        tx('Ticket history knowledge base', '历史工单知识库')
       ),
       h(
         'div',
@@ -954,7 +997,7 @@ function PromiseScene() {
             rise(line(1), 10)
           ),
         },
-        '每一张关闭的工单，'
+        tx('Every closed ticket', '每一张关闭的工单，')
       ),
       h(
         'div',
@@ -964,7 +1007,7 @@ function PromiseScene() {
             rise(line(2), 10)
           ),
         },
-        '都是下一张的答案。'
+        tx('answers the next one.', '都是下一张的答案。')
       )
     ),
     card(
@@ -973,14 +1016,18 @@ function PromiseScene() {
         'div',
         { style: { display: 'flex', alignItems: 'center', gap: 10 } },
         h(CheckCircle, { size: 20, color: ACCENT, p: seg(t, T.promise + 1.7, T.promise + 2.4) }),
-        h('span', { style: sans(15, INK, { fontWeight: 600 }) }, '找到相关工单'),
+        h(
+          'span',
+          { style: sans(15, INK, { fontWeight: 600 }) },
+          tx('Related ticket found', '找到相关工单')
+        ),
         h('span', { style: mono(13, SUB, { marginLeft: 'auto' }) }, '#' + OLD.id)
       ),
-      h('div', { style: sans(16, INK, { marginTop: 10 }) }, OLD.subj),
+      h('div', { style: sans(16, INK, { marginTop: 10 }) }, tx(...OLD.subj)),
       h(
         'div',
         { style: { marginTop: 12, borderLeft: `3px solid ${INK}`, paddingLeft: 12 } },
-        h('div', { style: sans(13.5, MUT, { lineHeight: 1.6 }) }, OLD.quote)
+        h('div', { style: sans(13.5, MUT, { lineHeight: 1.6 }) }, tx(...OLD.quote))
       )
     )
   )
@@ -991,12 +1038,28 @@ function PromiseScene() {
 // =====================================================================
 // Notion page header: a line icon that draws itself above the H1
 const SECTIONS = [
-  { start: T.secForm, end: T.form, title: '图是怎么长出来的', icon: 'graph' },
-  { start: T.secSearch, end: T.query, title: '一次检索怎么走', icon: 'search' },
-  { start: T.secHard, end: T.hard, title: '工单支持，难在哪里', icon: 'peak' },
+  {
+    start: T.secForm,
+    end: T.form,
+    title: ['How the graph grows', '图是怎么长出来的'],
+    icon: 'graph',
+  },
+  {
+    start: T.secSearch,
+    end: T.query,
+    title: ['How a search runs', '一次检索怎么走'],
+    icon: 'search',
+  },
+  {
+    start: T.secHard,
+    end: T.hard,
+    title: ['Why ticket support is hard', '工单支持，难在哪里'],
+    icon: 'peak',
+  },
 ]
 function SectionTitle() {
   const t = useTime()
+  const tx = useT()
   const s = SECTIONS.find((x) => t >= x.start && t < x.end)
   if (!s) return null
   const o = win(t, s.start, s.end, 0.25, 0.3)
@@ -1013,7 +1076,11 @@ function SectionTitle() {
         sw: 1.15,
         style: { marginBottom: 26, marginLeft: -4 },
       }),
-      h('div', { style: sans(66, INK, { fontWeight: 700, letterSpacing: '-0.02em' }) }, s.title)
+      h(
+        'div',
+        { style: sans(66, INK, { fontWeight: 700, letterSpacing: '-0.02em' }) },
+        tx(...s.title)
+      )
     )
   )
 }
@@ -1024,6 +1091,7 @@ function SectionTitle() {
 const PG = { x: 80, y: 92, w: 470 }
 function FormPage() {
   const t = useTime()
+  const tx = useT()
   const o = win(t, T.form, T.secSearch, 0.5, 0.4)
   if (o <= 0) return null
   const inn = seg(t, T.form, T.form + 0.6, E.easeOutCubic)
@@ -1068,23 +1136,27 @@ function FormPage() {
       'div',
       { style: { display: 'flex', alignItems: 'center', gap: 8 } },
       h('span', { style: mono(13, SUB) }, '#' + OLD.id),
-      tag('已关闭', TONE.gray, { size: 12 }),
+      tag(tx('Closed', '已关闭'), TONE.gray, { size: 12 }),
       h(
         'span',
         { style: Object.assign({ marginLeft: 'auto' }, popStyle(badge, '100% 50%')) },
-        tag('已脱敏', TONE.pink, { size: 12 })
+        tag(tx('Masked', '已脱敏'), TONE.pink, { size: 12 })
       )
     ),
     h(
       'div',
       { style: sans(22, INK, { fontWeight: 700, marginTop: 10, marginBottom: 10 }) },
-      OLD.subj
+      tx(...OLD.subj)
     ),
-    propRow('提交人', pii('王小明', '[NAME_1]', scanN, swapN), 'n'),
-    propRow('邮箱', pii('xiaoming@example.com', '[EMAIL_1]', scanE, swapE), 'e'),
-    propRow('版本', h('span', { style: sans(14, INK) }, '3.9.5'), 'v'),
+    propRow(
+      tx('Requester', '提交人'),
+      pii(tx('Wang Xiaoming', '王小明'), '[NAME_1]', scanN, swapN),
+      'n'
+    ),
+    propRow(tx('Email', '邮箱'), pii('xiaoming@example.com', '[EMAIL_1]', scanE, swapE), 'e'),
+    propRow(tx('Version', '版本'), h('span', { style: sans(14, INK) }, '3.9.5'), 'v'),
     divider('d'),
-    h('div', { style: sans(12.5, SUB, { marginBottom: 6 }) }, '工程师回复'),
+    h('div', { style: sans(12.5, SUB, { marginBottom: 6 }) }, tx('Engineer reply', '工程师回复')),
     h(
       'div',
       { style: sans(15, INK, { lineHeight: 1.7 }) },
@@ -1097,7 +1169,7 @@ function FormPage() {
             borderRadius: 2,
           },
         },
-        OLD.quote
+        tx(...OLD.quote)
       )
     ),
     h(
@@ -1118,6 +1190,8 @@ const XCHIPS = [
 const XCHIP_Y = 316
 function ExtractPanel() {
   const t = useTime()
+  const tx = useT()
+  const en = useLang() === 'en'
   const o = win(t, T.extract, T.nodes + 0.5, 0.5, 0.5)
   if (o <= 0) return null
   const s = T.extract
@@ -1155,7 +1229,11 @@ function ExtractPanel() {
         rise(head, 8)
       ),
       h(Icon, { name: 'sparkle', size: 18, accent: ACCENT, p: seg(t, s + 0.1, s + 0.8), t: t }),
-      h('span', { style: sans(14, SUB) }, 'AI 提炼（只看脱敏后的文本）')
+      h(
+        'span',
+        { style: sans(14, SUB) },
+        tx('AI extraction (masked text only)', 'AI 提炼（只看脱敏后的文本）')
+      )
     ),
     abs(
       Object.assign(
@@ -1170,7 +1248,7 @@ function ExtractPanel() {
         },
         rise(claim, 10)
       ),
-      h('div', { style: sans(12.5, SUB, { marginBottom: 6 }) }, '结论'),
+      h('div', { style: sans(12.5, SUB, { marginBottom: 6 }) }, tx('Claim', '结论')),
       h('div', { style: sans(16, INK, { lineHeight: 1.55 }) }, OLD.claim)
     ),
     abs(
@@ -1178,17 +1256,18 @@ function ExtractPanel() {
         { left: 640, top: 262, display: 'flex', alignItems: 'center', gap: 10 },
         rise(src, 8)
       ),
-      h('span', { style: sans(14, MUT) }, '↳ 原话出处'),
+      h('span', { style: sans(14, MUT) }, tx('↳ Source quote', '↳ 原话出处')),
       h('span', { style: mono(13, INK) }, '#' + OLD.id + ' · ' + OLD.quoteId),
       h(CheckCircle, { size: 18, color: TONE.blue.fg, p: seg(t, s + 2.3, s + 3.0) })
     ),
     abs(
       Object.assign({ left: 640, top: XCHIP_Y + 3 }, rise(rowIn, 6)),
-      h('span', { style: sans(14, SUB) }, '关键词')
+      h('span', { style: sans(14, SUB) }, tx('Keywords', '关键词'))
     ),
     abs(
-      Object.assign({ left: 930, top: XCHIP_Y + 3 }, rise(rowIn, 6)),
-      h('span', { style: sans(14, SUB) }, '版本')
+      // "Version" is wider than 版本; keep it clear of the 3.9.x chip at x 980
+      Object.assign({ left: en ? 916 : 930, top: XCHIP_Y + 3 }, rise(rowIn, 6)),
+      h('span', { style: sans(14, SUB) }, tx('Version', '版本'))
     ),
     flying
       ? null
@@ -1244,15 +1323,20 @@ function FlyingChips() {
 // =====================================================================
 // ACT 3 — how a search runs (41.5–60)
 // =====================================================================
-const QUERY = '3.9.8 升级后 panic: could not create filter · main.DifySeccomp(…)'
+const QUERY = [
+  'after upgrading to 3.9.8, panic: could not create filter · main.DifySeccomp(…)',
+  '3.9.8 升级后 panic: could not create filter · main.DifySeccomp(…)',
+]
 function QueryBox() {
   const t = useTime()
+  const tx = useT()
   const o = win(t, T.query, T.secHard, 0.5, 0.4)
   if (o <= 0) return null
-  const n = Math.floor(QUERY.length * seg(t, T.query + 0.3, T.query + 1.8))
-  const typed = QUERY.slice(0, n)
+  const query = tx(...QUERY)
+  const n = Math.floor(query.length * seg(t, T.query + 0.3, T.query + 1.8))
+  const typed = query.slice(0, n)
   const hi = seg(t, CH[1].t, CH[1].t + 0.3) * (1 - seg(t, T.rank, T.rank + 0.5))
-  const k = QUERY.indexOf('DifySeccomp')
+  const k = query.indexOf('DifySeccomp')
   const text =
     n > k + 11 && hi > 0
       ? [
@@ -1317,7 +1401,7 @@ function QueryBox() {
     ),
     abs(
       { left: 66, top: QCHIP_Y + 3, opacity: lab * (1 - seg(t, T.rank, T.rank + 0.5)) },
-      h('span', { style: sans(13.5, SUB) }, '识别出')
+      h('span', { style: sans(13.5, SUB) }, tx('Detected', '识别出'))
     ),
     QCHIPS.map((c, i) =>
       abs(
@@ -1335,11 +1419,15 @@ function QueryBox() {
 const PANEL = { x: 770, w: 440 }
 function ChannelPanel() {
   const t = useTime()
+  const tx = useT()
   const o = win(t, T.channels - 0.1, T.rank + 0.3, 0.4, 0.4)
   if (o <= 0) return null
   return abs(
     { inset: 0, opacity: o },
-    abs({ left: PANEL.x, top: 70 }, h('span', { style: sans(14, SUB) }, '四路同时找')),
+    abs(
+      { left: PANEL.x, top: 70 },
+      h('span', { style: sans(14, SUB) }, tx('Four channels at once', '四路同时找'))
+    ),
     CH.map((c, k) => {
       const p = seg(t, c.t - 0.2, c.t + 0.3, E.easeOutCubic)
       const active = win(t, c.t, c.t + 1.4, 0.2, 0.4)
@@ -1347,7 +1435,7 @@ function ChannelPanel() {
       return card(
         Object.assign(
           {
-            key: c.name,
+            key: k,
             left: PANEL.x,
             top: 102 + k * 88,
             width: PANEL.w,
@@ -1392,8 +1480,8 @@ function ChannelPanel() {
         h(
           'div',
           null,
-          h('div', { style: sans(18, INK, { fontWeight: 600 }) }, c.name),
-          h('div', { style: sans(13, SUB, { marginTop: 2 }) }, c.desc)
+          h('div', { style: sans(18, INK, { fontWeight: 600 }) }, tx(...c.name)),
+          h('div', { style: sans(13, SUB, { marginTop: 2 }) }, tx(...c.desc))
         ),
         h(
           'div',
@@ -1403,7 +1491,7 @@ function ChannelPanel() {
             { style: sans(24, c.tone.fg, { fontWeight: 600, fontVariantNumeric: 'tabular-nums' }) },
             count
           ),
-          h('div', { style: sans(11.5, SUB) }, '命中')
+          h('div', { style: sans(11.5, SUB) }, tx('hits', '命中'))
         )
       )
     })
@@ -1412,13 +1500,18 @@ function ChannelPanel() {
 
 function RankPanel() {
   const t = useTime()
+  const tx = useT()
   const o = win(t, T.rank, T.answer + 0.2, 0.4, 0.4)
   if (o <= 0) return null
   return abs(
     { inset: 0, opacity: o },
     abs(
       { left: PANEL.x, top: 70 },
-      h('span', { style: sans(14, SUB) }, '合并排序：几路都找到的，排在前面')
+      h(
+        'span',
+        { style: sans(14, SUB) },
+        tx('Fused ranking: found by more channels ranks higher', '合并排序：几路都找到的，排在前面')
+      )
     ),
     G.top.map((ti, k) => {
       const tk = G.tickets[ti]
@@ -1426,7 +1519,7 @@ function RankPanel() {
       const grow = seg(t, T.rank + 0.4 + k * 0.12, T.rank + 1.3 + k * 0.12, E.easeOutCubic)
       const first = k === 0
       const hl = first ? seg(t, T.rank + 1.2, T.rank + 1.6) : 0
-      const subj = ti === 0 ? OLD.subj : ti === 1 ? NEIGHBOR.subj : null
+      const subj = ti === 0 ? tx(...OLD.subj) : ti === 1 ? NEIGHBOR.subj : null
       const segs = [0, 1, 2, 3].filter((ch) => G.hits[ti].some((x) => x.ch === ch))
       return card(
         Object.assign(
@@ -1490,7 +1583,7 @@ function RankPanel() {
           h(
             'span',
             { style: sans(12, SUB, { width: 28, textAlign: 'right' }) },
-            segs.length + ' 路'
+            tx(segs.length + '/4', segs.length + ' 路')
           )
         )
       )
@@ -1500,6 +1593,7 @@ function RankPanel() {
 
 function AnswerPanel() {
   const t = useTime()
+  const tx = useT()
   const o = win(t, T.answer, T.entry + 0.2, 0.5, 0.4)
   if (o <= 0) return null
   const s = T.answer
@@ -1518,7 +1612,7 @@ function AnswerPanel() {
     h(
       'div',
       { style: { display: 'flex', alignItems: 'center', gap: 8 } },
-      h('span', { style: sans(13, SUB) }, '回复草稿'),
+      h('span', { style: sans(13, SUB) }, tx('Draft reply', '回复草稿')),
       h(
         'span',
         { style: { marginLeft: 'auto', display: 'flex', gap: 6 } },
@@ -1529,9 +1623,9 @@ function AnswerPanel() {
     h(
       'div',
       { style: sans(19, INK, { fontWeight: 700, lineHeight: 1.45, marginTop: 12 }) },
-      '故障出在 sandbox 的 seccomp 初始化，',
+      tx('Sandbox seccomp init failed,', '故障出在 sandbox 的 seccomp 初始化，'),
       h('br'),
-      '不在您的代码。'
+      tx('not your code.', '不在您的代码。')
     ),
     h(
       'div',
@@ -1541,7 +1635,7 @@ function AnswerPanel() {
           rise(q, 8)
         ),
       },
-      h('div', { style: sans(14.5, MUT, { lineHeight: 1.65 }) }, OLD.quote),
+      h('div', { style: sans(14.5, MUT, { lineHeight: 1.65 }) }, tx(...OLD.quote)),
       h('div', { style: mono(12, SUB, { marginTop: 6 }) }, '— #' + OLD.id + ' · ' + OLD.quoteId)
     ),
     h(
@@ -1559,7 +1653,7 @@ function AnswerPanel() {
             display: 'inline-block',
           }),
         },
-        '插入工单回复'
+        tx('Insert into reply', '插入工单回复')
       ),
       h(
         'span',
@@ -1570,7 +1664,7 @@ function AnswerPanel() {
           ),
         },
         h(CheckCircle, { size: 18, color: TONE.blue.fg, p: seg(t, s + 2.1, s + 2.8) }),
-        h('span', { style: sans(13.5, TONE.blue.fg) }, '已插入')
+        h('span', { style: sans(13.5, TONE.blue.fg) }, tx('Inserted', '已插入'))
       )
     )
   )
@@ -1579,30 +1673,37 @@ function AnswerPanel() {
 const ENTRIES = [
   {
     icon: 'bubble',
-    name: 'Zendesk 回票 agent',
-    line: '回复客户之前，自动先查一遍知识库。',
+    name: ['Zendesk reply agent', 'Zendesk 回票 agent'],
+    line: ['Checks the knowledge base before every reply.', '回复客户之前，自动先查一遍知识库。'],
     tone: TONE.ink,
   },
   {
     icon: 'stack',
-    name: 'Dify 外部知识库',
-    line: '挂进任意 Dify 应用，当知识库直接用。',
+    name: ['Dify external knowledge base', 'Dify 外部知识库'],
+    line: [
+      'Plugs into any Dify app as its knowledge base.',
+      '挂进任意 Dify 应用，当知识库直接用。',
+    ],
     tone: TONE.blue,
   },
 ]
 function EntryPanel() {
   const t = useTime()
+  const tx = useT()
   const o = win(t, T.entry, T.secHard, 0.4, 0.4)
   if (o <= 0) return null
   return abs(
     { inset: 0, opacity: o },
-    abs({ left: PANEL.x, top: 70 }, h('span', { style: sans(14, SUB) }, '在哪里用')),
+    abs(
+      { left: PANEL.x, top: 70 },
+      h('span', { style: sans(14, SUB) }, tx('Where it runs', '在哪里用'))
+    ),
     ENTRIES.map((e, k) => {
       const p = seg(t, T.entry + 0.2 + k * 0.5, T.entry + 0.7 + k * 0.5, E.easeOutCubic)
       return card(
         Object.assign(
           {
-            key: e.name,
+            key: k,
             left: PANEL.x,
             top: 102 + k * 128,
             width: PANEL.w,
@@ -1640,8 +1741,8 @@ function EntryPanel() {
         h(
           'div',
           null,
-          h('div', { style: sans(19, INK, { fontWeight: 700 }) }, e.name),
-          h('div', { style: sans(14, MUT, { marginTop: 4 }) }, e.line)
+          h('div', { style: sans(19, INK, { fontWeight: 700 }) }, tx(...e.name)),
+          h('div', { style: sans(14, MUT, { marginTop: 4 }) }, tx(...e.line))
         )
       )
     })
@@ -1652,61 +1753,74 @@ function EntryPanel() {
 // ACT 4 — why it is hard (61.5–76): two columns, six problems → fixes
 // =====================================================================
 const COLS = [
-  { title: '问题难回答', icon: 'question', tone: TONE.pink, x: 110, t: T.solveA },
-  { title: '回答难被相信', icon: 'shield', tone: TONE.pink, x: 670, t: T.solveB },
+  {
+    title: ['Hard to answer', '问题难回答'],
+    icon: 'question',
+    tone: TONE.pink,
+    x: 110,
+    t: T.solveA,
+  },
+  {
+    title: ['Hard to trust', '回答难被相信'],
+    icon: 'shield',
+    tone: TONE.pink,
+    x: 670,
+    t: T.solveB,
+  },
 ]
 const arrow = (k) => h('span', { key: k, style: sans(13, SUB) }, '→')
+// demo: (tx) => the row's example tags, built at render so they follow the language
 const ROWS = [
   {
-    problem: '版本号、报错码混在一起',
-    fix: '原样贴进去，直接搜',
-    demo: [
+    problem: ['Versions and error codes, all mixed in', '版本号、报错码混在一起'],
+    fix: ['Paste it verbatim, search directly', '原样贴进去，直接搜'],
+    demo: () => [
       tag('#3412', TONE.gray, { mono: true, key: 'a' }),
       tag('3.8.0', TONE.blue, { mono: true, key: 'b' }),
       tag('panic: …', TONE.ink, { mono: true, key: 'c' }),
     ],
   },
   {
-    problem: '症状描述很模糊',
-    fix: '说「连不上」，也能找到报错',
-    demo: [
-      tag('连不上', TONE.blue, { key: 'a' }),
+    problem: ['Symptoms are vague', '症状描述很模糊'],
+    fix: ['Say “can’t connect”, still find the error', '说「连不上」，也能找到报错'],
+    demo: (tx) => [
+      tag(tx('can’t connect', '连不上'), TONE.blue, { key: 'a' }),
       arrow('x'),
       tag('ECONNREFUSED', TONE.green, { mono: true, key: 'b' }),
     ],
   },
   {
-    problem: '答案藏在外部链接里',
-    fix: '文档和 issue 一起找到',
-    demo: [
+    problem: ['The answer hides behind a link', '答案藏在外部链接里'],
+    fix: ['Docs and issues turn up too', '文档和 issue 一起找到'],
+    demo: () => [
       tag('docs/…', TONE.purple, { mono: true, key: 'a' }),
       tag('issue #232', TONE.purple, { mono: true, key: 'b' }),
     ],
   },
   {
-    problem: '总结是怎么写出来的？',
-    fix: '每条总结都说得清来历',
-    demo: [
-      tag('哪张票', TONE.gray, { key: 'a' }),
+    problem: ['Where did this summary come from?', '总结是怎么写出来的？'],
+    fix: ['Every summary can show its origin', '每条总结都说得清来历'],
+    demo: (tx) => [
+      tag(tx('which ticket', '哪张票'), TONE.gray, { key: 'a' }),
       arrow('x'),
-      tag('哪次会话', TONE.gray, { key: 'b' }),
+      tag(tx('which session', '哪次会话'), TONE.gray, { key: 'b' }),
       arrow('y'),
-      tag('哪条 prompt', TONE.gray, { key: 'c' }),
+      tag(tx('which prompt', '哪条 prompt'), TONE.gray, { key: 'c' }),
     ],
   },
   {
-    problem: '原文到底是哪一句？',
-    fix: '结论旁边就是原话',
-    demo: [
-      tag('结论', TONE.blue, { key: 'a' }),
+    problem: ['Which sentence did it come from?', '原文到底是哪一句？'],
+    fix: ['The quote sits right beside the claim', '结论旁边就是原话'],
+    demo: (tx) => [
+      tag(tx('claim', '结论'), TONE.blue, { key: 'a' }),
       h('span', { key: 'x', style: sans(13, SUB) }, '↔'),
-      tag('原话', TONE.ink, { key: 'b' }),
+      tag(tx('quote', '原话'), TONE.ink, { key: 'b' }),
     ],
   },
   {
-    problem: '个人信息会不会泄露？',
-    fix: '入库前拦两遍',
-    demo: [
+    problem: ['Could personal data leak?', '个人信息会不会泄露？'],
+    fix: ['Masked twice before indexing', '入库前拦两遍'],
+    demo: () => [
       tag('[NAME_1]', TONE.pink, { mono: true, key: 'a' }),
       tag('[EMAIL_1]', TONE.pink, { mono: true, key: 'b' }),
     ],
@@ -1715,6 +1829,7 @@ const ROWS = [
 const ROW_T = 1.9
 function Challenges() {
   const t = useTime()
+  const tx = useT()
   const o = win(t, T.hard, T.nums, 0.4, 0.5)
   if (o <= 0) return null
   return abs(
@@ -1729,7 +1844,7 @@ function Challenges() {
         E.easeInOutCubic
       )
       return abs(
-        Object.assign({ key: col.title, left: col.x, top: 96, width: 500 }, rise(hp, 10)),
+        Object.assign({ key: c, left: col.x, top: 96, width: 500 }, rise(hp, 10)),
         h(
           'div',
           { style: { display: 'flex', alignItems: 'center', gap: 14 } },
@@ -1760,7 +1875,7 @@ function Challenges() {
           h(
             'span',
             { style: sans(30, INK, { fontWeight: 700, letterSpacing: '-0.01em' }) },
-            col.title
+            tx(...col.title)
           )
         ),
         h('div', { style: { height: 1, background: HAIR, marginTop: 20 } })
@@ -1795,7 +1910,7 @@ function Challenges() {
             opacity: 1 - seg(flip, 0, 0.5),
             transform: `translateY(${-6 * flip}px)`,
           },
-          h('span', { style: sans(21, INK, { fontWeight: 500 }) }, r.problem)
+          h('span', { style: sans(21, INK, { fontWeight: 500 }) }, tx(...r.problem))
         ),
         abs(
           {
@@ -1804,18 +1919,22 @@ function Challenges() {
             opacity: seg(flip, 0.5, 1),
             transform: `translateY(${6 * (1 - flip)}px)`,
           },
-          h('span', { style: sans(21, INK, { fontWeight: 700 }) }, r.fix)
+          h('span', { style: sans(21, INK, { fontWeight: 700 }) }, tx(...r.fix))
         ),
         abs(
           { left: 50, top: 48, opacity: flip },
-          h('span', { style: sans(13.5, SUB, { textDecoration: 'line-through' }) }, r.problem)
+          h(
+            'span',
+            { style: sans(13.5, SUB, { textDecoration: 'line-through' }) },
+            tx(...r.problem)
+          )
         ),
         abs(
           Object.assign(
             { left: 50, top: 74, display: 'flex', gap: 6, alignItems: 'center' },
             rise(demo, 6)
           ),
-          r.demo
+          r.demo(tx)
         )
       )
     })
@@ -1825,11 +1944,15 @@ function Challenges() {
 // =====================================================================
 // ACT 5 — numbers (76–88): two bar charts, two tiles
 // =====================================================================
-const SYSTEMS = ['本系统', '开源 GraphRAG 方案', '工单系统自带搜索']
+const SYSTEMS = [
+  ['This system', '本系统'],
+  ['OSS GraphRAG', '开源 GraphRAG 方案'],
+  ['Built-in ticket search', '工单系统自带搜索'],
+]
 const CHARTS = [
   {
-    title: '命中率',
-    note: '排在第一的就是那张票',
+    title: ['Hit rate', '命中率'],
+    note: ['the right ticket ranks first', '排在第一的就是那张票'],
     icon: 'target',
     x: 100,
     vals: [0.711, 0.57, 0],
@@ -1838,8 +1961,8 @@ const CHARTS = [
     t: T.nums + 0.3,
   },
   {
-    title: '查询中位延迟',
-    note: '越短越好',
+    title: ['Median query latency', '查询中位延迟'],
+    note: ['lower is better', '越短越好'],
     icon: 'stopwatch',
     x: 680,
     vals: [0.8, 1.7, 26.4],
@@ -1851,13 +1974,14 @@ const CHARTS = [
 const TILES = [
   {
     big: '1/2',
-    text: '查询延迟，对比开源 GraphRAG 方案',
-    sub: '0.8 s vs 1.7 s（对方有缓存）',
+    text: ['Query latency vs. open-source GraphRAG', '查询延迟，对比开源 GraphRAG 方案'],
+    sub: ['0.8 s vs 1.7 s (theirs is cached)', '0.8 s vs 1.7 s（对方有缓存）'],
     x: 390,
   },
 ]
 function Numbers() {
   const t = useTime()
+  const tx = useT()
   const o = win(t, T.nums, T.values, 0.5, 0.5)
   if (o <= 0) return null
   const BAR = 250
@@ -1866,7 +1990,7 @@ function Numbers() {
     CHARTS.map((c) => {
       const p = seg(t, c.t, c.t + 0.5, E.easeOutCubic)
       return abs(
-        Object.assign({ key: c.title, left: c.x, top: 84, width: 500 }, rise(p, 10)),
+        Object.assign({ key: c.icon, left: c.x, top: 84, width: 500 }, rise(p, 10)),
         h(
           'div',
           { style: { display: 'flex', alignItems: 'center', gap: 12 } },
@@ -1879,8 +2003,8 @@ function Numbers() {
             t: t,
             sw: 1.6,
           }),
-          h('span', { style: sans(24, INK, { fontWeight: 700 }) }, c.title),
-          h('span', { style: sans(14, SUB) }, c.note)
+          h('span', { style: sans(24, INK, { fontWeight: 700 }) }, tx(...c.title)),
+          h('span', { style: sans(14, SUB) }, tx(...c.note))
         ),
         h('div', { style: { height: 1, background: HAIR, margin: '14px 0 8px' } }),
         c.vals.map((v, k) => {
@@ -1892,7 +2016,7 @@ function Numbers() {
             h(
               'span',
               { style: sans(15, ours ? INK : MUT, { width: 170, fontWeight: ours ? 600 : 400 }) },
-              SYSTEMS[k]
+              tx(...SYSTEMS[k])
             ),
             h(
               'div',
@@ -1959,8 +2083,12 @@ function Numbers() {
         h(
           'div',
           null,
-          h('div', { style: sans(17, INK, { fontWeight: 600, lineHeight: 1.45 }) }, tile.text),
-          h('div', { style: mono(12.5, SUB, { marginTop: 8 }) }, tile.sub)
+          h(
+            'div',
+            { style: sans(17, INK, { fontWeight: 600, lineHeight: 1.45 }) },
+            tx(...tile.text)
+          ),
+          h('div', { style: mono(12.5, SUB, { marginTop: 8 }) }, tx(...tile.sub))
         )
       )
     }),
@@ -1975,7 +2103,10 @@ function Numbers() {
       h(
         'span',
         { style: sans(13, SUB) },
-        '2026-07 实测 · 同一组 149 个问题 · 本系统与 GraphRAG 同在 600 张工单上，自带搜索用其全量索引'
+        tx(
+          'Measured 2026-07 · same 149 questions · this system and GraphRAG on the same 600 tickets; built-in search on its full index',
+          '2026-07 实测 · 同一组 149 个问题 · 本系统与 GraphRAG 同在 600 张工单上，自带搜索用其全量索引'
+        )
       )
     )
   )
@@ -1986,18 +2117,29 @@ function Numbers() {
 // =====================================================================
 const VIGNETTE = { team: TeamVignette, repeat: RepeatVignette, ask: AskVignette }
 const HEADS = [
-  { t0: T.values + 0.3, t1: T.values + 3.8, big: '支持团队的经验，不再随人走。', art: 'team' },
+  {
+    t0: T.values + 0.3,
+    t1: T.values + 3.8,
+    big: ['Team know-how stays when people leave.', '支持团队的经验，不再随人走。'],
+    art: 'team',
+  },
   {
     t0: T.values + 4.3,
     t1: T.values + 7.8,
-    big: '同一个缺陷第二次出现，就能被看见。',
+    big: ['A bug that comes back gets recognised.', '同一个缺陷第二次出现，就能被看见。'],
     art: 'repeat',
   },
-  { t0: T.values + 8.3, t1: T.values + 11.8, big: '下一张工单，先问它一句。', art: 'ask' },
-  { t0: T.crystal + 0.1, t1: T.crystalDoc + 0.1, big: '还有一件事。' },
+  {
+    t0: T.values + 8.3,
+    t1: T.values + 11.8,
+    big: ['Next ticket? Ask it first.', '下一张工单，先问它一句。'],
+    art: 'ask',
+  },
+  { t0: T.crystal + 0.1, t1: T.crystalDoc + 0.1, big: ['One more thing.', '还有一件事。'] },
 ]
 function Headline() {
   const t = useTime()
+  const tx = useT()
   const hd = HEADS.find((x) => t >= x.t0 && t <= x.t1)
   if (!hd) return null
   const o = win(t, hd.t0, hd.t1, 0.6, 0.5)
@@ -2023,7 +2165,7 @@ function Headline() {
     h(
       'div',
       { style: serif(50, INK, { fontWeight: 700, letterSpacing: '0.01em', textAlign: 'center' }) },
-      hd.big
+      tx(...hd.big)
     )
   )
 }
@@ -2065,13 +2207,38 @@ const CR_EDGES = (() => {
   return out
 })()
 const CR_STEPS = [
-  ['先定位是哪一层先断：比对各层生效值与时间戳', '#2286'],
-  ['进运行中的 Pod 看实际值，不只看 Helm values', '#476'],
-  ['查插件 Pod 的 SDK 版本，写死的走升级', '#1448'],
-  ['Dify 侧都够了就往外查：ingress、WAF、外部 LB', '#2739'],
+  [
+    [
+      'Find which layer breaks first: compare live values and timestamps',
+      '先定位是哪一层先断：比对各层生效值与时间戳',
+    ],
+    '#2286',
+  ],
+  [
+    [
+      'Check real values in the running Pod, not just Helm values',
+      '进运行中的 Pod 看实际值，不只看 Helm values',
+    ],
+    '#476',
+  ],
+  [
+    [
+      'Check the plugin Pod’s SDK version; upgrade if it’s pinned',
+      '查插件 Pod 的 SDK 版本，写死的走升级',
+    ],
+    '#1448',
+  ],
+  [
+    [
+      'If Dify has enough, look outward: ingress, WAF, external LB',
+      'Dify 侧都够了就往外查：ingress、WAF、外部 LB',
+    ],
+    '#2739',
+  ],
 ]
 function Crystal() {
   const t = useTime()
+  const tx = useT()
   const s = CR.s
   const o = win(t, s, T.bento, 0.4, 0.5)
   if (o <= 0) return null
@@ -2124,22 +2291,30 @@ function Crystal() {
     h('svg', { width: 1280, height: 720, style: { position: 'absolute', left: 0, top: 0 } }, els),
     abs(
       { left: 150, top: 160, opacity: lab },
-      h('span', { style: sans(16, MUT) }, '同一类问题的 14 张工单')
+      h('span', { style: sans(16, MUT) }, tx('14 tickets, one problem', '同一类问题的 14 张工单'))
     ),
     card(
       Object.assign({ left: D.x, top: D.y, width: D.w, padding: '24px 28px' }, rise(docIn, 16)),
       h(
         'div',
         { style: { display: 'flex', alignItems: 'center', gap: 10 } },
-        h('span', { style: sans(13, SUB) }, '排查文档'),
-        h('span', { style: { marginLeft: 'auto' } }, tag('实验中', TONE.blue, { size: 12 }))
+        h('span', { style: sans(13, SUB) }, tx('Troubleshooting doc', '排查文档')),
+        h(
+          'span',
+          { style: { marginLeft: 'auto' } },
+          tag(tx('Experimental', '实验中'), TONE.blue, { size: 12 })
+        )
       ),
       h(
         'div',
         { style: sans(22, INK, { fontWeight: 700, marginTop: 8 }) },
-        '插件执行超时：先确定哪一层先断'
+        tx('Plugin timeouts: find the layer that breaks first', '插件执行超时：先确定哪一层先断')
       ),
-      h('div', { style: sans(13, SUB, { marginTop: 6 }) }, '由 14 张已关闭工单合成'),
+      h(
+        'div',
+        { style: sans(13, SUB, { marginTop: 6 }) },
+        tx('Synthesised from 14 closed tickets', '由 14 张已关闭工单合成')
+      ),
       divider('d'),
       CR_STEPS.map(([text, id], i) =>
         h(
@@ -2152,7 +2327,7 @@ function Crystal() {
             ),
           },
           h('span', { style: sans(14, SUB, { width: 18 }) }, i + 1 + '.'),
-          h('span', { style: sans(14.5, INK, { flex: 1, lineHeight: 1.45 }) }, text),
+          h('span', { style: sans(14.5, INK, { flex: 1, lineHeight: 1.45 }) }, tx(...text)),
           h(
             'span',
             { style: popStyle(chipIn(i), '100% 50%') },
@@ -2172,7 +2347,11 @@ function Crystal() {
           },
         },
         h(CheckCircle, { size: 18, color: TONE.blue.fg, p: seg(t, s + 4.6, s + 5.3) }),
-        h('span', { style: sans(13, MUT) }, '28 条出处，逐条核对')
+        h(
+          'span',
+          { style: sans(13, MUT) },
+          tx('28 citations, each one checked', '28 条出处，逐条核对')
+        )
       )
     )
   )
@@ -2198,12 +2377,45 @@ const HERO_CAM = {
   ox: HERO.left + HERO.width / 2,
   oy: HERO.top + HERO.height - 108,
 }
+// feat body: (tx) => the tile's content, built at render so it follows the language
 const BENTO = [
   { c: 0, r: 0, cs: 2, rs: 2, kind: 'hero' },
-  { c: 2, r: 0, cs: 1, rs: 1, kind: 'num', big: '3,400+', text: '张已关闭工单，连成一张图' },
-  { c: 3, r: 0, cs: 1, rs: 1, kind: 'num', big: '0.711', text: '命中率：排第一的就是那张票' },
-  { c: 2, r: 1, cs: 1, rs: 1, kind: 'num', big: '0.8 s', text: '查询中位延迟，检索不调用 LLM' },
-  { c: 3, r: 1, cs: 1, rs: 1, kind: 'num', big: '1/2', text: '查询延迟，对比开源 GraphRAG 方案' },
+  {
+    c: 2,
+    r: 0,
+    cs: 1,
+    rs: 1,
+    kind: 'num',
+    big: '3,400+',
+    text: ['closed tickets, linked into one graph', '张已关闭工单，连成一张图'],
+  },
+  {
+    c: 3,
+    r: 0,
+    cs: 1,
+    rs: 1,
+    kind: 'num',
+    big: '0.711',
+    text: ['hit rate: the right ticket ranks first', '命中率：排第一的就是那张票'],
+  },
+  {
+    c: 2,
+    r: 1,
+    cs: 1,
+    rs: 1,
+    kind: 'num',
+    big: '0.8 s',
+    text: ['median query latency; retrieval calls no LLM', '查询中位延迟，检索不调用 LLM'],
+  },
+  {
+    c: 3,
+    r: 1,
+    cs: 1,
+    rs: 1,
+    kind: 'num',
+    big: '1/2',
+    text: ['query latency vs. open-source GraphRAG', '查询延迟，对比开源 GraphRAG 方案'],
+  },
   { c: 4, r: 0, cs: 1, rs: 2, kind: 'next' },
   {
     c: 0,
@@ -2211,13 +2423,13 @@ const BENTO = [
     cs: 1,
     rs: 1,
     kind: 'feat',
-    title: '每句结论带原话',
+    title: ['Quoted claims', '每句结论带原话'],
     icon: 'quote',
     tone: TONE.ink,
-    body: [
-      tag('结论', TONE.blue, { key: 'a', size: 12 }),
+    body: (tx) => [
+      tag(tx('claim', '结论'), TONE.blue, { key: 'a', size: 12 }),
       h('span', { key: 'x', style: sans(12, SUB) }, '↔'),
-      tag('原话', TONE.ink, { key: 'b', size: 12 }),
+      tag(tx('quote', '原话'), TONE.ink, { key: 'b', size: 12 }),
     ],
   },
   {
@@ -2226,10 +2438,10 @@ const BENTO = [
     cs: 1,
     rs: 1,
     kind: 'feat',
-    title: '脱敏两道关',
+    title: ['Masked twice', '脱敏两道关'],
     icon: 'shield',
     tone: TONE.pink,
-    body: [
+    body: () => [
       tag('[NAME_1]', TONE.pink, { key: 'a', mono: true, size: 11.5 }),
       tag('[EMAIL_1]', TONE.pink, { key: 'b', mono: true, size: 11.5 }),
     ],
@@ -2240,10 +2452,16 @@ const BENTO = [
     cs: 1,
     rs: 1,
     kind: 'feat',
-    title: '每天自动同步',
+    title: ['Nightly sync', '每天自动同步'],
     icon: 'moon',
     tone: TONE.blue,
-    body: [h('span', { key: 'a', style: sans(13, MUT) }, '解决的工单，次日入图')],
+    body: (tx) => [
+      h(
+        'span',
+        { key: 'a', style: sans(13, MUT) },
+        tx('Solved today, in the graph tomorrow', '解决的工单，次日入图')
+      ),
+    ],
   },
   {
     c: 3,
@@ -2251,29 +2469,30 @@ const BENTO = [
     cs: 2,
     rs: 1,
     kind: 'feat',
-    title: '两个入口',
-    body: ENTRIES.map((e) =>
-      h(
-        'span',
-        { key: e.name, style: { display: 'flex', alignItems: 'center', gap: 8, marginRight: 14 } },
+    title: ['Two entry points', '两个入口'],
+    body: (tx) =>
+      ENTRIES.map((e, k) =>
         h(
           'span',
-          {
-            style: {
-              width: 26,
-              height: 26,
-              borderRadius: 7,
-              background: e.tone.bg,
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
+          { key: k, style: { display: 'flex', alignItems: 'center', gap: 8, marginRight: 14 } },
+          h(
+            'span',
+            {
+              style: {
+                width: 26,
+                height: 26,
+                borderRadius: 7,
+                background: e.tone.bg,
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+              },
             },
-          },
-          h(Icon, { name: e.icon, size: 16, color: e.tone.fg, sw: 1.8 })
-        ),
-        h('span', { style: sans(14, INK) }, e.name)
-      )
-    ),
+            h(Icon, { name: e.icon, size: 16, color: e.tone.fg, sw: 1.8 })
+          ),
+          h('span', { style: sans(14, INK) }, tx(...e.name))
+        )
+      ),
   },
 ]
 // bento hero: the graph at rest, with a few pulses still running along it
@@ -2363,6 +2582,7 @@ function GraphStatic({ cam, t }) {
 }
 function Bento() {
   const t = useTime()
+  const tx = useT()
   const o = win(t, T.bento, END + 1, 0.4, 0.3)
   if (o <= 0) return null
   return abs(
@@ -2401,7 +2621,7 @@ function Bento() {
               t: t,
               sw: 1.8,
             }),
-            '历史工单知识库'
+            tx('Ticket history knowledge base', '历史工单知识库')
           ),
           h(
             'div',
@@ -2413,9 +2633,9 @@ function Bento() {
                 marginTop: 14,
               }),
             },
-            '每一张关闭的工单，',
+            tx('Every closed ticket', '每一张关闭的工单，'),
             h('br'),
-            '都是下一张的答案。'
+            tx('answers the next one.', '都是下一张的答案。')
           )
         )
       if (b.kind === 'num')
@@ -2442,7 +2662,7 @@ function Bento() {
             },
             b.big
           ),
-          h('div', { style: sans(13, MUT, { lineHeight: 1.5 }) }, b.text)
+          h('div', { style: sans(13, MUT, { lineHeight: 1.5 }) }, tx(...b.text))
         )
       if (b.kind === 'next')
         return card(
@@ -2460,20 +2680,24 @@ function Bento() {
           h(
             'div',
             null,
-            tag('实验中', { fg: TONE.blue.fg, bg: '#fff' }, { size: 12 }),
+            tag(tx('Experimental', '实验中'), { fg: TONE.blue.fg, bg: '#fff' }, { size: 12 }),
             h(
               'div',
               { style: sans(18, INK, { fontWeight: 700, lineHeight: 1.4, marginTop: 10 }) },
-              '同类工单，自动合成一篇文档'
+              tx('Similar tickets, merged into one doc', '同类工单，自动合成一篇文档')
             )
           ),
           h(DocGather, { t: t - T.bento }),
-          h('div', { style: sans(13, MUT) }, '14 张票 → 1 篇排查文档')
+          h(
+            'div',
+            { style: sans(13, MUT) },
+            tx('14 tickets → 1 troubleshooting doc', '14 张票 → 1 篇排查文档')
+          )
         )
       return card(
         Object.assign(
           {
-            key: b.title,
+            key: 'f' + k,
             padding: '22px 22px',
             display: 'flex',
             flexDirection: 'column',
@@ -2496,12 +2720,12 @@ function Bento() {
                 sw: 1.7,
               })
             : null,
-          h('span', { style: sans(17, INK, { fontWeight: 700 }) }, b.title)
+          h('span', { style: sans(17, INK, { fontWeight: 700 }) }, tx(...b.title))
         ),
         h(
           'div',
           { style: { display: 'flex', alignItems: 'center', gap: 6, flexWrap: 'wrap' } },
-          b.body
+          b.body(tx)
         )
       )
     }),
@@ -2516,7 +2740,10 @@ function Bento() {
       h(
         'span',
         { style: sans(12.5, SUB) },
-        '示例为真实已关闭工单，客户信息已去除 · 对比：2026-07 实测，同一组 149 个问题，本系统与 GraphRAG 同在 600 张工单上'
+        tx(
+          'Examples are real closed tickets, customer data removed · Comparison: measured 2026-07, same 149 questions, this system and GraphRAG on the same 600 tickets',
+          '示例为真实已关闭工单，客户信息已去除 · 对比：2026-07 实测，同一组 149 个问题，本系统与 GraphRAG 同在 600 张工单上'
+        )
       )
     )
   )
@@ -2525,28 +2752,120 @@ function Bento() {
 // =====================================================================
 // captions
 // =====================================================================
+// [start, end, en, zh]
 const CAPS = [
-  [T.ticket + 0.3, T.buried - 0.3, '一张新工单：升级到 3.9.8 后，代码节点崩了。'],
-  [T.buried + 0.4, T.connect - 0.2, '答案在半年前一张已关闭的工单里。没人找得到。'],
-  [T.connect + 0.4, T.promise - 0.2, '把已关闭的工单，按关键词、版本、链接连成一张图。'],
-  [T.promise + 0.4, T.secForm - 0.2, '问一句，返回排好序的旧工单，每句结论带原话出处。'],
-  [T.form + 0.4, T.extract - 0.2, '先脱敏：人名、邮箱换成占位符，报错原文留着。'],
-  [T.extract + 0.3, T.nodes - 0.2, '再提炼：一句结论、几个关键词、版本号；结论指回原话。'],
-  [T.nodes + 0.3, T.grow - 0.2, '它们落成图里的节点和边。'],
-  [T.grow + 0.2, T.secSearch - 0.3, '共用关键词的工单自动相连；每天夜里，新关的工单加入。'],
-  [T.query + 0.4, T.channels - 0.2, '还是开头那张工单，原话直接贴进去。'],
-  [T.channels + 0.3, T.rank - 0.3, '四路同时找：语义、原文、关键词、图关系。'],
-  [T.rank + 0.3, T.answer - 0.2, '几路结果合起来排序：#2948 排第一。'],
-  [T.answer + 0.3, T.entry - 0.2, '结论旁边附原话出处，直接回进工单。'],
-  [T.entry + 0.3, T.secHard - 0.3, 'Zendesk 回票时自动先查；也能挂进 Dify 应用。'],
-  [T.solveA + 0.3, T.solveB - 0.3, '难回答：原样贴、说症状、找链接，都能搜到。'],
-  [T.solveB + 0.3, T.nums - 0.3, '难相信：每条总结有来历，每句结论有原话，隐私拦两遍。'],
-  [T.nums + 0.4, T.nums2 - 0.1, '命中率 0.711，开源 GraphRAG 方案 0.570，工单系统自带搜索是 0。'],
-  [T.nums2 + 0.3, T.values - 0.3, '查询延迟减半，检索全程不调用大模型。'],
-  [T.crystalDoc + 0.4, T.bento - 0.3, '同类问题的 14 张工单，自动合成一篇排查文档，每句都带出处。'],
+  [
+    T.ticket + 0.3,
+    T.buried - 0.3,
+    'A new ticket: after the 3.9.8 upgrade, the Code node crashes.',
+    '一张新工单：升级到 3.9.8 后，代码节点崩了。',
+  ],
+  [
+    T.buried + 0.4,
+    T.connect - 0.2,
+    'The answer is in a ticket closed six months ago. Nobody can find it.',
+    '答案在半年前一张已关闭的工单里。没人找得到。',
+  ],
+  [
+    T.connect + 0.4,
+    T.promise - 0.2,
+    'Link closed tickets into a graph by keyword, version and link.',
+    '把已关闭的工单，按关键词、版本、链接连成一张图。',
+  ],
+  [
+    T.promise + 0.4,
+    T.secForm - 0.2,
+    'Ask once: old tickets come back ranked, every claim with its source.',
+    '问一句，返回排好序的旧工单，每句结论带原话出处。',
+  ],
+  [
+    T.form + 0.4,
+    T.extract - 0.2,
+    'Mask first: names and emails become placeholders; error text stays.',
+    '先脱敏：人名、邮箱换成占位符，报错原文留着。',
+  ],
+  [
+    T.extract + 0.3,
+    T.nodes - 0.2,
+    'Then extract a claim, keywords and versions; the claim points to the quote.',
+    '再提炼：一句结论、几个关键词、版本号；结论指回原话。',
+  ],
+  [
+    T.nodes + 0.3,
+    T.grow - 0.2,
+    'They become nodes and edges in the graph.',
+    '它们落成图里的节点和边。',
+  ],
+  [
+    T.grow + 0.2,
+    T.secSearch - 0.3,
+    'Tickets sharing a keyword connect; newly closed ones join every night.',
+    '共用关键词的工单自动相连；每天夜里，新关的工单加入。',
+  ],
+  [
+    T.query + 0.4,
+    T.channels - 0.2,
+    'The same ticket from the start, pasted in as is.',
+    '还是开头那张工单，原话直接贴进去。',
+  ],
+  [
+    T.channels + 0.3,
+    T.rank - 0.3,
+    'Four channels at once: semantic, exact text, keyword, graph.',
+    '四路同时找：语义、原文、关键词、图关系。',
+  ],
+  [
+    T.rank + 0.3,
+    T.answer - 0.2,
+    'The channels’ results are fused: #2948 ranks first.',
+    '几路结果合起来排序：#2948 排第一。',
+  ],
+  [
+    T.answer + 0.3,
+    T.entry - 0.2,
+    'The claim, with its source quote, goes straight into the reply.',
+    '结论旁边附原话出处，直接回进工单。',
+  ],
+  [
+    T.entry + 0.3,
+    T.secHard - 0.3,
+    'Zendesk checks it before replying; it also plugs into Dify apps.',
+    'Zendesk 回票时自动先查；也能挂进 Dify 应用。',
+  ],
+  [
+    T.solveA + 0.3,
+    T.solveB - 0.3,
+    'Hard to answer: raw errors, vague symptoms, linked docs — all searchable.',
+    '难回答：原样贴、说症状、找链接，都能搜到。',
+  ],
+  [
+    T.solveB + 0.3,
+    T.nums - 0.3,
+    'Hard to trust: every summary has an origin, every claim a quote, PII masked twice.',
+    '难相信：每条总结有来历，每句结论有原话，隐私拦两遍。',
+  ],
+  [
+    T.nums + 0.4,
+    T.nums2 - 0.1,
+    'Hit rate 0.711; open-source GraphRAG 0.570; built-in ticket search 0.',
+    '命中率 0.711，开源 GraphRAG 方案 0.570，工单系统自带搜索是 0。',
+  ],
+  [
+    T.nums2 + 0.3,
+    T.values - 0.3,
+    'Half the query latency, and retrieval never calls an LLM.',
+    '查询延迟减半，检索全程不调用大模型。',
+  ],
+  [
+    T.crystalDoc + 0.4,
+    T.bento - 0.3,
+    '14 tickets on one problem become one troubleshooting doc, every line cited.',
+    '同类问题的 14 张工单，自动合成一篇排查文档，每句都带出处。',
+  ],
 ]
 function Caption() {
   const t = useTime()
+  const tx = useT()
   const cap = CAPS.find(([a, b]) => t >= a && t <= b)
   if (!cap) return null
   const o = win(t, cap[0], cap[1], 0.4, 0.4)
@@ -2559,7 +2878,7 @@ function Caption() {
       opacity: o,
       transform: `translateY(${(1 - seg(t, cap[0], cap[0] + 0.4, E.easeOutCubic)) * 8}px)`,
     },
-    h('span', { style: sans(20, MUT, { letterSpacing: '0.01em' }) }, cap[2])
+    h('span', { style: sans(20, MUT, { letterSpacing: '0.01em' }) }, tx(cap[2], cap[3]))
   )
 }
 

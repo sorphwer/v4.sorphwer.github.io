@@ -212,7 +212,7 @@ authors (optional list which should correspond to the file names in `data/author
 layout (optional list which should correspond to the file names in `data/layouts`)
 canonicalUrl (optional, canonical url for the post for SEO)
 bodyClass (optional, PostWide only: class on the post body that scopes a stylesheet in `css/`, e.g. `paper`, `glance`)
-titleZh (optional: Chinese title; makes the post bilingual — the header gets an EN / 中文 toggle and the body reads the language through `T` / `useT` from `components/article/lang`)
+titleZh (optional: Chinese title; makes the post bilingual — the header gets an EN / 中文 toggle (English default) and the body reads the language through `T` / `useT` from `components/article/lang`; MDX prose wraps each language's copy in `<En>` / `<Zh>` blocks)
 ```
 
 Here's an example of a post's frontmatter:

@@ -1,9 +1,10 @@
 import { useEffect, useRef, useState } from 'react'
+import { T, useT } from '@/components/article/lang'
 import { TONE, Tag, useReveal } from '../shared'
 
 const COLS = [
   {
-    title: '问题难回答',
+    title: ['Hard to answer', '问题难回答'],
     tone: 'pink',
     icon: (
       <>
@@ -14,7 +15,7 @@ const COLS = [
     ),
   },
   {
-    title: '回答难被相信',
+    title: ['Hard to trust', '回答难被相信'],
     tone: 'pink',
     icon: (
       <>
@@ -28,12 +29,12 @@ const COLS = [
 
 const arrow = <span>→</span>
 
-// [column, problem, fix, demo]
+// [column, [en, zh] problem, [en, zh] fix, demo]
 const ROWS = [
   [
     0,
-    '版本号、报错码混在一起',
-    '原样贴进去，直接搜',
+    ['Mixed versions & error codes', '版本号、报错码混在一起'],
+    ['Paste as-is and search', '原样贴进去，直接搜'],
     <>
       <Tag tone="gray" mono>
         #3412
@@ -48,10 +49,12 @@ const ROWS = [
   ],
   [
     0,
-    '症状描述很模糊',
-    '说“连不上”，也能找到报错',
+    ['Vague symptom descriptions', '症状描述很模糊'],
+    ['“Offline” finds the error', '说“连不上”，也能找到报错'],
     <>
-      <Tag tone="blue">连不上</Tag>
+      <Tag tone="blue">
+        <T en="offline" zh="连不上" />
+      </Tag>
       {arrow}
       <Tag tone="green" mono>
         ECONNREFUSED
@@ -60,8 +63,8 @@ const ROWS = [
   ],
   [
     0,
-    '答案藏在外部链接里',
-    '文档和 issue 一起找到',
+    ['The answer sits behind a link', '答案藏在外部链接里'],
+    ['Docs and issues found too', '文档和 issue 一起找到'],
     <>
       <Tag tone="purple" mono>
         docs/…
@@ -73,30 +76,40 @@ const ROWS = [
   ],
   [
     1,
-    '总结是怎么写出来的？',
-    '每条总结都说得清来历',
+    ['How was this summary made?', '总结是怎么写出来的？'],
+    ['Summaries are traceable', '每条总结都说得清来历'],
     <>
-      <Tag tone="gray">哪张工单</Tag>
+      <Tag tone="gray">
+        <T en="ticket" zh="哪张工单" />
+      </Tag>
       {arrow}
-      <Tag tone="gray">哪次调用</Tag>
+      <Tag tone="gray">
+        <T en="call" zh="哪次调用" />
+      </Tag>
       {arrow}
-      <Tag tone="gray">哪版 prompt</Tag>
+      <Tag tone="gray">
+        <T en="prompt" zh="哪版 prompt" />
+      </Tag>
     </>,
   ],
   [
     1,
-    '原文到底是哪一句？',
-    '结论旁边就是原话',
+    ['Which sentence is the source?', '原文到底是哪一句？'],
+    ['The quote sits by the claim', '结论旁边就是原话'],
     <>
-      <Tag tone="blue">结论</Tag>
+      <Tag tone="blue">
+        <T en="claim" zh="结论" />
+      </Tag>
       <span>↔</span>
-      <Tag tone="ink">原话</Tag>
+      <Tag tone="ink">
+        <T en="quote" zh="原话" />
+      </Tag>
     </>,
   ],
   [
     1,
-    '个人信息会不会泄露？',
-    '入库前拦两遍',
+    ['Could personal data leak out?', '个人信息会不会泄露？'],
+    ['Two filters before storage', '入库前拦两遍'],
     <>
       <Tag tone="pink" mono>
         [NAME_1]
@@ -112,6 +125,7 @@ const NONE = ROWS.map(() => false)
 const setAt = (i, f) => (d) => d.map((x, k) => (k === i ? f(x) : x))
 
 export default function Hard() {
+  const t = useT()
   const [gridRef, revealed] = useReveal(0.5)
   const [done, setDone] = useState(NONE)
   const timers = useRef([])
@@ -147,7 +161,7 @@ export default function Hard() {
                       {c.icon}
                     </svg>
                   </span>
-                  {c.title}
+                  {t(...c.title)}
                 </h4>
                 {rows.map(([r, i]) => {
                   const toggle = () => setDone(setAt(i, (x) => !x))
@@ -171,10 +185,10 @@ export default function Hard() {
                         </svg>
                       </span>
                       <div className="t">
-                        <div className="pb">{r[1]}</div>
-                        <div className="fx">{r[2]}</div>
+                        <div className="pb">{t(...r[1])}</div>
+                        <div className="fx">{t(...r[2])}</div>
                       </div>
-                      <div className="was">{r[1]}</div>
+                      <div className="was">{t(...r[1])}</div>
                       <div className="demo">{r[3]}</div>
                     </div>
                   )
@@ -184,14 +198,19 @@ export default function Hard() {
           })}
         </div>
         <div className="row" style={{ marginTop: 14, justifyContent: 'space-between' }}>
-          <span className="lbl">点击任意一条，看我们怎么处理它</span>
+          <span className="lbl">
+            <T en="Click any item to see how we handle it" zh="点击任意一条，看我们怎么处理它" />
+          </span>
           <button className="btn" onClick={reset}>
-            重来
+            <T en="Replay" zh="重来" />
           </button>
         </div>
       </div>
       <figcaption className="cap">
-        六个具体的难点，以及对应的做法。左边一列关于“搜得到”，右边一列关于“信得过”。
+        <T
+          en="Six concrete difficulties and how we address each. The left column is about “can we find it”, the right about “can we trust it”."
+          zh="六个具体的难点，以及对应的做法。左边一列关于“搜得到”，右边一列关于“信得过”。"
+        />
       </figcaption>
     </figure>
   )

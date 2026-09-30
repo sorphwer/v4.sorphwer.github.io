@@ -1,4 +1,5 @@
 import { Fragment, useState } from 'react'
+import { T, useT } from '@/components/article/lang'
 import { TONE } from '../shared'
 
 const I = {
@@ -54,59 +55,83 @@ const I = {
   ),
 }
 
+const GATE = [['Gate', '关'], 'pink']
+const CACHE = [['Cache', '缓存'], 'blue']
+
 const ST = [
   {
-    nm: '原始工单',
-    sm: '原样存档',
+    nm: ['Raw ticket', '原始工单'],
+    sm: ['Stored as-is', '原样存档'],
     ic: 'doc',
     tone: 'gray',
-    txt: '从工单系统原样取回工单记录和附件，一字不改。它是整个系统唯一的输入，其余一切都能从它重新算出来。',
+    txt: [
+      'The ticket record and attachments, pulled from the ticketing system and left untouched. This is the only input to the whole system; everything else can be recomputed from it.',
+      '从工单系统原样取回工单记录和附件，一字不改。它是整个系统唯一的输入，其余一切都能从它重新算出来。',
+    ],
   },
   {
-    nm: '渲染 · 脱敏',
-    sm: '第一道关',
+    nm: ['Render & mask', '渲染 · 脱敏'],
+    sm: ['Gate 1', '第一道关'],
     ic: 'mask',
     tone: 'pink',
-    badge: ['关', 'pink'],
-    txt: '确定性地把工单转成给模型读的文本，按时间排好每条回复并保留编号；同时把人名、邮箱、电话换成占位符。模型只见得到这一版。',
+    badge: GATE,
+    txt: [
+      'Deterministically turns the ticket into text for the model, with every comment in time order and its id kept; names, emails and phone numbers become placeholders. This is the only version the model ever sees.',
+      '确定性地把工单转成给模型读的文本，按时间排好每条回复并保留编号；同时把人名、邮箱、电话换成占位符。模型只见得到这一版。',
+    ],
   },
   {
-    nm: 'AI 提炼',
-    sm: '唯一调用模型',
+    nm: ['AI extraction', 'AI 提炼'],
+    sm: ['Only LLM call', '唯一调用模型'],
     ic: 'spark',
     tone: 'blue',
-    badge: ['缓存', 'blue'],
-    txt: '问题摘要、解决方案摘要（拆成带原话的结论）、关键词、外部链接。按内容寻址缓存：工单和配置都没变，就不再调用模型。',
+    badge: CACHE,
+    txt: [
+      'Problem summary, solution summary (split into claims, each with a verbatim quote), keywords and external links. Cached by content: if neither the ticket nor the config changed, the model is not called again.',
+      '问题摘要、解决方案摘要（拆成带原话的结论）、关键词、外部链接。按内容寻址缓存：工单和配置都没变，就不再调用模型。',
+    ],
   },
   {
-    nm: '校验出处',
-    sm: '纯函数',
+    nm: ['Verify sources', '校验出处'],
+    sm: ['Pure function', '纯函数'],
     ic: 'check',
     tone: 'ink',
-    txt: '逐句检查结论是否出自摘要、原话是否逐字存在于对应回复、“已解决”是否有证据。不过就定向修复一轮，仍不过则标为未核实。',
+    txt: [
+      'Checks sentence by sentence that each claim comes from the summary, that each quote appears verbatim in its comment, and that “resolved” is backed by evidence. A failure gets one targeted repair pass; if it still fails, it is marked unverified.',
+      '逐句检查结论是否出自摘要、原话是否逐字存在于对应回复、“已解决”是否有证据。不过就定向修复一轮，仍不过则标为未核实。',
+    ],
   },
   {
-    nm: '入库前再查',
-    sm: '第二道关',
+    nm: ['Pre-write check', '入库前再查'],
+    sm: ['Gate 2', '第二道关'],
     ic: 'shield',
     tone: 'pink',
-    badge: ['关', 'pink'],
-    txt: '模型输出的每一个字段再过一遍同一套脱敏规则。命中即整票拦下，一行不写；只记录规则和字段，不记录原值。',
+    badge: GATE,
+    txt: [
+      'Every field the model produced goes through the same masking rules again. Any hit blocks the whole ticket and nothing is written; the log records the rule and the field, never the value.',
+      '模型输出的每一个字段再过一遍同一套脱敏规则。命中即整票拦下，一行不写；只记录规则和字段，不记录原值。',
+    ],
   },
   {
-    nm: '向量化',
-    sm: '两段摘要',
+    nm: ['Embedding', '向量化'],
+    sm: ['Two summaries', '两段摘要'],
     ic: 'vec',
     tone: 'gray',
-    badge: ['缓存', 'blue'],
-    txt: '问题摘要和解决方案摘要各生成一个向量，供语义检索使用。按文字内容缓存：摘要没变，就不重新向量化。',
+    badge: CACHE,
+    txt: [
+      'The problem summary and the solution summary each get one vector for semantic search. Cached by text: if a summary didn’t change, it isn’t re-embedded.',
+      '问题摘要和解决方案摘要各生成一个向量，供语义检索使用。按文字内容缓存：摘要没变，就不重新向量化。',
+    ],
   },
   {
-    nm: '知识图谱',
-    sm: '每晚同步',
+    nm: ['Knowledge graph', '知识图谱'],
+    sm: ['Nightly sync', '每晚同步'],
     ic: 'graph',
     tone: 'blue',
-    txt: '每晚把新关闭的工单增量写入图；改了 prompt 或规则时，在旁边把新图完整重建，用同一组问题验收通过后再切换。',
+    txt: [
+      'Newly closed tickets are added to the graph incrementally every night. When a prompt or rule changes, a new graph is rebuilt from scratch alongside, and only swapped in after passing the same set of test questions.',
+      '每晚把新关闭的工单增量写入图；改了 prompt 或规则时，在旁边把新图完整重建，用同一组问题验收通过后再切换。',
+    ],
   },
 ]
 
@@ -114,16 +139,19 @@ const LEGEND_TAG = { fontSize: 11, padding: '1px 6px' }
 
 export default function Pipe() {
   const [sel, setSel] = useState(2)
+  const t = useT()
 
   return (
     <figure className="fig wide" id="fig-pipe">
       <div className="panel wash">
         <div className="pipe">
           {ST.map((s, i) => (
-            <Fragment key={s.nm}>
+            <Fragment key={s.ic}>
               {i ? <span className="ar" style={{ '--d': `${(i * 0.34).toFixed(2)}s` }} /> : null}
               <button className={`st${i === sel ? ' on' : ''}`} onClick={() => setSel(i)}>
-                {s.badge ? <span className={`badge tag ${s.badge[1]}`}>{s.badge[0]}</span> : null}
+                {s.badge ? (
+                  <span className={`badge tag ${s.badge[1]}`}>{t(...s.badge[0])}</span>
+                ) : null}
                 <span
                   className="ic"
                   style={{ background: TONE[s.tone][1], color: TONE[s.tone][0] }}
@@ -132,37 +160,39 @@ export default function Pipe() {
                     {I[s.ic]}
                   </svg>
                 </span>
-                <div className="nm">{s.nm}</div>
-                <div className="sm">{s.sm}</div>
+                <div className="nm">{t(...s.nm)}</div>
+                <div className="sm">{t(...s.sm)}</div>
               </button>
             </Fragment>
           ))}
         </div>
         <div className="pipe-detail">
           <div className="k">
-            {sel + 1} · {ST[sel].nm}
+            {sel + 1} · {t(...ST[sel].nm)}
           </div>
-          <div className="v">{ST[sel].txt}</div>
+          <div className="v">{t(...ST[sel].txt)}</div>
         </div>
         <div className="pipe-legend">
           <span>
             <span className="tag pink" style={LEGEND_TAG}>
-              关
+              {t(...GATE[0])}
             </span>
-            两道脱敏关
+            {t('Two masking gates', '两道脱敏关')}
           </span>
           <span>
             <span className="tag blue" style={LEGEND_TAG}>
-              缓存
+              {t(...CACHE[0])}
             </span>
-            内容没变就不重算
+            {t('Not recomputed unless the content changed', '内容没变就不重算')}
           </span>
-          <span>点击任一步查看细节</span>
+          <span>{t('Click any step for details', '点击任一步查看细节')}</span>
         </div>
       </div>
       <figcaption className="cap">
-        一张工单从原文到图谱经过的七步。只有“AI
-        提炼”这一步调用大模型；校验、脱敏检查和入图都是确定性的代码。
+        <T
+          en="The seven steps a ticket goes through, from raw text to the graph. Only “AI extraction” calls an LLM; verification, the masking checks and graph writes are all deterministic code."
+          zh="一张工单从原文到图谱经过的七步。只有“AI 提炼”这一步调用大模型；校验、脱敏检查和入图都是确定性的代码。"
+        />
       </figcaption>
     </figure>
   )

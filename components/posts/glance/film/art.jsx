@@ -11,6 +11,7 @@
 import { createElement as h } from 'react'
 import { Easing as E } from './engine'
 import { clamp01, lerp } from '../shared'
+import { useT } from '@/components/article/lang'
 
 // ---------- palette ----------
 // Same roles as css/glance.css, frozen at the light theme (the film canvas stays light in
@@ -446,6 +447,7 @@ function Head({ t, relaxed }) {
 }
 
 function Engineer({ t, pose }) {
+  const tx = useT()
   const relaxed = pose === 'relaxed'
   const lean = relaxed ? -7 * seg(t, 0, 1.2, E.easeInOutCubic) : 0
   const nod = relaxed
@@ -535,8 +537,14 @@ function Engineer({ t, pose }) {
       style: { overflow: 'visible' },
       role: 'img',
       'aria-label': relaxed
-        ? '售后工程师靠在椅背上端起咖啡，电脑上已经有了答案'
-        : '戴着耳麦的售后工程师在电脑前处理支持工单',
+        ? tx(
+            'A support engineer leans back with a coffee; the answer is already on screen',
+            '售后工程师靠在椅背上端起咖啡，电脑上已经有了答案'
+          )
+        : tx(
+            'A support engineer in a headset works through a support ticket at the computer',
+            '戴着耳麦的售后工程师在电脑前处理支持工单'
+          ),
     },
     h('circle', {
       cx: 268,

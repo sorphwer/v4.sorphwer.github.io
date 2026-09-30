@@ -439,6 +439,32 @@ export function Stage({
     }
   }, [paused])
 
+  // Fullscreen the whole stage (canvas + bar); the ResizeObserver rescales the canvas.
+  const [canFullscreen] = useState(
+    () => !!(document.fullscreenEnabled || document.webkitFullscreenEnabled)
+  )
+  const [fullscreen, setFullscreen] = useState(false)
+  useEffect(() => {
+    const sync = () =>
+      setFullscreen(
+        (document.fullscreenElement || document.webkitFullscreenElement) === stageRef.current
+      )
+    document.addEventListener('fullscreenchange', sync)
+    document.addEventListener('webkitfullscreenchange', sync)
+    return () => {
+      document.removeEventListener('fullscreenchange', sync)
+      document.removeEventListener('webkitfullscreenchange', sync)
+    }
+  }, [])
+  const toggleFullscreen = () => {
+    if (fullscreen) {
+      ;(document.exitFullscreen || document.webkitExitFullscreen).call(document)
+    } else {
+      const el = stageRef.current
+      ;(el.requestFullscreen || el.webkitRequestFullscreen).call(el)
+    }
+  }
+
   // Animation loop
   useEffect(() => {
     if (!playing) {
@@ -573,16 +599,28 @@ export function Stage({
         onReset={() => setTime(0)}
         onSeek={setTime}
         onHover={setHoverTime}
+        fullscreen={fullscreen}
+        onFullscreen={canFullscreen ? toggleFullscreen : null}
       />
     </div>
   )
 }
 
 // ── Playback bar ────────────────────────────────────────────────────────────
-// Play/pause, return-to-begin, scrub track, time display.
+// Play/pause, return-to-begin, scrub track, time display, optional fullscreen toggle.
 // Uses fixed-width time fields so layout doesn't thrash.
 
-export function PlaybackBar({ time, duration, playing, onPlayPause, onReset, onSeek, onHover }) {
+export function PlaybackBar({
+  time,
+  duration,
+  playing,
+  onPlayPause,
+  onReset,
+  onSeek,
+  onHover,
+  fullscreen = false,
+  onFullscreen = null,
+}) {
   const trackRef = useRef(null)
   const [dragging, setDragging] = useState(false)
 
@@ -762,6 +800,31 @@ export function PlaybackBar({ time, duration, playing, onPlayPause, onReset, onS
       >
         {fmt(duration)}
       </div>
+      {onFullscreen && (
+        <IconButton onClick={onFullscreen} title={fullscreen ? 'Exit full screen' : 'Full screen'}>
+          {fullscreen ? (
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+              <path
+                d="M5 1.5V5H1.5M9 1.5V5h3.5M5 12.5V9H1.5M9 12.5V9h3.5"
+                stroke="currentColor"
+                strokeWidth="1.5"
+                strokeLinejoin="round"
+                strokeLinecap="round"
+              />
+            </svg>
+          ) : (
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+              <path
+                d="M1.5 5V1.5H5M12.5 5V1.5H9M1.5 9v3.5H5M12.5 9v3.5H9"
+                stroke="currentColor"
+                strokeWidth="1.5"
+                strokeLinejoin="round"
+                strokeLinecap="round"
+              />
+            </svg>
+          )}
+        </IconButton>
+      )}
     </div>
   )
 }
