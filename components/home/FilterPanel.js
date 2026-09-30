@@ -10,10 +10,11 @@ const TAG_PREVIEW = 7
 
 /**
  * Scrolling facet list: 6px trackless scrollbar (css/tailwind.css) pushed into
- * the sidebar's 6px right padding (-mr / pr), so the bar sits outside the
- * content column and the counts keep the chevron's right edge.
+ * the sidebar's 6px right padding via -mr, with the gutter always reserved so
+ * the bar (present or not) occupies exactly that overhang and the counts keep
+ * the chevron's right edge.
  */
-const SCROLL_LIST = 'filter-scroll -mr-1.5 overflow-y-auto pr-1.5'
+const SCROLL_LIST = 'filter-scroll -mr-1.5 overflow-y-auto [scrollbar-gutter:stable]'
 
 function Section({
   id,
