@@ -13,7 +13,7 @@
  * that css/tailwind.css maps to DESIGN.md's palette per theme. Light: white
  * ground, black ink, RS Blue Light; dark: black ground, white ink, RS Blue
  * Dark; 50% Grey and Warning Pink in both. Roles: g ground, i ink, m grey,
- * b blue, p pink, l / r the two shaded cube faces.
+ * b blue, p pink.
  */
 
 /** Artwork height in SVG units; boxes of any size show a centred `slice` of it. */
@@ -110,42 +110,61 @@ function pickInk(random) {
   return 'p'
 }
 
-/** Isometric cube field, the Notion-cover look: shaded faces, a few coloured lids. */
-function cubes({ width, height, random }) {
+/**
+ * Interlocking isometric L blocks, op-art style: chevron lids, grey left and
+ * ink right L faces tile the plane with no gaps. Grid point (i, j) is
+ * i·(down-right) + j·(down-left) unit edges; each 3 × 3 lattice cell holds one
+ * lid and one L of each side. Lids are ground (a few blue / pink), so ground
+ * lids are left to the background rect.
+ */
+function blocks({ width, height, random }) {
   const layer = makeLayer()
-  const a = height / random.range(3.2, 5.5)
-  const w = a * Math.sqrt(3)
-  for (let row = -1; row * a * 1.5 < height + a * 2; row++) {
-    for (let col = -1; col * w < width + w; col++) {
-      if (random() < 0.08) continue
-      const x = col * w + (row % 2 ? w / 2 : 0)
-      const y = row * a * 1.5
-      const r = random()
+  const u = height / random.range(9, 14)
+  const rx = (u * Math.sqrt(3)) / 2
+  const shape = (i0, j0, points) =>
+    polygon(points.map(([i, j]) => [(i0 + i - j0 - j) * rx, ((i0 + i + j0 + j) * u) / 2]))
+  // Lattice points (3m, 3n): x = 3(m − n)·rx, y = 3(m + n)·u/2; m − n and m + n
+  // share parity. Pieces reach 3·rx either side and 5.5·u below their point.
+  for (let t = -3; t * 1.5 * u <= height; t++) {
+    for (let s = -2; s * 3 * rx <= width + 3 * rx; s++) {
+      if ((s + t) % 2) continue
+      const i0 = ((t + s) / 2) * 3
+      const j0 = ((t - s) / 2) * 3
+      const pick = random()
+      const lid = pick < 0.16 ? 'b' : pick < 0.2 ? 'p' : 'g'
+      if (lid !== 'g') {
+        layer.fill(
+          lid,
+          shape(i0, j0, [
+            [0, 0],
+            [2, 0],
+            [2, 1],
+            [1, 1],
+            [1, 2],
+            [0, 2],
+          ])
+        )
+      }
       layer.fill(
-        r < 0.16 ? 'b' : r < 0.2 ? 'p' : 'm',
-        polygon([
-          [x, y - a],
-          [x + w / 2, y - a / 2],
-          [x, y],
-          [x - w / 2, y - a / 2],
+        'm',
+        shape(i0, j0, [
+          [1, 4],
+          [2, 4],
+          [3, 5],
+          [4, 5],
+          [5, 6],
+          [3, 6],
         ])
       )
       layer.fill(
-        'l',
-        polygon([
-          [x - w / 2, y - a / 2],
-          [x, y],
-          [x, y + a],
-          [x - w / 2, y + a / 2],
-        ])
-      )
-      layer.fill(
-        'r',
-        polygon([
-          [x, y],
-          [x + w / 2, y - a / 2],
-          [x + w / 2, y + a / 2],
-          [x, y + a],
+        'i',
+        shape(i0, j0, [
+          [4, 2],
+          [4, 1],
+          [6, 3],
+          [6, 5],
+          [5, 4],
+          [5, 3],
         ])
       )
     }
@@ -263,7 +282,7 @@ function halftone({ width, height, random, noise }) {
   return String(layer)
 }
 
-const VARIANTS = [cubes, truchet, bauhaus, flow, halftone]
+const VARIANTS = [blocks, truchet, bauhaus, flow, halftone]
 
 /**
  * SVG markup for the artwork of `slug`, `width` SVG units wide and ART_HEIGHT

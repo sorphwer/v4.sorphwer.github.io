@@ -27,22 +27,18 @@ body {
 
 /* Post artwork (components/article/art.js): role classes → DESIGN.md palette.
    Light: white ground, black ink, RS Blue Light. Dark: black ground, white ink,
-   RS Blue Dark. l / r are the cube faces, ground mixed 45% / 15% toward grey. */
+   RS Blue Dark. */
 .post-art {
   --art-g: #ffffff;
   --art-i: #000000;
   --art-m: #808080;
   --art-b: #64d2ff;
   --art-p: #e83e8c;
-  --art-l: #c6c6c6;
-  --art-r: #ececec;
 }
 .dark .post-art {
   --art-g: #000000;
   --art-i: #ffffff;
   --art-b: #0070c9;
-  --art-l: #3a3a3a;
-  --art-r: #131313;
 }
 .post-art svg {
   display: block;
@@ -63,12 +59,6 @@ body {
 }
 .post-art .fp {
   fill: var(--art-p);
-}
-.post-art .fl {
-  fill: var(--art-l);
-}
-.post-art .fr {
-  fill: var(--art-r);
 }
 .post-art [class^='s'] {
   fill: none;
