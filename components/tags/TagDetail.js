@@ -34,7 +34,7 @@ function Legend({ recentFrom }) {
         Written about since {recentFrom}
       </li>
       <li className="flex items-center gap-2">
-        <span className="h-3 w-3 rounded-full bg-gray-200 dark:bg-gray-800" />
+        <span className="h-3 w-3 rounded-full bg-gray-200 dark:bg-gray-700" />
         Earlier topics
       </li>
       <li className="flex items-center gap-2">

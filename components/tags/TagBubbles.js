@@ -1,13 +1,13 @@
 import NextLink from 'next/link'
 import { ATLAS_SIZE } from '@/lib/tagAtlas'
 
-// Estimated advance of an Inter glyph, as a fraction of the font size.
-const GLYPH = 0.58
+// Estimated advance of an Inter glyph, as a fraction of the font size (errs wide for capitals).
+const GLYPH = 0.64
 
 /** Label size that fits inside the circle, or 0 when even the smallest size would overflow. */
 function labelSize(tag) {
-  const size = Math.min(15, tag.r * 0.42, (1.7 * tag.r) / (GLYPH * tag.label.length))
-  return size >= 8 ? size : 0
+  const size = Math.min(15, tag.r * 0.42, (1.6 * tag.r) / (GLYPH * tag.label.length))
+  return size >= 7.5 ? size : 0
 }
 
 /**
@@ -34,7 +34,7 @@ export default function TagBubbles({ tags, recentFrom, active, matches, onActive
           ? 'fill-RSpink'
           : recent
           ? 'fill-primary-500'
-          : 'fill-gray-200 dark:fill-gray-800'
+          : 'fill-gray-200 dark:fill-gray-700'
         const ink = isActive || recent ? 'fill-white' : 'fill-gray-700 dark:fill-gray-300'
         return (
           <NextLink key={tag.key} href={`/tags/${tag.key}`} passHref>
@@ -49,7 +49,13 @@ export default function TagBubbles({ tags, recentFrom, active, matches, onActive
                 className={`transition-opacity duration-200 ${dimmed ? 'opacity-15' : ''}`}
                 transform={`translate(${tag.x} ${tag.y})`}
               >
-                <circle r={tag.r} className={`${fill} transition-colors duration-150`} />
+                <circle
+                  r={tag.r}
+                  className={`${fill} transition-colors duration-150 ${
+                    matches && !dimmed ? 'stroke-RSpink' : ''
+                  }`}
+                  strokeWidth={matches && !dimmed ? 2.5 : 0}
+                />
                 {size > 0 && (
                   <text
                     textAnchor="middle"

@@ -9,12 +9,20 @@ const YEAR_PREVIEW = 9
 const TAG_PREVIEW = 7
 
 /**
- * Scrolling facet list: 6px trackless scrollbar (css/tailwind.css) pushed into
- * the sidebar's 12px right padding via -mr-3. The gutter is always reserved
- * (bar present or not) and pr-1.5 keeps 6px between the counts and the bar, so
+ * Scrolling facet list. Its 6px trackless scrollbar (css/tailwind.css) is pushed
+ * into the sidebar's 12px right padding via -mr-3; the gutter is always reserved
+ * (bar present or not) and pr-1.5 keeps 6px between the content and the bar, so
  * the content column, and with it the counts, keep the chevron's right edge.
  */
-const SCROLL_LIST = '-mr-3 overflow-y-auto pr-1.5 filter-scroll [scrollbar-gutter:stable]'
+function ScrollList({ className = '', children }) {
+  return (
+    <div
+      className={`filter-scroll -mr-3 overflow-y-auto pr-1.5 [scrollbar-gutter:stable] ${className}`}
+    >
+      {children}
+    </div>
+  )
+}
 
 function Section({
   id,
@@ -135,7 +143,7 @@ export default function FilterPanel({ facets, filters, onToggle, onSort }) {
         defaultOpen
         bodyClassName="flex flex-col"
       >
-        <div className={`grid grid-cols-3 gap-1.5 ${SCROLL_LIST} ${allYears ? 'max-h-36' : ''}`}>
+        <ScrollList className={`grid grid-cols-3 gap-1.5 ${allYears ? 'max-h-36' : ''}`}>
           {years.map((year) => {
             const selected = filters.years.includes(year.key)
             return (
@@ -155,7 +163,7 @@ export default function FilterPanel({ facets, filters, onToggle, onSort }) {
               </button>
             )
           })}
-        </div>
+        </ScrollList>
         {facets.years.length > YEAR_PREVIEW && (
           <ShowAllButton
             expanded={allYears}
@@ -167,16 +175,18 @@ export default function FilterPanel({ facets, filters, onToggle, onSort }) {
       </Section>
 
       <Section id="filter-source" title="Source" note={selectedNote(filters.sources)} defaultOpen>
-        {facets.sources.map((source) => (
-          <Option
-            key={source.key}
-            checked={filters.sources.includes(source.key)}
-            onChange={() => onToggle('sources', source.key)}
-            count={source.count}
-          >
-            <SourceMark source={source.key} />
-          </Option>
-        ))}
+        <ScrollList className="max-h-36">
+          {facets.sources.map((source) => (
+            <Option
+              key={source.key}
+              checked={filters.sources.includes(source.key)}
+              onChange={() => onToggle('sources', source.key)}
+              count={source.count}
+            >
+              <SourceMark source={source.key} />
+            </Option>
+          ))}
+        </ScrollList>
       </Section>
 
       <Section
@@ -187,9 +197,7 @@ export default function FilterPanel({ facets, filters, onToggle, onSort }) {
         className="xl:flex xl:min-h-0 xl:flex-col"
         bodyClassName="xl:flex xl:min-h-0 xl:flex-col"
       >
-        <div
-          className={`${SCROLL_LIST} xl:min-h-[8rem] ${allTags ? 'max-h-72 xl:max-h-none' : ''}`}
-        >
+        <ScrollList className={`xl:min-h-[8rem] ${allTags ? 'max-h-72 xl:max-h-none' : ''}`}>
           {tags.map((tag) => (
             <Option
               key={tag.key}
@@ -200,7 +208,7 @@ export default function FilterPanel({ facets, filters, onToggle, onSort }) {
               {tag.label}
             </Option>
           ))}
-        </div>
+        </ScrollList>
         {otherTags.length > TAG_PREVIEW && (
           <ShowAllButton
             expanded={allTags}
