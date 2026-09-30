@@ -9,13 +9,10 @@ const YEAR_PREVIEW = 9
 const TAG_PREVIEW = 7
 
 /**
- * Reserves the scrollbar gutter (0 with overlay scrollbars, the bar's width with
- * classic ones). Put on the scrolling lists and on everything that must share a
- * right edge with them (section headers, non-scrolling bodies), so the chevrons
- * and counts line up regardless of which lists currently show a scrollbar.
+ * Scrolling facet list: thin scrollbar with no track (css/tailwind.css), gutter
+ * always reserved so the counts don't shift when the bar appears.
  */
-const GUTTER = '[scrollbar-gutter:stable]'
-const STATIC_GUTTER = `overflow-hidden ${GUTTER}`
+const SCROLL_LIST = 'filter-scroll overflow-y-auto [scrollbar-gutter:stable]'
 
 function Section({
   id,
@@ -24,14 +21,12 @@ function Section({
   defaultOpen = false,
   className = '',
   bodyClassName = '',
-  /** false when a child list scrolls and reserves the gutter itself. */
-  bodyGutter = true,
   children,
 }) {
   const [open, setOpen] = useState(defaultOpen)
   return (
     <div className={`border-t border-gray-200 dark:border-gray-800 ${className}`}>
-      <h3 className={STATIC_GUTTER}>
+      <h3>
         <button
           type="button"
           aria-expanded={open}
@@ -51,7 +46,7 @@ function Section({
         </button>
       </h3>
       {open && (
-        <div id={id} className={`pb-4 ${bodyGutter ? STATIC_GUTTER : ''} ${bodyClassName}`}>
+        <div id={id} className={`pb-4 ${bodyClassName}`}>
           {children}
         </div>
       )}
@@ -136,14 +131,9 @@ export default function FilterPanel({ facets, filters, onToggle, onSort }) {
         title="Year"
         note={selectedNote(filters.years)}
         defaultOpen
-        bodyGutter={false}
         bodyClassName="flex flex-col"
       >
-        <div
-          className={`grid grid-cols-3 gap-1.5 overflow-y-auto ${GUTTER} ${
-            allYears ? 'max-h-36' : ''
-          }`}
-        >
+        <div className={`grid grid-cols-3 gap-1.5 ${SCROLL_LIST} ${allYears ? 'max-h-36' : ''}`}>
           {years.map((year) => {
             const selected = filters.years.includes(year.key)
             return (
@@ -193,13 +183,10 @@ export default function FilterPanel({ facets, filters, onToggle, onSort }) {
         note={selectedNote(filters.tags)}
         defaultOpen
         className="xl:flex xl:min-h-0 xl:flex-col"
-        bodyGutter={false}
         bodyClassName="xl:flex xl:min-h-0 xl:flex-col"
       >
         <div
-          className={`overflow-y-auto ${GUTTER} xl:min-h-[8rem] ${
-            allTags ? 'max-h-72 xl:max-h-none' : ''
-          }`}
+          className={`${SCROLL_LIST} xl:min-h-[8rem] ${allTags ? 'max-h-72 xl:max-h-none' : ''}`}
         >
           {tags.map((tag) => (
             <Option
