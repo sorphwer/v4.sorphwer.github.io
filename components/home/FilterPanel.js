@@ -128,7 +128,9 @@ export default function FilterPanel({ facets, filters, onToggle, onSort }) {
         bodyClassName="flex flex-col"
       >
         <div
-          className={`grid grid-cols-3 gap-1.5 ${allYears ? 'max-h-36 overflow-y-auto pr-2' : ''}`}
+          className={`grid grid-cols-3 gap-1.5 ${
+            allYears ? 'max-h-36 overflow-y-auto pr-2 [scrollbar-gutter:stable]' : ''
+          }`}
         >
           {years.map((year) => {
             const selected = filters.years.includes(year.key)
@@ -161,16 +163,19 @@ export default function FilterPanel({ facets, filters, onToggle, onSort }) {
       </Section>
 
       <Section id="filter-source" title="Source" note={selectedNote(filters.sources)} defaultOpen>
-        {facets.sources.map((source) => (
-          <Option
-            key={source.key}
-            checked={filters.sources.includes(source.key)}
-            onChange={() => onToggle('sources', source.key)}
-            count={source.count}
-          >
-            <SourceMark source={source.key} />
-          </Option>
-        ))}
+        {/* Same gutter as the tag list so both count columns share a right edge. */}
+        <div className="xl:overflow-y-auto xl:pr-2 xl:[scrollbar-gutter:stable]">
+          {facets.sources.map((source) => (
+            <Option
+              key={source.key}
+              checked={filters.sources.includes(source.key)}
+              onChange={() => onToggle('sources', source.key)}
+              count={source.count}
+            >
+              <SourceMark source={source.key} />
+            </Option>
+          ))}
+        </div>
       </Section>
 
       <Section
@@ -181,9 +186,10 @@ export default function FilterPanel({ facets, filters, onToggle, onSort }) {
         className="xl:flex xl:min-h-0 xl:flex-col"
         bodyClassName="xl:flex xl:min-h-0 xl:flex-col"
       >
+        {/* scrollbar-gutter keeps the counts' right edge fixed whether or not the list scrolls. */}
         <div
-          className={`xl:min-h-[8rem] xl:overflow-y-auto ${
-            allTags ? 'max-h-72 overflow-y-auto pr-2 xl:max-h-none' : ''
+          className={`xl:min-h-[8rem] xl:overflow-y-auto xl:pr-2 xl:[scrollbar-gutter:stable] ${
+            allTags ? 'max-h-72 overflow-y-auto pr-2 [scrollbar-gutter:stable] xl:max-h-none' : ''
           }`}
         >
           {tags.map((tag) => (
