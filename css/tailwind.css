@@ -51,14 +51,32 @@ body {
 .post-art .fi {
   fill: var(--art-i);
 }
+/* --art-t / --art-to: a role's colour and where its tints (below) mix toward. */
 .post-art .fm {
   fill: var(--art-m);
+  --art-t: var(--art-m);
+  --art-to: var(--art-g);
 }
 .post-art .fb {
   fill: var(--art-b);
+  --art-t: var(--art-b);
+  --art-to: #ffffff;
 }
 .post-art .fp {
   fill: var(--art-p);
+  --art-t: var(--art-p);
+  --art-to: #ffffff;
+}
+/* Tints (art.js `garden`), opaque: blue and pink lighten toward Pure White in
+   both themes, grey fades toward the ground so ink veins stay legible. Without
+   color-mix the plain role colour stays. */
+@supports (color: color-mix(in srgb, red, blue)) {
+  .post-art .t5 {
+    fill: color-mix(in srgb, var(--art-t) 50%, var(--art-to));
+  }
+  .post-art .t7 {
+    fill: color-mix(in srgb, var(--art-t) 70%, var(--art-to));
+  }
 }
 .post-art [class^='s'] {
   fill: none;
