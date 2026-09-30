@@ -5,14 +5,15 @@
   display: none;
 }
 
-.notion-page-cover-wrapper {
-  height: 10vh !important;
+/* The post frame (components/article/PostArticle) supplies the banner, title
+   and navigation, so Notion's own breadcrumb header, cover and page icon go. */
+.notion-header,
+.notion-page-cover-wrapper,
+.notion-page-icon-hero {
+  display: none !important;
 }
-.notion-page-cover-wrapper img {
-  height: 10vh !important;
-}
-.notion-header {
-  visibility: hidden;
+.notion-page {
+  width: 100% !important;
 }
 .notion.notion-app {
   background: inherit !important;
@@ -42,10 +43,6 @@ a.notion-page-link:hover {
 .notion-bookmark-link-text {
   @apply !text-black;
   @apply dark:!text-gray-50;
-}
-.notion-page-cover-wrapper {
-  filter: brightness(0);
-  @apply dark:brightness-200;
 }
 .notion-bookmark {
   @apply !no-underline;

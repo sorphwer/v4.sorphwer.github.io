@@ -4,7 +4,7 @@ import generateRss from '@/lib/generate-rss'
 import { MDXLayoutRenderer } from '@/components/MDXComponents'
 import { formatSlug, getAllFilesFrontMatter, getFileBySlug, getFiles } from '@/lib/mdx'
 import { getNotionPage } from '@/lib/notion'
-import { NotionRenderer } from 'react-notion-x'
+import relatedPosts from '@/lib/utils/relatedPosts'
 export async function getStaticPaths() {
   const posts = getFiles('blog')
   return {
@@ -41,14 +41,15 @@ export async function getStaticProps({ params }) {
     recordMap = await getNotionPage(post.frontMatter.notion)
   }
 
-  return { props: { post, recordMap, authorDetails, prev, next } }
+  // Drafts are absent from allPosts (postIndex -1) and render no article.
+  const related = postIndex >= 0 ? relatedPosts(allPosts, allPosts[postIndex], prev, next) : []
+
+  return { props: { post, recordMap, authorDetails, prev, next, related } }
 }
 
-export default function Blog({ post, recordMap, authorDetails, prev, next }) {
+export default function Blog({ post, recordMap, authorDetails, prev, next, related }) {
   const DEFAULT_LAYOUT = 'PostLayout'
-  const { mdxSource, toc, frontMatter } = post
-  // console.log(typeof(mdxSource))
-  // console.log(typeof(recordMap))
+  const { mdxSource, frontMatter } = post
   return (
     <>
       {frontMatter.draft !== true ? (
@@ -56,13 +57,13 @@ export default function Blog({ post, recordMap, authorDetails, prev, next }) {
           layout={
             (frontMatter.layout === 'post' ? 'PostLayout' : frontMatter.layout) || DEFAULT_LAYOUT
           }
-          toc={toc}
           mdxSource={mdxSource}
           frontMatter={frontMatter}
           recordMap={recordMap}
           authorDetails={authorDetails}
           prev={prev}
           next={next}
+          related={related}
         />
       ) : (
         <div className="mt-24 text-center">

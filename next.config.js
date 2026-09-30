@@ -66,21 +66,22 @@ module.exports = withBundleAnalyzer({
       },
     ]
   },
-  webpack: (config, { dev, isServer }) => {
+  // /tags/<slug> pages were replaced by the home page's filter (lib/utils/postFacets filterHref).
+  async redirects() {
+    return [
+      { source: '/tags/:source(mdx|notion)', destination: '/?source=:source', permanent: true },
+      { source: '/tags/:tag', destination: '/?tags=:tag', permanent: true },
+      { source: '/tags/:tag/feed.xml', destination: '/feed.xml', permanent: true },
+    ]
+  },
+  webpack: (config) => {
+    // Production client no longer swaps React for preact/compat: recharts 3
+    // (paper post) stores React elements in an immer-frozen redux store and
+    // preact mutates vnode internals, which throws on frozen objects.
     config.module.rules.push({
       test: /\.svg$/,
       use: ['@svgr/webpack'],
     })
-
-    if (!dev && !isServer) {
-      // Replace React with Preact only in client production build
-      Object.assign(config.resolve.alias, {
-        'react/jsx-runtime.js': 'preact/compat/jsx-runtime',
-        react: 'preact/compat',
-        'react-dom/test-utils': 'preact/test-utils',
-        'react-dom': 'preact/compat',
-      })
-    }
 
     return config
   },

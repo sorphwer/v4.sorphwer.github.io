@@ -2,6 +2,80 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Post banners are full-bleed (100vw); clip the scrollbar-width overhang without
+   creating a scroll container, so fixed positioning is unaffected. */
+body {
+  overflow-x: clip;
+}
+
+/* Home filter lists (components/home/FilterPanel): 6px thumb, no track.
+   Chromium ignores ::-webkit-scrollbar once scrollbar-width/-color are set, so
+   only the WebKit pseudo-elements are used; Firefox keeps its default bar. */
+.filter-scroll::-webkit-scrollbar {
+  width: 6px;
+}
+.filter-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+.filter-scroll::-webkit-scrollbar-thumb {
+  border-radius: 3px;
+  background: rgb(209 213 219);
+}
+.dark .filter-scroll::-webkit-scrollbar-thumb {
+  background: rgb(55 65 81);
+}
+
+/* Post artwork (components/article/art.js): role classes → DESIGN.md palette.
+   Light: white ground, black ink, RS Blue Light. Dark: black ground, white ink,
+   RS Blue Dark. */
+.post-art {
+  --art-g: #ffffff;
+  --art-i: #000000;
+  --art-m: #808080;
+  --art-b: #64d2ff;
+  --art-p: #e83e8c;
+}
+.dark .post-art {
+  --art-g: #000000;
+  --art-i: #ffffff;
+  --art-b: #0070c9;
+}
+.post-art svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.post-art .fg {
+  fill: var(--art-g);
+}
+.post-art .fi {
+  fill: var(--art-i);
+}
+.post-art .fm {
+  fill: var(--art-m);
+}
+.post-art .fb {
+  fill: var(--art-b);
+}
+.post-art .fp {
+  fill: var(--art-p);
+}
+.post-art [class^='s'] {
+  fill: none;
+}
+.post-art .si {
+  stroke: var(--art-i);
+}
+.post-art .sm {
+  stroke: var(--art-m);
+}
+.post-art .sb {
+  stroke: var(--art-b);
+}
+.post-art .sp {
+  stroke: var(--art-p);
+}
+
 .task-list-item::before {
   @apply hidden;
 }

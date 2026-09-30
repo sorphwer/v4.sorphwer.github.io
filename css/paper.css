@@ -1,0 +1,282 @@
+/*
+ * Geist design-system token layer for the paper post (components/posts/paper).
+ * Copied from the paper-version standalone `styles.css`; scoped under `.paper`
+ * and flipped by the site's `.dark` class (next-themes) instead of
+ * prefers-color-scheme. Tailwind exposes these as `*-ds-*` utilities
+ * (see dsPalette() in tailwind.config.js).
+ *
+ * Colour follows DESIGN.md (6 : 3 : 1): the gray scale is the neutral black /
+ * 50%-grey / white axis; the blue scale is tints of ONE blue per theme (#0070c9 on
+ * light, #64d2ff on dark — contrast-driven, see css/glance.css); the red and pink
+ * scales are tints of Warning Pink #e83e8c (destructive, cost blow-ups, the Zendesk
+ * anchor in charts). green-900 stays only because the table captions name it
+ * ("Green bold" / 绿色加粗); amber / teal / purple are unused by the components.
+ */
+.paper {
+  /* Backgrounds */
+  --ds-background-100: #ffffff;
+  --ds-background-200: #fafafa;
+
+  /* Gray — 100/200/300 bg · 400/500/600 border · 700/800 solid · 900/1000 text */
+  --ds-gray-100: #f2f2f2;
+  --ds-gray-200: #ebebeb;
+  --ds-gray-300: #e6e6e6;
+  --ds-gray-400: #eaeaea;
+  --ds-gray-500: #c9c9c9;
+  --ds-gray-600: #a8a8a8;
+  --ds-gray-700: #8f8f8f;
+  --ds-gray-800: #7d7d7d;
+  --ds-gray-900: #4d4d4d;
+  --ds-gray-1000: #171717;
+
+  /* Gray alpha — translucent; layers over any background */
+  --ds-gray-alpha-100: #0000000d;
+  --ds-gray-alpha-200: #00000015;
+  --ds-gray-alpha-300: #0000001a;
+  --ds-gray-alpha-400: #00000014;
+  --ds-gray-alpha-500: #00000036;
+  --ds-gray-alpha-600: #0000003d;
+
+  /* Blue — tints of #0070c9 (the site's light-theme link blue) */
+  --ds-blue-100: #eef5fb;
+  --ds-blue-200: #e6f1fa;
+  --ds-blue-300: #dbeaf7;
+  --ds-blue-400: #d1e5f5;
+  --ds-blue-500: #a6cdec;
+  --ds-blue-600: #66a9df;
+  --ds-blue-700: #0070c9;
+  --ds-blue-800: #005ea6;
+  --ds-blue-900: #0070c9;
+  --ds-blue-1000: #00325a;
+
+  /* Red — tints of Warning Pink #e83e8c; 900 is the AA text shade */
+  --ds-red-100: #fef7fa;
+  --ds-red-200: #fdf1f7;
+  --ds-red-300: #fdecf4;
+  --ds-red-400: #fbdcea;
+  --ds-red-500: #f7bbd7;
+  --ds-red-600: #f18bba;
+  --ds-red-700: #e83e8c;
+  --ds-red-800: #e83e8c;
+  --ds-red-900: #c2256f;
+  --ds-red-1000: #5d1938;
+
+  /* Amber — warnings */
+  --ds-amber-100: #fff6de;
+  --ds-amber-200: #fff4cf;
+  --ds-amber-300: #fff1c1;
+  --ds-amber-400: #ffdc73;
+  --ds-amber-500: #ffc543;
+  --ds-amber-600: #ffa600;
+  --ds-amber-700: #ffae00;
+  --ds-amber-800: #ff9300;
+  --ds-amber-900: #aa4d00;
+  --ds-amber-1000: #561900;
+
+  /* Green — only 900 is used: the captions' "green bold" per-column winner */
+  --ds-green-100: #ecfdec;
+  --ds-green-200: #e5fce7;
+  --ds-green-300: #d3fad1;
+  --ds-green-400: #b9f5bc;
+  --ds-green-500: #82eb8d;
+  --ds-green-600: #4ce15e;
+  --ds-green-700: #28a948;
+  --ds-green-800: #279141;
+  --ds-green-900: #3d7a57;
+  --ds-green-1000: #003a00;
+
+  /* Teal */
+  --ds-teal-100: #defffb;
+  --ds-teal-300: #ccf9f1;
+  --ds-teal-600: #00e3c4;
+  --ds-teal-700: #00ac96;
+  --ds-teal-900: #007f70;
+  --ds-teal-1000: #003f34;
+
+  /* Purple */
+  --ds-purple-100: #faf0ff;
+  --ds-purple-300: #f6e8ff;
+  --ds-purple-600: #c979ff;
+  --ds-purple-700: #a000f8;
+  --ds-purple-900: #7d00cc;
+  --ds-purple-1000: #2f004e;
+
+  /* Pink — Warning Pink */
+  --ds-pink-100: #fdecf4;
+  --ds-pink-300: #fbdcea;
+  --ds-pink-700: #e83e8c;
+  --ds-pink-900: #c2256f;
+
+  /* Semantic aliases */
+  --ds-link: var(--ds-blue-900);
+  --ds-btn-primary-hover: #383838;
+  --ds-focus-ring: 0 0 0 2px var(--ds-background-100), 0 0 0 4px var(--ds-blue-700);
+
+  /* Shadows — hierarchy comes from borders first */
+  --ds-shadow-border: 0 0 0 1px var(--ds-gray-alpha-400);
+  --ds-shadow-small: 0 2px 2px rgba(0, 0, 0, 0.04);
+  --ds-shadow-medium: 0 1px 1px rgba(0, 0, 0, 0.02), 0 4px 8px -4px rgba(0, 0, 0, 0.04),
+    0 16px 24px -8px rgba(0, 0, 0, 0.06);
+  --ds-shadow-modal: 0 1px 1px rgba(0, 0, 0, 0.02), 0 8px 16px -4px rgba(0, 0, 0, 0.04),
+    0 24px 32px -8px rgba(0, 0, 0, 0.06);
+
+  /* Motion — instant by default; short and physical when it helps */
+  --ds-ease: cubic-bezier(0.175, 0.885, 0.32, 1.1);
+
+  /* shadcn semantic aliases -> Geist tokens (auto-flip via the dark scope) */
+  --ds-sem-background: var(--ds-background-100);
+  --ds-sem-foreground: var(--ds-gray-1000);
+  --ds-sem-card: var(--ds-background-100);
+  --ds-sem-card-foreground: var(--ds-gray-1000);
+  --ds-sem-popover: var(--ds-background-100);
+  --ds-sem-popover-foreground: var(--ds-gray-1000);
+  --ds-sem-primary: var(--ds-gray-1000);
+  --ds-sem-primary-foreground: var(--ds-background-100);
+  --ds-sem-secondary: var(--ds-gray-100);
+  --ds-sem-secondary-foreground: var(--ds-gray-1000);
+  --ds-sem-muted: var(--ds-gray-100);
+  --ds-sem-muted-foreground: var(--ds-gray-900);
+  --ds-sem-accent: var(--ds-gray-100);
+  --ds-sem-accent-foreground: var(--ds-gray-1000);
+  --ds-sem-destructive: var(--ds-red-800);
+  --ds-sem-border: var(--ds-gray-alpha-400);
+  --ds-sem-input: var(--ds-gray-alpha-400);
+  --ds-sem-ring: var(--ds-blue-700);
+  /* Chart slots: 1 answered / 2 low-confidence / 3 unscored / 4 no-evidence */
+  --ds-sem-chart-1: var(--ds-blue-700);
+  --ds-sem-chart-2: var(--ds-blue-500);
+  --ds-sem-chart-3: var(--ds-gray-500);
+  --ds-sem-chart-4: var(--ds-red-700);
+  --ds-sem-chart-5: var(--ds-gray-900);
+  --ds-sem-radius: 6px;
+  --ds-sem-sidebar: var(--ds-background-200);
+  --ds-sem-sidebar-foreground: var(--ds-gray-1000);
+  --ds-sem-sidebar-primary: var(--ds-gray-1000);
+  --ds-sem-sidebar-primary-foreground: var(--ds-background-100);
+  --ds-sem-sidebar-accent: var(--ds-gray-100);
+  --ds-sem-sidebar-accent-foreground: var(--ds-gray-1000);
+  --ds-sem-sidebar-border: var(--ds-gray-alpha-400);
+  --ds-sem-sidebar-ring: var(--ds-blue-700);
+}
+
+/* Dark surfaces follow the site's dark palette instead of Geist's near-black:
+ * background-100 is the page (body `dark:bg-gray-900`, #171717), background-200
+ * a slightly raised card, and the gray 100–400 fills step up from there
+ * (gray-200 = the site's gray-800 code/pre surface) so chips and panels stay
+ * visible on #171717. */
+.dark .paper {
+  --ds-background-100: #171717;
+  --ds-background-200: #1f1f1f;
+
+  --ds-gray-100: #222222;
+  --ds-gray-200: #262626;
+  --ds-gray-300: #2e2e2e;
+  --ds-gray-400: #363636;
+  --ds-gray-500: #454545;
+  --ds-gray-600: #878787;
+  --ds-gray-700: #8f8f8f;
+  --ds-gray-800: #7d7d7d;
+  --ds-gray-900: #a0a0a0;
+  --ds-gray-1000: #ededed;
+
+  --ds-gray-alpha-100: #ffffff0f;
+  --ds-gray-alpha-200: #ffffff17;
+  --ds-gray-alpha-300: #ffffff1f;
+  --ds-gray-alpha-400: #ffffff24;
+  --ds-gray-alpha-500: #ffffff3d;
+  --ds-gray-alpha-600: #ffffff57;
+
+  /* Blue — tints of #64d2ff over the #171717 page (the site's dark hover / tag blue) */
+  --ds-blue-100: #1e282c;
+  --ds-blue-200: #223137;
+  --ds-blue-300: #263c45;
+  --ds-blue-400: #2b4853;
+  --ds-blue-500: #417e97;
+  --ds-blue-600: #55add1;
+  --ds-blue-700: #64d2ff;
+  --ds-blue-800: #8fdeff;
+  --ds-blue-900: #64d2ff;
+  --ds-blue-1000: #d1f2ff;
+
+  /* Red — tints of Warning Pink over #171717; 900 is the AA text tint */
+  --ds-red-100: #281a20;
+  --ds-red-200: #2e1b24;
+  --ds-red-300: #381d2a;
+  --ds-red-400: #452031;
+  --ds-red-500: #602540;
+  --ds-red-600: #b8336f;
+  --ds-red-700: #e83e8c;
+  --ds-red-800: #ee5f9f;
+  --ds-red-900: #f28dba;
+  --ds-red-1000: #fce2ee;
+
+  --ds-amber-100: #271700;
+  --ds-amber-200: #341c00;
+  --ds-amber-300: #4a2900;
+  --ds-amber-400: #573300;
+  --ds-amber-500: #693f05;
+  --ds-amber-600: #e79c13;
+  --ds-amber-700: #ffae00;
+  --ds-amber-800: #ff9300;
+  --ds-amber-900: #f2a20d;
+  --ds-amber-1000: #fef3dd;
+
+  --ds-green-100: #0b2211;
+  --ds-green-200: #0f2c17;
+  --ds-green-300: #11351b;
+  --ds-green-400: #0c451b;
+  --ds-green-500: #126426;
+  --ds-green-600: #1a9338;
+  --ds-green-700: #28a948;
+  --ds-green-800: #43c25f;
+  --ds-green-900: #6fb58a;
+  --ds-green-1000: #e5fbeb;
+
+  --ds-teal-100: #04201b;
+  --ds-teal-300: #083a33;
+  --ds-teal-600: #00c4a8;
+  --ds-teal-700: #00ac96;
+  --ds-teal-900: #0ac5b3;
+  --ds-teal-1000: #e1faf4;
+
+  --ds-purple-100: #231528;
+  --ds-purple-300: #3a2250;
+  --ds-purple-600: #b45ff5;
+  --ds-purple-700: #a000f8;
+  --ds-purple-900: #bf7af0;
+  --ds-purple-1000: #f7ecfc;
+
+  --ds-pink-100: #281a20;
+  --ds-pink-300: #452031;
+  --ds-pink-700: #e83e8c;
+  --ds-pink-900: #f28dba;
+
+  --ds-btn-primary-hover: #cccccc;
+
+  --ds-shadow-small: 0 1px 2px rgba(0, 0, 0, 0.32);
+  --ds-shadow-medium: 0 1px 1px rgba(0, 0, 0, 0.16), 0 4px 8px -4px rgba(0, 0, 0, 0.32),
+    0 16px 24px -8px rgba(0, 0, 0, 0.4);
+  --ds-shadow-modal: 0 1px 1px rgba(0, 0, 0, 0.16), 0 8px 16px -4px rgba(0, 0, 0, 0.32),
+    0 24px 32px -8px rgba(0, 0, 0, 0.4);
+}
+
+/* Geist base rules, scoped: selection, keyboard focus ring, reduced motion. */
+.paper ::selection {
+  background: var(--ds-blue-300);
+  color: var(--ds-gray-1000);
+}
+
+.paper :focus-visible {
+  outline: none;
+  box-shadow: var(--ds-focus-ring);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .paper *,
+  .paper *::before,
+  .paper *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

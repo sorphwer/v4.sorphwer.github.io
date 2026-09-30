@@ -1,16 +1,12 @@
 // Archive page
 import Link from '@/components/Link'
 import Tag from '@/components/Tag'
-import Image from 'next/image'
-import siteMetadata from '@/data/siteMetadata'
 import { useState } from 'react'
 import Pagination from '@/components/Pagination'
 import formatDate from '@/lib/utils/formatDate'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import SocialIcon from '@/components/social-icons'
+import SeasonIcon from '@/components/SeasonIcon'
 export default function ListLayout({
   posts,
-  title,
   initialDisplayPosts = [],
   pagination,
   enableSearch = true,
@@ -66,19 +62,13 @@ export default function ListLayout({
           {displayPosts.map((frontMatter) => {
             // todo modify this
             const { slug, date, title, summary, tags } = frontMatter
-            const season = Math.floor((new Date(date).getMonth() / 12) * 4) % 4
             return (
               <li key={slug} className="py-4 font-rs">
                 <article className="space-y-2 xl:grid xl:grid-cols-4 xl:items-baseline xl:space-y-0">
                   <dl>
                     <dt className="sr-only">Published on</dt>
                     <dd className="text  -base font-medium leading-6 text-gray-500 dark:text-gray-400">
-                      {season == 0 && <FontAwesomeIcon icon="fan" className="text-pink-300" />}
-                      {season == 1 && <FontAwesomeIcon icon="sun" className="text-amber-300" />}
-                      {season == 2 && <FontAwesomeIcon icon="leaf" className="text-green-300" />}
-                      {season == 3 && (
-                        <FontAwesomeIcon icon="snowflake" className="text-stone-300" />
-                      )}
+                      <SeasonIcon date={date} />
                       <time dateTime={date}>{' ' + formatDate(date)}</time>
                     </dd>
                   </dl>
