@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import kebabCase from '@/lib/utils/kebabCase'
+import { filterHref } from '@/lib/utils/postFacets'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Image from 'next/image'
 
@@ -45,8 +46,9 @@ function variant(text) {
 }
 
 /**
- * Tag chip. Links to the tag's page, or with `onClick` becomes a button that
- * receives the tag text (the home page uses it to filter by the tag).
+ * Tag chip. Links to the home page filtered to the tag (lib/utils/postFacets
+ * filterHref), or with `onClick` becomes a button that receives the tag text
+ * (the home page uses it to toggle the filter in place).
  * `className` is appended to the chip's own classes.
  */
 const Tag = ({ text, onClick, className = '' }) => {
@@ -65,7 +67,7 @@ const Tag = ({ text, onClick, className = '' }) => {
     )
   }
   return (
-    <Link href={`/tags/${kebabCase(text)}`}>
+    <Link href={filterHref(text)}>
       <a className={classes}>{chip.content}</a>
     </Link>
   )

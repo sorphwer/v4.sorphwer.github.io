@@ -9,33 +9,29 @@ const YEAR_PREVIEW = 9
 const TAG_PREVIEW = 7
 
 /**
- * Scrolling facet list. Its 6px trackless scrollbar (css/tailwind.css) is pushed
- * into the sidebar's 12px right padding via -mr-3; the gutter is always reserved
- * (bar present or not) and pr-1.5 keeps 6px between the content and the bar, so
- * the content column, and with it the counts, keep the chevron's right edge.
+ * Collapsible facet section. The body is a scroll lane: its 6px trackless
+ * scrollbar (css/tailwind.css) is pushed into the sidebar's 12px right padding
+ * via -mr-3, the gutter is always reserved (bar present or not) and pr-1.5
+ * keeps 6px between the content and the bar, so the content column, and with it
+ * the counts, keep the chevron's right edge. `bodyClassName` sets the lane's
+ * layout / max height; `footer` (e.g. "Show all") sits below the lane, outside
+ * the scroll; `shrink` lets the lane give up height on xl when the sticky
+ * sidebar is capped.
  */
-function ScrollList({ className = '', children }) {
-  return (
-    <div
-      className={`filter-scroll -mr-3 overflow-y-auto pr-1.5 [scrollbar-gutter:stable] ${className}`}
-    >
-      {children}
-    </div>
-  )
-}
-
 function Section({
   id,
   title,
   note,
   defaultOpen = false,
-  className = '',
+  shrink = false,
   bodyClassName = '',
+  footer,
   children,
 }) {
   const [open, setOpen] = useState(defaultOpen)
+  const column = shrink ? 'xl:flex xl:min-h-0 xl:flex-col' : ''
   return (
-    <div className={`border-t border-gray-200 dark:border-gray-800 ${className}`}>
+    <div className={`border-t border-gray-200 dark:border-gray-800 ${column}`}>
       <h3>
         <button
           type="button"
@@ -56,8 +52,13 @@ function Section({
         </button>
       </h3>
       {open && (
-        <div id={id} className={`pb-4 ${bodyClassName}`}>
-          {children}
+        <div id={id} className={`pb-4 ${column}`}>
+          <div
+            className={`filter-scroll -mr-3 overflow-y-auto pr-1.5 [scrollbar-gutter:stable] ${bodyClassName}`}
+          >
+            {children}
+          </div>
+          {footer}
         </div>
       )}
     </div>
@@ -141,52 +142,56 @@ export default function FilterPanel({ facets, filters, onToggle, onSort }) {
         title="Year"
         note={selectedNote(filters.years)}
         defaultOpen
-        bodyClassName="flex flex-col"
+        bodyClassName={`grid grid-cols-3 gap-1.5 ${allYears ? 'max-h-36' : ''}`}
+        footer={
+          facets.years.length > YEAR_PREVIEW && (
+            <ShowAllButton
+              expanded={allYears}
+              total={facets.years.length}
+              noun="years"
+              onClick={() => setAllYears(!allYears)}
+            />
+          )
+        }
       >
-        <ScrollList className={`grid grid-cols-3 gap-1.5 ${allYears ? 'max-h-36' : ''}`}>
-          {years.map((year) => {
-            const selected = filters.years.includes(year.key)
-            return (
-              <button
-                key={year.key}
-                type="button"
-                aria-pressed={selected}
-                title={`${year.count} post${year.count === 1 ? '' : 's'}`}
-                onClick={() => onToggle('years', year.key)}
-                className={`rounded-md border py-1 text-xs tabular-nums transition-colors ${
-                  selected
-                    ? 'border-primary-500 bg-primary-500 text-white dark:border-primary-500'
-                    : 'border-gray-200 text-gray-600 hover:border-gray-400 hover:text-gray-900 dark:border-gray-800 dark:text-gray-400 dark:hover:border-gray-600 dark:hover:text-gray-100'
-                }`}
-              >
-                {year.label}
-              </button>
-            )
-          })}
-        </ScrollList>
-        {facets.years.length > YEAR_PREVIEW && (
-          <ShowAllButton
-            expanded={allYears}
-            total={facets.years.length}
-            noun="years"
-            onClick={() => setAllYears(!allYears)}
-          />
-        )}
+        {years.map((year) => {
+          const selected = filters.years.includes(year.key)
+          return (
+            <button
+              key={year.key}
+              type="button"
+              aria-pressed={selected}
+              title={`${year.count} post${year.count === 1 ? '' : 's'}`}
+              onClick={() => onToggle('years', year.key)}
+              className={`rounded-md border py-1 text-xs tabular-nums transition-colors ${
+                selected
+                  ? 'border-primary-500 bg-primary-500 text-white dark:border-primary-500'
+                  : 'border-gray-200 text-gray-600 hover:border-gray-400 hover:text-gray-900 dark:border-gray-800 dark:text-gray-400 dark:hover:border-gray-600 dark:hover:text-gray-100'
+              }`}
+            >
+              {year.label}
+            </button>
+          )
+        })}
       </Section>
 
-      <Section id="filter-source" title="Source" note={selectedNote(filters.sources)} defaultOpen>
-        <ScrollList className="max-h-36">
-          {facets.sources.map((source) => (
-            <Option
-              key={source.key}
-              checked={filters.sources.includes(source.key)}
-              onChange={() => onToggle('sources', source.key)}
-              count={source.count}
-            >
-              <SourceMark source={source.key} />
-            </Option>
-          ))}
-        </ScrollList>
+      <Section
+        id="filter-source"
+        title="Source"
+        note={selectedNote(filters.sources)}
+        defaultOpen
+        bodyClassName="max-h-36"
+      >
+        {facets.sources.map((source) => (
+          <Option
+            key={source.key}
+            checked={filters.sources.includes(source.key)}
+            onChange={() => onToggle('sources', source.key)}
+            count={source.count}
+          >
+            <SourceMark source={source.key} />
+          </Option>
+        ))}
       </Section>
 
       <Section
@@ -194,29 +199,29 @@ export default function FilterPanel({ facets, filters, onToggle, onSort }) {
         title="Tag"
         note={selectedNote(filters.tags)}
         defaultOpen
-        className="xl:flex xl:min-h-0 xl:flex-col"
-        bodyClassName="xl:flex xl:min-h-0 xl:flex-col"
+        shrink
+        bodyClassName={`xl:min-h-[8rem] ${allTags ? 'max-h-72 xl:max-h-none' : ''}`}
+        footer={
+          otherTags.length > TAG_PREVIEW && (
+            <ShowAllButton
+              expanded={allTags}
+              total={facets.tags.length}
+              noun="tags"
+              onClick={() => setAllTags(!allTags)}
+            />
+          )
+        }
       >
-        <ScrollList className={`xl:min-h-[8rem] ${allTags ? 'max-h-72 xl:max-h-none' : ''}`}>
-          {tags.map((tag) => (
-            <Option
-              key={tag.key}
-              checked={filters.tags.includes(tag.key)}
-              onChange={() => onToggle('tags', tag.key)}
-              count={tag.count}
-            >
-              {tag.label}
-            </Option>
-          ))}
-        </ScrollList>
-        {otherTags.length > TAG_PREVIEW && (
-          <ShowAllButton
-            expanded={allTags}
-            total={facets.tags.length}
-            noun="tags"
-            onClick={() => setAllTags(!allTags)}
-          />
-        )}
+        {tags.map((tag) => (
+          <Option
+            key={tag.key}
+            checked={filters.tags.includes(tag.key)}
+            onChange={() => onToggle('tags', tag.key)}
+            count={tag.count}
+          >
+            {tag.label}
+          </Option>
+        ))}
       </Section>
     </div>
   )

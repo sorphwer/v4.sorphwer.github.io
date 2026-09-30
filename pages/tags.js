@@ -3,12 +3,11 @@ import Link from '@/components/Link'
 import { PageSEO } from '@/components/SEO'
 import SourceMark from '@/components/home/SourceMark'
 import { SearchIcon } from '@/components/home/icons'
-import TagBubbles from '@/components/tags/TagBubbles'
-import TagDetail from '@/components/tags/TagDetail'
 import TagTimeline from '@/components/tags/TagTimeline'
 import siteMetadata from '@/data/siteMetadata'
 import { getAllFilesFrontMatter } from '@/lib/mdx'
-import { buildTagAtlas } from '@/lib/tagAtlas'
+import { buildTagTimeline } from '@/lib/tagTimeline'
+import { filterHref } from '@/lib/utils/postFacets'
 
 export async function getStaticProps() {
   const posts = (await getAllFilesFrontMatter('blog')).map((post) => ({
@@ -16,7 +15,7 @@ export async function getStaticProps() {
     tags: post.tags,
     source: post.notion ? 'notion' : 'mdx',
   }))
-  return { props: { atlas: buildTagAtlas(posts), postCount: posts.length } }
+  return { props: { timeline: buildTagTimeline(posts), postCount: posts.length } }
 }
 
 const byLabel = (a, b) => a.label.localeCompare(b.label, 'en', { sensitivity: 'base' })
@@ -33,6 +32,26 @@ function SectionTitle({ children, note }) {
       </h2>
       {note && <p className="mt-0.5 text-sm text-gray-500 dark:text-gray-400">{note}</p>}
     </div>
+  )
+}
+
+function Legend({ recentFrom }) {
+  return (
+    <ul className="mb-4 flex flex-wrap gap-x-5 gap-y-1 text-xs text-gray-500 dark:text-gray-400">
+      <li className="flex items-center gap-2">
+        <span className="h-2.5 w-2.5 rounded-full bg-primary-500" />
+        Written about since {recentFrom}
+      </li>
+      <li className="flex items-center gap-2">
+        <span className="h-2.5 w-2.5 rounded-full bg-gray-400 dark:bg-gray-500" />
+        Earlier topics
+      </li>
+      <li className="flex items-center gap-2">
+        <span className="h-1.5 w-1.5 rounded-full bg-gray-400" />
+        <span className="-ml-1 h-3 w-3 rounded-full bg-gray-400" />
+        Dot size = posts that year
+      </li>
+    </ul>
   )
 }
 
@@ -56,7 +75,7 @@ function TagIndex({ tags, matches }) {
             {group.map((tag) => (
               <li key={tag.key}>
                 <Link
-                  href={`/tags/${tag.key}`}
+                  href={filterHref(tag.key)}
                   className="text-sm text-gray-600 hover:text-primary-600 dark:text-gray-400 dark:hover:text-primary-400"
                 >
                   {tag.label}
@@ -74,16 +93,13 @@ function TagIndex({ tags, matches }) {
 }
 
 /**
- * Tag atlas: a packed bubble chart of every topic (size = posts, colour =
- * recent or earlier) with a detail panel for the hovered tag, a timeline of
- * the recurring topics by year, and an A–Z index. The filter box dims
- * non-matching tags in the charts and narrows the index. Clicking a tag opens
- * /tags/<slug>. Layout is computed at build time (lib/tagAtlas).
+ * Tags: the recurring topics charted by year (components/tags/TagTimeline),
+ * then an A–Z index of every tag. The filter box dims non-matching rows and
+ * narrows the index. Every tag links to the home page filtered to it.
  */
-export default function Tags({ atlas, postCount }) {
-  const { tags, years, postsPerYear, recentFrom, sources } = atlas
+export default function Tags({ timeline, postCount }) {
+  const { tags, years, postsPerYear, recentFrom, sources } = timeline
   const [query, setQuery] = useState('')
-  const [active, setActive] = useState(null)
   const [showIndex, setShowIndex] = useState(false)
 
   const matches = useMemo(() => {
@@ -95,10 +111,8 @@ export default function Tags({ atlas, postCount }) {
         .map((tag) => tag.key)
     )
   }, [tags, query])
-  // With a filter that leaves one tag, show it in the panel.
-  const single = matches && matches.size === 1 ? [...matches][0] : null
-  const activeTag = tags.find((tag) => tag.key === (active ?? single)) ?? null
   const recurring = tags.filter((tag) => tag.count > 1).length
+  const indexOpen = showIndex || !!matches
 
   return (
     <>
@@ -117,7 +131,7 @@ export default function Tags({ atlas, postCount }) {
               <span key={source.key}>
                 {i > 0 && <span className="mx-1.5 text-gray-300 dark:text-gray-600">/</span>}
                 <Link
-                  href={`/tags/${source.key}`}
+                  href={filterHref(source.key)}
                   className="hover:text-primary-600 dark:hover:text-primary-400"
                 >
                   <SourceMark source={source.key} />
@@ -150,59 +164,34 @@ export default function Tags({ atlas, postCount }) {
         )}
       </div>
 
-      <section className="grid gap-8 border-b border-gray-200 pb-12 dark:border-gray-800 lg:grid-cols-[minmax(0,1fr)_17rem] lg:items-center">
-        <div className="mx-auto w-full max-w-[40rem]">
-          <TagBubbles
-            tags={tags}
-            recentFrom={recentFrom}
-            active={activeTag?.key ?? null}
-            matches={matches}
-            onActive={setActive}
-          />
-        </div>
-        <aside
-          aria-live="polite"
-          className="lg:border-l lg:border-gray-200 lg:pl-8 lg:dark:border-gray-800"
-        >
-          <TagDetail
-            tag={activeTag}
-            years={years}
-            postsPerYear={postsPerYear}
-            recentFrom={recentFrom}
-            tagCount={tags.length}
-          />
-        </aside>
-      </section>
-
-      <section className="border-b border-gray-200 py-12 dark:border-gray-800">
+      <section className="border-b border-gray-200 pb-12 dark:border-gray-800">
         <SectionTitle
-          note={`The ${recurring} tags used in more than one post, in order of first appearance. Dot size = posts that year.`}
+          note={`The ${recurring} tags used in more than one post, in order of first appearance. Click a row to see its posts.`}
         >
           Topics over time
         </SectionTitle>
+        <Legend recentFrom={recentFrom} />
         <TagTimeline
           tags={tags}
           years={years}
           postsPerYear={postsPerYear}
           recentFrom={recentFrom}
-          active={activeTag?.key ?? null}
           matches={matches}
-          onActive={setActive}
         />
       </section>
 
       <section className="py-12">
         <button
           type="button"
-          aria-expanded={showIndex || !!matches}
+          aria-expanded={indexOpen}
           onClick={() => setShowIndex(!showIndex)}
           className="text-left"
         >
           <SectionTitle note="Every tag, alphabetically, with its post count.">
-            All tags A–Z <span className="text-gray-400">{showIndex || matches ? '−' : '+'}</span>
+            All tags A–Z <span className="text-gray-400">{indexOpen ? '−' : '+'}</span>
           </SectionTitle>
         </button>
-        {(showIndex || matches) && <TagIndex tags={tags} matches={matches} />}
+        {indexOpen && <TagIndex tags={tags} matches={matches} />}
       </section>
     </>
   )

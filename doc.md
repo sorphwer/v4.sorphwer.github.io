@@ -86,7 +86,7 @@ I wanted it to be nearly as feature-rich as popular blogging templates like [bea
 - Citation and bibliography support via [rehype-citation](https://github.com/timlrx/rehype-citation)
 - Automatic image optimization via [next/image](https://nextjs.org/docs/basic-features/image-optimization)
 - Flexible data retrieval with [mdx-bundler](https://github.com/kentcdodds/mdx-bundler)
-- Support for tags - each unique tag will be its own page
+- Tags: `/tags` charts the recurring topics by year; every tag links to the home page filtered to it (`/?tags=python`, `/?source=notion`)
 - Support for multiple authors
 - Blog templates
 - Fixed heading rail (right edge) built from the rendered headings
