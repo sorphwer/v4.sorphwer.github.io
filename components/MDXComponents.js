@@ -10,6 +10,35 @@ import { NotionRenderer } from 'react-notion-x'
 import { getPageTitle } from 'notion-utils'
 import dynamic from 'next/dynamic'
 
+// Interactive post bodies live in components/posts/* and are registered here
+// (webpack side) rather than imported from the .mdx: mdx-bundler would inline
+// them into the serialized page props and `next/dynamic` would not work.
+// Paper is server-rendered (English default) so its prose is in the static HTML;
+// the film and glance figures are client-only (animation/layout measurement).
+const PaperArticle = dynamic(() => import('./posts/paper/PaperArticle'))
+const Film = dynamic(() => import('./posts/glance/film/Film'), { ssr: false })
+// One chunk for all glance figures; `<Glance.Sea />` etc. in the .mdx.
+const GLANCE_FIGURES = [
+  'Sea',
+  'Hard',
+  'Pipe',
+  'Mask',
+  'Ground',
+  'Schema',
+  'Graph',
+  'Search',
+  'Cache',
+  'Nums',
+  'Entry',
+  'Doc',
+]
+const Glance = Object.fromEntries(
+  GLANCE_FIGURES.map((name) => [
+    name,
+    dynamic(() => import('./posts/glance/figures').then((m) => m[name]), { ssr: false }),
+  ])
+)
+
 const Code = dynamic(() => import('react-notion-x/build/third-party/code').then((m) => m.Code))
 const Collection = dynamic(() =>
   import('react-notion-x/build/third-party/collection').then((m) => m.Collection)
@@ -35,6 +64,9 @@ export const MDXComponents = {
   BlogNewsletterForm: BlogNewsletterForm,
   mermaid: Mermaid,
   Mermaid,
+  PaperArticle,
+  Film,
+  Glance,
   wrapper: ({ components, layout, ...rest }) => {
     const Layout = require(`../layouts/${layout}`).default
     return <Layout {...rest} />

@@ -54,7 +54,9 @@ const LayoutWrapper = ({ children }) => {
           <MobileNav />
         </div>
       </header>
-      <div className="mx-auto flex h-screen flex-col justify-between justify-self-center lg:max-w-5xl xl:max-w-6xl">
+      {/* No `justify-self-center`: modern Chromium applies justify-self to block boxes,
+          which turned this wrapper into a shrink-to-fit box sized by its content. */}
+      <div className="mx-auto flex h-screen flex-col justify-between lg:max-w-5xl xl:max-w-6xl">
         <main className="mb-auto">{children}</main>
         <Footer />
       </div>

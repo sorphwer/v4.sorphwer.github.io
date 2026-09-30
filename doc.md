@@ -211,6 +211,8 @@ images (optional, if none provided defaults to socialBanner in siteMetadata conf
 authors (optional list which should correspond to the file names in `data/authors`. Uses `default` if none is specified)
 layout (optional list which should correspond to the file names in `data/layouts`)
 canonicalUrl (optional, canonical url for the post for SEO)
+bodyClass (optional, PostWide only: class on the post body that scopes a stylesheet in `css/`, e.g. `paper`, `glance`)
+titleZh (optional: Chinese title; makes the post bilingual — the header gets an EN / 中文 toggle and the body reads the language through `T` / `useT` from `components/article/lang`)
 ```
 
 Here's an example of a post's frontmatter:
@@ -229,6 +231,10 @@ layout: PostLayout
 canonicalUrl: https://tailwind-nextjs-starter-blog.vercel.app/blog/introducing-tailwind-nextjs-starter-blog
 ---
 ```
+
+Interactive posts (`layout: PostWide`) keep their body in React components under `components/posts/<name>/`, registered by name in `components/MDXComponents.js` (never `import` them from the `.mdx`: mdx-bundler would inline them into page props). Their global CSS lives in `css/<name>.css`, imported from `pages/_app.js`. See `data/blog/2026-07-09-hybrid-retrieval-support-ticket.mdx` and `data/blog/2026-09-24-every-closed-ticket-answers-the-next.mdx`.
+
+Every post layout (`PostLayout` for Markdown/MDX and Notion, `PostWide` for interactive posts) renders through `components/article/PostArticle.js`: a full-bleed banner drawn with p5 from the post slug (`components/article/art.js`, DESIGN.md palette), the title sheet with byline, language toggle and tags, the body, a fixed heading rail on the right built from the rendered `h1`–`h3` / Notion headings (hover for the full list; mark a heading `data-toc-skip` to leave it out), and "Keep reading" cards (previous, next, and posts sharing tags, from `lib/utils/relatedPosts.js`).
 
 ### Compose
 

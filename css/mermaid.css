@@ -19,7 +19,9 @@ html {
   stroke: none !important;
 }
 
-tspan {
+/* `:where(:not(.glance *, .paper *))` keeps these unscoped mermaid rules (same specificity)
+ * off the SVG figures/charts of the glance and paper posts (css/glance.css, css/paper.css). */
+tspan:where(:not(.glance *, .paper *)) {
   fill: var(--post-title-color) !important;
 }
 
@@ -27,7 +29,7 @@ rect.actor {
   fill: var(--rect-color) !important;
 }
 
-line {
+line:where(:not(.glance *, .paper *)) {
   stroke: var(--text) !important;
 }
 
@@ -36,23 +38,23 @@ line {
   fill: #000 !important;
 }
 
-g text {
+g text:where(:not(.glance *, .paper *)) {
   fill: var(--post-title-color) !important;
 }
-article svg {
+article svg:where(:not(.glance *, .paper *)) {
   @apply font-rs;
   @apply text-sm;
   @apply text-center;
   @apply border-red-50;
 }
 
-article path {
+article path:where(:not(.glance *, .paper *)) {
   /* stroke: var(--text) !important; */
   @apply !stroke-black;
   @apply dark:!stroke-white;
 }
 
-svg line {
+svg line:where(:not(.glance *, .paper *)) {
   @apply !stroke-black;
   @apply dark:!stroke-white;
 }
@@ -145,7 +147,7 @@ text.actor {
   marker-end: 'url(#arrowhead)';
   stroke: #ccccff;
 }
-.note {
+.note:where(:not(.glance *, .paper *)) {
   stroke: #aaaa33;
   fill: #fff5ad;
 }
@@ -189,12 +191,12 @@ text.actor {
   text-height: 14px;
 }
 /* Grid and axis */
-.grid .tick {
+.grid .tick:where(:not(.glance *, .paper *)) {
   stroke: lightgrey;
   opacity: 0.3;
   shape-rendering: crispEdges;
 }
-.grid path {
+.grid path:where(:not(.glance *, .paper *)) {
   stroke-width: 0;
 }
 /* Today line */
@@ -321,7 +323,7 @@ text.actor {
 
 
 */
-text {
+text:where(:not(.glance *, .paper *)) {
   font-family: verdana, arial;
   font-size: 14px;
 }
@@ -349,7 +351,7 @@ rect.actor {
   @apply dark:!fill-gray-900;
 }
 
-svg tspan {
+svg tspan:where(:not(.glance *, .paper *)) {
   @apply !fill-black;
   @apply dark:!fill-white;
 }
@@ -390,7 +392,7 @@ circle.face {
   @apply dark:!fill-white;
 }
 
-.legend text {
+.legend text:where(:not(.glance *, .paper *)) {
   @apply !fill-black;
   @apply dark:!fill-white;
 }
@@ -426,7 +428,7 @@ circle.commit {
   @apply !fill-primary-500;
 }
 
-svg text {
+svg text:where(:not(.glance *, .paper *)) {
   @apply !fill-black;
   @apply dark:!fill-white;
 }
