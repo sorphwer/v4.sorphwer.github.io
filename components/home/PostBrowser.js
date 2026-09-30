@@ -133,8 +133,9 @@ export default function PostBrowser({ posts }) {
       {/* On xl the sidebar is sticky and capped at the viewport height; only FilterPanel's
           tag list shrinks and scrolls. overflow-y-auto is a fallback for very short windows;
           overflow-x-hidden keeps the chevron's rotation (whose box briefly exceeds the
-          edge mid-transition) from flashing a horizontal scrollbar. */}
-      <aside className="mb-8 xl:sticky xl:top-8 xl:mb-0 xl:flex xl:max-h-[calc(100vh-4rem)] xl:flex-col xl:self-start xl:overflow-y-auto xl:overflow-x-hidden">
+          edge mid-transition) from flashing a horizontal scrollbar. pr-1.5 is the lane
+          FilterPanel's list scrollbars sit in, right of the content column. */}
+      <aside className="mb-8 pr-1.5 xl:sticky xl:top-8 xl:mb-0 xl:flex xl:max-h-[calc(100vh-4rem)] xl:flex-col xl:self-start xl:overflow-y-auto xl:overflow-x-hidden">
         <div className="flex items-center justify-between gap-4 pb-3">
           <h2 className="hidden font-rs text-base font-medium text-gray-900 dark:text-gray-100 xl:block">
             Filter and sort

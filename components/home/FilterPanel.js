@@ -9,10 +9,11 @@ const YEAR_PREVIEW = 9
 const TAG_PREVIEW = 7
 
 /**
- * Scrolling facet list: thin scrollbar with no track (css/tailwind.css), gutter
- * always reserved so the counts don't shift when the bar appears.
+ * Scrolling facet list: 6px trackless scrollbar (css/tailwind.css) pushed into
+ * the sidebar's 6px right padding (-mr / pr), so the bar sits outside the
+ * content column and the counts keep the chevron's right edge.
  */
-const SCROLL_LIST = 'filter-scroll overflow-y-auto [scrollbar-gutter:stable]'
+const SCROLL_LIST = 'filter-scroll -mr-1.5 overflow-y-auto pr-1.5'
 
 function Section({
   id,

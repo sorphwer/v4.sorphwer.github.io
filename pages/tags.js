@@ -133,25 +133,27 @@ export default function Tags({ tags, sources, postCount }) {
         <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10">
           Tags
         </h1>
-        <p className="mt-2 text-sm text-gray-500 dark:text-gray-400">
-          {tags.length} topics across {postCount} posts
-          <span aria-hidden="true" className="mx-2">
-            ·
+        <p className="mt-2 flex flex-wrap items-center gap-x-2 gap-y-1 text-sm text-gray-500 dark:text-gray-400">
+          <span>
+            {tags.length} topics across {postCount} posts
           </span>
-          {sources.map((source, i) => (
-            <span key={source.key}>
-              {i > 0 && <span className="mx-1.5 text-gray-300 dark:text-gray-600">/</span>}
-              <Link
-                href={`/tags/${source.key}`}
-                className="hover:text-primary-600 dark:hover:text-primary-400"
-              >
-                <SourceMark source={source.key} />
-                <span className="ml-1 tabular-nums text-gray-400 dark:text-gray-500">
-                  {source.count}
-                </span>
-              </Link>
-            </span>
-          ))}
+          <span aria-hidden="true">·</span>
+          <span className="whitespace-nowrap">
+            {sources.map((source, i) => (
+              <span key={source.key}>
+                {i > 0 && <span className="mx-1.5 text-gray-300 dark:text-gray-600">/</span>}
+                <Link
+                  href={`/tags/${source.key}`}
+                  className="hover:text-primary-600 dark:hover:text-primary-400"
+                >
+                  <SourceMark source={source.key} />
+                  <span className="ml-1 tabular-nums text-gray-400 dark:text-gray-500">
+                    {source.count}
+                  </span>
+                </Link>
+              </span>
+            ))}
+          </span>
         </p>
       </header>
 
