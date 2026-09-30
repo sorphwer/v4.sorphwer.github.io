@@ -89,7 +89,7 @@ I wanted it to be nearly as feature-rich as popular blogging templates like [bea
 - Support for tags - each unique tag will be its own page
 - Support for multiple authors
 - Blog templates
-- TOC component
+- Fixed heading rail (right edge) built from the rendered headings
 - Support for nested routing of blog posts
 - Newsletter component with support for mailchimp, buttondown, convertkit, klaviyo, revue, and emailoctopus
 - Supports [giscus](https://github.com/laymonage/giscus), [utterances](https://github.com/utterance/utterances) or disqus
@@ -234,7 +234,7 @@ canonicalUrl: https://tailwind-nextjs-starter-blog.vercel.app/blog/introducing-t
 
 Interactive posts (`layout: PostWide`) keep their body in React components under `components/posts/<name>/`, registered by name in `components/MDXComponents.js` (never `import` them from the `.mdx`: mdx-bundler would inline them into page props). Their global CSS lives in `css/<name>.css`, imported from `pages/_app.js`. See `data/blog/2026-07-09-hybrid-retrieval-support-ticket.mdx` and `data/blog/2026-09-24-every-closed-ticket-answers-the-next.mdx`.
 
-Every post layout (`PostLayout` for Markdown/MDX and Notion, `PostWide` for interactive posts) renders through `components/article/PostArticle.js`: a full-bleed banner drawn with p5 from the post slug (`components/article/art.js`, DESIGN.md palette), the title sheet with byline, language toggle and tags, the body, a fixed heading rail on the right built from the rendered `h1`–`h3` / Notion headings (hover for the full list; mark a heading `data-toc-skip` to leave it out), and "Keep reading" cards (previous, next, and posts sharing tags, from `lib/utils/relatedPosts.js`).
+Every post layout (`PostLayout` for Markdown/MDX and Notion, `PostWide` for interactive posts) renders through `components/article/PostArticle.js`: a full-bleed banner generated from the post slug as inline SVG during static generation (`components/article/art.js`, DESIGN.md palette, colours follow light/dark via `.post-art` in `css/tailwind.css`), the title sheet with byline, language toggle and tags, the body, a fixed heading rail on the right built from the rendered `h1`–`h3` / Notion headings (hover for the full list; mark a heading `data-toc-skip` to leave it out), and "Keep reading" cards (previous, next, and posts sharing tags, from `lib/utils/relatedPosts.js`).
 
 ### Compose
 

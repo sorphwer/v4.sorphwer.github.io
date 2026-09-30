@@ -1,7 +1,7 @@
 import Link from '@/components/Link'
 import siteMetadata from '@/data/siteMetadata'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import ArtCanvas from './ArtCanvas'
+import PostArt, { CARD_ART_WIDTH } from './PostArt'
 
 const cardDate = { year: 'numeric', month: 'short', day: 'numeric' }
 
@@ -48,7 +48,7 @@ export default function RelatedPosts({ posts }) {
                 href={`/blog/${post.slug}`}
                 className="group flex h-full flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white transition duration-200 hover:-translate-y-0.5 hover:border-gray-300 hover:shadow-lg dark:border-gray-800 dark:bg-gray-800/40 dark:hover:border-gray-700"
               >
-                <ArtCanvas seed={post.slug} className="h-40 shrink-0" />
+                <PostArt seed={post.slug} width={CARD_ART_WIDTH} className="h-40 shrink-0" />
                 <div className="flex flex-1 flex-col px-6 pt-5 pb-6">
                   {post.date && (
                     <time

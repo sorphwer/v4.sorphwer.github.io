@@ -7,7 +7,7 @@ import Tag from '@/components/Tag'
 import ScrollTopAndComment from '@/components/ScrollTopAndComment'
 import siteMetadata from '@/data/siteMetadata'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import ArtCanvas from './ArtCanvas'
+import PostArt from './PostArt'
 import PostToc from './PostToc'
 import RelatedPosts from './RelatedPosts'
 import { LangProvider, LangToggle, T } from './lang'
@@ -19,7 +19,7 @@ const postDateTemplate = { weekday: 'long', year: 'numeric', month: 'long', day:
 /**
  * Shared frame for every blog post (MDX prose, Notion, component-built posts):
  *
- *   full-bleed seeded p5 banner
+ *   full-bleed seeded SVG banner (static HTML)
  *   sheet overlapping the banner: title + byline | language toggle + tags
  *   rule
  *   body (`children`, the layout's own wrapper) with the fixed heading rail
@@ -44,7 +44,7 @@ export default function PostArticle({ frontMatter, authorDetails, title, related
       <ScrollTopAndComment />
       <article>
         {/* Full-bleed: centred in the viewport regardless of the container's width. */}
-        <ArtCanvas
+        <PostArt
           seed={slug}
           className="ml-[calc(50%-50vw)] h-44 w-screen border-y border-gray-200 dark:border-gray-800 sm:h-56 lg:h-64"
         />

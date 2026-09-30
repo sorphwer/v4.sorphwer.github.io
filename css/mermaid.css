@@ -19,9 +19,10 @@ html {
   stroke: none !important;
 }
 
-/* `:where(:not(.glance *, .paper *))` keeps these unscoped mermaid rules (same specificity)
- * off the SVG figures/charts of the glance and paper posts (css/glance.css, css/paper.css). */
-tspan:where(:not(.glance *, .paper *)) {
+/* `:where(:not(.glance *, .paper *, .post-art *))` keeps these unscoped mermaid rules (same specificity)
+ * off the SVG figures/charts of the glance and paper posts (css/glance.css, css/paper.css)
+ * and the post artwork (components/article/art.js). */
+tspan:where(:not(.glance *, .paper *, .post-art *)) {
   fill: var(--post-title-color) !important;
 }
 
@@ -29,7 +30,7 @@ rect.actor {
   fill: var(--rect-color) !important;
 }
 
-line:where(:not(.glance *, .paper *)) {
+line:where(:not(.glance *, .paper *, .post-art *)) {
   stroke: var(--text) !important;
 }
 
@@ -38,23 +39,23 @@ line:where(:not(.glance *, .paper *)) {
   fill: #000 !important;
 }
 
-g text:where(:not(.glance *, .paper *)) {
+g text:where(:not(.glance *, .paper *, .post-art *)) {
   fill: var(--post-title-color) !important;
 }
-article svg:where(:not(.glance *, .paper *)) {
+article svg:where(:not(.glance *, .paper *, .post-art *)) {
   @apply font-rs;
   @apply text-sm;
   @apply text-center;
   @apply border-red-50;
 }
 
-article path:where(:not(.glance *, .paper *)) {
+article path:where(:not(.glance *, .paper *, .post-art *)) {
   /* stroke: var(--text) !important; */
   @apply !stroke-black;
   @apply dark:!stroke-white;
 }
 
-svg line:where(:not(.glance *, .paper *)) {
+svg line:where(:not(.glance *, .paper *, .post-art *)) {
   @apply !stroke-black;
   @apply dark:!stroke-white;
 }
@@ -147,7 +148,7 @@ text.actor {
   marker-end: 'url(#arrowhead)';
   stroke: #ccccff;
 }
-.note:where(:not(.glance *, .paper *)) {
+.note:where(:not(.glance *, .paper *, .post-art *)) {
   stroke: #aaaa33;
   fill: #fff5ad;
 }
@@ -191,12 +192,12 @@ text.actor {
   text-height: 14px;
 }
 /* Grid and axis */
-.grid .tick:where(:not(.glance *, .paper *)) {
+.grid .tick:where(:not(.glance *, .paper *, .post-art *)) {
   stroke: lightgrey;
   opacity: 0.3;
   shape-rendering: crispEdges;
 }
-.grid path:where(:not(.glance *, .paper *)) {
+.grid path:where(:not(.glance *, .paper *, .post-art *)) {
   stroke-width: 0;
 }
 /* Today line */
@@ -323,7 +324,7 @@ text.actor {
 
 
 */
-text:where(:not(.glance *, .paper *)) {
+text:where(:not(.glance *, .paper *, .post-art *)) {
   font-family: verdana, arial;
   font-size: 14px;
 }
@@ -351,7 +352,7 @@ rect.actor {
   @apply dark:!fill-gray-900;
 }
 
-svg tspan:where(:not(.glance *, .paper *)) {
+svg tspan:where(:not(.glance *, .paper *, .post-art *)) {
   @apply !fill-black;
   @apply dark:!fill-white;
 }
@@ -392,7 +393,7 @@ circle.face {
   @apply dark:!fill-white;
 }
 
-.legend text:where(:not(.glance *, .paper *)) {
+.legend text:where(:not(.glance *, .paper *, .post-art *)) {
   @apply !fill-black;
   @apply dark:!fill-white;
 }
@@ -428,7 +429,7 @@ circle.commit {
   @apply !fill-primary-500;
 }
 
-svg text:where(:not(.glance *, .paper *)) {
+svg text:where(:not(.glance *, .paper *, .post-art *)) {
   @apply !fill-black;
   @apply dark:!fill-white;
 }

@@ -1,24 +1,26 @@
 /**
- * Seeded generative artwork for post banners and related-post cards, drawn with
- * p5 (instance mode, see ArtCanvas). Composition is derived from the post slug,
- * so a post always gets the same picture and its card matches its banner; the
- * colour scheme follows the site theme.
+ * Seeded generative artwork for post banners and related-post cards, emitted as
+ * an SVG string so it is part of the statically generated HTML (see PostArt).
+ * The composition is derived from the post slug alone, so a post always gets
+ * the same picture.
  *
- * Palette is DESIGN.md's: Pure Black / 50% Grey / Pure White as the base,
- * one RS Blue per theme (RS Blue Light on the light theme's white ground,
- * RS Blue Dark on the dark theme's black ground) and Warning Pink, picked at
- * roughly 6 : 3 : 1.
+ * Output must be byte-identical on the server and in the browser (hydration),
+ * so everything here is integer/IEEE arithmetic: a seeded PRNG, hash-based
+ * value noise, a rounded direction table instead of per-step trig, and every
+ * coordinate rounded to an integer.
+ *
+ * Colours are not baked in: shapes carry role classes (`f*` fill, `s*` stroke)
+ * that css/tailwind.css maps to DESIGN.md's palette per theme. Light: white
+ * ground, black ink, RS Blue Light; dark: black ground, white ink, RS Blue
+ * Dark; 50% Grey and Warning Pink in both. Roles: g ground, i ink, m grey,
+ * b blue, p pink, l / r the two shaded cube faces.
  */
 
-const BLACK = '#000000'
-const GREY = '#808080'
-const WHITE = '#ffffff'
-const RS_BLUE_LIGHT = '#64d2ff'
-const RS_BLUE_DARK = '#0070c9'
-const WARNING_PINK = '#e83e8c'
+/** Artwork height in SVG units; boxes of any size show a centred `slice` of it. */
+export const ART_HEIGHT = 256
 
 /** FNV-1a: stable 32-bit seed from a slug. */
-export function hashSeed(text) {
+function hashSeed(text) {
   let h = 0x811c9dc5
   for (let i = 0; i < text.length; i++) {
     h ^= text.charCodeAt(i)
@@ -27,162 +29,265 @@ export function hashSeed(text) {
   return h >>> 0
 }
 
-/** Ground and inks for the site theme. */
-function artScheme(dark) {
-  return dark
-    ? { ground: BLACK, ink: WHITE, mid: GREY, blue: RS_BLUE_DARK, pink: WARNING_PINK }
-    : { ground: WHITE, ink: BLACK, mid: GREY, blue: RS_BLUE_LIGHT, pink: WARNING_PINK }
+/** mulberry32: small seeded PRNG in [0, 1). */
+function makeRandom(seed) {
+  let a = seed
+  const random = () => {
+    a = (a + 0x6d2b79f5) | 0
+    let t = Math.imul(a ^ (a >>> 15), 1 | a)
+    t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296
+  }
+  random.range = (lo, hi) => lo + random() * (hi - lo)
+  random.int = (n) => Math.floor(random() * n)
+  return random
+}
+
+/** Three-octave value noise in [0, 1), p5 `noise()`-like. */
+function makeNoise(seed) {
+  const lattice = (x, y) => {
+    let h = Math.imul(x, 0x27d4eb2d) ^ Math.imul(y, 0x165667b1) ^ seed
+    h = Math.imul(h ^ (h >>> 15), 0x2c1b3c6d)
+    h ^= h >>> 12
+    return (h >>> 0) / 4294967296
+  }
+  const smooth = (t) => t * t * (3 - 2 * t)
+  const layer = (x, y) => {
+    const xi = Math.floor(x)
+    const yi = Math.floor(y)
+    const u = smooth(x - xi)
+    const v = smooth(y - yi)
+    const a = lattice(xi, yi)
+    const b = lattice(xi + 1, yi)
+    const c = lattice(xi, yi + 1)
+    const d = lattice(xi + 1, yi + 1)
+    return a + (b - a) * u + (c - a) * v + (a - b - c + d) * u * v
+  }
+  return (x, y) => (layer(x, y) * 4 + layer(x * 2, y * 2) * 2 + layer(x * 4, y * 4)) / 7
+}
+
+// 64 unit directions, rounded so platform trig differences cannot leak into output.
+const DIRECTIONS = Array.from({ length: 64 }, (_, i) => [
+  Math.round(Math.cos((i * Math.PI) / 32) * 1e6) / 1e6,
+  Math.round(Math.sin((i * Math.PI) / 32) * 1e6) / 1e6,
+])
+
+const n = Math.round
+const pt = (x, y) => `${n(x)} ${n(y)}`
+const polygon = (points) => `M${points.map(([x, y]) => pt(x, y)).join('L')}Z`
+const arc = (x0, y0, x1, y1, radius) =>
+  `M${pt(x0, y0)}A${n(radius)} ${n(radius)} 0 0 1 ${pt(x1, y1)}`
+const circle = (cx, cy, radius) =>
+  `M${pt(cx - radius, cy)}a${n(radius)} ${n(radius)} 0 1 0 ${n(2 * radius)} 0a${n(radius)} ${n(
+    radius
+  )} 0 1 0 ${-n(2 * radius)} 0Z`
+
+/**
+ * Shapes batched into one <path> per style, so a banner is a few dozen
+ * elements instead of hundreds. Batching reorders drawing, so patterns whose
+ * shapes overlap across styles use separate layers.
+ */
+function makeLayer() {
+  const groups = new Map()
+  const add = (key, attrs, d) => {
+    let group = groups.get(key)
+    if (!group) groups.set(key, (group = { attrs, d: [] }))
+    group.d.push(d)
+  }
+  return {
+    fill: (role, d) => add(`f${role}`, `class="f${role}"`, d),
+    stroke: (role, attrs, d) => add(`s${role}${attrs}`, `class="s${role}" ${attrs}`, d),
+    toString: () =>
+      [...groups.values()].map((g) => `<path ${g.attrs} d="${g.d.join('')}"/>`).join(''),
+  }
 }
 
 /** Base (grey / ink) : blue : pink ≈ 6 : 3 : 1 over the drawn shapes. */
-function pickInk(p, s) {
-  const r = p.random()
-  if (r < 0.6) return r < 0.4 ? s.mid : s.ink
-  if (r < 0.9) return s.blue
-  return s.pink
+function pickInk(random) {
+  const r = random()
+  if (r < 0.6) return r < 0.4 ? 'm' : 'i'
+  if (r < 0.9) return 'b'
+  return 'p'
 }
 
 /** Isometric cube field, the Notion-cover look: shaded faces, a few coloured lids. */
-function cubes(p, s) {
-  const a = p.height / p.random(3.2, 5.5)
+function cubes({ width, height, random }) {
+  const layer = makeLayer()
+  const a = height / random.range(3.2, 5.5)
   const w = a * Math.sqrt(3)
-  const left = p.lerpColor(p.color(s.ground), p.color(s.mid), 0.45)
-  const right = p.lerpColor(p.color(s.ground), p.color(s.mid), 0.15)
-  p.noStroke()
-  for (let row = -1; row * a * 1.5 < p.height + a * 2; row++) {
-    for (let col = -1; col * w < p.width + w; col++) {
-      if (p.random() < 0.08) continue
+  for (let row = -1; row * a * 1.5 < height + a * 2; row++) {
+    for (let col = -1; col * w < width + w; col++) {
+      if (random() < 0.08) continue
       const x = col * w + (row % 2 ? w / 2 : 0)
       const y = row * a * 1.5
-      const r = p.random()
-      const lid = r < 0.16 ? s.blue : r < 0.2 ? s.pink : s.mid
-      p.fill(lid)
-      p.quad(x, y - a, x + w / 2, y - a / 2, x, y, x - w / 2, y - a / 2)
-      p.fill(left)
-      p.quad(x - w / 2, y - a / 2, x, y, x, y + a, x - w / 2, y + a / 2)
-      p.fill(right)
-      p.quad(x, y, x + w / 2, y - a / 2, x + w / 2, y + a / 2, x, y + a)
+      const r = random()
+      layer.fill(
+        r < 0.16 ? 'b' : r < 0.2 ? 'p' : 'm',
+        polygon([
+          [x, y - a],
+          [x + w / 2, y - a / 2],
+          [x, y],
+          [x - w / 2, y - a / 2],
+        ])
+      )
+      layer.fill(
+        'l',
+        polygon([
+          [x - w / 2, y - a / 2],
+          [x, y],
+          [x, y + a],
+          [x - w / 2, y + a / 2],
+        ])
+      )
+      layer.fill(
+        'r',
+        polygon([
+          [x, y],
+          [x + w / 2, y - a / 2],
+          [x + w / 2, y + a / 2],
+          [x, y + a],
+        ])
+      )
     }
   }
+  return String(layer)
 }
 
 /** Truchet quarter-arcs: continuous grey strands, some cells re-inked. */
-function truchet(p, s) {
-  const size = p.height / Math.floor(p.random(3, 6))
-  p.noFill()
-  p.strokeCap(p.SQUARE)
-  p.strokeWeight(size * 0.2)
-  for (let y = 0; y < p.height; y += size) {
-    for (let x = 0; x < p.width; x += size) {
-      p.stroke(p.random() < 0.55 ? s.mid : pickInk(p, s))
-      if (p.random() < 0.5) {
-        p.arc(x, y, size, size, 0, p.HALF_PI)
-        p.arc(x + size, y + size, size, size, p.PI, p.PI + p.HALF_PI)
-      } else {
-        p.arc(x + size, y, size, size, p.HALF_PI, p.PI)
-        p.arc(x, y + size, size, size, p.PI + p.HALF_PI, p.TWO_PI)
-      }
+function truchet({ width, height, random }) {
+  const layer = makeLayer()
+  const size = height / Math.floor(random.range(3, 6))
+  const h = size / 2
+  const attrs = `stroke-width="${n(size * 0.2)}"`
+  for (let y = 0; y < height; y += size) {
+    for (let x = 0; x < width; x += size) {
+      const role = random() < 0.55 ? 'm' : pickInk(random)
+      const d =
+        random() < 0.5
+          ? arc(x + h, y, x, y + h, h) + arc(x + h, y + size, x + size, y + h, h)
+          : arc(x + size, y + h, x + h, y, h) + arc(x, y + h, x + h, y + size, h)
+      layer.stroke(role, attrs, d)
     }
   }
+  return String(layer)
 }
 
 /** Bauhaus tiles: each cell one primitive (quarter / half disc, circle, triangle, bars). */
-function bauhaus(p, s) {
-  const size = p.height / Math.floor(p.random(2, 4))
-  p.noStroke()
-  for (let y = 0; y < p.height; y += size) {
-    for (let x = 0; x < p.width; x += size) {
-      const back = p.random() < 0.55 ? s.ground : pickInk(p, s)
-      let front = pickInk(p, s)
-      if (front === back) front = back === s.ground ? s.mid : s.ground
-      p.fill(back)
-      p.rect(x, y, size, size)
-      p.fill(front)
-      const turn = Math.floor(p.random(4)) * p.HALF_PI
-      const kind = Math.floor(p.random(6))
-      p.push()
-      p.translate(x + size / 2, y + size / 2)
-      p.rotate(turn)
-      if (kind === 0) p.arc(-size / 2, -size / 2, size * 2, size * 2, 0, p.HALF_PI, p.PIE)
-      else if (kind === 1) p.arc(0, size / 2, size, size, p.PI, p.TWO_PI, p.PIE)
-      else if (kind === 2) p.circle(0, 0, size * 0.62)
-      else if (kind === 3)
-        p.triangle(-size / 2, -size / 2, size / 2, -size / 2, -size / 2, size / 2)
-      else if (kind === 4) {
-        for (let i = 0; i < 3; i++) p.rect(-size / 2, -size / 2 + (i * size) / 3, size, size / 7)
+function bauhaus({ width, height, random }) {
+  const backs = makeLayer()
+  const fronts = makeLayer()
+  const size = height / Math.floor(random.range(2, 4))
+  const h = size / 2
+  for (let y = 0; y < height; y += size) {
+    for (let x = 0; x < width; x += size) {
+      const back = random() < 0.55 ? 'g' : pickInk(random)
+      let front = pickInk(random)
+      if (front === back) front = back === 'g' ? 'm' : 'g'
+      backs.fill(back, `M${pt(x, y)}h${n(size)}v${n(size)}h${-n(size)}Z`)
+      const turn = random.int(4)
+      const kind = random.int(6)
+      // Cell-local point, rotated by quarter turns (exact), to canvas space.
+      const at = (u, v) => {
+        for (let i = 0; i < turn; i++) [u, v] = [-v, u]
+        return [x + h + u, y + h + v]
       }
-      p.pop()
+      const p = (u, v) => pt(...at(u, v))
+      if (kind === 0) {
+        fronts.fill(front, `M${p(-h, -h)}L${p(h, -h)}A${n(size)} ${n(size)} 0 0 1 ${p(-h, h)}Z`)
+      } else if (kind === 1) {
+        fronts.fill(front, `M${p(-h, h)}A${n(h)} ${n(h)} 0 0 1 ${p(h, h)}Z`)
+      } else if (kind === 2) {
+        fronts.fill(front, circle(x + h, y + h, size * 0.31))
+      } else if (kind === 3) {
+        fronts.fill(front, polygon([at(-h, -h), at(h, -h), at(-h, h)]))
+      } else if (kind === 4) {
+        for (let i = 0; i < 3; i++) {
+          const top = -h + (i * size) / 3
+          const bottom = top + size / 7
+          fronts.fill(front, polygon([at(-h, top), at(h, top), at(h, bottom), at(-h, bottom)]))
+        }
+      }
     }
   }
+  return String(backs) + String(fronts)
 }
 
-/** Perlin flow field: thin grey strands with blue and pink currents. */
-function flow(p, s) {
-  const k = p.random(0.002, 0.005)
-  const twist = p.random(1.5, 3)
-  const count = Math.floor((p.width * p.height) / 900)
-  p.noFill()
+/** Noise flow field: thin grey strands with blue and pink currents. */
+function flow({ width, height, random, noise }) {
+  const layer = makeLayer()
+  const k = random.range(0.002, 0.005)
+  const twist = random.range(1.5, 3)
+  const count = Math.floor((width * height) / 2400)
+  const step = 10
   for (let i = 0; i < count; i++) {
-    let x = p.random(-40, p.width + 40)
-    let y = p.random(-40, p.height + 40)
-    const c = p.color(pickInk(p, s))
-    c.setAlpha(p.random(120, 230))
-    p.stroke(c)
-    p.strokeWeight(p.random(0.6, 2.2))
-    p.beginShape()
-    const steps = Math.floor(p.random(20, 70))
+    let x = random.range(-40, width + 40)
+    let y = random.range(-40, height + 40)
+    const start = pt(x, y)
+    const role = pickInk(random)
+    const opacity = random() < 0.5 ? 0.55 : 0.9
+    const strokeWidth = [1, 1.5, 2.5][random.int(3)]
+    const steps = Math.floor(random.range(10, 35))
+    const moves = []
     for (let j = 0; j < steps; j++) {
-      p.vertex(x, y)
-      const angle = p.noise(x * k, y * k) * p.TWO_PI * twist
-      x += Math.cos(angle) * 4
-      y += Math.sin(angle) * 4
+      const dir = DIRECTIONS[((Math.floor(noise(x * k, y * k) * twist * 64) % 64) + 64) % 64]
+      const nx = x + dir[0] * step
+      const ny = y + dir[1] * step
+      moves.push(`${n(nx) - n(x)} ${n(ny) - n(y)}`)
+      x = nx
+      y = ny
     }
-    p.endShape()
+    layer.stroke(
+      role,
+      `stroke-width="${strokeWidth}" stroke-opacity="${opacity}" stroke-linejoin="round"`,
+      `M${start}l${moves.join(' ')}`
+    )
   }
+  return String(layer)
 }
 
-/** Halftone: a dot grid whose radii follow a noise wave; coloured bands ride the crests. */
-function halftone(p, s) {
-  const step = p.height / p.random(14, 24)
-  const k = p.random(0.004, 0.01)
-  p.noStroke()
-  for (let y = step / 2; y < p.height; y += step) {
-    for (let x = step / 2; x < p.width; x += step) {
-      const n = p.noise(x * k, y * k)
-      const d = step * 0.95 * p.constrain((n - 0.3) * 2, 0, 1)
-      if (d < 1) continue
-      p.fill(n > 0.68 ? s.pink : n > 0.55 ? s.blue : s.mid)
-      p.circle(x, y, d)
+/** Halftone: a dot grid whose sizes follow a noise wave; coloured bands ride the crests. */
+function halftone({ width, height, random, noise }) {
+  const layer = makeLayer()
+  const step = height / random.range(8, 12)
+  const k = random.range(0.004, 0.01)
+  for (let y = step / 2; y < height; y += step) {
+    for (let x = step / 2; x < width; x += step) {
+      const v = noise(x * k, y * k)
+      const d = Math.round((step * 0.95 * Math.min(1, Math.max(0, (v - 0.3) * 2))) / 3) * 3
+      if (d < 3) continue
+      const role = v > 0.66 ? 'p' : v > 0.55 ? 'b' : 'm'
+      // A zero-length segment with a round cap is a dot of diameter stroke-width.
+      layer.stroke(role, `stroke-width="${d}" stroke-linecap="round"`, `M${pt(x, y)}h0`)
     }
   }
+  return String(layer)
 }
 
 const VARIANTS = [cubes, truchet, bauhaus, flow, halftone]
 
-/** Print-like speckle over the whole artwork. */
-function grain(p, s) {
-  const count = Math.floor((p.width * p.height) / 45)
-  const light = p.color(s.ink)
-  const dark = p.color(s.ground)
-  light.setAlpha(28)
-  dark.setAlpha(60)
-  p.strokeWeight(1)
-  for (let i = 0; i < count; i++) {
-    p.stroke(i % 2 ? light : dark)
-    p.point(p.random(p.width), p.random(p.height))
-  }
-}
-
 /**
- * Draw the artwork for `seed` onto the whole p5 canvas in the light or dark
- * scheme. The seed alone fixes the composition, so both themes show the same
- * picture with swapped ground and inks.
+ * SVG markup for the artwork of `slug`, `width` SVG units wide and ART_HEIGHT
+ * tall. The pattern and its parameters depend only on the slug; `width` only
+ * sets how far the pattern extends.
  */
-export function drawArt(p, seed, dark) {
-  const scheme = artScheme(dark)
-  p.randomSeed(seed)
-  p.noiseSeed(seed)
-  p.background(scheme.ground)
-  VARIANTS[(seed >>> 3) % VARIANTS.length](p, scheme)
-  grain(p, scheme)
+export function artSvg(slug, width) {
+  const seed = hashSeed(slug)
+  const random = makeRandom(seed)
+  const noise = makeNoise(seed)
+  const height = ART_HEIGHT
+  const body = VARIANTS[(seed >>> 3) % VARIANTS.length]({ width, height, random, noise })
+  const grain = `pa-grain-${seed.toString(36)}-${width}`
+  return (
+    `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${width} ${height}" preserveAspectRatio="xMidYMid slice">` +
+    `<rect class="fg" width="${width}" height="${height}"/>` +
+    body +
+    // Print-like speckle: thresholded fractal noise as the alpha of an ink-coloured sheet.
+    `<filter id="${grain}" x="0" y="0" width="1" height="1">` +
+    `<feTurbulence type="fractalNoise" baseFrequency=".9" seed="${seed % 1000}" result="n"/>` +
+    `<feColorMatrix in="n" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 24 0 0 0 -16"/>` +
+    `<feComposite in="SourceGraphic" operator="in"/>` +
+    `</filter>` +
+    `<rect class="fi" width="${width}" height="${height}" opacity=".22" filter="url(#${grain})"/>` +
+    `</svg>`
+  )
 }

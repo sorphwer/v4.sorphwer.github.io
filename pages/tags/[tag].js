@@ -45,13 +45,7 @@ export async function getStaticProps({ params }) {
 }
 
 export default function TagPage({ posts, tag, all_tags }) {
-  // Capitalize first letter and convert space to dash
-  const title = tag[0].toUpperCase() + tag.split(' ').join('-').slice(1)
-  // const title = 'Title'
-
   const sortedTags = Object.keys(all_tags).sort((a, b) => all_tags[b] - all_tags[a])
-  // console.log('tag',tag)
-  // console.log('tags',sortedTags )
   return (
     <>
       <TagSEO
@@ -94,7 +88,7 @@ export default function TagPage({ posts, tag, all_tags }) {
           })}
         </div>
       </div>
-      <ListLayout posts={posts} title={title} enableSearch={false} />
+      <ListLayout posts={posts} enableSearch={false} />
     </>
   )
 }

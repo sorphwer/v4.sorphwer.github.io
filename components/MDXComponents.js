@@ -3,7 +3,6 @@ import { useMemo } from 'react'
 import { getMDXComponent } from 'mdx-bundler/client'
 import Image from './Image'
 import CustomLink from './Link'
-import TOCInline from './TOCInline'
 import Pre from './Pre'
 import { BlogNewsletterForm } from './NewsletterForm'
 import { NotionRenderer } from 'react-notion-x'
@@ -58,7 +57,6 @@ const Mermaid = dynamic(() => import('mdx-mermaid/lib/Mermaid').then((m) => m.Me
 })
 export const MDXComponents = {
   Image,
-  TOCInline,
   a: CustomLink,
   pre: Pre,
   BlogNewsletterForm: BlogNewsletterForm,
@@ -103,9 +101,6 @@ export const MDXLayoutRenderer = ({ layout, mdxSource, recordMap, ...rest }) => 
         NotionTitle={NotionTitle}
         {...rest}
       />
-      {/* {recordMap && (
-      <NotionRenderer recordMap={recordMap} fullPage={true} darkMode={true}/>
-    )} */}
     </>
   )
 }

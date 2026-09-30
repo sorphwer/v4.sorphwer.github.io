@@ -49,9 +49,7 @@ export async function getStaticProps({ params }) {
 
 export default function Blog({ post, recordMap, authorDetails, prev, next, related }) {
   const DEFAULT_LAYOUT = 'PostLayout'
-  const { mdxSource, toc, frontMatter } = post
-  // console.log(typeof(mdxSource))
-  // console.log(typeof(recordMap))
+  const { mdxSource, frontMatter } = post
   return (
     <>
       {frontMatter.draft !== true ? (
@@ -59,7 +57,6 @@ export default function Blog({ post, recordMap, authorDetails, prev, next, relat
           layout={
             (frontMatter.layout === 'post' ? 'PostLayout' : frontMatter.layout) || DEFAULT_LAYOUT
           }
-          toc={toc}
           mdxSource={mdxSource}
           frontMatter={frontMatter}
           recordMap={recordMap}

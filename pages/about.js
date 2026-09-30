@@ -1,9 +1,7 @@
 import { MDXLayoutRenderer } from '@/components/MDXComponents'
 import { getFileBySlug } from '@/lib/mdx'
 import { getNotionPage } from '@/lib/notion'
-import { NotionRenderer } from 'react-notion-x'
 const DEFAULT_LAYOUT = 'AuthorLayout'
-// const DEFAULT_LAYOUT = 'NotionLayout'
 
 //Next.js SSR
 export async function getStaticProps() {
