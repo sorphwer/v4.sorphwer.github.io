@@ -93,6 +93,45 @@ body {
 .post-art .sp {
   stroke: var(--art-p);
 }
+/* Seascape halftone plates (feFlood). Dark mode dims the inks, which keeps the
+   dot screens from shimmering against black, and moves the light to the
+   horizon: dark overhead, glowing sky and sea at the waterline. */
+.post-art .kb {
+  flood-color: var(--art-b);
+}
+.post-art .km {
+  flood-color: var(--art-m);
+}
+.post-art .kp {
+  flood-color: var(--art-p);
+}
+.dark .post-art .kp {
+  flood-opacity: 0.6;
+}
+.dark .post-art .km {
+  flood-opacity: 0.5;
+}
+.dark .post-art .tsky0 {
+  stop-opacity: 0.05;
+}
+.dark .post-art .tsky1 {
+  stop-opacity: 0.14;
+}
+.dark .post-art .tsky2 {
+  stop-opacity: 0.36;
+}
+.dark .post-art .tsea0 {
+  stop-opacity: 0.5;
+}
+.dark .post-art .tsea1 {
+  stop-opacity: 0.34;
+}
+.dark .post-art .tsea2 {
+  stop-opacity: 0.16;
+}
+.dark .post-art .tcloud {
+  opacity: 0.14;
+}
 
 .task-list-item::before {
   @apply hidden;

@@ -14,7 +14,9 @@
  * fill) that css/tailwind.css maps to DESIGN.md's palette per theme. Light:
  * white ground, black ink, RS Blue Light; dark: black ground, white ink, RS
  * Blue Dark; 50% Grey and Warning Pink in both. Roles: g ground, i ink, m grey,
- * b blue, p pink.
+ * b blue, p pink. The seascape's halftone plates take their colour from
+ * `k*` classes on feFlood, and its theme-dependent tones from `t*` classes on
+ * gradient stops, so dark mode is CSS-only there too.
  */
 
 /** Artwork height in SVG units; boxes of any size show a centred `slice` of it. */
@@ -407,7 +409,143 @@ function halftone({ width, height, random, noise }) {
   return String(layer)
 }
 
-const VARIANTS = [blocks, truchet, garden, flow, halftone]
+/** Seascape halftone: plate role → square dot lattice direction (≈ 18°, 45°, 72°), back to front. */
+const SEA_SCREENS = [
+  ['b', 3, 1],
+  ['m', 1, 1],
+  ['p', 1, 3],
+]
+/** Seascape dot pitch in SVG units. */
+const SEA_PITCH = 6
+
+/**
+ * One halftone cell tile as a data URI: a square dot lattice along (a, b),
+ * periodic in an L×L tile (L integer), so feTile repeats it without rotating
+ * the filter region. Each dot is a radial "hill" (opaque centre, fading out
+ * past the cell's half-diagonal) that the plate filter thresholds against
+ * coverage, so dot area grows with coverage.
+ */
+function screenTile(a, b) {
+  const k = a * a + b * b
+  const root = Math.sqrt(k)
+  const L = n(SEA_PITCH * root)
+  const step = L / k
+  const pitch = L / root
+  const r = (pitch * 0.6).toFixed(2)
+  const dots = []
+  for (let i = -k; i <= 2 * k; i++) {
+    for (let j = -k; j <= 2 * k; j++) {
+      const x = (i * a - j * b) * step
+      const y = (i * b + j * a) * step
+      if (x > -pitch && x < L + pitch && y > -pitch && y < L + pitch) {
+        dots.push(`<circle cx="${x.toFixed(2)}" cy="${y.toFixed(2)}" r="${r}" fill="url(#g)"/>`)
+      }
+    }
+  }
+  const svg =
+    `<svg xmlns="http://www.w3.org/2000/svg" width="${L}" height="${L}"><radialGradient id="g">` +
+    `<stop offset="0"/><stop offset=".5" stop-opacity=".75"/><stop offset=".75" stop-opacity=".44"/><stop offset="1" stop-opacity="0"/>` +
+    `</radialGradient>${dots.join('')}</svg>`
+  return { L, uri: `data:image/svg+xml,${encodeURIComponent(svg)}` }
+}
+
+/**
+ * Seascape, a tonal halftone: coverage per colour role comes from gradients
+ * and feTurbulence fields (cloud band, ripples); a filter per role turns that
+ * coverage into a dot screen in the browser, each plate slightly out of
+ * register. Pale sky with a soft cloud band, a low sun with pink haze and a
+ * broken glint on a rippled sea. In dark mode the CSS dims the inks and moves
+ * the light to the horizon (css/tailwind.css).
+ */
+function seascape({ width, height, random, seed }) {
+  const ns = `pa-sea-${seed.toString(36)}-${width}-`
+  const box = `x="0" y="0" width="${width}" height="${height}"`
+  const area = `maskUnits="userSpaceOnUse" ${box}`
+  /** Vertical gradient; `stops` are offset, opacity pairs, stop k classed `${cls}${k}` for theming. */
+  const vgrad = (id, y1, y2, cls, ...stops) => {
+    let markup = `<linearGradient id="${ns}${id}" gradientUnits="userSpaceOnUse" x1="0" y1="${y1}" x2="0" y2="${y2}">`
+    for (let k = 0; k < stops.length; k += 2) {
+      markup += `<stop class="${cls}${k / 2}" offset="${stops[k]}" stop-opacity="${stops[k + 1]}"/>`
+    }
+    return `${markup}</linearGradient>`
+  }
+  // Noise as alpha (gain · noise + bias), white for luminance masks or black.
+  const noiseFilter = (id, fx, fy, octaves, noiseSeed, gain, bias, white) =>
+    `<filter id="${ns}${id}" filterUnits="userSpaceOnUse" ${box} color-interpolation-filters="sRGB">` +
+    `<feTurbulence type="fractalNoise" baseFrequency="${fx} ${fy}" numOctaves="${octaves}" seed="${noiseSeed}"/>` +
+    `<feColorMatrix type="matrix" values="0 0 0 0 ${white} 0 0 0 0 ${white} 0 0 0 0 ${white} ${gain} 0 0 0 ${bias}"/>` +
+    `</filter>`
+
+  const horizon = 150 + n(random() * 30)
+  const sunX = n(width * (0.4 + random() * 0.2))
+  const sunR = 18 + n(random() * 8)
+  const sunY = horizon - n(sunR * (0.2 + random() * 0.9))
+  const sea = height - horizon
+  const water = horizon + 3
+  const sunHole = sunR + 2
+  const hazeR = n(width * 0.22)
+  const glintX = sunX - 70
+  const glintEnd = sunX + 70
+  const glintY = horizon + 2
+  const cloudH = horizon - 6
+  const defs =
+    vgrad('sky', 0, horizon, 'tsky', 0, 0.34, 0.7, 0.12, 1, 0.04) +
+    vgrad('sea', horizon, height, 'tsea', 0, 0.42, 0.12, 0.3, 1, 0.55) +
+    `<linearGradient id="${ns}band" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="0" y2="${horizon}">` +
+    `<stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".3" stop-color="#fff"/><stop offset=".8" stop-color="#fff" stop-opacity=".7"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>` +
+    `<radialGradient id="${ns}haze" gradientUnits="userSpaceOnUse" cx="${sunX}" cy="${horizon}" r="${hazeR}" gradientTransform="translate(0 ${horizon}) scale(1 .28) translate(0 -${horizon})">` +
+    `<stop offset="0" stop-opacity=".26"/><stop offset="1" stop-opacity="0"/></radialGradient>` +
+    `<linearGradient id="${ns}glint" gradientUnits="userSpaceOnUse" x1="${glintX}" y1="0" x2="${glintEnd}" y2="0">` +
+    `<stop offset="0" stop-opacity="0"/><stop offset=".5" stop-opacity=".6"/><stop offset="1" stop-opacity="0"/></linearGradient>` +
+    noiseFilter('cloud', 0.0014, 0.012, 4, seed % 997, 5, -2.45, 1) +
+    noiseFilter('ripple', 0.0035, 0.09, 3, (seed >>> 10) % 997, 2.4, -0.9, 0) +
+    noiseFilter('ripple-w', 0.0035, 0.09, 3, (seed >>> 10) % 997, 2.4, -0.9, 1) +
+    // Cloud band: noise kept to the upper sky by a vertical gradient.
+    `<mask id="${ns}band-m" ${area}><rect width="${width}" height="${horizon}" fill="url(#${ns}band)"/></mask>` +
+    `<mask id="${ns}cloud-m" ${area}><g mask="url(#${ns}band-m)"><rect width="${width}" height="${horizon}" filter="url(#${ns}cloud)"/></g></mask>` +
+    // Sky minus clouds and the sun; sea minus ripple highlights; glint only on ripples.
+    `<mask id="${ns}sky-m" ${area}><rect width="${width}" height="${height}" fill="#fff"/>` +
+    `<g mask="url(#${ns}cloud-m)"><rect width="${width}" height="${horizon}"/></g><circle cx="${sunX}" cy="${sunY}" r="${sunHole}"/></mask>` +
+    `<mask id="${ns}sea-m" ${area}><rect width="${width}" height="${height}" fill="#fff"/>` +
+    `<rect y="${water}" width="${width}" height="${sea}" filter="url(#${ns}ripple)"/></mask>` +
+    `<mask id="${ns}glint-m" ${area}><rect y="${water}" width="${width}" height="${sea}" filter="url(#${ns}ripple-w)"/></mask>` +
+    `<clipPath id="${ns}above"><rect width="${width}" height="${horizon}"/></clipPath>`
+  const plates = {
+    b:
+      `<rect mask="url(#${ns}sky-m)" width="${width}" height="${horizon}" fill="url(#${ns}sky)"/>` +
+      `<rect mask="url(#${ns}sea-m)" y="${horizon}" width="${width}" height="${sea}" fill="url(#${ns}sea)"/>`,
+    // Cloud undersides: the cloud field nudged down, faint.
+    m: `<g class="tcloud" mask="url(#${ns}cloud-m)" transform="translate(0 6)" opacity=".28"><rect width="${width}" height="${cloudH}"/></g>`,
+    p:
+      `<rect width="${width}" height="${horizon}" fill="url(#${ns}haze)"/>` +
+      `<circle clip-path="url(#${ns}above)" cx="${sunX}" cy="${sunY}" r="${sunR}" fill-opacity=".5"/>` +
+      `<rect x="${glintX}" y="${glintY}" width="140" height="${sea}" fill="url(#${ns}glint)" mask="url(#${ns}glint-m)"/>`,
+  }
+
+  let filters = ''
+  let layers = ''
+  for (const [role, a, b] of SEA_SCREENS) {
+    const { L, uri } = screenTile(a, b)
+    const dx = n((random() - 0.5) * 3)
+    const dy = n((random() - 0.5) * 3)
+    // Blurred coverage + dot hill − ½, thresholded steeply: a dot wherever the sum clears ½.
+    filters +=
+      `<filter id="${ns}${role}" filterUnits="userSpaceOnUse" ${box} color-interpolation-filters="sRGB">` +
+      `<feImage href="${uri}" x="0" y="0" width="${L}" height="${L}" result="c"/>` +
+      `<feTile in="c" result="s"/>` +
+      `<feGaussianBlur in="SourceAlpha" stdDeviation=".8" result="a"/>` +
+      `<feComposite in="a" in2="s" operator="arithmetic" k2="1" k3="1" k4="-.5"/>` +
+      `<feComponentTransfer result="d"><feFuncA type="linear" slope="14" intercept="-6.5"/></feComponentTransfer>` +
+      `<feFlood class="k${role}"/>` +
+      `<feComposite in2="d" operator="in"/>` +
+      `<feOffset dx="${dx}" dy="${dy}"/>` +
+      `</filter>`
+    layers += `<g filter="url(#${ns}${role})">${plates[role]}</g>`
+  }
+  return `<defs>${defs}${filters}</defs>${layers}`
+}
+
+const VARIANTS = [blocks, truchet, garden, flow, halftone, seascape]
 
 /**
  * SVG markup for the artwork of `slug`, `width` SVG units wide and ART_HEIGHT
@@ -419,19 +557,23 @@ export function artSvg(slug, width) {
   const random = makeRandom(seed)
   const noise = makeNoise(seed)
   const height = ART_HEIGHT
-  const body = VARIANTS[(seed >>> 3) % VARIANTS.length]({ width, height, random, noise })
+  const variant = VARIANTS[(seed >>> 3) % VARIANTS.length]
+  const body = variant({ width, height, random, noise, seed })
   const grain = `pa-grain-${seed.toString(36)}-${width}`
   return (
     `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${width} ${height}" preserveAspectRatio="xMidYMid slice">` +
     `<rect class="fg" width="${width}" height="${height}"/>` +
     body +
-    // Print-like speckle: thresholded fractal noise as the alpha of an ink-coloured sheet.
-    `<filter id="${grain}" x="0" y="0" width="1" height="1">` +
-    `<feTurbulence type="fractalNoise" baseFrequency=".9" seed="${seed % 1000}" result="n"/>` +
-    `<feColorMatrix in="n" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 24 0 0 0 -16"/>` +
-    `<feComposite in="SourceGraphic" operator="in"/>` +
-    `</filter>` +
-    `<rect class="fi" width="${width}" height="${height}" opacity=".22" filter="url(#${grain})"/>` +
+    // Print-like speckle: thresholded fractal noise as the alpha of an ink-coloured
+    // sheet. Not on the seascape, whose dot screens already are the print texture.
+    (variant === seascape
+      ? ''
+      : `<filter id="${grain}" x="0" y="0" width="1" height="1">` +
+        `<feTurbulence type="fractalNoise" baseFrequency=".9" seed="${seed % 1000}" result="n"/>` +
+        `<feColorMatrix in="n" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 24 0 0 0 -16"/>` +
+        `<feComposite in="SourceGraphic" operator="in"/>` +
+        `</filter>` +
+        `<rect class="fi" width="${width}" height="${height}" opacity=".22" filter="url(#${grain})"/>`) +
     `</svg>`
   )
 }
