@@ -557,23 +557,11 @@ export function artSvg(slug, width) {
   const random = makeRandom(seed)
   const noise = makeNoise(seed)
   const height = ART_HEIGHT
-  const variant = VARIANTS[(seed >>> 3) % VARIANTS.length]
-  const body = variant({ width, height, random, noise, seed })
-  const grain = `pa-grain-${seed.toString(36)}-${width}`
+  const body = VARIANTS[(seed >>> 3) % VARIANTS.length]({ width, height, random, noise, seed })
   return (
     `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${width} ${height}" preserveAspectRatio="xMidYMid slice">` +
     `<rect class="fg" width="${width}" height="${height}"/>` +
     body +
-    // Print-like speckle: thresholded fractal noise as the alpha of an ink-coloured
-    // sheet. Not on the seascape, whose dot screens already are the print texture.
-    (variant === seascape
-      ? ''
-      : `<filter id="${grain}" x="0" y="0" width="1" height="1">` +
-        `<feTurbulence type="fractalNoise" baseFrequency=".9" seed="${seed % 1000}" result="n"/>` +
-        `<feColorMatrix in="n" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 24 0 0 0 -16"/>` +
-        `<feComposite in="SourceGraphic" operator="in"/>` +
-        `</filter>` +
-        `<rect class="fi" width="${width}" height="${height}" opacity=".22" filter="url(#${grain})"/>`) +
     `</svg>`
   )
 }
