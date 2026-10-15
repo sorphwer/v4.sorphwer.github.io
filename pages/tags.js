@@ -24,20 +24,17 @@ const initialOf = (tag) => {
   return c >= 'A' && c <= 'Z' ? c : '#'
 }
 
-function SectionTitle({ children, note }) {
+function SectionTitle({ children }) {
   return (
-    <div className="mb-4">
-      <h2 className="text-lg font-bold tracking-tight text-gray-900 dark:text-gray-100">
-        {children}
-      </h2>
-      {note && <p className="mt-0.5 text-sm text-gray-500 dark:text-gray-400">{note}</p>}
-    </div>
+    <h2 className="mb-4 text-center text-lg font-bold tracking-tight text-gray-900 dark:text-gray-100">
+      {children}
+    </h2>
   )
 }
 
 function Legend({ recentFrom }) {
   return (
-    <ul className="mb-4 flex flex-wrap gap-x-5 gap-y-1 text-xs text-gray-500 dark:text-gray-400">
+    <ul className="mb-4 flex flex-wrap justify-center gap-x-5 gap-y-1 text-xs text-gray-500 dark:text-gray-400">
       <li className="flex items-center gap-2">
         <span className="h-2.5 w-2.5 rounded-full bg-primary-500" />
         Written about since {recentFrom}
@@ -100,7 +97,6 @@ function TagIndex({ tags, matches }) {
 export default function Tags({ timeline, postCount }) {
   const { tags, years, postsPerYear, recentFrom, sources } = timeline
   const [query, setQuery] = useState('')
-  const [showIndex, setShowIndex] = useState(false)
 
   const matches = useMemo(() => {
     const needle = query.trim().toLowerCase()
@@ -111,8 +107,6 @@ export default function Tags({ timeline, postCount }) {
         .map((tag) => tag.key)
     )
   }, [tags, query])
-  const recurring = tags.filter((tag) => tag.count > 1).length
-  const indexOpen = showIndex || !!matches
 
   return (
     <>
@@ -165,11 +159,7 @@ export default function Tags({ timeline, postCount }) {
       </div>
 
       <section className="border-b border-gray-200 pb-12 dark:border-gray-800">
-        <SectionTitle
-          note={`The ${recurring} tags used in more than one post, in order of first appearance. Click a row to see its posts.`}
-        >
-          Topics over time
-        </SectionTitle>
+        <SectionTitle>Topics over time</SectionTitle>
         <Legend recentFrom={recentFrom} />
         <TagTimeline
           tags={tags}
@@ -181,17 +171,8 @@ export default function Tags({ timeline, postCount }) {
       </section>
 
       <section className="py-12">
-        <button
-          type="button"
-          aria-expanded={indexOpen}
-          onClick={() => setShowIndex(!showIndex)}
-          className="text-left"
-        >
-          <SectionTitle note="Every tag, alphabetically, with its post count.">
-            All tags A–Z <span className="text-gray-400">{indexOpen ? '−' : '+'}</span>
-          </SectionTitle>
-        </button>
-        {indexOpen && <TagIndex tags={tags} matches={matches} />}
+        <SectionTitle>All tags A–Z</SectionTitle>
+        <TagIndex tags={tags} matches={matches} />
       </section>
     </>
   )
