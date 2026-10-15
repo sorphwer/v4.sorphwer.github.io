@@ -96,8 +96,8 @@ const REFERENCES: Ref[] = [
     n: 9,
     text: (
       <T
-        en="Dify · Zendesk Knowledge-Graph Project. Internal design documentation: system architecture and knowledge-graph schema, 2026. Not public."
-        zh="Dify · Zendesk 知识图谱项目。内部设计文档：系统架构与知识图谱 schema，2026。未公开。"
+        en="Dify · Zendesk Knowledge-Graph Project. Retrieval Scoring Algorithm (the scoring-algorithm document): Graph-Constrained Hybrid Retrieval with Weighted Reciprocal Rank Fusion. Internal technical document, 2026. Not public."
+        zh="Dify · Zendesk 知识图谱项目。《检索打分算法》（打分算法文档）：Graph-Constrained Hybrid Retrieval with Weighted Reciprocal Rank Fusion。内部技术文档，2026。未公开。"
       />
     ),
   },
