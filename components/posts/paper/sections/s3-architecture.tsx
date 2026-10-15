@@ -203,14 +203,14 @@ export default function S3Architecture() {
           <>
             The ticket-centric star schema: four edge types <C>HANDLED_BY</C> /{' '}
             <C>AFFECTS_VERSION</C> / <C>HAS_KEYWORD</C> / <C>REFERENCES</C>, all reachable within
-            one hop. Adapted from the scoring-algorithm document §1.1.
+            one hop.
           </>
         }
         zh={
           <>
             工单中心的星型 schema：四条边型 <C>HANDLED_BY</C> / <C>AFFECTS_VERSION</C> /{' '}
             <C>HAS_KEYWORD</C> / <C>REFERENCES</C>
-            ，全部一跳可达。改编自打分算法文档 §1.1。
+            ，全部一跳可达。
           </>
         }
       >

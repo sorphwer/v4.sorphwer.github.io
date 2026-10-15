@@ -96,10 +96,11 @@ const REFERENCES: Ref[] = [
     n: 9,
     text: (
       <T
-        en="Dify · Zendesk Knowledge-Graph Project. Retrieval Scoring Algorithm (the scoring-algorithm document): Graph-Constrained Hybrid Retrieval with Weighted Reciprocal Rank Fusion. Internal technical document, 2026. Not public."
-        zh="Dify · Zendesk 知识图谱项目。《检索打分算法》（打分算法文档）：Graph-Constrained Hybrid Retrieval with Weighted Reciprocal Rank Fusion。内部技术文档，2026。未公开。"
+        en="Riino. Every Closed Ticket Answers the Next: A Ticket Knowledge Graph Where Every Claim Cites Its Source. Blog post, 2026."
+        zh="Riino。《每一张关闭的工单，都是下一张的答案》。博客文章，2026。"
       />
     ),
+    url: '/blog/2026-09-24-every-closed-ticket-answers-the-next',
   },
   {
     n: 10,
