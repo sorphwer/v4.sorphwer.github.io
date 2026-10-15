@@ -127,15 +127,10 @@ export default function S4Algorithm() {
         en={
           <>
             Five-layer pipeline overview, marking the ticket-ID sentinel short-circuit (I1) and the
-            branch between the constrained and global paths. Adapted from scoring-algorithm doc §0.
+            branch between the constrained and global paths.
           </>
         }
-        zh={
-          <>
-            五层流水线总览，标注工单号哨兵短路（I1）与约束/全局两条路径的分岔。改编自打分算法文档
-            §0。
-          </>
-        }
+        zh={<>五层流水线总览，标注工单号哨兵短路（I1）与约束/全局两条路径的分岔。</>}
       >
         <DiagramPanel>
           <div className="flex flex-col">
@@ -432,8 +427,8 @@ export default function S4Algorithm() {
             constrained pool passes three gates in order (three thresholds that throttle by
             candidate size): <M t="n>1000" /> refuses to run, <M t="n>300" /> first does a
             keyword-literal pre-selection to the top 200, otherwise the whole pool is re-ranked
-            directly (constants in Appendix A). When no version constraint is given, the query takes
-            the global path and the candidate pool is the whole corpus.
+            directly. When no version constraint is given, the query takes the global path and the
+            candidate pool is the whole corpus.
           </>
         }
         zh={
@@ -444,8 +439,8 @@ export default function S4Algorithm() {
             <C>filter.versions</C> 的 soft
             boost（§4.6）相互独立，前者决定谁能进场，后者只在场内轻推。约束池进入通道前依次经过三道闸（按候选规模限流的三个阈值）：
             <M t="n>1000" /> 拒绝执行，
-            <M t="n>300" /> 先做关键词字面预选取前 200，否则整池直接重排（常量见附录
-            A）。未给定版本约束时，查询走全局路径，候选池为全库。
+            <M t="n>300" /> 先做关键词字面预选取前
+            200，否则整池直接重排。未给定版本约束时，查询走全局路径，候选池为全库。
           </>
         }
       />

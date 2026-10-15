@@ -124,20 +124,13 @@ export default function S2Related() {
         en={
           <>
             <Lead>Industrial hybrid retrieval systems.</Lead> Cerebras&rsquo;s enterprise knowledge
-            base{' '}
-            <a
-              href="https://www.cerebras.ai/blog/how-we-built-our-knowledge-base"
-              className="text-ds-blue-900 hover:underline"
-            >
-              <Cite n={11} />
-            </a>{' '}
-            is the closest industrial parallel to this paper&rsquo;s retrieval core: multiple
-            retrieval signals (full-text, embeddings, IDF, age decay) recall in parallel, are fused
-            with RRF at <M t="k=60" />, then reranked by a lightweight LLM reranker. Its ingestion
-            side reports the same finding — raw text should not be embedded directly: an LLM first
-            distills each Slack thread into a normalized question/summary/resolution document before
-            embedding, the same discovery as this paper&rsquo;s issue/solution dual-summary
-            embeddings (
+            base <Cite n={11} /> is the closest industrial parallel to this paper&rsquo;s retrieval
+            core: multiple retrieval signals (full-text, embeddings, IDF, age decay) recall in
+            parallel, are fused with RRF at <M t="k=60" />, then reranked by a lightweight LLM
+            reranker. Its ingestion side reports the same finding — raw text should not be embedded
+            directly: an LLM first distills each Slack thread into a normalized
+            question/summary/resolution document before embedding, the same discovery as this
+            paper&rsquo;s issue/solution dual-summary embeddings (
             <a href="#s3" className="text-ds-blue-900 hover:underline">
               §3
             </a>
@@ -172,13 +165,7 @@ export default function S2Related() {
         }
         zh={
           <>
-            <Lead>工业界混合检索系统。</Lead>Cerebras 的企业知识库{' '}
-            <a
-              href="https://www.cerebras.ai/blog/how-we-built-our-knowledge-base"
-              className="text-ds-blue-900 hover:underline"
-            >
-              <Cite n={11} />
-            </a>{' '}
+            <Lead>工业界混合检索系统。</Lead>Cerebras 的企业知识库 <Cite n={11} />{' '}
             是与本文检索内核最接近的工业界并行案例：多路检索信号（全文、向量、IDF、时间衰减）并行召回，以{' '}
             <M t="k=60" /> 的 RRF 融合，再经轻量 LLM reranker
             重排。其取入侧报告了同一发现——原始文本不宜直接嵌入：LLM 先把 Slack 线程蒸馏为

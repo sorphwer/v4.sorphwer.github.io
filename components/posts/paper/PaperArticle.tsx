@@ -9,6 +9,7 @@ import S6Results from './sections/s6-results'
 import S6External from './sections/s6-external'
 import S7Engineering from './sections/s7-engineering'
 import S8Discussion from './sections/s8-discussion'
+import References from './sections/references'
 
 /**
  * Provenance line above the abstract. Title, byline, language toggle and the
@@ -60,6 +61,7 @@ export default function PaperArticle() {
       <S6External />
       <S7Engineering />
       <S8Discussion />
+      <References />
       <footer className="mt-16 border-t border-ds-gray-alpha-400 pt-6 pb-2 font-geist-mono text-xs text-ds-gray-700">
         riino@dify.ai · 2026-07-09 · commit dc99579 · Dify · Zendesk Knowledge-Graph Project
       </footer>

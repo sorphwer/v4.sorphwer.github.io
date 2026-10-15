@@ -9,7 +9,7 @@
 import type { ReactNode } from 'react'
 import { T } from '@/components/article/lang'
 
-/** Top-level numbered section. `num` is the printed section number ("04"). */
+/** Top-level section. `num` is the printed section number ("04"); omit it for back matter. */
 export function Section({
   id,
   num,
@@ -18,7 +18,7 @@ export function Section({
   children,
 }: {
   id: string
-  num: string
+  num?: string
   en: string
   zh: string
   children: ReactNode
@@ -26,7 +26,9 @@ export function Section({
   return (
     <section id={id} className="mt-14 border-t border-ds-gray-alpha-400 pt-8 scroll-mt-24">
       <h2 className="flex items-baseline gap-3.5 text-2xl font-bold leading-8 tracking-tight text-ds-gray-1000">
-        <span className="font-geist-mono text-[13px] font-normal text-ds-gray-700">{num}</span>{' '}
+        {num && (
+          <span className="font-geist-mono text-[13px] font-normal text-ds-gray-700">{num}</span>
+        )}{' '}
         <span className="text-balance">
           <T en={en} zh={zh} />
         </span>
@@ -75,9 +77,13 @@ export function C({ children }: { children: ReactNode }) {
   )
 }
 
-/** Inline citation marker: <Cite n={4} /> renders [4]. */
-export function Cite({ n }: { n: number | string }) {
-  return <span className="text-[13px] text-ds-blue-900">[{n}]</span>
+/** Inline citation marker: <Cite n={4} /> renders [4], linking to entry #ref-4 in References. */
+export function Cite({ n }: { n: number }) {
+  return (
+    <a href={`#ref-${n}`} className="text-[13px] text-ds-blue-900 hover:underline">
+      [{n}]
+    </a>
+  )
 }
 
 const CHANNEL_STYLE: Record<string, string> = {
