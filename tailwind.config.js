@@ -2,15 +2,60 @@ const defaultTheme = require('tailwindcss/defaultTheme')
 const colors = require('tailwindcss/colors')
 const { DEFAULT } = require('@tailwindcss/typography/src/styles')
 
+// Geist tokens → Tailwind color keys. `text-ds-gray-900`, `bg-ds-background-100`,
+// `border-ds-gray-alpha-400`, `text-ds-foreground` … all resolve to CSS variables
+// declared in css/paper.css.
+function dsPalette() {
+  const scale = (name, steps) => Object.fromEntries(steps.map((s) => [s, `var(--ds-${name}-${s})`]))
+  const full = [100, 200, 300, 400, 500, 600, 700, 800, 900, 1000]
+  const semantic = [
+    'foreground',
+    'card',
+    'card-foreground',
+    'popover',
+    'popover-foreground',
+    'primary',
+    'primary-foreground',
+    'secondary',
+    'secondary-foreground',
+    'muted',
+    'muted-foreground',
+    'accent',
+    'accent-foreground',
+    'destructive',
+    'border',
+    'input',
+    'ring',
+    'chart-1',
+    'chart-2',
+    'chart-3',
+    'chart-4',
+    'chart-5',
+  ]
+  return {
+    background: { ...scale('background', [100, 200]), DEFAULT: 'var(--ds-sem-background)' },
+    gray: { ...scale('gray', full), alpha: scale('gray-alpha', [100, 200, 300, 400, 500, 600]) },
+    blue: scale('blue', full),
+    red: scale('red', full),
+    amber: scale('amber', full),
+    green: scale('green', full),
+    teal: scale('teal', [100, 300, 600, 700, 900, 1000]),
+    purple: scale('purple', [100, 300, 600, 700, 900, 1000]),
+    pink: scale('pink', [100, 300, 700, 900]),
+    link: 'var(--ds-link)',
+    ...Object.fromEntries(semantic.map((k) => [k, `var(--ds-sem-${k})`])),
+  }
+}
+
 module.exports = {
   experimental: {
     optimizeUniversalDefaults: true,
   },
   content: [
-    './pages/**/*.js',
-    './components/**/*.js',
-    './layouts/**/*.js',
-    './lib/**/*.js',
+    './pages/**/*.{js,jsx,ts,tsx}',
+    './components/**/*.{js,jsx,ts,tsx}',
+    './layouts/**/*.{js,jsx,ts,tsx}',
+    './lib/**/*.{js,jsx,ts,tsx}',
     './data/**/*.mdx',
   ],
   darkMode: 'class',
@@ -28,6 +73,23 @@ module.exports = {
       fontFamily: {
         sans: ['InterVariable', ...defaultTheme.fontFamily.sans],
         rs: '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"',
+        geist: ['"Geist Variable"', ...defaultTheme.fontFamily.sans],
+        'geist-mono': ['"Geist Mono Variable"', ...defaultTheme.fontFamily.mono],
+      },
+      boxShadow: {
+        'ds-border': 'var(--ds-shadow-border)',
+        'ds-small': 'var(--ds-shadow-small)',
+        'ds-medium': 'var(--ds-shadow-medium)',
+        'ds-modal': 'var(--ds-shadow-modal)',
+      },
+      keyframes: {
+        paperRise: {
+          from: { opacity: '0', transform: 'translateY(10px)' },
+          to: { opacity: '1', transform: 'translateY(0)' },
+        },
+      },
+      animation: {
+        'paper-rise': 'paperRise 600ms var(--ds-ease) both',
       },
       colors: {
         gray: colors.neutral,
@@ -41,6 +103,10 @@ module.exports = {
         },
         RSpink: '#e83e8c',
         RSgrey: '#808080',
+        // Geist design-system palette for the paper post; every value is a CSS
+        // variable scoped under `.paper` (css/paper.css) so it flips with `.dark`
+        // and never leaks into the rest of the site.
+        ds: dsPalette(),
       },
       typography: (theme) => ({
         DEFAULT: {

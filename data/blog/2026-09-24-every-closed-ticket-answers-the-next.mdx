@@ -1,0 +1,432 @@
+---
+layout: PostWide
+bodyClass: glance
+title: 'Every Closed Ticket Answers the Next'
+titleZh: '每一张关闭的工单，都是下一张的答案'
+subtitle: 'A ticket knowledge graph where every claim cites its source'
+date: '2026-09-24'
+tags: ['Zendesk', 'Knowledge Graph', 'Support', 'Dify']
+summary: 'We turned closed support tickets into a searchable knowledge graph in which every conclusion traces back to the words it came from. / 我们把售后工单变成了一张可检索、每句结论都能追溯到原话的知识图谱。'
+draft: false
+---
+
+{/*
+Ported from external-blogs/glance-version/blog.html. Example tickets are de-identified; graph layout, ticket ids other than #2948 / #3256, channel hits and ranks are illustrative, like the film's. Headings are JSX with the original ids so deep links keep resolving; both languages keep the same ids. English is the default; the Chinese original follows in <Zh> (components/article/lang). Film and figures read the language themselves. */}
+
+<Film />
+
+<En>
+
+<div className="post" lang="en">
+
+{/* ============ 1 ============ */}
+
+<h2 id="buried">The answer was already written</h2>
+
+<p>Anyone who has worked in support knows the feeling: a new ticket comes in and the error looks familiar. You vaguely remember a colleague handling almost the same problem six months ago, but that ticket was closed long ago and lies buried in a long history. Searching the title finds nothing, searching the error finds nothing, and you end up reading the source code from scratch.</p>
+
+The answers do exist. They are scattered through the conversations of closed tickets: the lines of investigation, the fixes tried and abandoned, the customer's final "That worked, thanks." What's missing is a way to organize them so that the next time they're needed, they can be found, and trusted.
+
+What we wanted was simple: <strong>make every closed ticket the answer to the next one.</strong>
+
+<Glance.Sea />
+
+{/* ============ 2 ============ */}
+
+<h2 id="hard">Why it's hard</h2>
+
+Tickets aren't tidy documents. A real request for help often mixes version numbers, stack traces, screenshots, and a vague "it just won't run."
+
+Keyword search needs an exact match, but customers describe symptoms, not errors. Vector search understands meaning, yet often treats `3.8.0` and `3.9.8` as the same thing. Worse, the real answer to many problems isn't in the ticket body at all, but in a documentation link or a GitHub issue.
+
+The other half of the difficulty is trust. A support engineer won't forward an AI summary of unknown origin to a customer. They'll ask: which ticket, which colleague said this? How was the summary produced? Did any of the customer's personal data get pulled in?
+
+So we set ourselves two requirements: <strong>questions must be answerable, and answers must be trustworthy.</strong> Nearly every design decision that follows traces back to one of them.
+
+<Glance.Hard />
+
+{/* ============ 3 ============ */}
+
+<h2 id="source">The original is the only source of truth</h2>
+
+The whole pipeline has a single input: ticket records and attachments fetched verbatim from the ticketing system and stored unchanged. Everything else, including the text the model reads, the summaries, keywords, vectors, and the graph's nodes and edges, is derived from it, and can be deleted and recomputed from the original at any time.
+
+It sounds fussy, but it buys three things:
+
+<ul className="list">
+  <li><strong>Replayable.</strong> Change a prompt, swap the model, adjust the masking rules: rerun and you get a new graph, with no archaeology into "how was this generated last time?"</li>
+  <li><strong>Traceable.</strong> Every summary can account for its origin: which ticket, which model call, which prompt version.</li>
+  <li><strong>Comparable.</strong> Old and new graphs can sit side by side and be compared on the same set of questions; switch only once nothing has regressed.</li>
+</ul>
+
+Every ticket travels the same trunk from start to finish. The nightly incremental sync and the occasional full rebuild run the same code; they differ only in which tickets go in and where the results are written.
+
+<Glance.Pipe />
+
+{/* ============ 4 ============ */}
+
+<h2 id="mask">Mask first, then show the model</h2>
+
+Tickets are full of personal data: names, emails, phone numbers, internal addresses. We set up two checkpoints.
+
+<strong>The first is at render time.</strong>
+Before a ticket is turned into text for the model, names, emails, phone numbers and the like are replaced with placeholders. The model only ever sees this version. Within a ticket, the same value always maps to the same number: `[EMAIL_1]` always refers to the same address, so the model can still follow who is replying to whom. Error messages and version numbers are kept as they are; they are exactly the signals retrieval needs most.
+
+Generic rules can't catch every name, so each ticket also carries its own list, taken from fields such as the requester and CCs. Try editing the text on the left below.
+
+<Glance.Mask />
+
+<strong>The second is before anything is stored.</strong>
+Every piece of text the model produces (the summaries, each conclusion, each quote, keywords, links) goes through the same rules again. On any hit, the whole ticket is rejected and not a single row is written; the log records only which rule matched and in which field, never the value itself.
+
+We deliberately chose not to quietly replace the value and move on. Fixing things quietly means never learning where the leak is. More importantly, attachments (screenshots, log files) are beyond the reach of the first checkpoint: the model can see an email address in an image; the renderer can't. For attachments the second checkpoint is the only detector, so it has to come before storage, and it has to fail loudly.
+
+{/* ============ 5 ============ */}
+
+<h2 id="ground">Every conclusion points back to the original words</h2>
+
+The masked ticket goes to the model, which extracts three things: summaries of the problem and the solution, a set of keywords, and the external links mentioned in the conversation. Summaries are always written in English to support cross-language retrieval; keywords are deduplicated per ticket.
+
+The real effort went into the solution summary. We ask the model to break it into individual "conclusions," each accompanied by the words it rests on: which reply, and which sentence in it.
+
+Then we don't trust it.
+
+After the model responds, a pure function that calls no model runs a set of mechanical checks:
+
+<ul className="list">
+  <li>Every conclusion must genuinely come from the summary, and together the conclusions must cover the whole summary, so no uncertain sentence can hide outside the citations;</li>
+  <li>Every quote must be found verbatim in the corresponding (masked) reply. This is our most effective probe for hallucinations;</li>
+  <li>A ticket marked "resolved" must produce a quote proving it was resolved; if it can't, it is downgraded to "attempted."</li>
+</ul>
+
+Anything that fails goes back to the model with the failure details, to rewrite only the citations while the summary itself stays frozen, for one round at most. If it still fails, that conclusion is marked "unverified": kept, but not pretending to be trustworthy.
+
+<Glance.Ground />
+
+<blockquote className="pull">Trust comes from the validator, not the model.</blockquote>
+
+This discipline has a side effect: the validation rules can be tightened at any time, almost for free. Validation is a pure function, recomputed from the model's raw output every time; when the rules change, just rerun, with no new model calls.
+
+{/* ============ 6 ============ */}
+
+<h2 id="graph">A graph with only the nodes it needs</h2>
+
+Extracted tickets land in a ticket-centric graph with only five kinds of node: tickets, keywords, versions, external links, and the support engineers who handled them. Every attribute node is one hop from a ticket.
+
+<Glance.Schema />
+
+We deliberately left out a lot of things that "look useful." Customer organizations and customer-side contacts count as personal data and have little to do with answers. The ticketing system's raw tags, product lines and environment descriptions are either too sparse or too noisy, and would only drown out the connections that carry real information.
+
+Keywords aren't normalized across tickets either: `sandbox` and `dify-sandbox` stay separate. Normalization looks tidier, but a single wrong merge silently links two unrelated kinds of ticket, and it is hard to notice.
+
+The payoff is that every connection in the graph is easy to explain: these two tickets are linked because both mention seccomp, both happened on 3.9.x, and both cite the same issue.
+
+<Glance.Graph />
+
+Not every connection carries equal weight. `docker`, attached to almost every ticket, says very little; an issue cited by just three tickets says a lot. So when looking for neighbours in the graph, the fewer tickets share a feature, the more it weighs.
+
+{/* ============ 7 ============ */}
+
+<h2 id="search">How a search runs</h2>
+
+No large model is called at search time. When a query comes in, we first apply a little rule-based understanding: does it contain a ticket number or a version number, and which keywords from the vocabulary does it hit? Then four channels search at once:
+
+<ul className="list">
+  <li><strong>Semantic</strong>: the vectors of the problem summary and of the solution summary each find tickets with a similar meaning. The customer says "can't connect"; it finds the ticket that says <code>ECONNREFUSED</code>.</li>
+  <li><strong>Full text</strong>: full-text search, for error strings, function names and anything else that must match exactly.</li>
+  <li><strong>Keyword</strong>: only steps in when the query contains sufficiently rare keywords, going straight to the tickets in the graph that carry them.</li>
+  <li><strong>Graph</strong>: takes the tickets the other channels rank highest as seeds, and looks for anyone else sharing their uncommon links or keywords.</li>
+</ul>
+
+How are the channels combined? We look only at ranks, never scores, using weighted Reciprocal Rank Fusion: each channel gives the ticket it ranks <i>r</i>-th
+
+<div className="math"><span className="frac"><span><i>w</i></span><span><i>k</i> + <i>r</i></span></span> votes, <i>k</i> = 60</div>
+
+The large denominator means that ranking first or tenth in a single channel makes little difference; <strong>being nominated by several channels at once matters far more than being ranked first by one.</strong> Another benefit is that nothing needs calibrating: cosine similarity, full-text scores and sums of rarity live on completely different scales, and comparing only ranks sidesteps the problem.
+
+Below are three typical queries. Turn a channel off, or drag <i>k</i>, and watch the ranking change.
+
+<Glance.Search />
+
+A few details worth mentioning:
+
+<ul className="list">
+  <li><strong>Versions are a hard constraint.</strong> If the query names a version, the scope is first narrowed to tickets on that version, before anything above happens. An answer for the wrong version is often worse than no answer. Try turning this constraint off for the third query above.</li>
+  <li><strong>Ticket numbers hit directly.</strong> If the query contains a ticket number, that ticket is returned as is, outside the ranking.</li>
+  <li><strong>Boosts are capped.</strong> When the caller also specifies a version or keywords, a small bonus is added after fusion. It is enough to flip two closely scored tickets, but deliberately can't outweigh agreement across channels.</li>
+  <li><strong>The graph channel reranks; it doesn't recall at random.</strong> It only looks for neighbours around tickets the other channels have already endorsed, so it can lift a correct answer from "top five, but not first" to the top, yet can hardly drag in an unrelated ticket out of nowhere.</li>
+</ul>
+
+{/* ============ 8 ============ */}
+
+<h2 id="replay">Making replay almost free</h2>
+
+"The original is the only source of truth" has a cost: every change means recomputing. Sending every ticket back to the model each time would cost too much, in both time and money.
+
+The fix is to give every model call a content-addressed cache key: `(call type, call version, ticket content fingerprint)`. The call version is a hash of the model name together with the prompt, output schema, parameters, rendering rules and masking rules. Change one of them and only that class of cache entries is invalidated; when a ticket gets a new reply, only that ticket is recomputed.
+
+<Glance.Cache />
+
+Two things are deliberately kept out of the cache key. One is the validation rules: validation reruns every time, so tightening the rules costs not a single model call. The other is vectors: they have their own cache, addressed by text content, so a summary that hasn't changed isn't re-embedded.
+
+This makes "build the new graph in full alongside the old one, accept it on the same question set, and switch over only when everything is green" a routine affair. Most changes touch only one class of call, and the rest of the rebuild is served from the cache.
+
+{/* ============ 9 ============ */}
+
+<h2 id="results">Results</h2>
+
+We evaluate on a frozen set of 149 real support questions, each labelled with the ticket that should be the correct answer. On the same set, we compared an open-source GraphRAG approach and the ticketing system's built-in search. The figures below were measured in July 2026.
+
+<Glance.Nums />
+
+The built-in search scoring 0 doesn't mean it's broken: it is built to find a ticket by title or by customer, not to turn a raw error message into an answer.
+
+Queries are fast because retrieval runs entirely on vector, full-text and graph queries, without calling a large model; GraphRAG-style approaches have a large model extract keywords before every query.
+
+<div className="note"><b>A finding about the graph channel.</b> In the July 2026 ablation, nearly all of its gain came from reranking: the correct answer was already in the top five, just not first, and evidence such as "other high-scoring tickets also cite the same obscure issue" pushed it to the top. It adds almost no recall depth, yet raises the hit rate substantially.</div>
+
+{/* ============ 10 ============ */}
+
+<h2 id="where">Where it's used</h2>
+
+The knowledge base itself isn't the destination. We wired it into the two places support engineers actually work every day.
+
+<Glance.Entry />
+
+Every conclusion in a draft reply carries its source ticket and the number of the reply it came from. Engineers don't need to trust the model; they only need to click through and read the original words.
+
+{/* ============ 11 ============ */}
+
+<h2 id="more">One more thing</h2>
+
+When a dozen tickets are really about the same kind of problem, returning them one by one isn't the best answer. We're experimenting with automatically synthesizing tickets of the same kind into a troubleshooting doc, where every step carries its source tickets and every citation has been checked one by one.
+
+<Glance.Doc />
+
+This is still an experiment. But the direction is clear: the graph isn't only for searching; it can gradually grow into a troubleshooting handbook that keeps itself up to date.
+
+{/* ============ 12 ============ */}
+
+<h2 id="end">Closing thoughts</h2>
+
+Looking back, what really makes this system work is mostly not some clever model call, but a few plain disciplines: leave the original untouched and keep everything derived recomputable; validate every sentence the model writes; screen personal data twice; rank by position, never trust scores.
+
+<div className="lines3">
+  <div><span>For the team</span>The support team's experience no longer leaves with the people who have it.</div>
+  <div><span>For the product</span>The second time a defect shows up, it gets noticed.</div>
+  <div><span>For the next ticket</span>Ask the graph first.</div>
+</div>
+
+<div className="foot">In the examples, #2948 and #3256 are real closed tickets with customer information removed; the other conversations were rewritten for illustration, and the names, emails and phone numbers in the masking example are fictional. The graph layout, the other ticket numbers, and the channel hits and ranks are illustrative. Comparison figures come from an internal evaluation in July 2026: the same set of 149 questions, with this system and the open-source GraphRAG approach both running on 600 tickets, and the ticketing system's built-in search using its full index.</div>
+
+</div>
+
+</En>
+
+<Zh>
+
+<div className="post" lang="zh-CN">
+
+{/* ============ 1 ============ */}
+
+<h2 id="buried">答案早就写过了</h2>
+
+<p>做过售后支持的人，大概都有过这种体验：一张新工单进来，报错看着眼熟。你隐约记得半年前某位同事处理过几乎一样的问题，可那张工单早已关闭，埋在一长串历史记录里。搜标题搜不到，搜报错也搜不到，最后只好从头翻源码。</p>
+
+这些答案并不是不存在。它们散落在已关闭工单的对话里：排查思路、试过又放弃的方案、客户最后那句“好了，谢谢”。缺的是一种组织方式，让它们在下一次被需要的时候，能被找到，也能被相信。
+
+我们想做的事情很朴素：<strong>让每一张关闭的工单，都能成为下一张的答案。</strong>
+
+<Glance.Sea />
+
+{/* ============ 2 ============ */}
+
+<h2 id="hard">难在哪里</h2>
+
+工单不是整洁的文档。一个真实的求助，往往同时混着版本号、报错堆栈、截图，还有一句含糊的“就是跑不起来”。
+
+关键词搜索要求一字不差，客户描述的却是症状，不是报错；向量检索擅长理解意思，又常常把 `3.8.0` 和 `3.9.8` 看成一回事。更麻烦的是，很多问题真正的答案根本不在工单正文里，而在一条文档链接或 GitHub issue 里。
+
+另一半难处在“信”。支持工程师不会把一段来路不明的 AI 总结直接发给客户。他们会问：这句结论是哪张工单、哪位同事说的？总结是怎么生成的？客户的个人信息有没有被带进来？
+
+所以我们给自己定了两条要求：<strong>问题要能被回答，回答要能被相信。</strong>后面几乎每一个设计决定，都能追溯到这两条中的一条。
+
+<Glance.Hard />
+
+{/* ============ 3 ============ */}
+
+<h2 id="source">原文是唯一的真相</h2>
+
+整条管线只有一个输入：从工单系统原样取回的工单记录和附件，一字不改地存下来。其余的一切，包括给模型读的文本、摘要、关键词、向量、图里的节点和边，都是它的派生物，随时可以删掉，再从原文重新算出来。
+
+这听起来像洁癖，实际上换来了三件事：
+
+<ul className="list">
+  <li><strong>可重放。</strong>改了 prompt、换了模型、调了脱敏规则，重新跑一遍就得到一张新图，不用考古“上次到底是怎么生成的”。</li>
+  <li><strong>可追溯。</strong>每条总结都说得清来历：哪张工单、哪一次模型调用、哪一版 prompt。</li>
+  <li><strong>可比较。</strong>新旧两张图可以并排放着，用同一组问题对比，确认没退步再切换。</li>
+</ul>
+
+每张工单都沿同一条主干走完全程。每晚的增量同步和偶尔的全量重建，走的是同一段代码，区别只在于输入哪些工单、结果写到哪里。
+
+<Glance.Pipe />
+
+{/* ============ 4 ============ */}
+
+<h2 id="mask">先脱敏，再给模型看</h2>
+
+工单里有大量个人信息：姓名、邮箱、电话、内网地址。我们设了两道关。
+
+<strong>第一道在渲染时。</strong>
+工单被转成给模型读的文本之前，人名、邮箱、电话等就被换成占位符。模型从头到尾只见得到这一版。同一张工单里，同一个值始终换成同一个编号：`[EMAIL_1]` 永远指同一个邮箱，这样模型仍然读得懂“谁在回复谁”。报错原文和版本号保持原样，它们正是检索最需要的信号。
+
+人名靠通用规则抓不全，所以每张工单还有一份自己的名单，来自提交人、抄送人这些字段。下面可以直接改左边的文字试试。
+
+<Glance.Mask />
+
+<strong>第二道在入库前。</strong>
+模型产出的每一段文字，摘要、每句结论、每段引用、关键词、链接，都要再过一遍同一套规则。一旦命中，整张工单直接拦下，一行都不写入；日志里只记录命中了哪条规则、在哪个字段，不记录原值。
+
+我们刻意没有选择“悄悄替换掉了事”。悄悄修掉意味着永远不知道漏洞在哪。更重要的是，附件（截图、日志文件）是第一道关覆盖不到的地方：模型能看见图片里的邮箱，渲染器看不见。对附件来说，第二道关是唯一的检测器，所以它必须在入库之前，而且必须大声失败。
+
+{/* ============ 5 ============ */}
+
+<h2 id="ground">每句结论都指回原话</h2>
+
+脱敏后的工单交给模型，提炼出三样东西：问题和解决方案的摘要、一组关键词、对话里提到的外部链接。摘要统一用英文写，方便跨语言检索；关键词按工单各自去重。
+
+真正花心思的是解决方案摘要。我们要求模型把它拆成一句句“结论”，每句结论都附上它依据的原话：在哪条回复里，原文是哪一句。
+
+然后，我们不信任它。
+
+模型输出之后，一段不调用任何模型的纯函数会做一组机械校验：
+
+<ul className="list">
+  <li>每句结论必须真的出自摘要，而且所有结论拼起来要覆盖整段摘要，不能把没把握的句子藏在引用之外；</li>
+  <li>每段“原话”必须能在对应那条（脱敏后的）回复里逐字找到。这是我们发现幻觉最有效的探针；</li>
+  <li>标记为“已解决”的工单，必须拿得出能证明解决了的原话，拿不出就降级为“尝试过”。</li>
+</ul>
+
+没通过的，带着失败明细让模型只重写引用部分，摘要本身冻结不动，最多一轮。还是不行，就把那句结论标成“未核实”：保留下来，但不假装它可信。
+
+<Glance.Ground />
+
+<blockquote className="pull">信任来自校验器，而不是模型。</blockquote>
+
+这条纪律带来一个副作用：校验规则可以随时收紧，而且几乎不花钱。校验是纯函数，每次都从模型的原始输出重新算一遍；规则改了，重跑一次即可，不需要重新调用模型。
+
+{/* ============ 6 ============ */}
+
+<h2 id="graph">一张只留必要节点的图</h2>
+
+提炼完的工单落进一张以工单为中心的图。节点只有五种：工单、关键词、版本、外部链接，以及处理它的支持工程师。所有属性节点都离工单一跳。
+
+<Glance.Schema />
+
+我们刻意没有放进很多“看起来有用”的东西。客户组织和客户侧联系人属于个人信息范畴，和答案关系也不大；工单系统里的原始标签、产品线、环境描述，要么太稀疏，要么太嘈杂，放进来只会把真正有信息量的连接淹没。
+
+关键词也不做跨工单归一，`sandbox` 和 `dify-sandbox` 各是各的。归一看上去更整洁，但一次错误的合并会悄悄把两类不相干的工单连在一起，而且很难被发现。
+
+这样做的好处是，图里每一条连接都很容易解释：这两张工单相连，是因为它们都提到了 seccomp，都发生在 3.9.x，都引用了同一个 issue。
+
+<Glance.Graph />
+
+并不是每一条连接都同样有分量。几乎所有工单都带着的 `docker` 说明不了什么；只有三张工单共同引用的某个 issue，却很能说明问题。所以在图上找邻居时，越少工单共享的特征，权重越高。
+
+{/* ============ 7 ============ */}
+
+<h2 id="search">一次检索怎么走</h2>
+
+检索时我们不调用大模型。一条查询进来，先做一点规则层面的理解：里面有没有票号、有没有版本号、命中了词表里的哪些关键词。然后四路同时找：
+
+<ul className="list">
+  <li><strong>语义</strong>：用问题摘要和解决方案摘要各自的向量，找意思相近的工单。客户说“连不上”，它能找到写着 <code>ECONNREFUSED</code> 的那张。</li>
+  <li><strong>原文</strong>：全文检索，负责报错串、函数名这类必须一字不差的东西。</li>
+  <li><strong>关键词</strong>：查询里出现了足够稀有的关键词时才上场，直接在图上找带着它们的工单。</li>
+  <li><strong>图关系</strong>：把前几路排得靠前的工单当作种子，看还有谁和它们共享冷门的链接或关键词。</li>
+</ul>
+
+几路结果怎么合起来？我们只看名次，不看分数，用的是加权的 Reciprocal Rank Fusion：每一路给自己的第 <i>r</i> 名投
+
+<div className="math"><span className="frac"><span><i>w</i></span><span><i>k</i> + <i>r</i></span></span> 票，<i>k</i> = 60</div>
+
+这个大分母意味着：在某一路排第一，和排第十，差别并不大；<strong>被几路同时提名，远比被某一路捧成第一重要。</strong>另一个好处是不用校准：余弦相似度、全文检索得分、稀有度之和，量纲完全不同，只比名次就绕开了这个问题。
+
+下面是三条典型的查询。可以关掉某一路，或者拖动 <i>k</i>，看排序怎么变。
+
+<Glance.Search />
+
+几个值得一提的细节：
+
+<ul className="list">
+  <li><strong>版本号是硬约束。</strong>查询里写了版本，就先把范围限定在对应版本的工单里，再做上面的一切。版本不对的答案，往往比没有答案更糟。上面第三条查询可以关掉这个约束看看。</li>
+  <li><strong>票号直接命中。</strong>查询里带了票号，就原样返回那张工单，不参与排序。</li>
+  <li><strong>加分有上限。</strong>调用方额外指定版本或关键词时，融合之后会再加一点分。这点分足够翻转两张比分接近的工单，但刻意压不过“几路一致提名”。</li>
+  <li><strong>“图关系”只重排，不乱召回。</strong>它只在已经被前几路认可的工单周围找邻居，所以它能把“在前五但不在第一”的正确答案顶上来，却很难凭空带进一张无关工单。</li>
+</ul>
+
+{/* ============ 8 ============ */}
+
+<h2 id="replay">让重放几乎免费</h2>
+
+“原文是唯一的真相”有一个代价：任何改动都意味着重算。如果每次都把所有工单重新交给模型，时间和成本都受不了。
+
+解法是给每一次模型调用一个内容寻址的缓存键：`(调用类型, 调用版本, 工单内容指纹)`。调用版本由模型名，加上 prompt、输出格式、参数、渲染规则、脱敏规则一起哈希得出。改了哪一项，就只让对应的那一类缓存失效；某张工单有了新回复，就只重算这一张。
+
+<Glance.Cache />
+
+有两件事刻意不进缓存键。一是校验规则：校验每次都重新跑，所以收紧规则不花一次模型调用。二是向量：向量有自己的缓存，按文字内容寻址，摘要没变就不重新向量化。
+
+这让“先在旁边把新图完整建出来，用同一组问题验收，全绿再切换”成了一件日常的事。大多数改动只动一类调用，重建时其余部分全部命中缓存。
+
+{/* ============ 9 ============ */}
+
+<h2 id="results">效果</h2>
+
+我们用一组冻结的真实支持问题（149 条）做评测，每个问题都标注了“正确答案应该是哪张工单”。用同一组问题，对比了一个开源的 GraphRAG 方案和工单系统自带的搜索。以下数据测于 2026 年 7 月。
+
+<Glance.Nums />
+
+工单系统自带的搜索得分为 0，并不是它坏了：它面向的是“按标题、按客户找某张工单”，而不是把一段报错原文变成答案。
+
+查询快，是因为检索全程都是向量、全文和图查询，不调用大模型；GraphRAG 类方案每次查询都要先让大模型抽一遍关键词。
+
+<div className="note"><b>关于“图关系”这一路的一个发现。</b>在 2026 年 7 月的消融评测里，它带来的提升几乎全部来自重排：正确答案本来就在前五，只是没排第一，是“别的高分工单也引用了同一个冷门 issue”这类证据把它顶了上去。它几乎不增加召回的深度，但把命中率拉高了一大截。</div>
+
+{/* ============ 10 ============ */}
+
+<h2 id="where">在哪里用</h2>
+
+知识库本身不是终点。我们把它接到了支持工程师每天真正在用的两个地方。
+
+<Glance.Entry />
+
+回复草稿里的每句结论，都带着来源工单和那条回复的编号。工程师不需要相信模型，只需要点开看一眼原话。
+
+{/* ============ 11 ============ */}
+
+<h2 id="more">还有一件事</h2>
+
+当十几张工单讲的其实是同一类问题时，把它们一张张返回并不是最好的答案。我们正在试验一件事：把同类工单自动合成一篇排查文档，每一步都带着来源工单，每一条出处都逐条核对过。
+
+<Glance.Doc />
+
+这还在实验阶段。但方向很清楚：图不只是用来搜的，它也可以慢慢长成一份会自己更新的排查手册。
+
+{/* ============ 12 ============ */}
+
+<h2 id="end">写在最后</h2>
+
+回头看，这个系统里真正起作用的，大多不是某个聪明的模型调用，而是几条朴素的纪律：原文不动，派生物随时可以重算；模型的每句话都要经过校验；个人信息拦两遍；检索只比名次，不信分数。
+
+<div className="lines3">
+  <div><span>对团队</span>支持团队的经验，不再随人走。</div>
+  <div><span>对产品</span>同一个缺陷第二次出现，就能被看见。</div>
+  <div><span>对下一张工单</span>先问它一句。</div>
+</div>
+
+<div className="foot">示例中的 #2948、#3256 为真实已关闭工单，客户信息已去除；其余对话为说明而改写，脱敏示例中的人名、邮箱、电话均为虚构。图的布局、其他票号、各路命中与名次均为示意。对比数据来自 2026 年 7 月的内部评测：同一组 149 个问题，本系统与开源 GraphRAG 方案同在 600 张工单上，工单系统自带搜索用其全量索引。</div>
+
+</div>
+
+</Zh>

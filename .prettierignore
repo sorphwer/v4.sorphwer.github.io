@@ -1,0 +1,3 @@
+# prettier 2 (MDX v1 parser) corrupts MDX v2 comments/JSX in these posts
+data/blog/2026-09-24-every-closed-ticket-answers-the-next.mdx
+data/blog/2026-07-09-hybrid-retrieval-support-ticket.mdx

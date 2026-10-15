@@ -1,0 +1,228 @@
+import { useState } from 'react'
+import { SORTS } from '@/lib/utils/postFacets'
+import { ChevronIcon } from './icons'
+import SourceMark from './SourceMark'
+
+/** Years listed before "Show all": three rows of the year grid. */
+const YEAR_PREVIEW = 9
+/** Unselected tags listed before "Show all" (short enough that the sidebar fits without scrolling). */
+const TAG_PREVIEW = 7
+
+/**
+ * Collapsible facet section. The body is a scroll lane: its 6px trackless
+ * scrollbar (css/tailwind.css) is pushed into the sidebar's 12px right padding
+ * via -mr-3, the gutter is always reserved (bar present or not) and pr-1.5
+ * keeps 6px between the content and the bar, so the content column, and with it
+ * the counts, keep the chevron's right edge. `bodyClassName` sets the lane's
+ * layout / max height; `footer` (e.g. "Show all") sits below the lane, outside
+ * the scroll; `shrink` lets the lane give up height on xl when the sticky
+ * sidebar is capped.
+ */
+function Section({
+  id,
+  title,
+  note,
+  defaultOpen = false,
+  shrink = false,
+  bodyClassName = '',
+  footer,
+  children,
+}) {
+  const [open, setOpen] = useState(defaultOpen)
+  const column = shrink ? 'xl:flex xl:min-h-0 xl:flex-col' : ''
+  return (
+    <div className={`border-t border-gray-200 dark:border-gray-800 ${column}`}>
+      <h3>
+        <button
+          type="button"
+          aria-expanded={open}
+          aria-controls={id}
+          onClick={() => setOpen(!open)}
+          className="flex w-full items-center justify-between gap-3 py-3 text-left text-sm text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-100"
+        >
+          <span>
+            {title}
+            {note && (
+              <span className="ml-2 text-xs text-primary-500 dark:text-primary-400">{note}</span>
+            )}
+          </span>
+          <ChevronIcon
+            className={`h-4 w-4 shrink-0 transition-transform ${open ? 'rotate-180' : ''}`}
+          />
+        </button>
+      </h3>
+      {open && (
+        <div id={id} className={`pb-4 ${column}`}>
+          <div
+            className={`filter-scroll -mr-3 overflow-y-auto pr-1.5 [scrollbar-gutter:stable] ${bodyClassName}`}
+          >
+            {children}
+          </div>
+          {footer}
+        </div>
+      )}
+    </div>
+  )
+}
+
+function Option({ type = 'checkbox', name, checked, onChange, count, children }) {
+  return (
+    <label className="flex cursor-pointer items-center gap-3 py-1.5 text-sm text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100">
+      <input
+        type={type}
+        name={name}
+        checked={checked}
+        onChange={onChange}
+        className={`h-3.5 w-3.5 border-gray-300 bg-transparent text-primary-500 focus:ring-primary-500 focus:ring-offset-0 dark:border-gray-600 ${
+          type === 'checkbox' ? 'rounded' : ''
+        }`}
+      />
+      <span className="min-w-0 flex-1 truncate">{children}</span>
+      {count !== undefined && (
+        <span className="text-xs tabular-nums text-gray-400 dark:text-gray-500">{count}</span>
+      )}
+    </label>
+  )
+}
+
+const selectedNote = (keys) => (keys.length > 0 ? String(keys.length) : null)
+
+function ShowAllButton({ expanded, total, noun, onClick }) {
+  return (
+    <button
+      type="button"
+      onClick={onClick}
+      className="mt-2 self-start text-xs text-primary-500 hover:underline dark:text-primary-400"
+    >
+      {expanded ? 'Show fewer' : `Show all ${total} ${noun}`}
+    </button>
+  )
+}
+
+/**
+ * "Filter and sort" controls: sort order, then year / source / tag facets from
+ * lib/utils/postFacets. Facet selections are toggled through `onToggle(field, key)`.
+ * Years and tags list a preview until "Show all"; expanded, each list scrolls
+ * on its own. On xl the panel lives in a height-capped sticky sidebar where the
+ * tag list is the part that shrinks, so the rest of the sidebar stays put.
+ */
+export default function FilterPanel({ facets, filters, onToggle, onSort }) {
+  const [allYears, setAllYears] = useState(false)
+  const [allTags, setAllTags] = useState(false)
+  // Years stay newest first; selected years are always listed.
+  const years = allYears
+    ? facets.years
+    : facets.years.filter((year, i) => i < YEAR_PREVIEW || filters.years.includes(year.key))
+  const selectedTags = facets.tags.filter((tag) => filters.tags.includes(tag.key))
+  const otherTags = facets.tags.filter((tag) => !filters.tags.includes(tag.key))
+  const tags = [...selectedTags, ...(allTags ? otherTags : otherTags.slice(0, TAG_PREVIEW))]
+
+  return (
+    <div className="border-b border-gray-200 dark:border-gray-800 xl:flex xl:min-h-0 xl:flex-col">
+      <Section
+        id="filter-sort"
+        title="Sort by"
+        note={SORTS.find((sort) => sort.key === filters.sort).label}
+      >
+        {SORTS.map((sort) => (
+          <Option
+            key={sort.key}
+            type="radio"
+            name="post-sort"
+            checked={filters.sort === sort.key}
+            onChange={() => onSort(sort.key)}
+          >
+            {sort.label}
+          </Option>
+        ))}
+      </Section>
+
+      <Section
+        id="filter-year"
+        title="Year"
+        note={selectedNote(filters.years)}
+        defaultOpen
+        bodyClassName={`grid grid-cols-3 gap-1.5 ${allYears ? 'max-h-36' : ''}`}
+        footer={
+          facets.years.length > YEAR_PREVIEW && (
+            <ShowAllButton
+              expanded={allYears}
+              total={facets.years.length}
+              noun="years"
+              onClick={() => setAllYears(!allYears)}
+            />
+          )
+        }
+      >
+        {years.map((year) => {
+          const selected = filters.years.includes(year.key)
+          return (
+            <button
+              key={year.key}
+              type="button"
+              aria-pressed={selected}
+              title={`${year.count} post${year.count === 1 ? '' : 's'}`}
+              onClick={() => onToggle('years', year.key)}
+              className={`rounded-md border py-1 text-xs tabular-nums transition-colors ${
+                selected
+                  ? 'border-primary-500 bg-primary-500 text-white dark:border-primary-500'
+                  : 'border-gray-200 text-gray-600 hover:border-gray-400 hover:text-gray-900 dark:border-gray-800 dark:text-gray-400 dark:hover:border-gray-600 dark:hover:text-gray-100'
+              }`}
+            >
+              {year.label}
+            </button>
+          )
+        })}
+      </Section>
+
+      <Section
+        id="filter-source"
+        title="Source"
+        note={selectedNote(filters.sources)}
+        defaultOpen
+        bodyClassName="max-h-36"
+      >
+        {facets.sources.map((source) => (
+          <Option
+            key={source.key}
+            checked={filters.sources.includes(source.key)}
+            onChange={() => onToggle('sources', source.key)}
+            count={source.count}
+          >
+            <SourceMark source={source.key} />
+          </Option>
+        ))}
+      </Section>
+
+      <Section
+        id="filter-tag"
+        title="Tag"
+        note={selectedNote(filters.tags)}
+        defaultOpen
+        shrink
+        bodyClassName={`xl:min-h-[8rem] ${allTags ? 'max-h-72 xl:max-h-none' : ''}`}
+        footer={
+          otherTags.length > TAG_PREVIEW && (
+            <ShowAllButton
+              expanded={allTags}
+              total={facets.tags.length}
+              noun="tags"
+              onClick={() => setAllTags(!allTags)}
+            />
+          )
+        }
+      >
+        {tags.map((tag) => (
+          <Option
+            key={tag.key}
+            checked={filters.tags.includes(tag.key)}
+            onChange={() => onToggle('tags', tag.key)}
+            count={tag.count}
+          >
+            {tag.label}
+          </Option>
+        ))}
+      </Section>
+    </div>
+  )
+}

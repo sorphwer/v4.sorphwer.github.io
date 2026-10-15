@@ -86,10 +86,10 @@ I wanted it to be nearly as feature-rich as popular blogging templates like [bea
 - Citation and bibliography support via [rehype-citation](https://github.com/timlrx/rehype-citation)
 - Automatic image optimization via [next/image](https://nextjs.org/docs/basic-features/image-optimization)
 - Flexible data retrieval with [mdx-bundler](https://github.com/kentcdodds/mdx-bundler)
-- Support for tags - each unique tag will be its own page
+- Tags: `/tags` charts the recurring topics by year; every tag links to the home page filtered to it (`/?tags=python`, `/?source=notion`)
 - Support for multiple authors
 - Blog templates
-- TOC component
+- Fixed heading rail (right edge) built from the rendered headings
 - Support for nested routing of blog posts
 - Newsletter component with support for mailchimp, buttondown, convertkit, klaviyo, revue, and emailoctopus
 - Supports [giscus](https://github.com/laymonage/giscus), [utterances](https://github.com/utterance/utterances) or disqus
@@ -211,6 +211,8 @@ images (optional, if none provided defaults to socialBanner in siteMetadata conf
 authors (optional list which should correspond to the file names in `data/authors`. Uses `default` if none is specified)
 layout (optional list which should correspond to the file names in `data/layouts`)
 canonicalUrl (optional, canonical url for the post for SEO)
+bodyClass (optional, PostWide only: class on the post body that scopes a stylesheet in `css/`, e.g. `paper`, `glance`)
+titleZh (optional: Chinese title; makes the post bilingual — the header gets an EN / 中文 toggle (English default) and the body reads the language through `T` / `useT` from `components/article/lang`; MDX prose wraps each language's copy in `<En>` / `<Zh>` blocks)
 ```
 
 Here's an example of a post's frontmatter:
@@ -229,6 +231,10 @@ layout: PostLayout
 canonicalUrl: https://tailwind-nextjs-starter-blog.vercel.app/blog/introducing-tailwind-nextjs-starter-blog
 ---
 ```
+
+Interactive posts (`layout: PostWide`) keep their body in React components under `components/posts/<name>/`, registered by name in `components/MDXComponents.js` (never `import` them from the `.mdx`: mdx-bundler would inline them into page props). Their global CSS lives in `css/<name>.css`, imported from `pages/_app.js`. See `data/blog/2026-07-09-hybrid-retrieval-support-ticket.mdx` and `data/blog/2026-09-24-every-closed-ticket-answers-the-next.mdx`.
+
+Every post layout (`PostLayout` for Markdown/MDX and Notion, `PostWide` for interactive posts) renders through `components/article/PostArticle.js`: a full-bleed banner generated from the post slug as inline SVG during static generation (`components/article/art.js`, DESIGN.md palette, colours follow light/dark via `.post-art` in `css/tailwind.css`), the title sheet with byline, language toggle and tags, the body, a fixed heading rail on the right built from the rendered `h1`–`h3` / Notion headings (hover for the full list; mark a heading `data-toc-skip` to leave it out), and "Keep reading" cards (previous, next, and posts sharing tags, from `lib/utils/relatedPosts.js`).
 
 ### Compose
 
