@@ -13,12 +13,26 @@ const TOOL = {
   inputSchema: { type: 'object', properties: {}, additionalProperties: false },
 }
 
+// The hosting platform injects its own credentials into every request it
+// forwards (Vercel's OIDC token, runtime-cache bearer, proxy signatures).
+// They are not part of what the client sent and must never be echoed.
+const HIDDEN_HEADER =
+  /^(x-vercel-oidc-token|x-vercel-sc-|x-vercel-proxy-signature|x-vercel-internal-)/i
+const visible = (name) => !HIDDEN_HEADER.test(name)
+const scrub = (name, value) =>
+  name.toLowerCase() === 'forwarded' ? String(value).replace(/;?\s*sig=[^;,]*/gi, '') : value
+
 function headerSnapshot(req) {
+  const headers = {}
+  for (const [name, value] of Object.entries(req.headers)) {
+    if (visible(name)) headers[name] = scrub(name, value)
+  }
   const raw = []
   for (let i = 0; i < req.rawHeaders.length; i += 2) {
-    raw.push([req.rawHeaders[i], req.rawHeaders[i + 1]])
+    const name = req.rawHeaders[i]
+    if (visible(name)) raw.push([name, scrub(name, req.rawHeaders[i + 1])])
   }
-  return { method: req.method, url: req.url, headers: req.headers, rawHeaders: raw }
+  return { method: req.method, url: req.url, headers, rawHeaders: raw }
 }
 
 const ok = (id, result) => ({ jsonrpc: '2.0', id, result })
