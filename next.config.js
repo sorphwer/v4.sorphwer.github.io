@@ -67,6 +67,9 @@ module.exports = withBundleAnalyzer({
     ]
   },
   // /tags/<slug> pages were replaced by the home page's filter (lib/utils/postFacets filterHref).
+  async rewrites() {
+    return [{ source: '/mcp', destination: '/api/mcp' }]
+  },
   async redirects() {
     return [
       { source: '/tags/:source(mdx|notion)', destination: '/?source=:source', permanent: true },
